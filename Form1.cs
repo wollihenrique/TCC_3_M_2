@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class login : Form
+    public partial class frm_Login : Form
     {
-        private cadastroAdmin txt_telaLogin;
 
-        public login()
+        public frm_Login()
         {
             InitializeComponent();
         }
 
         private void btn_cadastro_Click(object sender, EventArgs e)
         {
-            cadastroAdmin login = new cadastroAdmin();
+            frm_CadastroAdmin login = new frm_CadastroAdmin();
             login.Show();
         }
 
@@ -30,5 +29,6 @@ namespace TCC_3_M
             inicio login = new inicio();
             login.Show();
         }
+
     }
 }

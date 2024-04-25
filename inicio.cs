@@ -19,7 +19,7 @@ namespace TCC_3_M
 
         private void btnCadastrarDispositivo_Click(object sender, EventArgs e)
         {
-            registroDispositivos inicio = new registroDispositivos();
+            telaCadastroAdmin inicio = new telaCadastroAdmin();
             inicio.Show();
         }
     }

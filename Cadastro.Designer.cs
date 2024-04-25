@@ -1,6 +1,6 @@
 ﻿namespace TCC_3_M
 {
-    partial class cadastroAdmin
+    partial class frm_CadastroAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_user = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_Usuario_Cad = new System.Windows.Forms.TextBox();
+            this.txt_Senha_Cad = new System.Windows.Forms.TextBox();
+            this.btn_Caldastrar_Cad = new System.Windows.Forms.Button();
+            this.txt_Email_Cad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Voltar_Cad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txt_user
+            // txt_Usuario_Cad
             // 
-            this.txt_user.Location = new System.Drawing.Point(246, 98);
-            this.txt_user.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(117, 20);
-            this.txt_user.TabIndex = 0;
+            this.txt_Usuario_Cad.Location = new System.Drawing.Point(246, 98);
+            this.txt_Usuario_Cad.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Usuario_Cad.Name = "txt_Usuario_Cad";
+            this.txt_Usuario_Cad.Size = new System.Drawing.Size(117, 20);
+            this.txt_Usuario_Cad.TabIndex = 0;
             // 
-            // txt_password
+            // txt_Senha_Cad
             // 
-            this.txt_password.Location = new System.Drawing.Point(246, 149);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(117, 20);
-            this.txt_password.TabIndex = 1;
+            this.txt_Senha_Cad.Location = new System.Drawing.Point(246, 149);
+            this.txt_Senha_Cad.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Senha_Cad.Name = "txt_Senha_Cad";
+            this.txt_Senha_Cad.Size = new System.Drawing.Size(117, 20);
+            this.txt_Senha_Cad.TabIndex = 1;
             // 
-            // btn_salvar
+            // btn_Caldastrar_Cad
             // 
-            this.btn_salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salvar.Location = new System.Drawing.Point(245, 223);
-            this.btn_salvar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(56, 19);
-            this.btn_salvar.TabIndex = 2;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_Caldastrar_Cad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Caldastrar_Cad.Location = new System.Drawing.Point(245, 223);
+            this.btn_Caldastrar_Cad.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Caldastrar_Cad.Name = "btn_Caldastrar_Cad";
+            this.btn_Caldastrar_Cad.Size = new System.Drawing.Size(56, 19);
+            this.btn_Caldastrar_Cad.TabIndex = 2;
+            this.btn_Caldastrar_Cad.Text = "Salvar";
+            this.btn_Caldastrar_Cad.UseVisualStyleBackColor = true;
             // 
-            // txt_Email
+            // txt_Email_Cad
             // 
-            this.txt_Email.Location = new System.Drawing.Point(246, 191);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(117, 20);
-            this.txt_Email.TabIndex = 3;
+            this.txt_Email_Cad.Location = new System.Drawing.Point(246, 191);
+            this.txt_Email_Cad.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Email_Cad.Name = "txt_Email_Cad";
+            this.txt_Email_Cad.Size = new System.Drawing.Size(117, 20);
+            this.txt_Email_Cad.TabIndex = 3;
             // 
             // label1
             // 
@@ -106,33 +106,33 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Email";
             // 
-            // button2
+            // btn_Voltar_Cad
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(306, 223);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Inicio";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Voltar_Cad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_Cad.Location = new System.Drawing.Point(306, 223);
+            this.btn_Voltar_Cad.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Voltar_Cad.Name = "btn_Voltar_Cad";
+            this.btn_Voltar_Cad.Size = new System.Drawing.Size(56, 19);
+            this.btn_Voltar_Cad.TabIndex = 7;
+            this.btn_Voltar_Cad.Text = "Inicio";
+            this.btn_Voltar_Cad.UseVisualStyleBackColor = true;
+            this.btn_Voltar_Cad.Click += new System.EventHandler(this.button2_Click);
             // 
-            // cadastroAdmin
+            // frm_CadastroAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Voltar_Cad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_Email);
-            this.Controls.Add(this.btn_salvar);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_user);
+            this.Controls.Add(this.txt_Email_Cad);
+            this.Controls.Add(this.btn_Caldastrar_Cad);
+            this.Controls.Add(this.txt_Senha_Cad);
+            this.Controls.Add(this.txt_Usuario_Cad);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "cadastroAdmin";
+            this.Name = "frm_CadastroAdmin";
             this.Text = "Novo Cadastro";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,13 +141,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_user;
-        private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.Button btn_salvar;
-        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_Usuario_Cad;
+        private System.Windows.Forms.TextBox txt_Senha_Cad;
+        private System.Windows.Forms.Button btn_Caldastrar_Cad;
+        private System.Windows.Forms.TextBox txt_Email_Cad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Voltar_Cad;
     }
 }

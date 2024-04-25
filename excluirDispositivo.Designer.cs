@@ -47,10 +47,10 @@ namespace TCC_3_M
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_ = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblFilter = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -238,12 +238,12 @@ namespace TCC_3_M
             this.label2.TabIndex = 63;
             this.label2.Text = "Pesquisar ID :";
             // 
-            // textBox1
+            // txt_
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 64;
+            this.txt_.Location = new System.Drawing.Point(13, 59);
+            this.txt_.Name = "txt_";
+            this.txt_.Size = new System.Drawing.Size(124, 20);
+            this.txt_.TabIndex = 64;
             // 
             // panel2
             // 
@@ -256,17 +256,6 @@ namespace TCC_3_M
             this.panel2.Size = new System.Drawing.Size(625, 48);
             this.panel2.TabIndex = 65;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(69, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
@@ -278,6 +267,17 @@ namespace TCC_3_M
             this.lblFilter.Size = new System.Drawing.Size(70, 26);
             this.lblFilter.TabIndex = 2;
             this.lblFilter.Text = "Filtrar";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // textBox4
             // 
@@ -337,7 +337,7 @@ namespace TCC_3_M
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
@@ -387,7 +387,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.PictureBox pictureBox2;
