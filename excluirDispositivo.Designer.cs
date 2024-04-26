@@ -1,7 +1,7 @@
 ﻿
 namespace TCC_3_M
 {
-    partial class excluirDispositivo
+    partial class frm_ExcluirDispositivo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(excluirDispositivo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ExcluirDispositivo));
             this.txtTag = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btn_Excluir_ExcluirDisp = new System.Windows.Forms.Button();
+            this.btn_Voltar_ExcluirDisp = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbDeviceType = new System.Windows.Forms.ComboBox();
             this.lblDeviceType = new System.Windows.Forms.Label();
@@ -71,28 +71,31 @@ namespace TCC_3_M
             this.txtTag.Size = new System.Drawing.Size(121, 20);
             this.txtTag.TabIndex = 59;
             // 
-            // btnSave
+            // btn_Excluir_ExcluirDisp
             // 
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(534, 415);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(50, 23);
-            this.btnSave.TabIndex = 58;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btn_Excluir_ExcluirDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Excluir_ExcluirDisp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir_ExcluirDisp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Excluir_ExcluirDisp.Location = new System.Drawing.Point(534, 415);
+            this.btn_Excluir_ExcluirDisp.Name = "btn_Excluir_ExcluirDisp";
+            this.btn_Excluir_ExcluirDisp.Size = new System.Drawing.Size(62, 23);
+            this.btn_Excluir_ExcluirDisp.TabIndex = 58;
+            this.btn_Excluir_ExcluirDisp.Text = "Excluir";
+            this.btn_Excluir_ExcluirDisp.UseVisualStyleBackColor = true;
+            this.btn_Excluir_ExcluirDisp.Click += new System.EventHandler(this.btn_Excluir_ExcluirDisp_Click);
             // 
-            // btnCancel
+            // btn_Voltar_ExcluirDisp
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(442, 415);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(70, 23);
-            this.btnCancel.TabIndex = 57;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btn_Voltar_ExcluirDisp.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Voltar_ExcluirDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Voltar_ExcluirDisp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_ExcluirDisp.Location = new System.Drawing.Point(442, 415);
+            this.btn_Voltar_ExcluirDisp.Name = "btn_Voltar_ExcluirDisp";
+            this.btn_Voltar_ExcluirDisp.Size = new System.Drawing.Size(62, 23);
+            this.btn_Voltar_ExcluirDisp.TabIndex = 57;
+            this.btn_Voltar_ExcluirDisp.Text = "Voltar";
+            this.btn_Voltar_ExcluirDisp.UseVisualStyleBackColor = false;
+            this.btn_Voltar_ExcluirDisp.Click += new System.EventHandler(this.btn_Voltar_ExcluirDisp_Click);
             // 
             // cmbStatus
             // 
@@ -197,22 +200,22 @@ namespace TCC_3_M
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 40);
+            this.panel1.Size = new System.Drawing.Size(623, 29);
             this.panel1.TabIndex = 62;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 9);
+            this.label1.Location = new System.Drawing.Point(67, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 26);
             this.label1.TabIndex = 1;
@@ -224,7 +227,7 @@ namespace TCC_3_M
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -247,7 +250,7 @@ namespace TCC_3_M
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.lblFilter);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -259,7 +262,7 @@ namespace TCC_3_M
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
-            this.lblFilter.BackColor = System.Drawing.Color.Silver;
+            this.lblFilter.BackColor = System.Drawing.Color.SteelBlue;
             this.lblFilter.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFilter.ForeColor = System.Drawing.Color.White;
             this.lblFilter.Location = new System.Drawing.Point(67, 13);
@@ -328,10 +331,11 @@ namespace TCC_3_M
             this.dataGridView1.Size = new System.Drawing.Size(623, 166);
             this.dataGridView1.TabIndex = 69;
             // 
-            // excluirDispositivo
+            // frm_ExcluirDispositivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(623, 441);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox2);
@@ -342,8 +346,8 @@ namespace TCC_3_M
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtTag);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btn_Excluir_ExcluirDisp);
+            this.Controls.Add(this.btn_Voltar_ExcluirDisp);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbDeviceType);
             this.Controls.Add(this.lblDeviceType);
@@ -354,9 +358,8 @@ namespace TCC_3_M
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "excluirDispositivo";
+            this.Name = "frm_ExcluirDispositivo";
             this.Text = "Excluir Dispositivo";
-            this.Load += new System.EventHandler(this.excluirDispositivo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -371,8 +374,7 @@ namespace TCC_3_M
 
         #endregion
         private System.Windows.Forms.TextBox txtTag;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btn_Voltar_ExcluirDisp;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbDeviceType;
         private System.Windows.Forms.Label lblDeviceType;
@@ -395,5 +397,6 @@ namespace TCC_3_M
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_Excluir_ExcluirDisp;
     }
 }

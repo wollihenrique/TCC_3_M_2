@@ -1,7 +1,7 @@
 ﻿
 namespace TCC_3_M
 {
-    partial class inicio
+    partial class frm_Inicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Inicio));
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnCadastrarDispositivo = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -75,6 +75,7 @@ namespace TCC_3_M
             this.btnExcluir.Text = "Deletar";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCadastrarUsuario
             // 
@@ -89,7 +90,7 @@ namespace TCC_3_M
             this.btnCadastrarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
             // 
-            // inicio
+            // frm_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,7 +99,7 @@ namespace TCC_3_M
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrarDispositivo);
             this.Controls.Add(this.btnEstoque);
-            this.Name = "inicio";
+            this.Name = "frm_Inicio";
             this.Text = "Menu";
             this.ResumeLayout(false);
 

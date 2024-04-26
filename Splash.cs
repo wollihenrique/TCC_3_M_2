@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_CadastroAdmin : Form
+    public partial class Splash : Form
     {
-        public frm_CadastroAdmin()
+        public Splash()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frm_Login telaCadastro = new frm_Login();
-            telaCadastro.Show();
-            this.Hide();
         }
     }
 }

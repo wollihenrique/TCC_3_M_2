@@ -10,25 +10,32 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class telaCadastroAdmin : Form
+    public partial class frm_CadastroDisp : Form
     {
 
-        public telaCadastroAdmin()
+        public frm_CadastroDisp()
         {
             InitializeComponent();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void btn_Novo_CastroDisp_Click(object sender, EventArgs e)
         {
-            registroDispositivos telaMenuCadastroP = new registroDispositivos();
-            telaMenuCadastroP.Show();
+            frm_RegistroDisp frm_CadastroDisp = new frm_RegistroDisp();
+            frm_CadastroDisp.Show();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btn_Voltar_CadastroDisp_Click(object sender, EventArgs e)
         {
-            excluirDispositivo telaMenuCadastro = new excluirDispositivo();
-            telaMenuCadastro.Show();
-           
+            frm_Inicio frm_CadastroDisp = new frm_Inicio();
+            frm_CadastroDisp.Show();
+            this.Hide();
+        }
+
+        private void btn_Voltar_Hist_Disp_Click(object sender, EventArgs e)
+        {
+            frm_Inicio frm_CadastroDisp = new frm_Inicio();
+            frm_CadastroDisp.Show();
+            this.Hide();
         }
     }
 }

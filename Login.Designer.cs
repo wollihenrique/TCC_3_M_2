@@ -91,7 +91,7 @@
             this.btn_Entrar_Log.TabIndex = 4;
             this.btn_Entrar_Log.Text = "Entrar";
             this.btn_Entrar_Log.UseVisualStyleBackColor = true;
-            this.btn_Entrar_Log.Click += new System.EventHandler(this.btn_entrar_Click);
+            this.btn_Entrar_Log.Click += new System.EventHandler(this.btn_Entrar_Log_Click);
             // 
             // btn_Cadastro_Log
             // 
@@ -103,7 +103,7 @@
             this.btn_Cadastro_Log.TabIndex = 5;
             this.btn_Cadastro_Log.Text = "Cadastrar";
             this.btn_Cadastro_Log.UseVisualStyleBackColor = true;
-            this.btn_Cadastro_Log.Click += new System.EventHandler(this.btn_cadastro_Click);
+            this.btn_Cadastro_Log.Click += new System.EventHandler(this.btn_Cadastro_Log_Click);
             // 
             // pnl_Cadastro_Cad
             // 

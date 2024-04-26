@@ -1,7 +1,7 @@
 ﻿
 namespace TCC_3_M
 {
-    partial class telaCadastroAdmin
+    partial class frm_CadastroDisp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,13 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroAdmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDisp));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnl_Menu = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.btn_Novo_CastroDisp = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.lblOrderBy = new System.Windows.Forms.Label();
@@ -45,11 +44,22 @@ namespace TCC_3_M
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Excluir_Disp = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_Voltar_Hist_Disp = new System.Windows.Forms.Button();
+            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnlMenu.SuspendLayout();
+            this.pnl_Menu.SuspendLayout();
             this.pnlFilter.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -66,8 +76,9 @@ namespace TCC_3_M
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_Voltar_CadastroDisp);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.pnlMenu);
+            this.tabPage1.Controls.Add(this.pnl_Menu);
             this.tabPage1.Controls.Add(this.pnlFilter);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -81,22 +92,21 @@ namespace TCC_3_M
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 104);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 104);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1005, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(904, 263);
             this.dataGridView1.TabIndex = 8;
             // 
-            // pnlMenu
+            // pnl_Menu
             // 
-            this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMenu.Controls.Add(this.btnEdit);
-            this.pnlMenu.Controls.Add(this.btnDelete);
-            this.pnlMenu.Controls.Add(this.btnNew);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenu.Location = new System.Drawing.Point(3, 3);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(993, 51);
-            this.pnlMenu.TabIndex = 0;
+            this.pnl_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Menu.Controls.Add(this.btnEdit);
+            this.pnl_Menu.Controls.Add(this.btn_Novo_CastroDisp);
+            this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Menu.Location = new System.Drawing.Point(3, 3);
+            this.pnl_Menu.Name = "pnl_Menu";
+            this.pnl_Menu.Size = new System.Drawing.Size(993, 48);
+            this.pnl_Menu.TabIndex = 0;
             // 
             // btnEdit
             // 
@@ -105,44 +115,29 @@ namespace TCC_3_M
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Image = global::TCC_3_M.Properties.Resources.edit24x;
-            this.btnEdit.Location = new System.Drawing.Point(150, 0);
+            this.btnEdit.Location = new System.Drawing.Point(75, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 49);
+            this.btnEdit.Size = new System.Drawing.Size(75, 46);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Editar";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btn_Novo_CastroDisp
             // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(75, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 49);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "Excluir";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.Location = new System.Drawing.Point(0, 0);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 49);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "Novo";
-            this.btnNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.btn_Novo_CastroDisp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_Novo_CastroDisp.FlatAppearance.BorderSize = 0;
+            this.btn_Novo_CastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Novo_CastroDisp.Image = ((System.Drawing.Image)(resources.GetObject("btn_Novo_CastroDisp.Image")));
+            this.btn_Novo_CastroDisp.Location = new System.Drawing.Point(0, 0);
+            this.btn_Novo_CastroDisp.Name = "btn_Novo_CastroDisp";
+            this.btn_Novo_CastroDisp.Size = new System.Drawing.Size(75, 46);
+            this.btn_Novo_CastroDisp.TabIndex = 0;
+            this.btn_Novo_CastroDisp.Text = "Novo";
+            this.btn_Novo_CastroDisp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Novo_CastroDisp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Novo_CastroDisp.UseVisualStyleBackColor = true;
+            this.btn_Novo_CastroDisp.Click += new System.EventHandler(this.btn_Novo_CastroDisp_Click);
             // 
             // pnlFilter
             // 
@@ -153,9 +148,9 @@ namespace TCC_3_M
             this.pnlFilter.Controls.Add(this.lblStatus);
             this.pnlFilter.Controls.Add(this.txtSearch);
             this.pnlFilter.Controls.Add(this.lblSearch);
-            this.pnlFilter.Location = new System.Drawing.Point(0, 50);
+            this.pnlFilter.Location = new System.Drawing.Point(3, 50);
             this.pnlFilter.Name = "pnlFilter";
-            this.pnlFilter.Size = new System.Drawing.Size(999, 52);
+            this.pnlFilter.Size = new System.Drawing.Size(996, 52);
             this.pnlFilter.TabIndex = 7;
             // 
             // cmbStatus
@@ -214,10 +209,10 @@ namespace TCC_3_M
             // 
             // txtSearch
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Location = new System.Drawing.Point(4, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(278, 18);
+            this.txtSearch.Size = new System.Drawing.Size(278, 25);
             this.txtSearch.TabIndex = 4;
             // 
             // lblSearch
@@ -232,30 +227,117 @@ namespace TCC_3_M
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.btn_Voltar_Hist_Disp);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.btn_Excluir_Disp);
+            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(999, 461);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Dispositivos em estoque";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Text = "Histórico";
             // 
-            // telaMenus
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(993, 41);
+            this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(52, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(315, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Histórico de Registros";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_Excluir_Disp
+            // 
+            this.btn_Excluir_Disp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Excluir_Disp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Excluir_Disp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir_Disp.Location = new System.Drawing.Point(87, 375);
+            this.btn_Excluir_Disp.Name = "btn_Excluir_Disp";
+            this.btn_Excluir_Disp.Size = new System.Drawing.Size(56, 25);
+            this.btn_Excluir_Disp.TabIndex = 1;
+            this.btn_Excluir_Disp.Text = "Excluir";
+            this.btn_Excluir_Disp.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 42);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(909, 327);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // btn_Voltar_Hist_Disp
+            // 
+            this.btn_Voltar_Hist_Disp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_Hist_Disp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_Hist_Disp.Location = new System.Drawing.Point(6, 375);
+            this.btn_Voltar_Hist_Disp.Name = "btn_Voltar_Hist_Disp";
+            this.btn_Voltar_Hist_Disp.Size = new System.Drawing.Size(75, 25);
+            this.btn_Voltar_Hist_Disp.TabIndex = 3;
+            this.btn_Voltar_Hist_Disp.Text = "Voltar";
+            this.btn_Voltar_Hist_Disp.UseVisualStyleBackColor = true;
+            this.btn_Voltar_Hist_Disp.Click += new System.EventHandler(this.btn_Voltar_Hist_Disp_Click);
+            // 
+            // btn_Voltar_CadastroDisp
+            // 
+            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(3, 373);
+            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
+            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
+            this.btn_Voltar_CadastroDisp.TabIndex = 4;
+            this.btn_Voltar_CadastroDisp.Text = "Voltar";
+            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = true;
+            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
+            // 
+            // frm_CadastroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1007, 492);
+            this.ClientSize = new System.Drawing.Size(914, 434);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "telaMenus";
+            this.Name = "frm_CadastroDisp";
             this.Text = "Menu - [Cadastro de Dispositivos]";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnlMenu.ResumeLayout(false);
+            this.pnl_Menu.ResumeLayout(false);
             this.pnlFilter.ResumeLayout(false);
             this.pnlFilter.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,10 +347,9 @@ namespace TCC_3_M
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnl_Menu;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btn_Novo_CastroDisp;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbOrderBy;
         private System.Windows.Forms.TextBox txtSearch;
@@ -277,5 +358,12 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Excluir_Disp;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_Voltar_CadastroDisp;
+        private System.Windows.Forms.Button btn_Voltar_Hist_Disp;
     }
 }

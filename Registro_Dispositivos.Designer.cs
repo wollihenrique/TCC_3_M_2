@@ -1,6 +1,6 @@
 ﻿namespace TCC_3_M
 {
-    partial class registroDispositivos
+    partial class frm_RegistroDisp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registroDispositivos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_RegistroDisp));
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblLatitude = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.pnlCadastroP = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btn_Cancelar_RegistroDisp = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtTag = new System.Windows.Forms.TextBox();
             this.txtGuarantee = new System.Windows.Forms.TextBox();
@@ -314,11 +314,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(72, 8);
+            this.label1.Location = new System.Drawing.Point(57, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 26);
+            this.label1.Size = new System.Drawing.Size(351, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro de Dispositivos";
             // 
@@ -328,22 +328,23 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCancel
+            // btn_Cancelar_RegistroDisp
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(299, 427);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(78, 32);
-            this.btnCancel.TabIndex = 29;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btn_Cancelar_RegistroDisp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Cancelar_RegistroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar_RegistroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar_RegistroDisp.Location = new System.Drawing.Point(299, 427);
+            this.btn_Cancelar_RegistroDisp.Name = "btn_Cancelar_RegistroDisp";
+            this.btn_Cancelar_RegistroDisp.Size = new System.Drawing.Size(78, 32);
+            this.btn_Cancelar_RegistroDisp.TabIndex = 29;
+            this.btn_Cancelar_RegistroDisp.Text = "Cancelar";
+            this.btn_Cancelar_RegistroDisp.UseVisualStyleBackColor = false;
+            this.btn_Cancelar_RegistroDisp.Click += new System.EventHandler(this.btn_Cancelar_RegistroDisp_Click);
             // 
             // btnSave
             // 
@@ -355,6 +356,7 @@
             this.btnSave.TabIndex = 30;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtTag
             // 
@@ -372,7 +374,7 @@
             this.txtGuarantee.Size = new System.Drawing.Size(121, 20);
             this.txtGuarantee.TabIndex = 32;
             // 
-            // registroDispositivos
+            // frm_RegistroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -380,7 +382,7 @@
             this.Controls.Add(this.txtGuarantee);
             this.Controls.Add(this.txtTag);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btn_Cancelar_RegistroDisp);
             this.Controls.Add(this.txtObservations);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
@@ -407,7 +409,7 @@
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.pnlCadastroP);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Name = "registroDispositivos";
+            this.Name = "frm_RegistroDisp";
             this.Text = "Cadastro de produto";
             this.pnlCadastroP.ResumeLayout(false);
             this.pnlCadastroP.PerformLayout();
@@ -445,7 +447,7 @@
         private System.Windows.Forms.Panel pnlCadastroP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btn_Cancelar_RegistroDisp;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtTag;
         private System.Windows.Forms.TextBox txtGuarantee;
