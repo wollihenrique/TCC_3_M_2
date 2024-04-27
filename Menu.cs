@@ -10,31 +10,31 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_CadastroDisp : Form
+    public partial class frm_Inicio : Form
     {
-
-        public frm_CadastroDisp()
+        public frm_Inicio()
         {
             InitializeComponent();
         }
 
-        private void btn_Novo_CastroDisp_Click(object sender, EventArgs e)
+        private void btnCadastrarDispositivo_Click(object sender, EventArgs e)
         {
-            frm_RegistroDisp frm_CadastroDisp = new frm_RegistroDisp();
-            frm_CadastroDisp.Show();
-        }
-
-        private void btn_Voltar_CadastroDisp_Click(object sender, EventArgs e)
-        {
-            frm_Inicio frm_CadastroDisp = new frm_Inicio();
-            frm_CadastroDisp.Show();
+            frm_CadastroDisp frm_Inicio = new frm_CadastroDisp();
+            frm_Inicio.Show();
             this.Hide();
         }
 
-        private void btn_Voltar_Hist_Disp_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            frm_Inicio frm_CadastroDisp = new frm_Inicio();
-            frm_CadastroDisp.Show();
+            frm_ExcluirDispositivo frmExcluirDisp = new frm_ExcluirDispositivo();
+            frmExcluirDisp.Show();
+            this.Hide();
+        }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            frm_Usuario formUsuario = new frm_Usuario();
+            formUsuario.Show();
             this.Hide();
         }
     }

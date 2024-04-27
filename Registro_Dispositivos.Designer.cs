@@ -411,7 +411,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frm_RegistroDisp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de produto";
+            this.Text = "Novo Dispositivo";
             this.pnlCadastroP.ResumeLayout(false);
             this.pnlCadastroP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
