@@ -410,6 +410,7 @@
             this.Controls.Add(this.pnlCadastroP);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frm_RegistroDisp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de produto";
             this.pnlCadastroP.ResumeLayout(false);
             this.pnlCadastroP.PerformLayout();

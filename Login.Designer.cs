@@ -153,6 +153,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnl_Cadastro_Cad.ResumeLayout(false);
             this.pnl_Cadastro_Cad.PerformLayout();

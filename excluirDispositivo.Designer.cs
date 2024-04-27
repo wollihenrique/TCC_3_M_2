@@ -359,6 +359,7 @@ namespace TCC_3_M
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "frm_ExcluirDispositivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excluir Dispositivo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -100,6 +100,7 @@ namespace TCC_3_M
             this.Controls.Add(this.btnCadastrarDispositivo);
             this.Controls.Add(this.btnEstoque);
             this.Name = "frm_Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
 

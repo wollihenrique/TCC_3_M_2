@@ -32,6 +32,7 @@ namespace TCC_3_M
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDisp));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -44,22 +45,21 @@ namespace TCC_3_M
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_Excluir_Disp = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btn_Voltar_Hist_Disp = new System.Windows.Forms.Button();
-            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_Excluir_Disp = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnl_Menu.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -88,6 +88,18 @@ namespace TCC_3_M
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro de dispositivos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_Voltar_CadastroDisp
+            // 
+            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(3, 373);
+            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
+            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
+            this.btn_Voltar_CadastroDisp.TabIndex = 4;
+            this.btn_Voltar_CadastroDisp.Text = "Voltar";
+            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = true;
+            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
             // 
             // dataGridView1
             // 
@@ -239,39 +251,25 @@ namespace TCC_3_M
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Histórico";
             // 
-            // panel1
+            // btn_Voltar_Hist_Disp
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 41);
-            this.panel1.TabIndex = 0;
+            this.btn_Voltar_Hist_Disp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_Hist_Disp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_Hist_Disp.Location = new System.Drawing.Point(6, 375);
+            this.btn_Voltar_Hist_Disp.Name = "btn_Voltar_Hist_Disp";
+            this.btn_Voltar_Hist_Disp.Size = new System.Drawing.Size(75, 25);
+            this.btn_Voltar_Hist_Disp.TabIndex = 3;
+            this.btn_Voltar_Hist_Disp.Text = "Voltar";
+            this.btn_Voltar_Hist_Disp.UseVisualStyleBackColor = true;
+            this.btn_Voltar_Hist_Disp.Click += new System.EventHandler(this.btn_Voltar_Hist_Disp_Click);
             // 
-            // label1
+            // dataGridView2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(52, -1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Histórico de Registros";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 42);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(909, 327);
+            this.dataGridView2.TabIndex = 2;
             // 
             // btn_Excluir_Disp
             // 
@@ -285,37 +283,39 @@ namespace TCC_3_M
             this.btn_Excluir_Disp.Text = "Excluir";
             this.btn_Excluir_Disp.UseVisualStyleBackColor = false;
             // 
-            // dataGridView2
+            // panel1
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(909, 327);
-            this.dataGridView2.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(993, 41);
+            this.panel1.TabIndex = 0;
             // 
-            // btn_Voltar_Hist_Disp
+            // pictureBox1
             // 
-            this.btn_Voltar_Hist_Disp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Voltar_Hist_Disp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_Hist_Disp.Location = new System.Drawing.Point(6, 375);
-            this.btn_Voltar_Hist_Disp.Name = "btn_Voltar_Hist_Disp";
-            this.btn_Voltar_Hist_Disp.Size = new System.Drawing.Size(75, 25);
-            this.btn_Voltar_Hist_Disp.TabIndex = 3;
-            this.btn_Voltar_Hist_Disp.Text = "Voltar";
-            this.btn_Voltar_Hist_Disp.UseVisualStyleBackColor = true;
-            this.btn_Voltar_Hist_Disp.Click += new System.EventHandler(this.btn_Voltar_Hist_Disp_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_Voltar_CadastroDisp
+            // label1
             // 
-            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(3, 373);
-            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
-            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
-            this.btn_Voltar_CadastroDisp.TabIndex = 4;
-            this.btn_Voltar_CadastroDisp.Text = "Voltar";
-            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = true;
-            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(52, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(315, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Histórico de Registros";
             // 
             // frm_CadastroDisp
             // 
@@ -326,6 +326,7 @@ namespace TCC_3_M
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frm_CadastroDisp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu - [Cadastro de Dispositivos]";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -334,10 +335,10 @@ namespace TCC_3_M
             this.pnlFilter.ResumeLayout(false);
             this.pnlFilter.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }

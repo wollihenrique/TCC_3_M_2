@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Registro_Dispositivos.resx">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

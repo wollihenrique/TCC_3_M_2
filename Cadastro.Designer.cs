@@ -133,6 +133,7 @@
             this.Controls.Add(this.txt_Usuario_Cad);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_CadastroAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Cadastro";
             this.ResumeLayout(false);
             this.PerformLayout();
