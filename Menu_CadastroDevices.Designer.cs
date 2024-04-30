@@ -30,7 +30,7 @@ namespace TCC_3_M
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDisp));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,7 +51,7 @@ namespace TCC_3_M
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabControlPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnl_Menu.SuspendLayout();
@@ -62,17 +62,17 @@ namespace TCC_3_M
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControlPrincipal
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-2, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1007, 494);
-            this.tabControl1.TabIndex = 0;
+            this.tabControlPrincipal.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControlPrincipal.Controls.Add(this.tabPage1);
+            this.tabControlPrincipal.Controls.Add(this.tabPage2);
+            this.tabControlPrincipal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlPrincipal.Location = new System.Drawing.Point(-2, 0);
+            this.tabControlPrincipal.Name = "tabControlPrincipal";
+            this.tabControlPrincipal.SelectedIndex = 0;
+            this.tabControlPrincipal.Size = new System.Drawing.Size(1007, 494);
+            this.tabControlPrincipal.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -323,12 +323,12 @@ namespace TCC_3_M
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(914, 434);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlPrincipal);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frm_CadastroDisp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu - [Cadastro de Dispositivos]";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnl_Menu.ResumeLayout(false);
@@ -345,7 +345,7 @@ namespace TCC_3_M
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlPrincipal;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel pnl_Menu;
