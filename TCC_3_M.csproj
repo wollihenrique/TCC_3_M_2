@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Editar_Dispositivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_Dispositivos.Designer.cs">
+      <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcluirDispositivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Registro_Dispositivos.Designer.cs">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Editar_Dispositivos.resx">
+      <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcluirDispositivo.resx">
       <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cadastrar.32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarBranco.32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
