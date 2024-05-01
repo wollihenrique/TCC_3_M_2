@@ -52,6 +52,12 @@
     <Compile Include="Editar_Dispositivos.Designer.cs">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcluirDispositivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Editar_Dispositivos.resx">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirDispositivo.resx">
       <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
