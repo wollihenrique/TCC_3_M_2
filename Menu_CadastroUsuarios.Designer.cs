@@ -31,16 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Usuario));
             this.tabCntrl_CadstroU = new System.Windows.Forms.TabControl();
             this.tabPag_CadastroU = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Voltar_Usuario = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_NovoUsuario = new System.Windows.Forms.Button();
-            this.btn_EditarUsuario = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmb_Status_Usuario = new System.Windows.Forms.ComboBox();
             this.lblOrderBy = new System.Windows.Forms.Label();
@@ -48,13 +38,23 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.txt_Procurar_Usuario = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_EditarUsuario = new System.Windows.Forms.Button();
+            this.btn_NovoUsuario = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Voltar_Usuario = new System.Windows.Forms.Button();
+            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabCntrl_CadstroU.SuspendLayout();
             this.tabPag_CadastroU.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCntrl_CadstroU
@@ -72,7 +72,7 @@
             // 
             // tabPag_CadastroU
             // 
-            this.tabPag_CadastroU.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPag_CadastroU.BackColor = System.Drawing.SystemColors.Control;
             this.tabPag_CadastroU.Controls.Add(this.panel3);
             this.tabPag_CadastroU.Controls.Add(this.panel2);
             this.tabPag_CadastroU.Controls.Add(this.panel1);
@@ -86,123 +86,9 @@
             this.tabPag_CadastroU.TabIndex = 0;
             this.tabPag_CadastroU.Text = "Cadastro de Usuários";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(803, 418);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Histórico de Registros";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btn_Voltar_CadastroDisp
-            // 
-            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(-102, 379);
-            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
-            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
-            this.btn_Voltar_CadastroDisp.TabIndex = 10;
-            this.btn_Voltar_CadastroDisp.Text = "Voltar";
-            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 148);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 231);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // btn_Voltar_Usuario
-            // 
-            this.btn_Voltar_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Voltar_Usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_Usuario.Location = new System.Drawing.Point(6, 385);
-            this.btn_Voltar_Usuario.Name = "btn_Voltar_Usuario";
-            this.btn_Voltar_Usuario.Size = new System.Drawing.Size(75, 30);
-            this.btn_Voltar_Usuario.TabIndex = 5;
-            this.btn_Voltar_Usuario.Text = "Voltar";
-            this.btn_Voltar_Usuario.UseVisualStyleBackColor = true;
-            this.btn_Voltar_Usuario.Click += new System.EventHandler(this.btn_Voltar_Usuario_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 41);
-            this.panel1.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(61, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastrar Usuários";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_EditarUsuario);
-            this.panel2.Controls.Add(this.btn_NovoUsuario);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(797, 39);
-            this.panel2.TabIndex = 14;
-            // 
-            // btn_NovoUsuario
-            // 
-            this.btn_NovoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_NovoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_NovoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_NovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NovoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NovoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_NovoUsuario.Image")));
-            this.btn_NovoUsuario.Location = new System.Drawing.Point(0, 0);
-            this.btn_NovoUsuario.Name = "btn_NovoUsuario";
-            this.btn_NovoUsuario.Size = new System.Drawing.Size(75, 39);
-            this.btn_NovoUsuario.TabIndex = 0;
-            this.btn_NovoUsuario.Text = "Novo";
-            this.btn_NovoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_NovoUsuario.UseVisualStyleBackColor = false;
-            // 
-            // btn_EditarUsuario
-            // 
-            this.btn_EditarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_EditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EditarUsuario.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_EditarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditarUsuario.Image")));
-            this.btn_EditarUsuario.Location = new System.Drawing.Point(75, 0);
-            this.btn_EditarUsuario.Name = "btn_EditarUsuario";
-            this.btn_EditarUsuario.Size = new System.Drawing.Size(67, 39);
-            this.btn_EditarUsuario.TabIndex = 1;
-            this.btn_EditarUsuario.Text = "Editar";
-            this.btn_EditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_EditarUsuario.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.cmb_Status_Usuario);
             this.panel3.Controls.Add(this.lblOrderBy);
             this.panel3.Controls.Add(this.cmb_OrderBy_Usuario);
@@ -287,6 +173,123 @@
             this.lblSearch.TabIndex = 7;
             this.lblSearch.Text = "Procurar:";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.btn_EditarUsuario);
+            this.panel2.Controls.Add(this.btn_NovoUsuario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(797, 39);
+            this.panel2.TabIndex = 14;
+            // 
+            // btn_EditarUsuario
+            // 
+            this.btn_EditarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EditarUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_EditarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_EditarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditarUsuario.Image")));
+            this.btn_EditarUsuario.Location = new System.Drawing.Point(75, 0);
+            this.btn_EditarUsuario.Name = "btn_EditarUsuario";
+            this.btn_EditarUsuario.Size = new System.Drawing.Size(67, 39);
+            this.btn_EditarUsuario.TabIndex = 1;
+            this.btn_EditarUsuario.Text = "Editar";
+            this.btn_EditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_EditarUsuario.UseVisualStyleBackColor = false;
+            // 
+            // btn_NovoUsuario
+            // 
+            this.btn_NovoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_NovoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NovoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_NovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_NovoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NovoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_NovoUsuario.Image")));
+            this.btn_NovoUsuario.Location = new System.Drawing.Point(0, 0);
+            this.btn_NovoUsuario.Name = "btn_NovoUsuario";
+            this.btn_NovoUsuario.Size = new System.Drawing.Size(75, 39);
+            this.btn_NovoUsuario.TabIndex = 0;
+            this.btn_NovoUsuario.Text = "Novo";
+            this.btn_NovoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_NovoUsuario.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(797, 41);
+            this.panel1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(61, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Cadastrar Usuários";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_Voltar_Usuario
+            // 
+            this.btn_Voltar_Usuario.BackColor = System.Drawing.Color.White;
+            this.btn_Voltar_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_Usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_Usuario.Location = new System.Drawing.Point(6, 385);
+            this.btn_Voltar_Usuario.Name = "btn_Voltar_Usuario";
+            this.btn_Voltar_Usuario.Size = new System.Drawing.Size(75, 30);
+            this.btn_Voltar_Usuario.TabIndex = 5;
+            this.btn_Voltar_Usuario.Text = "Voltar";
+            this.btn_Voltar_Usuario.UseVisualStyleBackColor = false;
+            this.btn_Voltar_Usuario.Click += new System.EventHandler(this.btn_Voltar_Usuario_Click);
+            // 
+            // btn_Voltar_CadastroDisp
+            // 
+            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(-102, 379);
+            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
+            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
+            this.btn_Voltar_CadastroDisp.TabIndex = 10;
+            this.btn_Voltar_CadastroDisp.Text = "Voltar";
+            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 148);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(791, 231);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(803, 418);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Histórico de Registros";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // frm_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,13 +300,13 @@
             this.Text = "Menu - [Cadastro Usuarios]";
             this.tabCntrl_CadstroU.ResumeLayout(false);
             this.tabPag_CadastroU.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
