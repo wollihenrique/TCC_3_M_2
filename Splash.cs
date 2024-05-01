@@ -15,6 +15,8 @@ namespace TCC_3_M
         public frm_Splash()
         {
             InitializeComponent();
+            timer1.Interval = 3000;
+            timer1.Tick += new EventHandler(timer1_Tick);
         }
 
         private void frm_Splash_Load(object sender, EventArgs e)
@@ -24,19 +26,8 @@ namespace TCC_3_M
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBar1.Value < 100)
-            {
-                progressBar1.Value += 1;
-                lbl_Carregando.Text = progressBar1.Value.ToString() + " % ";
-            }
-
-            else
-            {
-                timer1.Stop();
-                this.Hide();
-                frm_Login formLogin = new frm_Login();
-                formLogin.ShowDialog();
-            }
+            timer1.Stop();
+            this.Close();
         }
     }
 }
