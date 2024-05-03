@@ -64,12 +64,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu_CadastroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +96,18 @@
     <Compile Include="Registro_Dispositivos.Designer.cs">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroAdmin.Designer.cs">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TermosDeUso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TermosDeUso.Designer.cs">
+      <DependentUpon>TermosDeUso.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Editar_Dispositivos.resx">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -138,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAdmin.resx">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TermosDeUso.resx">
+      <DependentUpon>TermosDeUso.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

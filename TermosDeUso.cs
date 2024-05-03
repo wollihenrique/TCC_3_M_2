@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_CadastroAdmin : Form
+    public partial class frm_TermosDeUso : Form
     {
-        public frm_CadastroAdmin()
+        public frm_TermosDeUso()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
         {
-            frm_Login telaCadastro = new frm_Login();
-            telaCadastro.Show();
             this.Hide();
         }
     }
