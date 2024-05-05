@@ -29,73 +29,78 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRevisao = new System.Windows.Forms.Button();
+            this.btnPerif = new System.Windows.Forms.Button();
+            this.btnCompu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnRevisao);
+            this.panel1.Controls.Add(this.btnPerif);
+            this.panel1.Controls.Add(this.btnCompu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(1364, 42);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnRevisao
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 0;
+            this.btnRevisao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnRevisao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRevisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevisao.Image = global::TCC_3_M.Properties.Resources.revisao;
+            this.btnRevisao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevisao.Location = new System.Drawing.Point(276, 0);
+            this.btnRevisao.Name = "btnRevisao";
+            this.btnRevisao.Size = new System.Drawing.Size(112, 42);
+            this.btnRevisao.TabIndex = 2;
+            this.btnRevisao.Text = "Revisão";
+            this.btnRevisao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevisao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRevisao.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPerif
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 106);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPerif.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPerif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerif.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerif.Image = global::TCC_3_M.Properties.Resources.quantidade;
+            this.btnPerif.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerif.Location = new System.Drawing.Point(151, 0);
+            this.btnPerif.Name = "btnPerif";
+            this.btnPerif.Size = new System.Drawing.Size(125, 42);
+            this.btnPerif.TabIndex = 1;
+            this.btnPerif.Text = "Periféricos";
+            this.btnPerif.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerif.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerif.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCompu
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 106);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 312);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 106);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCompu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCompu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompu.Image = global::TCC_3_M.Properties.Resources.Maquina;
+            this.btnCompu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompu.Location = new System.Drawing.Point(0, 0);
+            this.btnCompu.Name = "btnCompu";
+            this.btnCompu.Size = new System.Drawing.Size(151, 42);
+            this.btnCompu.TabIndex = 0;
+            this.btnCompu.Text = "Computadores";
+            this.btnCompu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompu.UseVisualStyleBackColor = true;
             // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1364, 591);
             this.Controls.Add(this.panel1);
             this.Name = "Estoque";
             this.Text = "Estoque";
@@ -107,9 +112,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRevisao;
+        private System.Windows.Forms.Button btnPerif;
+        private System.Windows.Forms.Button btnCompu;
     }
 }
