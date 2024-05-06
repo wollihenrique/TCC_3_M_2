@@ -41,8 +41,6 @@
             this.lblGuarantee = new System.Windows.Forms.Label();
             this.lblProcessor = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.lblDeviceType = new System.Windows.Forms.Label();
-            this.cmbDeviceType = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -184,25 +182,6 @@
             this.lblStatus.TabIndex = 12;
             this.lblStatus.Text = "Status :";
             // 
-            // lblDeviceType
-            // 
-            this.lblDeviceType.AutoSize = true;
-            this.lblDeviceType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeviceType.Location = new System.Drawing.Point(321, 213);
-            this.lblDeviceType.Name = "lblDeviceType";
-            this.lblDeviceType.Size = new System.Drawing.Size(113, 15);
-            this.lblDeviceType.TabIndex = 13;
-            this.lblDeviceType.Text = "Tipo de Dispositivo :";
-            // 
-            // cmbDeviceType
-            // 
-            this.cmbDeviceType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDeviceType.FormattingEnabled = true;
-            this.cmbDeviceType.Location = new System.Drawing.Point(324, 231);
-            this.cmbDeviceType.Name = "cmbDeviceType";
-            this.cmbDeviceType.Size = new System.Drawing.Size(121, 21);
-            this.cmbDeviceType.TabIndex = 14;
-            // 
             // cmbStatus
             // 
             this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,7 +204,7 @@
             this.textBox2.Location = new System.Drawing.Point(20, 62);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(284, 20);
+            this.textBox2.Size = new System.Drawing.Size(264, 20);
             this.textBox2.TabIndex = 19;
             // 
             // textBox3
@@ -234,7 +213,7 @@
             this.textBox3.Location = new System.Drawing.Point(20, 101);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 20);
+            this.textBox3.Size = new System.Drawing.Size(264, 20);
             this.textBox3.TabIndex = 20;
             // 
             // textBox4
@@ -252,7 +231,7 @@
             this.textBox5.Location = new System.Drawing.Point(20, 143);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(284, 20);
+            this.textBox5.Size = new System.Drawing.Size(264, 20);
             this.textBox5.TabIndex = 22;
             // 
             // textBox6
@@ -261,7 +240,7 @@
             this.textBox6.Location = new System.Drawing.Point(20, 185);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(284, 20);
+            this.textBox6.Size = new System.Drawing.Size(264, 20);
             this.textBox6.TabIndex = 23;
             // 
             // textBox7
@@ -270,7 +249,7 @@
             this.textBox7.Location = new System.Drawing.Point(20, 224);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(284, 20);
+            this.textBox7.Size = new System.Drawing.Size(264, 20);
             this.textBox7.TabIndex = 24;
             // 
             // textBox8
@@ -279,7 +258,7 @@
             this.textBox8.Location = new System.Drawing.Point(19, 265);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(285, 20);
+            this.textBox8.Size = new System.Drawing.Size(265, 20);
             this.textBox8.TabIndex = 25;
             // 
             // textBox9
@@ -288,7 +267,7 @@
             this.textBox9.Location = new System.Drawing.Point(18, 306);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(286, 20);
+            this.textBox9.Size = new System.Drawing.Size(266, 20);
             this.textBox9.TabIndex = 26;
             // 
             // txtObservations
@@ -301,7 +280,7 @@
             // 
             // pnlCadastroP
             // 
-            this.pnlCadastroP.BackColor = System.Drawing.Color.LightGray;
+            this.pnlCadastroP.BackColor = System.Drawing.Color.SteelBlue;
             this.pnlCadastroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCadastroP.Controls.Add(this.label1);
             this.pnlCadastroP.Controls.Add(this.pictureBox1);
@@ -318,9 +297,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(57, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 36);
+            this.label1.Size = new System.Drawing.Size(324, 36);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Dispositivos";
+            this.label1.Text = "Cadastro de Notebook";
             // 
             // pictureBox1
             // 
@@ -369,7 +348,9 @@
             // 
             // txtGuarantee
             // 
-            this.txtGuarantee.Location = new System.Drawing.Point(325, 148);
+            this.txtGuarantee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGuarantee.Location = new System.Drawing.Point(325, 143);
+            this.txtGuarantee.Multiline = true;
             this.txtGuarantee.Name = "txtGuarantee";
             this.txtGuarantee.Size = new System.Drawing.Size(121, 20);
             this.txtGuarantee.TabIndex = 32;
@@ -378,6 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(493, 471);
             this.Controls.Add(this.txtGuarantee);
             this.Controls.Add(this.txtTag);
@@ -393,8 +375,6 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.cmbDeviceType);
-            this.Controls.Add(this.lblDeviceType);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblProcessor);
             this.Controls.Add(this.lblGuarantee);
@@ -433,8 +413,6 @@
         private System.Windows.Forms.Label lblGuarantee;
         private System.Windows.Forms.Label lblProcessor;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblDeviceType;
-        private System.Windows.Forms.ComboBox cmbDeviceType;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
