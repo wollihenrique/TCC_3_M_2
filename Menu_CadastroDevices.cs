@@ -38,8 +38,13 @@ namespace TCC_3_M
 
         private void btn_Novo_CastroDisp_Click(object sender, EventArgs e)
         {
-            frm_RegistroDisp formCadastroDisp = new frm_RegistroDisp();
-            formCadastroDisp.Show();
+            pnl_NvoRgistro_CadastroDisp.Visible = true;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frm_Editar_Dispositivos formEditarNotebooks = new frm_Editar_Dispositivos();
+            formEditarNotebooks.Show();
         }
     }
 }

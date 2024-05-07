@@ -327,6 +327,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(392, 427);
@@ -334,7 +335,7 @@
             this.btnSave.Size = new System.Drawing.Size(77, 32);
             this.btnSave.TabIndex = 30;
             this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtTag
@@ -359,7 +360,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(493, 471);
             this.Controls.Add(this.txtGuarantee);
             this.Controls.Add(this.txtTag);
@@ -389,6 +390,7 @@
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.pnlCadastroP);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_RegistroDisp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Dispositivo";

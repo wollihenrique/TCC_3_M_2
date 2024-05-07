@@ -32,13 +32,6 @@ namespace TCC_3_M
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -61,21 +54,21 @@ namespace TCC_3_M
             this.lblGuarantee = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnFechar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 59);
+            this.panel1.Size = new System.Drawing.Size(650, 59);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -100,75 +93,10 @@ namespace TCC_3_M
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.splitter1);
-            this.panel2.Location = new System.Drawing.Point(3, 46);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(794, 167);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtSearch);
-            this.panel3.Controls.Add(this.lblSearch);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(0, 65);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 216);
-            this.panel3.TabIndex = 2;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(81, 0);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(61, 17);
-            this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Procurar:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Location = new System.Drawing.Point(84, 20);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(278, 20);
-            this.txtSearch.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ID:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(6, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 167);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(6, 303);
+            this.textBox2.Location = new System.Drawing.Point(12, 77);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(237, 20);
@@ -178,7 +106,7 @@ namespace TCC_3_M
             // 
             this.lblBrand.AutoSize = true;
             this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.Location = new System.Drawing.Point(8, 285);
+            this.lblBrand.Location = new System.Drawing.Point(14, 59);
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(46, 15);
             this.lblBrand.TabIndex = 20;
@@ -187,7 +115,7 @@ namespace TCC_3_M
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(6, 340);
+            this.textBox3.Location = new System.Drawing.Point(12, 114);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(237, 20);
@@ -197,7 +125,7 @@ namespace TCC_3_M
             // 
             this.lblModel.AutoSize = true;
             this.lblModel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModel.Location = new System.Drawing.Point(8, 324);
+            this.lblModel.Location = new System.Drawing.Point(14, 98);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(54, 15);
             this.lblModel.TabIndex = 22;
@@ -206,7 +134,7 @@ namespace TCC_3_M
             // textBox5
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(6, 379);
+            this.textBox5.Location = new System.Drawing.Point(12, 153);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(237, 20);
@@ -216,7 +144,7 @@ namespace TCC_3_M
             // 
             this.lblProcessor.AutoSize = true;
             this.lblProcessor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProcessor.Location = new System.Drawing.Point(8, 362);
+            this.lblProcessor.Location = new System.Drawing.Point(14, 136);
             this.lblProcessor.Name = "lblProcessor";
             this.lblProcessor.Size = new System.Drawing.Size(77, 15);
             this.lblProcessor.TabIndex = 24;
@@ -225,7 +153,7 @@ namespace TCC_3_M
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(6, 418);
+            this.textBox6.Location = new System.Drawing.Point(12, 192);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(237, 20);
@@ -235,7 +163,7 @@ namespace TCC_3_M
             // 
             this.lblRamMemory.AutoSize = true;
             this.lblRamMemory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRamMemory.Location = new System.Drawing.Point(8, 399);
+            this.lblRamMemory.Location = new System.Drawing.Point(14, 173);
             this.lblRamMemory.Name = "lblRamMemory";
             this.lblRamMemory.Size = new System.Drawing.Size(88, 15);
             this.lblRamMemory.TabIndex = 26;
@@ -244,7 +172,7 @@ namespace TCC_3_M
             // textBox7
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(287, 303);
+            this.textBox7.Location = new System.Drawing.Point(293, 77);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(264, 20);
@@ -254,7 +182,7 @@ namespace TCC_3_M
             // 
             this.lblDisc.AutoSize = true;
             this.lblDisc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisc.Location = new System.Drawing.Point(289, 285);
+            this.lblDisc.Location = new System.Drawing.Point(295, 59);
             this.lblDisc.Name = "lblDisc";
             this.lblDisc.Size = new System.Drawing.Size(42, 15);
             this.lblDisc.TabIndex = 28;
@@ -263,7 +191,7 @@ namespace TCC_3_M
             // textBox8
             // 
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(286, 340);
+            this.textBox8.Location = new System.Drawing.Point(292, 114);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(265, 20);
@@ -273,7 +201,7 @@ namespace TCC_3_M
             // 
             this.lblVideoCard.AutoSize = true;
             this.lblVideoCard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVideoCard.Location = new System.Drawing.Point(288, 322);
+            this.lblVideoCard.Location = new System.Drawing.Point(294, 96);
             this.lblVideoCard.Name = "lblVideoCard";
             this.lblVideoCard.Size = new System.Drawing.Size(89, 15);
             this.lblVideoCard.TabIndex = 30;
@@ -282,7 +210,7 @@ namespace TCC_3_M
             // textBox9
             // 
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(286, 381);
+            this.textBox9.Location = new System.Drawing.Point(292, 155);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(266, 20);
@@ -292,7 +220,7 @@ namespace TCC_3_M
             // 
             this.lblNetworkCard.AutoSize = true;
             this.lblNetworkCard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNetworkCard.Location = new System.Drawing.Point(288, 363);
+            this.lblNetworkCard.Location = new System.Drawing.Point(294, 137);
             this.lblNetworkCard.Name = "lblNetworkCard";
             this.lblNetworkCard.Size = new System.Drawing.Size(86, 15);
             this.lblNetworkCard.TabIndex = 32;
@@ -301,7 +229,7 @@ namespace TCC_3_M
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(287, 418);
+            this.textBox4.Location = new System.Drawing.Point(293, 192);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 20);
@@ -311,7 +239,7 @@ namespace TCC_3_M
             // 
             this.lblLatitude.AutoSize = true;
             this.lblLatitude.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLatitude.Location = new System.Drawing.Point(283, 400);
+            this.lblLatitude.Location = new System.Drawing.Point(289, 174);
             this.lblLatitude.Name = "lblLatitude";
             this.lblLatitude.Size = new System.Drawing.Size(56, 15);
             this.lblLatitude.TabIndex = 34;
@@ -320,7 +248,7 @@ namespace TCC_3_M
             // txtTag
             // 
             this.txtTag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTag.Location = new System.Drawing.Point(414, 418);
+            this.txtTag.Location = new System.Drawing.Point(420, 192);
             this.txtTag.Multiline = true;
             this.txtTag.Name = "txtTag";
             this.txtTag.Size = new System.Drawing.Size(121, 20);
@@ -330,7 +258,7 @@ namespace TCC_3_M
             // 
             this.lblTag.AutoSize = true;
             this.lblTag.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTag.Location = new System.Drawing.Point(411, 402);
+            this.lblTag.Location = new System.Drawing.Point(417, 176);
             this.lblTag.Name = "lblTag";
             this.lblTag.Size = new System.Drawing.Size(31, 15);
             this.lblTag.TabIndex = 36;
@@ -339,7 +267,7 @@ namespace TCC_3_M
             // txtGuarantee
             // 
             this.txtGuarantee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGuarantee.Location = new System.Drawing.Point(568, 303);
+            this.txtGuarantee.Location = new System.Drawing.Point(574, 77);
             this.txtGuarantee.Multiline = true;
             this.txtGuarantee.Name = "txtGuarantee";
             this.txtGuarantee.Size = new System.Drawing.Size(121, 20);
@@ -349,7 +277,7 @@ namespace TCC_3_M
             // 
             this.lblGuarantee.AutoSize = true;
             this.lblGuarantee.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuarantee.Location = new System.Drawing.Point(565, 289);
+            this.lblGuarantee.Location = new System.Drawing.Point(571, 63);
             this.lblGuarantee.Name = "lblGuarantee";
             this.lblGuarantee.Size = new System.Drawing.Size(57, 15);
             this.lblGuarantee.TabIndex = 38;
@@ -366,7 +294,7 @@ namespace TCC_3_M
             "Em conserto",
             "Indisponível",
             "Para descarte"});
-            this.cmbStatus.Location = new System.Drawing.Point(568, 340);
+            this.cmbStatus.Location = new System.Drawing.Point(574, 114);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbStatus.TabIndex = 41;
@@ -375,17 +303,30 @@ namespace TCC_3_M
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(565, 322);
+            this.lblStatus.Location = new System.Drawing.Point(571, 96);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(45, 15);
             this.lblStatus.TabIndex = 40;
             this.lblStatus.Text = "Status :";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnFechar.Location = new System.Drawing.Point(705, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(45, 46);
+            this.btnFechar.TabIndex = 42;
+            this.btnFechar.Text = "X";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            // 
             // frm_Editar_Dispositivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(650, 500);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtGuarantee);
@@ -409,15 +350,13 @@ namespace TCC_3_M
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Editar_Dispositivos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Dispositivos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,13 +367,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.TextBox textBox3;
@@ -457,5 +389,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblGuarantee;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
