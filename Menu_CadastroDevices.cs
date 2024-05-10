@@ -43,8 +43,12 @@ namespace TCC_3_M
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            frm_Editar_Dispositivos formEditarNotebooks = new frm_Editar_Dispositivos();
-            formEditarNotebooks.Show();
+            
+        }
+
+        private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
+        {
+            pnl_NvoRgistro_CadastroDisp.Visible = false;
         }
     }
 }
