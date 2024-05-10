@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maquinas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maquinas.Designer.cs">
+      <DependentUpon>Maquinas.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_CadastroUsuarios.cs">
       <SubType>Form</SubType>
@@ -122,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maquinas.resx">
+      <DependentUpon>Maquinas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -172,6 +182,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editarBranco.32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revisao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maquina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quantidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoTcc.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perifericos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
