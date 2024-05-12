@@ -21,6 +21,7 @@ namespace TCC_3_M
         {
             frm_Inicio formInicio = new frm_Inicio();
             formInicio.Show();
+            this.Hide();
         }
     }
 }

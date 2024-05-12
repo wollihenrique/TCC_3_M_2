@@ -23,5 +23,10 @@ namespace TCC_3_M
             formInicio.Show();
             this.Hide();
         }
+
+        private void btnVoltar_pnlCadastroDevice_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
