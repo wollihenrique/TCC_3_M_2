@@ -33,12 +33,13 @@ namespace TCC_3_M
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnl_NvoRgistro_CadastroDisp = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSalvar_pnlCadstroDevice = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
             this.txtGuarantee = new System.Windows.Forms.TextBox();
             this.txtTag = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -61,10 +62,7 @@ namespace TCC_3_M
             this.lblProcessor = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblBrand = new System.Windows.Forms.Label();
-            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btn_Novo_CastroDisp = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,10 +77,15 @@ namespace TCC_3_M
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btn_Excluir_Disp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Pesquisar_CadastroDispo = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btn_Novo_CastroDisp = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.tabControlPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnl_NvoRgistro_CadastroDisp.SuspendLayout();
@@ -110,8 +113,9 @@ namespace TCC_3_M
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.pnl_NvoRgistro_CadastroDisp);
             this.tabPage1.Controls.Add(this.btn_Voltar_CadastroDisp);
+            this.tabPage1.Controls.Add(this.pnl_NvoRgistro_CadastroDisp);
+            this.tabPage1.Controls.Add(this.btn_Pesquisar_CadastroDispo);
             this.tabPage1.Controls.Add(this.pnl_Menu);
             this.tabPage1.Controls.Add(this.pnlFilter);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,11 +156,23 @@ namespace TCC_3_M
             this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblProcessor);
             this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblModel);
             this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblBrand);
-            this.pnl_NvoRgistro_CadastroDisp.Location = new System.Drawing.Point(7, 67);
+            this.pnl_NvoRgistro_CadastroDisp.Location = new System.Drawing.Point(3, 63);
             this.pnl_NvoRgistro_CadastroDisp.Name = "pnl_NvoRgistro_CadastroDisp";
-            this.pnl_NvoRgistro_CadastroDisp.Size = new System.Drawing.Size(895, 319);
+            this.pnl_NvoRgistro_CadastroDisp.Size = new System.Drawing.Size(899, 323);
             this.pnl_NvoRgistro_CadastroDisp.TabIndex = 8;
             this.pnl_NvoRgistro_CadastroDisp.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(720, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 30);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnSalvar_pnlCadstroDevice
             // 
@@ -191,13 +207,24 @@ namespace TCC_3_M
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.btnVoltar_pnlCadastroDevice);
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.btnVoltar_pnlCadastroDevice);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(895, 44);
+            this.panel2.Size = new System.Drawing.Size(899, 44);
             this.panel2.TabIndex = 45;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(48, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(308, 30);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "ADICIONAR NOVO REGISTRO";
             // 
             // btnVoltar_pnlCadastroDevice
             // 
@@ -205,7 +232,7 @@ namespace TCC_3_M
             this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
             this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
             this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(47, 44);
@@ -213,17 +240,6 @@ namespace TCC_3_M
             this.btnVoltar_pnlCadastroDevice.Text = "<";
             this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
             this.btnVoltar_pnlCadastroDevice.Click += new System.EventHandler(this.btnVoltar_pnlCadastroDevice_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(44, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(308, 30);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "ADICIONAR NOVO REGISTRO";
             // 
             // txtGuarantee
             // 
@@ -430,67 +446,19 @@ namespace TCC_3_M
             this.lblBrand.TabIndex = 23;
             this.lblBrand.Text = "Marca :";
             // 
-            // btn_Voltar_CadastroDisp
-            // 
-            this.btn_Voltar_CadastroDisp.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_CadastroDisp.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(827, 392);
-            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
-            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(75, 30);
-            this.btn_Voltar_CadastroDisp.TabIndex = 4;
-            this.btn_Voltar_CadastroDisp.Text = "Voltar";
-            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = false;
-            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_Usuario_Click);
-            // 
             // pnl_Menu
             // 
             this.pnl_Menu.BackColor = System.Drawing.Color.SteelBlue;
             this.pnl_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Menu.Controls.Add(this.button3);
+            this.pnl_Menu.Controls.Add(this.button2);
             this.pnl_Menu.Controls.Add(this.btnEdit);
             this.pnl_Menu.Controls.Add(this.btn_Novo_CastroDisp);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Menu.Location = new System.Drawing.Point(3, 3);
             this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(902, 61);
+            this.pnl_Menu.Size = new System.Drawing.Size(902, 60);
             this.pnl_Menu.TabIndex = 0;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Image = global::TCC_3_M.Properties.Resources.edit24x;
-            this.btnEdit.Location = new System.Drawing.Point(75, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 59);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Editar";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btn_Novo_CastroDisp
-            // 
-            this.btn_Novo_CastroDisp.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Novo_CastroDisp.FlatAppearance.BorderSize = 0;
-            this.btn_Novo_CastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Novo_CastroDisp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Novo_CastroDisp.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Novo_CastroDisp.Image = ((System.Drawing.Image)(resources.GetObject("btn_Novo_CastroDisp.Image")));
-            this.btn_Novo_CastroDisp.Location = new System.Drawing.Point(0, 0);
-            this.btn_Novo_CastroDisp.Name = "btn_Novo_CastroDisp";
-            this.btn_Novo_CastroDisp.Size = new System.Drawing.Size(75, 59);
-            this.btn_Novo_CastroDisp.TabIndex = 0;
-            this.btn_Novo_CastroDisp.Text = "Novo";
-            this.btn_Novo_CastroDisp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Novo_CastroDisp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Novo_CastroDisp.UseVisualStyleBackColor = true;
-            this.btn_Novo_CastroDisp.Click += new System.EventHandler(this.btn_Novo_CastroDisp_Click);
             // 
             // pnlFilter
             // 
@@ -661,17 +629,6 @@ namespace TCC_3_M
             this.panel1.Size = new System.Drawing.Size(902, 41);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -696,17 +653,115 @@ namespace TCC_3_M
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Pesquisar_CadastroDispo
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(720, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 30);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Pesquisar_CadastroDispo.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Pesquisar_CadastroDispo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Pesquisar_CadastroDispo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pesquisar_CadastroDispo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Pesquisar_CadastroDispo.Image = global::TCC_3_M.Properties.Resources.big_search_len;
+            this.btn_Pesquisar_CadastroDispo.Location = new System.Drawing.Point(786, 392);
+            this.btn_Pesquisar_CadastroDispo.Name = "btn_Pesquisar_CadastroDispo";
+            this.btn_Pesquisar_CadastroDispo.Size = new System.Drawing.Size(108, 30);
+            this.btn_Pesquisar_CadastroDispo.TabIndex = 4;
+            this.btn_Pesquisar_CadastroDispo.Text = "Pesquisar";
+            this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Image = global::TCC_3_M.Properties.Resources.atualizar;
+            this.button3.Location = new System.Drawing.Point(225, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 58);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Atualizar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(150, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 58);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Excluir";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Image = global::TCC_3_M.Properties.Resources.edit24x;
+            this.btnEdit.Location = new System.Drawing.Point(75, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 58);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Novo_CastroDisp
+            // 
+            this.btn_Novo_CastroDisp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_Novo_CastroDisp.FlatAppearance.BorderSize = 0;
+            this.btn_Novo_CastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Novo_CastroDisp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Novo_CastroDisp.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Novo_CastroDisp.Image = ((System.Drawing.Image)(resources.GetObject("btn_Novo_CastroDisp.Image")));
+            this.btn_Novo_CastroDisp.Location = new System.Drawing.Point(0, 0);
+            this.btn_Novo_CastroDisp.Name = "btn_Novo_CastroDisp";
+            this.btn_Novo_CastroDisp.Size = new System.Drawing.Size(75, 58);
+            this.btn_Novo_CastroDisp.TabIndex = 0;
+            this.btn_Novo_CastroDisp.Text = "Novo";
+            this.btn_Novo_CastroDisp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Novo_CastroDisp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Novo_CastroDisp.UseVisualStyleBackColor = true;
+            this.btn_Novo_CastroDisp.Click += new System.EventHandler(this.btn_Novo_CastroDisp_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_Voltar_CadastroDisp
+            // 
+            this.btn_Voltar_CadastroDisp.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_CadastroDisp.ForeColor = System.Drawing.Color.White;
+            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(700, 391);
+            this.btn_Voltar_CadastroDisp.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
+            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(71, 33);
+            this.btn_Voltar_CadastroDisp.TabIndex = 9;
+            this.btn_Voltar_CadastroDisp.Text = "Voltar";
+            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = false;
+            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
             // 
             // frm_CadastroDisp
             // 
@@ -759,7 +814,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Excluir_Disp;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button btn_Voltar_CadastroDisp;
+        private System.Windows.Forms.Button btn_Pesquisar_CadastroDispo;
         private System.Windows.Forms.Button btn_Voltar_Hist_Disp;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
@@ -794,5 +849,8 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btnVoltar_pnlCadastroDevice;
         private System.Windows.Forms.Button btnSalvar_pnlCadstroDevice;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Voltar_CadastroDisp;
     }
 }

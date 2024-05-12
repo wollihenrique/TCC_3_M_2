@@ -17,7 +17,7 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btn_Voltar_Usuario_Click(object sender, EventArgs e)
+        private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
         {
             frm_Inicio formInicio = new frm_Inicio();
             formInicio.Show();

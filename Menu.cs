@@ -37,5 +37,19 @@ namespace TCC_3_M
             formUsuario.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_Login formLogin = new frm_Login();
+            formLogin.Show();
+            this.Hide();
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            frmEstoque formEstoque = new frmEstoque();
+            formEstoque.Show();
+            this.Hide();
+        }
     }
 }

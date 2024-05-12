@@ -32,7 +32,6 @@ namespace TCC_3_M
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ExcluirDispositivo));
             this.txtTag = new System.Windows.Forms.TextBox();
             this.btn_Excluir_ExcluirDisp = new System.Windows.Forms.Button();
-            this.btn_Voltar_ExcluirDisp = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbDeviceType = new System.Windows.Forms.ComboBox();
             this.lblDeviceType = new System.Windows.Forms.Label();
@@ -83,19 +82,6 @@ namespace TCC_3_M
             this.btn_Excluir_ExcluirDisp.Text = "Excluir";
             this.btn_Excluir_ExcluirDisp.UseVisualStyleBackColor = true;
             this.btn_Excluir_ExcluirDisp.Click += new System.EventHandler(this.btn_Excluir_ExcluirDisp_Click);
-            // 
-            // btn_Voltar_ExcluirDisp
-            // 
-            this.btn_Voltar_ExcluirDisp.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Voltar_ExcluirDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Voltar_ExcluirDisp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_ExcluirDisp.Location = new System.Drawing.Point(442, 415);
-            this.btn_Voltar_ExcluirDisp.Name = "btn_Voltar_ExcluirDisp";
-            this.btn_Voltar_ExcluirDisp.Size = new System.Drawing.Size(62, 23);
-            this.btn_Voltar_ExcluirDisp.TabIndex = 57;
-            this.btn_Voltar_ExcluirDisp.Text = "Voltar";
-            this.btn_Voltar_ExcluirDisp.UseVisualStyleBackColor = false;
-            this.btn_Voltar_ExcluirDisp.Click += new System.EventHandler(this.btn_Voltar_ExcluirDisp_Click);
             // 
             // cmbStatus
             // 
@@ -347,7 +333,6 @@ namespace TCC_3_M
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtTag);
             this.Controls.Add(this.btn_Excluir_ExcluirDisp);
-            this.Controls.Add(this.btn_Voltar_ExcluirDisp);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbDeviceType);
             this.Controls.Add(this.lblDeviceType);
@@ -375,7 +360,6 @@ namespace TCC_3_M
 
         #endregion
         private System.Windows.Forms.TextBox txtTag;
-        private System.Windows.Forms.Button btn_Voltar_ExcluirDisp;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbDeviceType;
         private System.Windows.Forms.Label lblDeviceType;

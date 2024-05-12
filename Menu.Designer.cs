@@ -30,79 +30,217 @@ namespace TCC_3_M
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Inicio));
-            this.btnEstoque = new System.Windows.Forms.Button();
-            this.btnCadastrarDispositivo = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnHistoricos = new System.Windows.Forms.Button();
+            this.btnPerifericos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
+            this.btnComputadores = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
+            this.pnlMenus = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMenus.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEstoque
+            // btnUsuario
             // 
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
-            this.btnEstoque.Location = new System.Drawing.Point(239, 110);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(136, 104);
-            this.btnEstoque.TabIndex = 0;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.Location = new System.Drawing.Point(690, 0);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(110, 70);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "Usuário";
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUsuario.UseVisualStyleBackColor = true;
             // 
-            // btnCadastrarDispositivo
+            // btnHistoricos
             // 
-            this.btnCadastrarDispositivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarDispositivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarDispositivo.Image")));
-            this.btnCadastrarDispositivo.Location = new System.Drawing.Point(417, 110);
-            this.btnCadastrarDispositivo.Name = "btnCadastrarDispositivo";
-            this.btnCadastrarDispositivo.Size = new System.Drawing.Size(136, 104);
-            this.btnCadastrarDispositivo.TabIndex = 1;
-            this.btnCadastrarDispositivo.Text = "Cadastrar Periférico";
-            this.btnCadastrarDispositivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCadastrarDispositivo.UseVisualStyleBackColor = true;
-            this.btnCadastrarDispositivo.Click += new System.EventHandler(this.btnCadastrarDispositivo_Click);
+            this.btnHistoricos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnHistoricos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoricos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHistoricos.Image = global::TCC_3_M.Properties.Resources.historia;
+            this.btnHistoricos.Location = new System.Drawing.Point(174, 234);
+            this.btnHistoricos.Name = "btnHistoricos";
+            this.btnHistoricos.Size = new System.Drawing.Size(136, 104);
+            this.btnHistoricos.TabIndex = 5;
+            this.btnHistoricos.Text = "Históricos";
+            this.btnHistoricos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHistoricos.UseVisualStyleBackColor = false;
+            // 
+            // btnPerifericos
+            // 
+            this.btnPerifericos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerifericos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerifericos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPerifericos.Image = global::TCC_3_M.Properties.Resources.rato;
+            this.btnPerifericos.Location = new System.Drawing.Point(511, 108);
+            this.btnPerifericos.Name = "btnPerifericos";
+            this.btnPerifericos.Size = new System.Drawing.Size(136, 104);
+            this.btnPerifericos.TabIndex = 4;
+            this.btnPerifericos.Text = "Periféricos";
+            this.btnPerifericos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerifericos.UseVisualStyleBackColor = false;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.Location = new System.Drawing.Point(511, 234);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(136, 104);
+            this.btnClientes.TabIndex = 3;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(417, 236);
+            this.btnExcluir.Location = new System.Drawing.Point(343, 234);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(136, 104);
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "Deletar";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnCadastrarUsuario
+            // btnComputadores
             // 
-            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarUsuario.Image")));
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(239, 236);
-            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
-            this.btnCadastrarUsuario.Size = new System.Drawing.Size(136, 104);
-            this.btnCadastrarUsuario.TabIndex = 3;
-            this.btnCadastrarUsuario.Text = "Cadastrar Usuário";
-            this.btnCadastrarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
-            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
+            this.btnComputadores.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnComputadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComputadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComputadores.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnComputadores.Image = global::TCC_3_M.Properties.Resources.computador;
+            this.btnComputadores.Location = new System.Drawing.Point(343, 108);
+            this.btnComputadores.Name = "btnComputadores";
+            this.btnComputadores.Size = new System.Drawing.Size(136, 104);
+            this.btnComputadores.TabIndex = 1;
+            this.btnComputadores.Text = "Hardware";
+            this.btnComputadores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnComputadores.UseVisualStyleBackColor = false;
+            this.btnComputadores.Click += new System.EventHandler(this.btnCadastrarDispositivo_Click);
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
+            this.btnEstoque.Location = new System.Drawing.Point(174, 108);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(136, 104);
+            this.btnEstoque.TabIndex = 0;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
+            // pnlMenus
+            // 
+            this.pnlMenus.Controls.Add(this.button3);
+            this.pnlMenus.Controls.Add(this.button2);
+            this.pnlMenus.Controls.Add(this.button1);
+            this.pnlMenus.Controls.Add(this.btnUsuario);
+            this.pnlMenus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMenus.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenus.Name = "pnlMenus";
+            this.pnlMenus.Size = new System.Drawing.Size(800, 70);
+            this.pnlMenus.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(360, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(110, 70);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Créditos";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(470, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 70);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Resultados";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(580, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 70);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Sair";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.btnComputadores);
+            this.panel1.Controls.Add(this.btnClientes);
+            this.panel1.Controls.Add(this.btnPerifericos);
+            this.panel1.Controls.Add(this.btnHistoricos);
+            this.panel1.Controls.Add(this.btnExcluir);
+            this.panel1.Controls.Add(this.btnEstoque);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.TabIndex = 8;
             // 
             // frm_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCadastrarUsuario);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnCadastrarDispositivo);
-            this.Controls.Add(this.btnEstoque);
+            this.Controls.Add(this.pnlMenus);
+            this.Controls.Add(this.panel1);
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.pnlMenus.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -110,8 +248,16 @@ namespace TCC_3_M
         #endregion
 
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Button btnCadastrarDispositivo;
+        private System.Windows.Forms.Button btnComputadores;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnCadastrarUsuario;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnPerifericos;
+        private System.Windows.Forms.Button btnHistoricos;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Panel pnlMenus;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

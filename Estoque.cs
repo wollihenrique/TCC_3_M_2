@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_RegistroDisp : Form
+    public partial class frmEstoque : Form
     {
-        public frm_RegistroDisp()
+        public frmEstoque()
         {
             InitializeComponent();
         }
 
-        private void btn_Cancelar_RegistroDisp_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
         {
-
+            frm_Inicio formInicio = new frm_Inicio();
+            formInicio.Show();
         }
     }
 }
