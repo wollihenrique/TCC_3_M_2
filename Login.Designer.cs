@@ -102,10 +102,10 @@
             // txtNome_CadstroAdmin
             // 
             this.txtNome_CadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome_CadstroAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(335, 220);
-            this.txtNome_CadstroAdmin.Multiline = true;
             this.txtNome_CadstroAdmin.Name = "txtNome_CadstroAdmin";
-            this.txtNome_CadstroAdmin.Size = new System.Drawing.Size(290, 30);
+            this.txtNome_CadstroAdmin.Size = new System.Drawing.Size(290, 31);
             this.txtNome_CadstroAdmin.TabIndex = 13;
             // 
             // label8
@@ -121,11 +121,12 @@
             // txtSenha_CadastroAdmin
             // 
             this.txtSenha_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenha_CadastroAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha_CadastroAdmin.Location = new System.Drawing.Point(335, 284);
-            this.txtSenha_CadastroAdmin.Multiline = true;
             this.txtSenha_CadastroAdmin.Name = "txtSenha_CadastroAdmin";
-            this.txtSenha_CadastroAdmin.Size = new System.Drawing.Size(290, 30);
+            this.txtSenha_CadastroAdmin.Size = new System.Drawing.Size(290, 31);
             this.txtSenha_CadastroAdmin.TabIndex = 15;
+            this.txtSenha_CadastroAdmin.UseSystemPasswordChar = true;
             this.txtSenha_CadastroAdmin.TextChanged += new System.EventHandler(this.txtSenha_CadastroAdmin_TextChanged);
             // 
             // btnFechar
@@ -193,6 +194,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -51,6 +51,8 @@ namespace TCC_3_M
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.txtCPF_CadastroAdmin = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -112,6 +114,8 @@ namespace TCC_3_M
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtCPF_CadastroAdmin);
+            this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtNumero_CadastroAdmin);
             this.panel2.Controls.Add(this.txtSenha_CadastroAdmin);
             this.panel2.Controls.Add(this.txtEmail_CadastroAdmin);
@@ -152,6 +156,7 @@ namespace TCC_3_M
             this.txtSenha_CadastroAdmin.Name = "txtSenha_CadastroAdmin";
             this.txtSenha_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
             this.txtSenha_CadastroAdmin.TabIndex = 14;
+            this.txtSenha_CadastroAdmin.UseSystemPasswordChar = true;
             this.txtSenha_CadastroAdmin.TextChanged += new System.EventHandler(this.txtSenha_CadastroAdmin_TextChanged);
             // 
             // txtEmail_CadastroAdmin
@@ -166,7 +171,7 @@ namespace TCC_3_M
             // txtNome_CadstroAdmin
             // 
             this.txtNome_CadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(33, 146);
+            this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(32, 107);
             this.txtNome_CadstroAdmin.Multiline = true;
             this.txtNome_CadstroAdmin.Name = "txtNome_CadstroAdmin";
             this.txtNome_CadstroAdmin.Size = new System.Drawing.Size(287, 22);
@@ -206,7 +211,7 @@ namespace TCC_3_M
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 126);
+            this.label7.Location = new System.Drawing.Point(30, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 17);
             this.label7.TabIndex = 8;
@@ -216,9 +221,9 @@ namespace TCC_3_M
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(228, 317);
+            this.linkLabel2.Location = new System.Drawing.Point(228, 309);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(91, 16);
+            this.linkLabel2.Size = new System.Drawing.Size(90, 16);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Tela de Login";
@@ -228,9 +233,9 @@ namespace TCC_3_M
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 317);
+            this.label6.Location = new System.Drawing.Point(29, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 16);
+            this.label6.Size = new System.Drawing.Size(199, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Já possui uma conta? Vá para a";
             // 
@@ -239,7 +244,7 @@ namespace TCC_3_M
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(27, 78);
+            this.label5.Location = new System.Drawing.Point(28, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 30);
             this.label5.TabIndex = 5;
@@ -262,7 +267,7 @@ namespace TCC_3_M
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(30, 365);
+            this.checkBox1.Location = new System.Drawing.Point(34, 354);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 3;
@@ -272,7 +277,7 @@ namespace TCC_3_M
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(164, 362);
+            this.linkLabel1.Location = new System.Drawing.Point(192, 353);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(221, 15);
             this.linkLabel1.TabIndex = 2;
@@ -284,11 +289,11 @@ namespace TCC_3_M
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 362);
+            this.label4.Location = new System.Drawing.Point(46, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 15);
+            this.label4.Size = new System.Drawing.Size(149, 15);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Aceito e concordo os ";
+            this.label4.Text = "Aceito e concordo com os ";
             // 
             // btnFechar
             // 
@@ -304,6 +309,25 @@ namespace TCC_3_M
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // txtCPF_CadastroAdmin
+            // 
+            this.txtCPF_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCPF_CadastroAdmin.Location = new System.Drawing.Point(32, 152);
+            this.txtCPF_CadastroAdmin.Multiline = true;
+            this.txtCPF_CadastroAdmin.Name = "txtCPF_CadastroAdmin";
+            this.txtCPF_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
+            this.txtCPF_CadastroAdmin.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 17);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "CPF:";
+            // 
             // frm_CadastroAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +336,7 @@ namespace TCC_3_M
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "frm_CadastroAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TesteLogin";
@@ -348,5 +373,7 @@ namespace TCC_3_M
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCPF_CadastroAdmin;
+        private System.Windows.Forms.Label label11;
     }
 }
