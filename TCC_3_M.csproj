@@ -198,5 +198,17 @@
   <ItemGroup>
     <None Include="Resources\Perifericos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabela-de-edicao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-de-deletar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-ao-portatil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salve-.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
