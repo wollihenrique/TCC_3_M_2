@@ -31,12 +31,8 @@ namespace TCC_3_M
 
         private void btn_Novo_CastroDisp_Click(object sender, EventArgs e)
         {
-            pnl_NvoRgistro_CadastroDisp.Visible = true;
-        }
-
-        private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
-        {
-            pnl_NvoRgistro_CadastroDisp.Visible = false;
+            frm_RegistroDisp formRegistroHardware = new frm_RegistroDisp();
+            formRegistroHardware.Show();
         }
 
         private void btn_Voltar_CadastroDisp_Click(object sender, EventArgs e)
@@ -44,6 +40,11 @@ namespace TCC_3_M
             frm_Inicio frm_CadastroDisp = new frm_Inicio();
             frm_CadastroDisp.Show();
             this.Hide();
+        }
+
+        private void btn_Pesquisar_CadastroDispo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

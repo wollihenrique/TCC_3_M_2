@@ -42,6 +42,7 @@ namespace TCC_3_M
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnlMenus.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -157,6 +158,7 @@ namespace TCC_3_M
             // 
             // pnlMenus
             // 
+            this.pnlMenus.Controls.Add(this.button4);
             this.pnlMenus.Controls.Add(this.button3);
             this.pnlMenus.Controls.Add(this.button2);
             this.pnlMenus.Controls.Add(this.button1);
@@ -228,6 +230,21 @@ namespace TCC_3_M
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 8;
             // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(250, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(110, 70);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Ajuda";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // frm_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +276,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
     }
 }

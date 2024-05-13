@@ -19,14 +19,19 @@ namespace TCC_3_M
 
         private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
         {
-            frm_Inicio formInicio = new frm_Inicio();
-            formInicio.Show();
-            this.Hide();
+           
         }
 
         private void btnVoltar_pnlCadastroDevice_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_Inicio formInicio = new frm_Inicio();
+            formInicio.Show();
+            this.Hide();
         }
     }
 }

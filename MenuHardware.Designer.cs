@@ -32,36 +32,7 @@ namespace TCC_3_M
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDisp));
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pnl_NvoRgistro_CadastroDisp = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSalvar_pnlCadstroDevice = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
-            this.txtGuarantee = new System.Windows.Forms.TextBox();
-            this.txtTag = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblGuarantee = new System.Windows.Forms.Label();
-            this.lblNetworkCard = new System.Windows.Forms.Label();
-            this.lblTag = new System.Windows.Forms.Label();
-            this.lblLatitude = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.lblDisc = new System.Windows.Forms.Label();
-            this.lblVideoCard = new System.Windows.Forms.Label();
-            this.lblRamMemory = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblProcessor = new System.Windows.Forms.Label();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblBrand = new System.Windows.Forms.Label();
+            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -85,17 +56,16 @@ namespace TCC_3_M
             this.btnEdit = new System.Windows.Forms.Button();
             this.btn_Novo_CastroDisp = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControlPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.pnl_NvoRgistro_CadastroDisp.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlPrincipal
@@ -113,8 +83,8 @@ namespace TCC_3_M
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.btn_Voltar_CadastroDisp);
-            this.tabPage1.Controls.Add(this.pnl_NvoRgistro_CadastroDisp);
             this.tabPage1.Controls.Add(this.btn_Pesquisar_CadastroDispo);
             this.tabPage1.Controls.Add(this.pnl_Menu);
             this.tabPage1.Controls.Add(this.pnlFilter);
@@ -126,325 +96,20 @@ namespace TCC_3_M
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro de dispositivos";
             // 
-            // pnl_NvoRgistro_CadastroDisp
+            // btn_Voltar_CadastroDisp
             // 
-            this.pnl_NvoRgistro_CadastroDisp.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.button1);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.btnSalvar_pnlCadstroDevice);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox10);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.label5);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.panel2);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.txtGuarantee);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.txtTag);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox9);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox4);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.comboBox1);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.label3);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblGuarantee);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblNetworkCard);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblTag);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblLatitude);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox8);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox7);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox6);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblDisc);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblVideoCard);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblRamMemory);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox5);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox3);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.textBox2);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblProcessor);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblModel);
-            this.pnl_NvoRgistro_CadastroDisp.Controls.Add(this.lblBrand);
-            this.pnl_NvoRgistro_CadastroDisp.Location = new System.Drawing.Point(3, 63);
-            this.pnl_NvoRgistro_CadastroDisp.Name = "pnl_NvoRgistro_CadastroDisp";
-            this.pnl_NvoRgistro_CadastroDisp.Size = new System.Drawing.Size(899, 323);
-            this.pnl_NvoRgistro_CadastroDisp.TabIndex = 8;
-            this.pnl_NvoRgistro_CadastroDisp.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(720, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 30);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvar_pnlCadstroDevice
-            // 
-            this.btnSalvar_pnlCadstroDevice.BackColor = System.Drawing.Color.LightGreen;
-            this.btnSalvar_pnlCadstroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvar_pnlCadstroDevice.Location = new System.Drawing.Point(805, 276);
-            this.btnSalvar_pnlCadstroDevice.Name = "btnSalvar_pnlCadstroDevice";
-            this.btnSalvar_pnlCadstroDevice.Size = new System.Drawing.Size(70, 30);
-            this.btnSalvar_pnlCadstroDevice.TabIndex = 48;
-            this.btnSalvar_pnlCadstroDevice.Text = "Salvar";
-            this.btnSalvar_pnlCadstroDevice.UseVisualStyleBackColor = false;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(11, 207);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(264, 99);
-            this.textBox10.TabIndex = 47;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 17);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Observações:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.btnVoltar_pnlCadastroDevice);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 44);
-            this.panel2.TabIndex = 45;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(48, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(308, 30);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "ADICIONAR NOVO REGISTRO";
-            // 
-            // btnVoltar_pnlCadastroDevice
-            // 
-            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
-            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
-            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(47, 44);
-            this.btnVoltar_pnlCadastroDevice.TabIndex = 49;
-            this.btnVoltar_pnlCadastroDevice.Text = "<";
-            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
-            this.btnVoltar_pnlCadastroDevice.Click += new System.EventHandler(this.btnVoltar_pnlCadastroDevice_Click);
-            // 
-            // txtGuarantee
-            // 
-            this.txtGuarantee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGuarantee.Location = new System.Drawing.Point(591, 117);
-            this.txtGuarantee.Name = "txtGuarantee";
-            this.txtGuarantee.Size = new System.Drawing.Size(141, 25);
-            this.txtGuarantee.TabIndex = 44;
-            // 
-            // txtTag
-            // 
-            this.txtTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTag.Location = new System.Drawing.Point(754, 165);
-            this.txtTag.Name = "txtTag";
-            this.txtTag.Size = new System.Drawing.Size(121, 25);
-            this.txtTag.TabIndex = 43;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(304, 159);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(266, 25);
-            this.textBox9.TabIndex = 42;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(591, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 25);
-            this.textBox4.TabIndex = 41;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Em uso",
-            "Em estoque",
-            "Em manutenção",
-            "Em conserto",
-            "Indisponível",
-            "Para descarte"});
-            this.comboBox1.Location = new System.Drawing.Point(754, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
-            this.comboBox1.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(751, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Status :";
-            // 
-            // lblGuarantee
-            // 
-            this.lblGuarantee.AutoSize = true;
-            this.lblGuarantee.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuarantee.Location = new System.Drawing.Point(588, 98);
-            this.lblGuarantee.Name = "lblGuarantee";
-            this.lblGuarantee.Size = new System.Drawing.Size(74, 17);
-            this.lblGuarantee.TabIndex = 38;
-            this.lblGuarantee.Text = "Garantia :";
-            // 
-            // lblNetworkCard
-            // 
-            this.lblNetworkCard.AutoSize = true;
-            this.lblNetworkCard.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNetworkCard.Location = new System.Drawing.Point(301, 141);
-            this.lblNetworkCard.Name = "lblNetworkCard";
-            this.lblNetworkCard.Size = new System.Drawing.Size(111, 17);
-            this.lblNetworkCard.TabIndex = 37;
-            this.lblNetworkCard.Text = "Placa de Rede :";
-            // 
-            // lblTag
-            // 
-            this.lblTag.AutoSize = true;
-            this.lblTag.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTag.Location = new System.Drawing.Point(751, 145);
-            this.lblTag.Name = "lblTag";
-            this.lblTag.Size = new System.Drawing.Size(39, 17);
-            this.lblTag.TabIndex = 36;
-            this.lblTag.Text = "Tag :";
-            // 
-            // lblLatitude
-            // 
-            this.lblLatitude.AutoSize = true;
-            this.lblLatitude.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLatitude.Location = new System.Drawing.Point(588, 145);
-            this.lblLatitude.Name = "lblLatitude";
-            this.lblLatitude.Size = new System.Drawing.Size(69, 17);
-            this.lblLatitude.TabIndex = 35;
-            this.lblLatitude.Text = "Latitude :";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(304, 113);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(265, 25);
-            this.textBox8.TabIndex = 34;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(304, 70);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(264, 25);
-            this.textBox7.TabIndex = 33;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(587, 70);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(288, 25);
-            this.textBox6.TabIndex = 32;
-            // 
-            // lblDisc
-            // 
-            this.lblDisc.AutoSize = true;
-            this.lblDisc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisc.Location = new System.Drawing.Point(301, 50);
-            this.lblDisc.Name = "lblDisc";
-            this.lblDisc.Size = new System.Drawing.Size(51, 17);
-            this.lblDisc.TabIndex = 31;
-            this.lblDisc.Text = "Disco :";
-            // 
-            // lblVideoCard
-            // 
-            this.lblVideoCard.AutoSize = true;
-            this.lblVideoCard.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVideoCard.Location = new System.Drawing.Point(301, 97);
-            this.lblVideoCard.Name = "lblVideoCard";
-            this.lblVideoCard.Size = new System.Drawing.Size(115, 17);
-            this.lblVideoCard.TabIndex = 30;
-            this.lblVideoCard.Text = "Placa de vídeo :";
-            // 
-            // lblRamMemory
-            // 
-            this.lblRamMemory.AutoSize = true;
-            this.lblRamMemory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRamMemory.Location = new System.Drawing.Point(588, 50);
-            this.lblRamMemory.Name = "lblRamMemory";
-            this.lblRamMemory.Size = new System.Drawing.Size(107, 17);
-            this.lblRamMemory.TabIndex = 29;
-            this.lblRamMemory.Text = "Memória Ram :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(11, 159);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(264, 25);
-            this.textBox5.TabIndex = 28;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(11, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 25);
-            this.textBox3.TabIndex = 27;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(11, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 25);
-            this.textBox2.TabIndex = 26;
-            // 
-            // lblProcessor
-            // 
-            this.lblProcessor.AutoSize = true;
-            this.lblProcessor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProcessor.Location = new System.Drawing.Point(8, 141);
-            this.lblProcessor.Name = "lblProcessor";
-            this.lblProcessor.Size = new System.Drawing.Size(94, 17);
-            this.lblProcessor.TabIndex = 25;
-            this.lblProcessor.Text = "Processador :";
-            // 
-            // lblModel
-            // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModel.Location = new System.Drawing.Point(8, 93);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(65, 17);
-            this.lblModel.TabIndex = 24;
-            this.lblModel.Text = "Modelo :";
-            // 
-            // lblBrand
-            // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.Location = new System.Drawing.Point(8, 50);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(57, 17);
-            this.lblBrand.TabIndex = 23;
-            this.lblBrand.Text = "Marca :";
+            this.btn_Voltar_CadastroDisp.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar_CadastroDisp.ForeColor = System.Drawing.Color.White;
+            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(700, 391);
+            this.btn_Voltar_CadastroDisp.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
+            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(71, 33);
+            this.btn_Voltar_CadastroDisp.TabIndex = 9;
+            this.btn_Voltar_CadastroDisp.Text = "Voltar";
+            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = false;
+            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
             // 
             // pnl_Menu
             // 
@@ -667,6 +332,7 @@ namespace TCC_3_M
             this.btn_Pesquisar_CadastroDispo.Text = "Pesquisar";
             this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
+            this.btn_Pesquisar_CadastroDispo.Click += new System.EventHandler(this.btn_Pesquisar_CadastroDispo_Click);
             // 
             // button3
             // 
@@ -748,20 +414,13 @@ namespace TCC_3_M
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_Voltar_CadastroDisp
+            // dataGridView1
             // 
-            this.btn_Voltar_CadastroDisp.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Voltar_CadastroDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Voltar_CadastroDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voltar_CadastroDisp.ForeColor = System.Drawing.Color.White;
-            this.btn_Voltar_CadastroDisp.Location = new System.Drawing.Point(700, 391);
-            this.btn_Voltar_CadastroDisp.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Voltar_CadastroDisp.Name = "btn_Voltar_CadastroDisp";
-            this.btn_Voltar_CadastroDisp.Size = new System.Drawing.Size(71, 33);
-            this.btn_Voltar_CadastroDisp.TabIndex = 9;
-            this.btn_Voltar_CadastroDisp.Text = "Voltar";
-            this.btn_Voltar_CadastroDisp.UseVisualStyleBackColor = false;
-            this.btn_Voltar_CadastroDisp.Click += new System.EventHandler(this.btn_Voltar_CadastroDisp_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 128);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(887, 258);
+            this.dataGridView1.TabIndex = 10;
             // 
             // frm_CadastroDisp
             // 
@@ -778,10 +437,6 @@ namespace TCC_3_M
             this.Text = "Menu - [Cadastro de Dispositivos]";
             this.tabControlPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.pnl_NvoRgistro_CadastroDisp.ResumeLayout(false);
-            this.pnl_NvoRgistro_CadastroDisp.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnl_Menu.ResumeLayout(false);
             this.pnlFilter.ResumeLayout(false);
             this.pnlFilter.PerformLayout();
@@ -790,6 +445,7 @@ namespace TCC_3_M
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -818,39 +474,10 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btn_Voltar_Hist_Disp;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnl_NvoRgistro_CadastroDisp;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblProcessor;
-        private System.Windows.Forms.Label lblModel;
-        private System.Windows.Forms.Label lblBrand;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label lblDisc;
-        private System.Windows.Forms.Label lblVideoCard;
-        private System.Windows.Forms.Label lblRamMemory;
-        private System.Windows.Forms.TextBox txtGuarantee;
-        private System.Windows.Forms.TextBox txtTag;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblGuarantee;
-        private System.Windows.Forms.Label lblNetworkCard;
-        private System.Windows.Forms.Label lblTag;
-        private System.Windows.Forms.Label lblLatitude;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnVoltar_pnlCadastroDevice;
-        private System.Windows.Forms.Button btnSalvar_pnlCadstroDevice;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_Voltar_CadastroDisp;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

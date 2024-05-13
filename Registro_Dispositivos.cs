@@ -24,7 +24,7 @@ namespace TCC_3_M
 
         private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }
