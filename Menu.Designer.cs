@@ -38,11 +38,13 @@ namespace TCC_3_M
             this.btnComputadores = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.pnlMenus = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Creditos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHistoricos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnHistoricos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoricos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistoricos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnHistoricos.Image = global::TCC_3_M.Properties.Resources.historia;
             this.btnHistoricos.Location = new System.Drawing.Point(174, 234);
@@ -84,7 +86,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPerifericos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerifericos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerifericos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerifericos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPerifericos.Image = global::TCC_3_M.Properties.Resources.rato;
             this.btnPerifericos.Location = new System.Drawing.Point(511, 108);
@@ -101,7 +103,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClientes.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.Location = new System.Drawing.Point(511, 234);
@@ -119,7 +121,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.Location = new System.Drawing.Point(343, 234);
@@ -137,7 +139,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnComputadores.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnComputadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComputadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComputadores.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComputadores.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnComputadores.Image = global::TCC_3_M.Properties.Resources.computador;
             this.btnComputadores.Location = new System.Drawing.Point(343, 108);
@@ -155,7 +157,7 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEstoque.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
             this.btnEstoque.Location = new System.Drawing.Point(174, 108);
@@ -169,8 +171,9 @@ namespace TCC_3_M
             // 
             // pnlMenus
             // 
+            this.pnlMenus.Controls.Add(this.pictureBox1);
             this.pnlMenus.Controls.Add(this.button4);
-            this.pnlMenus.Controls.Add(this.button3);
+            this.pnlMenus.Controls.Add(this.btn_Creditos);
             this.pnlMenus.Controls.Add(this.button1);
             this.pnlMenus.Controls.Add(this.btnUsuario);
             this.pnlMenus.Dock = System.Windows.Forms.DockStyle.Top;
@@ -178,6 +181,16 @@ namespace TCC_3_M
             this.pnlMenus.Name = "pnlMenus";
             this.pnlMenus.Size = new System.Drawing.Size(800, 70);
             this.pnlMenus.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // button4
             // 
@@ -194,20 +207,21 @@ namespace TCC_3_M
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Creditos
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(470, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 70);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Créditos";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Creditos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Creditos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Creditos.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Creditos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Creditos.Image")));
+            this.btn_Creditos.Location = new System.Drawing.Point(470, 0);
+            this.btn_Creditos.Name = "btn_Creditos";
+            this.btn_Creditos.Size = new System.Drawing.Size(110, 70);
+            this.btn_Creditos.TabIndex = 9;
+            this.btn_Creditos.Text = "Créditos";
+            this.btn_Creditos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_Creditos.UseVisualStyleBackColor = true;
+            this.btn_Creditos.Click += new System.EventHandler(this.btnCreditos_Click);
             // 
             // button1
             // 
@@ -248,11 +262,12 @@ namespace TCC_3_M
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlMenus);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenus.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -269,8 +284,9 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Panel pnlMenus;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Creditos;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

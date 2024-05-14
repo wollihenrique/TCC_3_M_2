@@ -1,6 +1,6 @@
 ﻿namespace TCC_3_M
 {
-    partial class frmEstoque
+    partial class frm_Estoque
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Estoque));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOpcoes_Estoque = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -121,7 +121,7 @@
             // 
             this.btnPerifericos_Estoque.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPerifericos_Estoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerifericos_Estoque.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerifericos_Estoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerifericos_Estoque.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPerifericos_Estoque.Image = ((System.Drawing.Image)(resources.GetObject("btnPerifericos_Estoque.Image")));
             this.btnPerifericos_Estoque.Location = new System.Drawing.Point(197, 0);
@@ -136,7 +136,7 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(97, 0);
@@ -152,7 +152,7 @@
             this.btnDispositivos_Estoque.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDispositivos_Estoque.Enabled = false;
             this.btnDispositivos_Estoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDispositivos_Estoque.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDispositivos_Estoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDispositivos_Estoque.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDispositivos_Estoque.Image = ((System.Drawing.Image)(resources.GetObject("btnDispositivos_Estoque.Image")));
             this.btnDispositivos_Estoque.Location = new System.Drawing.Point(0, 0);
@@ -307,13 +307,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(885, 226);
             this.dataGridView1.TabIndex = 0;
             // 
-            // frmEstoque
+            // frm_Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 471);
             this.Controls.Add(this.panel1);
-            this.Name = "frmEstoque";
+            this.Name = "frm_Estoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu - [Estoque]";
             this.panel1.ResumeLayout(false);

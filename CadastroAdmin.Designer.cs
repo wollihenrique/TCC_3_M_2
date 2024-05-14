@@ -29,12 +29,11 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCPF_CadastroAdmin = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtNumero_CadastroAdmin = new System.Windows.Forms.TextBox();
             this.txtSenha_CadastroAdmin = new System.Windows.Forms.TextBox();
             this.txtEmail_CadastroAdmin = new System.Windows.Forms.TextBox();
@@ -51,66 +50,21 @@ namespace TCC_3_M
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.txtCPF_CadastroAdmin = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(156, 403);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Dispositivos.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 379);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Sistema de Inventários de ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(120, 354);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bem vindos ao";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(59, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 102);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -139,10 +93,29 @@ namespace TCC_3_M
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 1;
             // 
+            // txtCPF_CadastroAdmin
+            // 
+            this.txtCPF_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCPF_CadastroAdmin.Location = new System.Drawing.Point(35, 186);
+            this.txtCPF_CadastroAdmin.Multiline = true;
+            this.txtCPF_CadastroAdmin.Name = "txtCPF_CadastroAdmin";
+            this.txtCPF_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
+            this.txtCPF_CadastroAdmin.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(34, 166);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 16);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "CPF:";
+            // 
             // txtNumero_CadastroAdmin
             // 
             this.txtNumero_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumero_CadastroAdmin.Location = new System.Drawing.Point(32, 193);
+            this.txtNumero_CadastroAdmin.Location = new System.Drawing.Point(35, 227);
             this.txtNumero_CadastroAdmin.Multiline = true;
             this.txtNumero_CadastroAdmin.Name = "txtNumero_CadastroAdmin";
             this.txtNumero_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
@@ -151,7 +124,7 @@ namespace TCC_3_M
             // txtSenha_CadastroAdmin
             // 
             this.txtSenha_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSenha_CadastroAdmin.Location = new System.Drawing.Point(33, 284);
+            this.txtSenha_CadastroAdmin.Location = new System.Drawing.Point(36, 318);
             this.txtSenha_CadastroAdmin.Multiline = true;
             this.txtSenha_CadastroAdmin.Name = "txtSenha_CadastroAdmin";
             this.txtSenha_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
@@ -162,7 +135,7 @@ namespace TCC_3_M
             // txtEmail_CadastroAdmin
             // 
             this.txtEmail_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail_CadastroAdmin.Location = new System.Drawing.Point(32, 239);
+            this.txtEmail_CadastroAdmin.Location = new System.Drawing.Point(35, 273);
             this.txtEmail_CadastroAdmin.Multiline = true;
             this.txtEmail_CadastroAdmin.Name = "txtEmail_CadastroAdmin";
             this.txtEmail_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
@@ -171,7 +144,7 @@ namespace TCC_3_M
             // txtNome_CadstroAdmin
             // 
             this.txtNome_CadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(32, 107);
+            this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(35, 141);
             this.txtNome_CadstroAdmin.Multiline = true;
             this.txtNome_CadstroAdmin.Name = "txtNome_CadstroAdmin";
             this.txtNome_CadstroAdmin.Size = new System.Drawing.Size(287, 22);
@@ -180,40 +153,40 @@ namespace TCC_3_M
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 173);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(32, 207);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 17);
+            this.label10.Size = new System.Drawing.Size(58, 16);
             this.label10.TabIndex = 11;
             this.label10.Text = "Número:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 218);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(33, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 17);
+            this.label9.Size = new System.Drawing.Size(48, 16);
             this.label9.TabIndex = 10;
             this.label9.Text = "E-mail:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 264);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(33, 298);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 17);
+            this.label8.Size = new System.Drawing.Size(49, 16);
             this.label8.TabIndex = 9;
             this.label8.Text = "Senha:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 87);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(33, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 17);
+            this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "Nome de Usuário:";
             // 
@@ -221,7 +194,7 @@ namespace TCC_3_M
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(228, 309);
+            this.linkLabel2.Location = new System.Drawing.Point(231, 343);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(90, 16);
             this.linkLabel2.TabIndex = 7;
@@ -233,7 +206,7 @@ namespace TCC_3_M
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 309);
+            this.label6.Location = new System.Drawing.Point(32, 343);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(199, 16);
             this.label6.TabIndex = 6;
@@ -256,7 +229,7 @@ namespace TCC_3_M
             this.btnCadstrar_Cadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadstrar_Cadastro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadstrar_Cadastro.ForeColor = System.Drawing.Color.White;
-            this.btnCadstrar_Cadastro.Location = new System.Drawing.Point(302, 424);
+            this.btnCadstrar_Cadastro.Location = new System.Drawing.Point(304, 445);
             this.btnCadstrar_Cadastro.Name = "btnCadstrar_Cadastro";
             this.btnCadstrar_Cadastro.Size = new System.Drawing.Size(83, 35);
             this.btnCadstrar_Cadastro.TabIndex = 4;
@@ -267,7 +240,7 @@ namespace TCC_3_M
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(34, 354);
+            this.checkBox1.Location = new System.Drawing.Point(37, 388);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 3;
@@ -277,7 +250,7 @@ namespace TCC_3_M
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(192, 353);
+            this.linkLabel1.Location = new System.Drawing.Point(195, 387);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(221, 15);
             this.linkLabel1.TabIndex = 2;
@@ -289,7 +262,7 @@ namespace TCC_3_M
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 354);
+            this.label4.Location = new System.Drawing.Point(49, 388);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 15);
             this.label4.TabIndex = 1;
@@ -309,24 +282,15 @@ namespace TCC_3_M
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // txtCPF_CadastroAdmin
+            // pictureBox1
             // 
-            this.txtCPF_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCPF_CadastroAdmin.Location = new System.Drawing.Point(32, 152);
-            this.txtCPF_CadastroAdmin.Multiline = true;
-            this.txtCPF_CadastroAdmin.Name = "txtCPF_CadastroAdmin";
-            this.txtCPF_CadastroAdmin.Size = new System.Drawing.Size(287, 22);
-            this.txtCPF_CadastroAdmin.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 17);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "CPF:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 158);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_CadastroAdmin
             // 
@@ -341,10 +305,9 @@ namespace TCC_3_M
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TesteLogin";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,10 +315,6 @@ namespace TCC_3_M
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnCadstrar_Cadastro;
@@ -375,5 +334,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCPF_CadastroAdmin;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

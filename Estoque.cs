@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frmEstoque : Form
+    public partial class frm_Estoque : Form
     {
-        public frmEstoque()
+        public frm_Estoque()
         {
             InitializeComponent();
         }

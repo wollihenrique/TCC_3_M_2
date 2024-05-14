@@ -47,8 +47,15 @@ namespace TCC_3_M
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            frmEstoque formEstoque = new frmEstoque();
+            frm_Estoque formEstoque = new frm_Estoque();
             formEstoque.Show();
+            this.Hide();
+        }
+
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            frm_Creditos formCreditos = new frm_Creditos();
+            formCreditos.Show();
             this.Hide();
         }
     }
