@@ -76,6 +76,12 @@
     <Compile Include="MenuClientes.Designer.cs">
       <DependentUpon>MenuClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vinculacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vinculacao.Designer.cs">
+      <DependentUpon>Vinculacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vinculacao.resx">
+      <DependentUpon>Vinculacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registro_Dispositivos.resx">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>

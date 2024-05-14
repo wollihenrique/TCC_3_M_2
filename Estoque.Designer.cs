@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlOpcoes_Estoque = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPerifericos_Estoque = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDispositivos_Estoque = new System.Windows.Forms.Button();
-            this.pnlOpcoes_Estoque = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
+            this.pnlHardware_Estoque = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Procurar_Usuario = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.cmb_Status_Usuario = new System.Windows.Forms.ComboBox();
             this.lblOrderBy = new System.Windows.Forms.Label();
             this.cmb_OrderBy_Usuario = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.txt_Procurar_Usuario = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.pnlHardware_Estoque = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Pesquisar_CadastroDispo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnlOpcoes_Estoque.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnlHardware_Estoque.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +67,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(904, 471);
             this.panel1.TabIndex = 1;
+            // 
+            // pnlOpcoes_Estoque
+            // 
+            this.pnlOpcoes_Estoque.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlOpcoes_Estoque.Controls.Add(this.label1);
+            this.pnlOpcoes_Estoque.Controls.Add(this.btnVoltar_pnlCadastroDevice);
+            this.pnlOpcoes_Estoque.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOpcoes_Estoque.Location = new System.Drawing.Point(0, 70);
+            this.pnlOpcoes_Estoque.Name = "pnlOpcoes_Estoque";
+            this.pnlOpcoes_Estoque.Size = new System.Drawing.Size(904, 49);
+            this.pnlOpcoes_Estoque.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(50, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Estoque";
+            // 
+            // btnVoltar_pnlCadastroDevice
+            // 
+            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
+            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
+            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(47, 49);
+            this.btnVoltar_pnlCadastroDevice.TabIndex = 50;
+            this.btnVoltar_pnlCadastroDevice.Text = "<";
+            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
+            this.btnVoltar_pnlCadastroDevice.Click += new System.EventHandler(this.btnVoltar_pnlCadastroDevice_Click_1);
             // 
             // panel2
             // 
@@ -113,6 +150,7 @@
             // btnDispositivos_Estoque
             // 
             this.btnDispositivos_Estoque.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDispositivos_Estoque.Enabled = false;
             this.btnDispositivos_Estoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDispositivos_Estoque.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDispositivos_Estoque.ForeColor = System.Drawing.SystemColors.Control;
@@ -126,42 +164,17 @@
             this.btnDispositivos_Estoque.UseVisualStyleBackColor = true;
             this.btnDispositivos_Estoque.Click += new System.EventHandler(this.btnDispositivos_Estoque_Click);
             // 
-            // pnlOpcoes_Estoque
+            // pnlHardware_Estoque
             // 
-            this.pnlOpcoes_Estoque.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlOpcoes_Estoque.Controls.Add(this.label1);
-            this.pnlOpcoes_Estoque.Controls.Add(this.btnVoltar_pnlCadastroDevice);
-            this.pnlOpcoes_Estoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOpcoes_Estoque.Location = new System.Drawing.Point(0, 70);
-            this.pnlOpcoes_Estoque.Name = "pnlOpcoes_Estoque";
-            this.pnlOpcoes_Estoque.Size = new System.Drawing.Size(904, 49);
-            this.pnlOpcoes_Estoque.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(50, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Estoque";
-            // 
-            // btnVoltar_pnlCadastroDevice
-            // 
-            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
-            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
-            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(47, 49);
-            this.btnVoltar_pnlCadastroDevice.TabIndex = 50;
-            this.btnVoltar_pnlCadastroDevice.Text = "<";
-            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
-            this.btnVoltar_pnlCadastroDevice.Click += new System.EventHandler(this.btnVoltar_pnlCadastroDevice_Click_1);
+            this.pnlHardware_Estoque.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlHardware_Estoque.Controls.Add(this.panel3);
+            this.pnlHardware_Estoque.Controls.Add(this.btn_Pesquisar_CadastroDispo);
+            this.pnlHardware_Estoque.Controls.Add(this.dataGridView1);
+            this.pnlHardware_Estoque.Location = new System.Drawing.Point(0, 115);
+            this.pnlHardware_Estoque.Name = "pnlHardware_Estoque";
+            this.pnlHardware_Estoque.Size = new System.Drawing.Size(904, 334);
+            this.pnlHardware_Estoque.TabIndex = 17;
+            this.pnlHardware_Estoque.Visible = false;
             // 
             // panel3
             // 
@@ -178,6 +191,44 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(898, 59);
             this.panel3.TabIndex = 16;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(16, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 24);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Modelo:";
+            // 
+            // txt_Procurar_Usuario
+            // 
+            this.txt_Procurar_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Procurar_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Procurar_Usuario.Location = new System.Drawing.Point(727, 30);
+            this.txt_Procurar_Usuario.Name = "txt_Procurar_Usuario";
+            this.txt_Procurar_Usuario.Size = new System.Drawing.Size(132, 22);
+            this.txt_Procurar_Usuario.TabIndex = 10;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(723, 7);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(127, 20);
+            this.lblSearch.TabIndex = 7;
+            this.lblSearch.Text = "Pesquisar por Tag:";
             // 
             // cmb_Status_Usuario
             // 
@@ -233,64 +284,6 @@
             this.lblStatus.TabIndex = 8;
             this.lblStatus.Text = "Status:";
             // 
-            // txt_Procurar_Usuario
-            // 
-            this.txt_Procurar_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Procurar_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Procurar_Usuario.Location = new System.Drawing.Point(727, 30);
-            this.txt_Procurar_Usuario.Name = "txt_Procurar_Usuario";
-            this.txt_Procurar_Usuario.Size = new System.Drawing.Size(132, 22);
-            this.txt_Procurar_Usuario.TabIndex = 10;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(723, 7);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(127, 20);
-            this.lblSearch.TabIndex = 7;
-            this.lblSearch.Text = "Pesquisar por Tag:";
-            // 
-            // pnlHardware_Estoque
-            // 
-            this.pnlHardware_Estoque.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlHardware_Estoque.Controls.Add(this.panel3);
-            this.pnlHardware_Estoque.Controls.Add(this.btn_Pesquisar_CadastroDispo);
-            this.pnlHardware_Estoque.Controls.Add(this.dataGridView1);
-            this.pnlHardware_Estoque.Location = new System.Drawing.Point(0, 115);
-            this.pnlHardware_Estoque.Name = "pnlHardware_Estoque";
-            this.pnlHardware_Estoque.Size = new System.Drawing.Size(904, 334);
-            this.pnlHardware_Estoque.TabIndex = 17;
-            this.pnlHardware_Estoque.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 24);
-            this.textBox1.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Modelo:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(885, 226);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // btn_Pesquisar_CadastroDispo
             // 
             this.btn_Pesquisar_CadastroDispo.BackColor = System.Drawing.Color.SteelBlue;
@@ -306,6 +299,14 @@
             this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 62);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(885, 226);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,12 +317,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu - [Estoque]";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.pnlOpcoes_Estoque.ResumeLayout(false);
             this.pnlOpcoes_Estoque.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.pnlHardware_Estoque.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.pnlHardware_Estoque.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

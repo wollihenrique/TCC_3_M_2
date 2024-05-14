@@ -42,16 +42,15 @@
             this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_NovoUsuario = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_EditarUsuario = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btn_Voltar_CadastroDisp = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_NovoUsuario = new System.Windows.Forms.Button();
-            this.btn_EditarUsuario = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Pesquisar_CadastroDispo = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabCntrl_CadstroU.SuspendLayout();
             this.tabPag_CadastroU.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -216,7 +215,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btn_NovoUsuario);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btn_EditarUsuario);
@@ -226,6 +224,74 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 62);
             this.panel1.TabIndex = 13;
+            // 
+            // btn_NovoUsuario
+            // 
+            this.btn_NovoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_NovoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NovoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_NovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_NovoUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NovoUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_NovoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_NovoUsuario.Image")));
+            this.btn_NovoUsuario.Location = new System.Drawing.Point(240, 0);
+            this.btn_NovoUsuario.Name = "btn_NovoUsuario";
+            this.btn_NovoUsuario.Size = new System.Drawing.Size(80, 62);
+            this.btn_NovoUsuario.TabIndex = 0;
+            this.btn_NovoUsuario.Text = "Novo";
+            this.btn_NovoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_NovoUsuario.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(160, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 62);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Excluir";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btn_EditarUsuario
+            // 
+            this.btn_EditarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EditarUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_EditarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_EditarUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditarUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_EditarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditarUsuario.Image")));
+            this.btn_EditarUsuario.Location = new System.Drawing.Point(80, 0);
+            this.btn_EditarUsuario.Name = "btn_EditarUsuario";
+            this.btn_EditarUsuario.Size = new System.Drawing.Size(80, 62);
+            this.btn_EditarUsuario.TabIndex = 1;
+            this.btn_EditarUsuario.Text = "Editar";
+            this.btn_EditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_EditarUsuario.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 62);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Atualizar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // btn_Voltar_CadastroDisp
             // 
@@ -256,74 +322,6 @@
             this.tabPage2.Text = "Histórico de Registros";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 62);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Atualizar";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(160, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 62);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Excluir";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btn_NovoUsuario
-            // 
-            this.btn_NovoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_NovoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_NovoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_NovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_NovoUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NovoUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_NovoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_NovoUsuario.Image")));
-            this.btn_NovoUsuario.Location = new System.Drawing.Point(240, 0);
-            this.btn_NovoUsuario.Name = "btn_NovoUsuario";
-            this.btn_NovoUsuario.Size = new System.Drawing.Size(80, 62);
-            this.btn_NovoUsuario.TabIndex = 0;
-            this.btn_NovoUsuario.Text = "Novo";
-            this.btn_NovoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_NovoUsuario.UseVisualStyleBackColor = false;
-            // 
-            // btn_EditarUsuario
-            // 
-            this.btn_EditarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_EditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EditarUsuario.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_EditarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_EditarUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditarUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_EditarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditarUsuario.Image")));
-            this.btn_EditarUsuario.Location = new System.Drawing.Point(80, 0);
-            this.btn_EditarUsuario.Name = "btn_EditarUsuario";
-            this.btn_EditarUsuario.Size = new System.Drawing.Size(80, 62);
-            this.btn_EditarUsuario.TabIndex = 1;
-            this.btn_EditarUsuario.Text = "Editar";
-            this.btn_EditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_EditarUsuario.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
@@ -353,20 +351,6 @@
             this.btn_Pesquisar_CadastroDispo.Text = "Pesquisar";
             this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Location = new System.Drawing.Point(320, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 62);
-            this.button4.TabIndex = 53;
-            this.button4.Text = "<";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // frm_Usuario
             // 
@@ -414,6 +398,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Pesquisar_CadastroDispo;
-        private System.Windows.Forms.Button button4;
     }
 }
