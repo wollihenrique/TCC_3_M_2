@@ -24,13 +24,6 @@ namespace TCC_3_M
             frm_CadastroDisp.Show();
         }
 
-        private void btn_Voltar_Usuario_Click(object sender, EventArgs e)
-        {
-            frm_Inicio frm_CadastroDisp = new frm_Inicio();
-            frm_CadastroDisp.Show();
-            this.Hide();
-        }
-
         private void btn_Voltar_Hist_Disp_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 0;
@@ -38,8 +31,20 @@ namespace TCC_3_M
 
         private void btn_Novo_CastroDisp_Click(object sender, EventArgs e)
         {
-            frm_RegistroDisp formCadastroDisp = new frm_RegistroDisp();
-            formCadastroDisp.Show();
+            frm_RegistroDisp formRegistroHardware = new frm_RegistroDisp();
+            formRegistroHardware.Show();
+        }
+
+        private void btn_Voltar_CadastroDisp_Click(object sender, EventArgs e)
+        {
+            frm_Inicio frm_CadastroDisp = new frm_Inicio();
+            frm_CadastroDisp.Show();
+            this.Hide();
+        }
+
+        private void btn_Pesquisar_CadastroDispo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -18,13 +18,6 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btn_Cadastro_Log_Click(object sender, EventArgs e)
-        {
-            frm_CadastroAdmin frm_Cadastro = new frm_CadastroAdmin();
-            frm_Cadastro.Show();
-            this.Hide();
-        }
-
         private void btn_Entrar_Log_Click(object sender, EventArgs e)
         {
             frm_Inicio frm_Inicio = new frm_Inicio();
@@ -32,5 +25,21 @@ namespace TCC_3_M
             this.Hide();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_CadastroAdmin formCadastroAdmin = new frm_CadastroAdmin();
+            formCadastroAdmin.Show();
+            this.Hide();
+        }
+
+        private void txtSenhaLogin_TextChanged(object sender, EventArgs e)
+        {
+            txtSenhaLogin.PasswordChar = '*';
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

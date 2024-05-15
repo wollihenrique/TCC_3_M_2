@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_Usuario : Form
+    public partial class frmVinculacao : Form
     {
-        public frm_Usuario()
+        public frmVinculacao()
         {
             InitializeComponent();
-        }
-
-        private void btn_Voltar_Usuario_Click(object sender, EventArgs e)
-        {
-            frm_Inicio formInicio = new frm_Inicio();
-            formInicio.Show();
-            this.Hide();
         }
     }
 }

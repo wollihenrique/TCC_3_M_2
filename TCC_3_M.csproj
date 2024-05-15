@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditos.Designer.cs">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editar_Dispositivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +76,17 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs">
+    <Compile Include="MenuClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <Compile Include="MenuClientes.Designer.cs">
+      <DependentUpon>MenuClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_CadastroUsuarios.cs">
+    <Compile Include="Vinculacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_CadastroUsuarios.Designer.cs">
-      <DependentUpon>Menu_CadastroUsuarios.cs</DependentUpon>
+    <Compile Include="Vinculacao.Designer.cs">
+      <DependentUpon>Vinculacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -88,11 +100,11 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_CadastroDevices.cs">
+    <Compile Include="MenuHardware.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_CadastroDevices.Designer.cs">
-      <DependentUpon>Menu_CadastroDevices.cs</DependentUpon>
+    <Compile Include="MenuHardware.Designer.cs">
+      <DependentUpon>MenuHardware.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +114,24 @@
     <Compile Include="Registro_Dispositivos.Designer.cs">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroAdmin.Designer.cs">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TermosDeUso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TermosDeUso.Designer.cs">
+      <DependentUpon>TermosDeUso.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Creditos.resx">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editar_Dispositivos.resx">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,17 +141,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_CadastroDevices.resx">
-      <DependentUpon>Menu_CadastroDevices.cs</DependentUpon>
+    <EmbeddedResource Include="MenuHardware.resx">
+      <DependentUpon>MenuHardware.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_CadastroUsuarios.resx">
-      <DependentUpon>Menu_CadastroUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="MenuClientes.resx">
+      <DependentUpon>MenuClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,11 +160,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vinculacao.resx">
+      <DependentUpon>Vinculacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registro_Dispositivos.resx">
       <DependentUpon>Registro_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAdmin.resx">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TermosDeUso.resx">
+      <DependentUpon>TermosDeUso.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +199,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editarBranco.32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\do-utilizador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big-search-len.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
