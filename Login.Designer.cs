@@ -37,9 +37,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome_CadstroAdmin = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSenha_CadastroAdmin = new System.Windows.Forms.TextBox();
+            this.txtSenhaLogin = new System.Windows.Forms.TextBox();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.pnl_Cadastro_Cad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -130,16 +131,16 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Senha:";
             // 
-            // txtSenha_CadastroAdmin
+            // txtSenhaLogin
             // 
-            this.txtSenha_CadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSenha_CadastroAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha_CadastroAdmin.Location = new System.Drawing.Point(335, 275);
-            this.txtSenha_CadastroAdmin.Name = "txtSenha_CadastroAdmin";
-            this.txtSenha_CadastroAdmin.Size = new System.Drawing.Size(290, 22);
-            this.txtSenha_CadastroAdmin.TabIndex = 15;
-            this.txtSenha_CadastroAdmin.UseSystemPasswordChar = true;
-            this.txtSenha_CadastroAdmin.TextChanged += new System.EventHandler(this.txtSenha_CadastroAdmin_TextChanged);
+            this.txtSenhaLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenhaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaLogin.Location = new System.Drawing.Point(335, 275);
+            this.txtSenhaLogin.Name = "txtSenhaLogin";
+            this.txtSenhaLogin.Size = new System.Drawing.Size(290, 22);
+            this.txtSenhaLogin.TabIndex = 15;
+            this.txtSenhaLogin.UseSystemPasswordChar = true;
+            this.txtSenhaLogin.TextChanged += new System.EventHandler(this.txtSenhaLogin_TextChanged);
             // 
             // btnFechar
             // 
@@ -157,7 +158,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtSenha_CadastroAdmin);
+            this.panel1.Controls.Add(this.lblLogin);
+            this.panel1.Controls.Add(this.txtSenhaLogin);
             this.panel1.Controls.Add(this.btnEntrarLog);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtNome_CadstroAdmin);
@@ -170,6 +172,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 530);
             this.panel1.TabIndex = 17;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblLogin.Location = new System.Drawing.Point(335, 90);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(122, 44);
+            this.lblLogin.TabIndex = 17;
+            this.lblLogin.Text = "Login";
             // 
             // frm_Login
             // 
@@ -202,10 +215,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome_CadstroAdmin;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSenha_CadastroAdmin;
+        private System.Windows.Forms.TextBox txtSenhaLogin;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblLogin;
     }
 }
 

@@ -32,9 +32,9 @@ namespace TCC_3_M
             this.Hide();
         }
 
-        private void txtSenha_CadastroAdmin_TextChanged(object sender, EventArgs e)
+        private void txtSenhaLogin_TextChanged(object sender, EventArgs e)
         {
-            txtSenha_CadastroAdmin.PasswordChar = '*';
+            txtSenhaLogin.PasswordChar = '*';
         }
 
         private void btnFechar_Click(object sender, EventArgs e)

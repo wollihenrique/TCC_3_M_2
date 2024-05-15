@@ -105,7 +105,6 @@ namespace TCC_3_M
             // 
             this.txtCpfCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCpfCadastroAdmin.Location = new System.Drawing.Point(30, 155);
-            this.txtCpfCadastroAdmin.Multiline = true;
             this.txtCpfCadastroAdmin.Name = "txtCpfCadastroAdmin";
             this.txtCpfCadastroAdmin.Size = new System.Drawing.Size(250, 22);
             this.txtCpfCadastroAdmin.TabIndex = 17;
@@ -124,7 +123,6 @@ namespace TCC_3_M
             // 
             this.txtNumeroCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumeroCadastroAdmin.Location = new System.Drawing.Point(30, 215);
-            this.txtNumeroCadastroAdmin.Multiline = true;
             this.txtNumeroCadastroAdmin.Name = "txtNumeroCadastroAdmin";
             this.txtNumeroCadastroAdmin.Size = new System.Drawing.Size(250, 22);
             this.txtNumeroCadastroAdmin.TabIndex = 15;
@@ -133,7 +131,6 @@ namespace TCC_3_M
             // 
             this.txtSenhaCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenhaCadastroAdmin.Location = new System.Drawing.Point(30, 335);
-            this.txtSenhaCadastroAdmin.Multiline = true;
             this.txtSenhaCadastroAdmin.Name = "txtSenhaCadastroAdmin";
             this.txtSenhaCadastroAdmin.Size = new System.Drawing.Size(250, 22);
             this.txtSenhaCadastroAdmin.TabIndex = 14;
@@ -144,7 +141,6 @@ namespace TCC_3_M
             // 
             this.txtEmailCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmailCadastroAdmin.Location = new System.Drawing.Point(30, 275);
-            this.txtEmailCadastroAdmin.Multiline = true;
             this.txtEmailCadastroAdmin.Name = "txtEmailCadastroAdmin";
             this.txtEmailCadastroAdmin.Size = new System.Drawing.Size(250, 22);
             this.txtEmailCadastroAdmin.TabIndex = 13;
@@ -153,7 +149,6 @@ namespace TCC_3_M
             // 
             this.txtNomeCadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeCadstroAdmin.Location = new System.Drawing.Point(30, 95);
-            this.txtNomeCadstroAdmin.Multiline = true;
             this.txtNomeCadstroAdmin.Name = "txtNomeCadstroAdmin";
             this.txtNomeCadstroAdmin.Size = new System.Drawing.Size(250, 22);
             this.txtNomeCadstroAdmin.TabIndex = 12;
@@ -238,7 +233,7 @@ namespace TCC_3_M
             // 
             this.cnkTermosCondicoes.AutoSize = true;
             this.cnkTermosCondicoes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnkTermosCondicoes.Location = new System.Drawing.Point(30, 410);
+            this.cnkTermosCondicoes.Location = new System.Drawing.Point(30, 415);
             this.cnkTermosCondicoes.Name = "cnkTermosCondicoes";
             this.cnkTermosCondicoes.Size = new System.Drawing.Size(15, 14);
             this.cnkTermosCondicoes.TabIndex = 3;
@@ -248,7 +243,7 @@ namespace TCC_3_M
             // 
             this.lnkTermosCondicoes.AutoSize = true;
             this.lnkTermosCondicoes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkTermosCondicoes.Location = new System.Drawing.Point(190, 409);
+            this.lnkTermosCondicoes.Location = new System.Drawing.Point(190, 414);
             this.lnkTermosCondicoes.Name = "lnkTermosCondicoes";
             this.lnkTermosCondicoes.Size = new System.Drawing.Size(221, 15);
             this.lnkTermosCondicoes.TabIndex = 2;
@@ -260,7 +255,7 @@ namespace TCC_3_M
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 409);
+            this.label4.Location = new System.Drawing.Point(45, 414);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 15);
             this.label4.TabIndex = 1;
