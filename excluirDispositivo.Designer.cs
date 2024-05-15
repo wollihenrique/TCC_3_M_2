@@ -31,10 +31,8 @@ namespace TCC_3_M
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ExcluirDispositivo));
             this.txtTag = new System.Windows.Forms.TextBox();
-            this.btn_Excluir_ExcluirDisp = new System.Windows.Forms.Button();
+            this.btnExcluirExcluirDisp = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cmbDeviceType = new System.Windows.Forms.ComboBox();
-            this.lblDeviceType = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTag = new System.Windows.Forms.Label();
             this.lblLatitude = new System.Windows.Forms.Label();
@@ -51,9 +49,9 @@ namespace TCC_3_M
             this.lblFilter = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtMarcaExluirDispositivo = new System.Windows.Forms.TextBox();
+            this.txtModeloExcluirDispositivo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,18 +68,18 @@ namespace TCC_3_M
             this.txtTag.Size = new System.Drawing.Size(121, 20);
             this.txtTag.TabIndex = 59;
             // 
-            // btn_Excluir_ExcluirDisp
+            // btnExcluirExcluirDisp
             // 
-            this.btn_Excluir_ExcluirDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Excluir_ExcluirDisp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir_ExcluirDisp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Excluir_ExcluirDisp.Location = new System.Drawing.Point(534, 415);
-            this.btn_Excluir_ExcluirDisp.Name = "btn_Excluir_ExcluirDisp";
-            this.btn_Excluir_ExcluirDisp.Size = new System.Drawing.Size(62, 23);
-            this.btn_Excluir_ExcluirDisp.TabIndex = 58;
-            this.btn_Excluir_ExcluirDisp.Text = "Excluir";
-            this.btn_Excluir_ExcluirDisp.UseVisualStyleBackColor = true;
-            this.btn_Excluir_ExcluirDisp.Click += new System.EventHandler(this.btn_Excluir_ExcluirDisp_Click);
+            this.btnExcluirExcluirDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirExcluirDisp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirExcluirDisp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExcluirExcluirDisp.Location = new System.Drawing.Point(534, 415);
+            this.btnExcluirExcluirDisp.Name = "btnExcluirExcluirDisp";
+            this.btnExcluirExcluirDisp.Size = new System.Drawing.Size(62, 23);
+            this.btnExcluirExcluirDisp.TabIndex = 58;
+            this.btnExcluirExcluirDisp.Text = "Excluir";
+            this.btnExcluirExcluirDisp.UseVisualStyleBackColor = true;
+            this.btnExcluirExcluirDisp.Click += new System.EventHandler(this.btn_Excluir_ExcluirDisp_Click);
             // 
             // cmbStatus
             // 
@@ -98,25 +96,6 @@ namespace TCC_3_M
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbStatus.TabIndex = 47;
-            // 
-            // cmbDeviceType
-            // 
-            this.cmbDeviceType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDeviceType.FormattingEnabled = true;
-            this.cmbDeviceType.Location = new System.Drawing.Point(299, 204);
-            this.cmbDeviceType.Name = "cmbDeviceType";
-            this.cmbDeviceType.Size = new System.Drawing.Size(121, 21);
-            this.cmbDeviceType.TabIndex = 46;
-            // 
-            // lblDeviceType
-            // 
-            this.lblDeviceType.AutoSize = true;
-            this.lblDeviceType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeviceType.Location = new System.Drawing.Point(296, 186);
-            this.lblDeviceType.Name = "lblDeviceType";
-            this.lblDeviceType.Size = new System.Drawing.Size(113, 15);
-            this.lblDeviceType.TabIndex = 45;
-            this.lblDeviceType.Text = "Tipo de Dispositivo :";
             // 
             // lblStatus
             // 
@@ -192,7 +171,7 @@ namespace TCC_3_M
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 29);
+            this.panel1.Size = new System.Drawing.Size(938, 29);
             this.panel1.TabIndex = 62;
             // 
             // label1
@@ -277,38 +256,6 @@ namespace TCC_3_M
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 66;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Em uso",
-            "Em estoque",
-            "Em manutenção",
-            "Em conserto",
-            "Indisponível",
-            "Para descarte"});
-            this.comboBox1.Location = new System.Drawing.Point(155, 204);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 67;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Em uso",
-            "Em estoque",
-            "Em manutenção",
-            "Em conserto",
-            "Indisponível",
-            "Para descarte"});
-            this.comboBox2.Location = new System.Drawing.Point(16, 204);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 68;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -317,25 +264,39 @@ namespace TCC_3_M
             this.dataGridView1.Size = new System.Drawing.Size(623, 166);
             this.dataGridView1.TabIndex = 69;
             // 
+            // txtMarcaExluirDispositivo
+            // 
+            this.txtMarcaExluirDispositivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarcaExluirDispositivo.Location = new System.Drawing.Point(13, 204);
+            this.txtMarcaExluirDispositivo.Name = "txtMarcaExluirDispositivo";
+            this.txtMarcaExluirDispositivo.Size = new System.Drawing.Size(100, 20);
+            this.txtMarcaExluirDispositivo.TabIndex = 70;
+            // 
+            // txtModeloExcluirDispositivo
+            // 
+            this.txtModeloExcluirDispositivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtModeloExcluirDispositivo.Location = new System.Drawing.Point(153, 204);
+            this.txtModeloExcluirDispositivo.Name = "txtModeloExcluirDispositivo";
+            this.txtModeloExcluirDispositivo.Size = new System.Drawing.Size(100, 20);
+            this.txtModeloExcluirDispositivo.TabIndex = 71;
+            // 
             // frm_ExcluirDispositivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(623, 441);
+            this.ClientSize = new System.Drawing.Size(938, 544);
+            this.Controls.Add(this.txtModeloExcluirDispositivo);
+            this.Controls.Add(this.txtMarcaExluirDispositivo);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.txt_);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtTag);
-            this.Controls.Add(this.btn_Excluir_ExcluirDisp);
+            this.Controls.Add(this.btnExcluirExcluirDisp);
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.cmbDeviceType);
-            this.Controls.Add(this.lblDeviceType);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblTag);
             this.Controls.Add(this.lblLatitude);
@@ -343,9 +304,11 @@ namespace TCC_3_M
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ExcluirDispositivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excluir Dispositivo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -361,8 +324,6 @@ namespace TCC_3_M
         #endregion
         private System.Windows.Forms.TextBox txtTag;
         private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.ComboBox cmbDeviceType;
-        private System.Windows.Forms.Label lblDeviceType;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblTag;
         private System.Windows.Forms.Label lblLatitude;
@@ -379,9 +340,9 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_Excluir_ExcluirDisp;
+        private System.Windows.Forms.Button btnExcluirExcluirDisp;
+        private System.Windows.Forms.TextBox txtMarcaExluirDispositivo;
+        private System.Windows.Forms.TextBox txtModeloExcluirDispositivo;
     }
 }

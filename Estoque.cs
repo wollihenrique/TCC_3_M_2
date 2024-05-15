@@ -17,25 +17,24 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btnDispositivos_Estoque_Click(object sender, EventArgs e)
+        private void btnHardwareEstoque_Click(object sender, EventArgs e)
         {
             pnlHardware_Estoque.Visible = true;
         }
 
-        private void btnVoltar_pnlCadastroDevice_Click_1(object sender, EventArgs e)
+        private void btnVoltarEstoque_Click_1(object sender, EventArgs e)
         {
             if(pnlHardware_Estoque.Visible == true)
             {
                 pnlHardware_Estoque.Visible = false;
             }
+        }
 
-            else
-            {
-                frm_Inicio formInicio = new frm_Inicio();
-                formInicio.Show();
-                this.Hide();
-            }
-            
+        private void btnVoltarCreditos_Click(object sender, EventArgs e)
+        {
+            frm_Inicio formInicio = new frm_Inicio();
+            formInicio.Show();
+            this.Hide();
         }
     }
 }

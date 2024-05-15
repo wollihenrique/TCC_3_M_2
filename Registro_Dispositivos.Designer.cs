@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlCadastroP = new System.Windows.Forms.Panel();
-            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
+            this.btnVoltarPnlCadastroDevice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -66,7 +66,7 @@
             // 
             this.pnlCadastroP.BackColor = System.Drawing.Color.SteelBlue;
             this.pnlCadastroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCadastroP.Controls.Add(this.btnVoltar_pnlCadastroDevice);
+            this.pnlCadastroP.Controls.Add(this.btnVoltarPnlCadastroDevice);
             this.pnlCadastroP.Controls.Add(this.label1);
             this.pnlCadastroP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCadastroP.Location = new System.Drawing.Point(0, 0);
@@ -74,20 +74,20 @@
             this.pnlCadastroP.Size = new System.Drawing.Size(588, 42);
             this.pnlCadastroP.TabIndex = 28;
             // 
-            // btnVoltar_pnlCadastroDevice
+            // btnVoltarPnlCadastroDevice
             // 
-            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
-            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
-            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(52, 40);
-            this.btnVoltar_pnlCadastroDevice.TabIndex = 50;
-            this.btnVoltar_pnlCadastroDevice.Text = "<";
-            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
-            this.btnVoltar_pnlCadastroDevice.Click += new System.EventHandler(this.btnVoltar_pnlCadastroDevice_Click);
+            this.btnVoltarPnlCadastroDevice.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnVoltarPnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnVoltarPnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarPnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltarPnlCadastroDevice.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoltarPnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
+            this.btnVoltarPnlCadastroDevice.Name = "btnVoltarPnlCadastroDevice";
+            this.btnVoltarPnlCadastroDevice.Size = new System.Drawing.Size(52, 40);
+            this.btnVoltarPnlCadastroDevice.TabIndex = 50;
+            this.btnVoltarPnlCadastroDevice.Text = "<";
+            this.btnVoltarPnlCadastroDevice.UseVisualStyleBackColor = false;
+            this.btnVoltarPnlCadastroDevice.Click += new System.EventHandler(this.btnVoltarPnlCadastroDevice_Click);
             // 
             // label1
             // 
@@ -388,7 +388,7 @@
         #endregion
         private System.Windows.Forms.Panel pnlCadastroP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnVoltar_pnlCadastroDevice;
+        private System.Windows.Forms.Button btnVoltarPnlCadastroDevice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;

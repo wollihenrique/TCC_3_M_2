@@ -63,23 +63,6 @@ namespace TCC_3_M
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUsuario.UseVisualStyleBackColor = true;
             // 
-            // btnHistoricos
-            // 
-            this.btnHistoricos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistoricos.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnHistoricos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistoricos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistoricos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHistoricos.Image = global::TCC_3_M.Properties.Resources.historia;
-            this.btnHistoricos.Location = new System.Drawing.Point(174, 234);
-            this.btnHistoricos.Name = "btnHistoricos";
-            this.btnHistoricos.Size = new System.Drawing.Size(136, 104);
-            this.btnHistoricos.TabIndex = 5;
-            this.btnHistoricos.Text = "Históricos";
-            this.btnHistoricos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHistoricos.UseVisualStyleBackColor = false;
-            // 
             // btnPerifericos
             // 
             this.btnPerifericos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -262,6 +245,7 @@ namespace TCC_3_M
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlMenus);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

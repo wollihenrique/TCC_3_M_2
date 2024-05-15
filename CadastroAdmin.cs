@@ -31,13 +31,18 @@ namespace TCC_3_M
 
         private void txtSenha_CadastroAdmin_TextChanged(object sender, EventArgs e)
         {
-            txtSenha_CadastroAdmin.PasswordChar = '*'; 
+            txtSenhaCadastroAdmin.PasswordChar = '*'; 
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frm_TermosDeUso formTermosdeUso = new frm_TermosDeUso();
             formTermosdeUso.Show();
+        }
+
+        private void btnCadstrarCadastro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

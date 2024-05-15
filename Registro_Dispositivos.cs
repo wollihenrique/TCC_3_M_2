@@ -22,7 +22,7 @@ namespace TCC_3_M
             this.Hide();
         }
 
-        private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
+        private void btnVoltarPnlCadastroDevice_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
