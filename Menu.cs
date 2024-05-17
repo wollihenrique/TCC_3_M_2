@@ -58,5 +58,12 @@ namespace TCC_3_M
             formCreditos.Show();
             this.Hide();
         }
+
+        private void btnPerifericos_Click(object sender, EventArgs e)
+        {
+            frm_Perifericos formPerifericos = new frm_Perifericos();
+            formPerifericos.Show();
+            this.Hide();
+        }
     }
 }

@@ -30,127 +30,30 @@ namespace TCC_3_M
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Inicio));
-            this.btnUsuario = new System.Windows.Forms.Button();
             this.btnHistoricos = new System.Windows.Forms.Button();
-            this.btnPerifericos = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnComputadores = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
             this.pnlMenus = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_Creditos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnComputadores = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnPerifericos = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.pnlMenus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnUsuario
+            // btnHistoricos
             // 
-            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
-            this.btnUsuario.Location = new System.Drawing.Point(690, 0);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(110, 70);
-            this.btnUsuario.TabIndex = 6;
-            this.btnUsuario.Text = "Usuário";
-            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnPerifericos
-            // 
-            this.btnPerifericos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPerifericos.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerifericos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerifericos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPerifericos.Image = global::TCC_3_M.Properties.Resources.rato;
-            this.btnPerifericos.Location = new System.Drawing.Point(511, 108);
-            this.btnPerifericos.Name = "btnPerifericos";
-            this.btnPerifericos.Size = new System.Drawing.Size(136, 104);
-            this.btnPerifericos.TabIndex = 4;
-            this.btnPerifericos.Text = "Periféricos";
-            this.btnPerifericos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerifericos.UseVisualStyleBackColor = false;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClientes.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
-            this.btnClientes.Location = new System.Drawing.Point(511, 234);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(136, 104);
-            this.btnClientes.TabIndex = 3;
-            this.btnClientes.Text = "Usuários";
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(343, 234);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(136, 104);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Deletar";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnComputadores
-            // 
-            this.btnComputadores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComputadores.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnComputadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComputadores.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputadores.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnComputadores.Image = global::TCC_3_M.Properties.Resources.computador;
-            this.btnComputadores.Location = new System.Drawing.Point(343, 108);
-            this.btnComputadores.Name = "btnComputadores";
-            this.btnComputadores.Size = new System.Drawing.Size(136, 104);
-            this.btnComputadores.TabIndex = 1;
-            this.btnComputadores.Text = "Hardware";
-            this.btnComputadores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnComputadores.UseVisualStyleBackColor = false;
-            this.btnComputadores.Click += new System.EventHandler(this.btnCadastrarDispositivo_Click);
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEstoque.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
-            this.btnEstoque.Location = new System.Drawing.Point(174, 108);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(136, 104);
-            this.btnEstoque.TabIndex = 0;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            this.btnHistoricos.Location = new System.Drawing.Point(0, 0);
+            this.btnHistoricos.Name = "btnHistoricos";
+            this.btnHistoricos.Size = new System.Drawing.Size(75, 23);
+            this.btnHistoricos.TabIndex = 5;
             // 
             // pnlMenus
             // 
@@ -164,6 +67,21 @@ namespace TCC_3_M
             this.pnlMenus.Name = "pnlMenus";
             this.pnlMenus.Size = new System.Drawing.Size(800, 70);
             this.pnlMenus.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.btnComputadores);
+            this.panel1.Controls.Add(this.btnClientes);
+            this.panel1.Controls.Add(this.btnPerifericos);
+            this.panel1.Controls.Add(this.btnHistoricos);
+            this.panel1.Controls.Add(this.btnExcluir);
+            this.panel1.Controls.Add(this.btnEstoque);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -222,20 +140,110 @@ namespace TCC_3_M
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
+            // btnUsuario
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Controls.Add(this.btnComputadores);
-            this.panel1.Controls.Add(this.btnClientes);
-            this.panel1.Controls.Add(this.btnPerifericos);
-            this.panel1.Controls.Add(this.btnHistoricos);
-            this.panel1.Controls.Add(this.btnExcluir);
-            this.panel1.Controls.Add(this.btnEstoque);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
-            this.panel1.TabIndex = 8;
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.Location = new System.Drawing.Point(690, 0);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(110, 70);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "Usuário";
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            // 
+            // btnComputadores
+            // 
+            this.btnComputadores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnComputadores.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnComputadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComputadores.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComputadores.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnComputadores.Image = global::TCC_3_M.Properties.Resources.computador;
+            this.btnComputadores.Location = new System.Drawing.Point(343, 108);
+            this.btnComputadores.Name = "btnComputadores";
+            this.btnComputadores.Size = new System.Drawing.Size(136, 104);
+            this.btnComputadores.TabIndex = 1;
+            this.btnComputadores.Text = "Hardware";
+            this.btnComputadores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnComputadores.UseVisualStyleBackColor = false;
+            this.btnComputadores.Click += new System.EventHandler(this.btnCadastrarDispositivo_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClientes.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.Location = new System.Drawing.Point(511, 234);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(136, 104);
+            this.btnClientes.TabIndex = 3;
+            this.btnClientes.Text = "Usuários";
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
+            // 
+            // btnPerifericos
+            // 
+            this.btnPerifericos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPerifericos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerifericos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerifericos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPerifericos.Image = global::TCC_3_M.Properties.Resources.rato;
+            this.btnPerifericos.Location = new System.Drawing.Point(511, 108);
+            this.btnPerifericos.Name = "btnPerifericos";
+            this.btnPerifericos.Size = new System.Drawing.Size(136, 104);
+            this.btnPerifericos.TabIndex = 4;
+            this.btnPerifericos.Text = "Periféricos";
+            this.btnPerifericos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerifericos.UseVisualStyleBackColor = false;
+            this.btnPerifericos.Click += new System.EventHandler(this.btnPerifericos_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(343, 234);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(136, 104);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Deletar";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEstoque.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
+            this.btnEstoque.Location = new System.Drawing.Point(174, 108);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(136, 104);
+            this.btnEstoque.TabIndex = 0;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // frm_Inicio
             // 
@@ -251,8 +259,8 @@ namespace TCC_3_M
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.pnlMenus.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

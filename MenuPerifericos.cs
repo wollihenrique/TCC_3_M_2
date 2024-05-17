@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_Usuario : Form
+    public partial class frm_Perifericos : Form
     {
-        public frm_Usuario()
+        public frm_Perifericos()
         {
             InitializeComponent();
         }
 
-        private void btnVoltar_pnlCadastroDevice_Click(object sender, EventArgs e)
+        private void btnVoltarPerifericos_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void btnVoltarEstoque_Click(object sender, EventArgs e)
-        {
-            frm_Inicio formInicio = new frm_Inicio();
-            formInicio.Show();
+            frm_Inicio formMenu = new frm_Inicio();
+            formMenu.Show();
             this.Hide();
         }
     }

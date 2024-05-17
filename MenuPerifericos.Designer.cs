@@ -1,7 +1,7 @@
 ﻿
 namespace TCC_3_M
 {
-    partial class frm_CadastroDisp
+    partial class frm_Perifericos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,7 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDisp));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Perifericos));
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmb_Status_Usuario = new System.Windows.Forms.ComboBox();
             this.lblOrderBy = new System.Windows.Forms.Label();
@@ -42,77 +37,22 @@ namespace TCC_3_M
             this.lblStatus = new System.Windows.Forms.Label();
             this.txt_Procurar_Usuario = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.btn_Pesquisar_CadastroDispo = new System.Windows.Forms.Button();
-            this.btnVoltarHardware = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVoltar_pnlCadastroDevice = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.btnVoltarPerifericos = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btn_Novo_CastroDisp = new System.Windows.Forms.Button();
+            this.btn_Pesquisar_CadastroDispo = new System.Windows.Forms.Button();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnl_Menu.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(920, 281);
-            this.dataGridView1.TabIndex = 22;
-            // 
-            // pnl_Menu
-            // 
-            this.pnl_Menu.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnl_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Menu.Controls.Add(this.btnVoltarHardware);
-            this.pnl_Menu.Controls.Add(this.button3);
-            this.pnl_Menu.Controls.Add(this.button2);
-            this.pnl_Menu.Controls.Add(this.btnEdit);
-            this.pnl_Menu.Controls.Add(this.btn_Novo_CastroDisp);
-            this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(944, 62);
-            this.pnl_Menu.TabIndex = 18;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.btnVoltar_pnlCadastroDevice);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(944, 47);
-            this.panel2.TabIndex = 23;
-            // 
-            // btnVoltar_pnlCadastroDevice
-            // 
-            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
-            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
-            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(44, 47);
-            this.btnVoltar_pnlCadastroDevice.TabIndex = 52;
-            this.btnVoltar_pnlCadastroDevice.Text = "<";
-            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(49, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "HARDWARE";
             // 
             // panel3
             // 
@@ -127,7 +67,7 @@ namespace TCC_3_M
             this.panel3.Location = new System.Drawing.Point(0, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(944, 57);
-            this.panel3.TabIndex = 24;
+            this.panel3.TabIndex = 29;
             // 
             // cmb_Status_Usuario
             // 
@@ -201,36 +141,81 @@ namespace TCC_3_M
             this.lblSearch.TabIndex = 7;
             this.lblSearch.Text = "Procurar:";
             // 
-            // btn_Pesquisar_CadastroDispo
+            // panel2
             // 
-            this.btn_Pesquisar_CadastroDispo.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Pesquisar_CadastroDispo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Pesquisar_CadastroDispo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pesquisar_CadastroDispo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Pesquisar_CadastroDispo.Image = global::TCC_3_M.Properties.Resources.big_search_len;
-            this.btn_Pesquisar_CadastroDispo.Location = new System.Drawing.Point(824, 469);
-            this.btn_Pesquisar_CadastroDispo.Name = "btn_Pesquisar_CadastroDispo";
-            this.btn_Pesquisar_CadastroDispo.Size = new System.Drawing.Size(108, 30);
-            this.btn_Pesquisar_CadastroDispo.TabIndex = 19;
-            this.btn_Pesquisar_CadastroDispo.Text = "Pesquisar";
-            this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.btnVoltar_pnlCadastroDevice);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(944, 47);
+            this.panel2.TabIndex = 28;
             // 
-            // btnVoltarHardware
+            // btnVoltar_pnlCadastroDevice
             // 
-            this.btnVoltarHardware.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnVoltarHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarHardware.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltarHardware.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltarHardware.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarHardware.Image")));
-            this.btnVoltarHardware.Location = new System.Drawing.Point(832, 0);
-            this.btnVoltarHardware.Name = "btnVoltarHardware";
-            this.btnVoltarHardware.Size = new System.Drawing.Size(110, 60);
-            this.btnVoltarHardware.TabIndex = 9;
-            this.btnVoltarHardware.Text = "Voltar";
-            this.btnVoltarHardware.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVoltarHardware.UseVisualStyleBackColor = true;
-            this.btnVoltarHardware.Click += new System.EventHandler(this.btnVoltarHardware_Click);
+            this.btnVoltar_pnlCadastroDevice.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnVoltar_pnlCadastroDevice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnVoltar_pnlCadastroDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar_pnlCadastroDevice.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar_pnlCadastroDevice.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnVoltar_pnlCadastroDevice.Location = new System.Drawing.Point(0, 0);
+            this.btnVoltar_pnlCadastroDevice.Name = "btnVoltar_pnlCadastroDevice";
+            this.btnVoltar_pnlCadastroDevice.Size = new System.Drawing.Size(44, 47);
+            this.btnVoltar_pnlCadastroDevice.TabIndex = 52;
+            this.btnVoltar_pnlCadastroDevice.Text = "<";
+            this.btnVoltar_pnlCadastroDevice.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(50, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "PERIFÉRICOS";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 186);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(920, 281);
+            this.dataGridView1.TabIndex = 27;
+            // 
+            // pnl_Menu
+            // 
+            this.pnl_Menu.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnl_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Menu.Controls.Add(this.btnVoltarPerifericos);
+            this.pnl_Menu.Controls.Add(this.button3);
+            this.pnl_Menu.Controls.Add(this.button2);
+            this.pnl_Menu.Controls.Add(this.btnEdit);
+            this.pnl_Menu.Controls.Add(this.btn_Novo_CastroDisp);
+            this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Menu.Name = "pnl_Menu";
+            this.pnl_Menu.Size = new System.Drawing.Size(944, 62);
+            this.pnl_Menu.TabIndex = 25;
+            // 
+            // btnVoltarPerifericos
+            // 
+            this.btnVoltarPerifericos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnVoltarPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarPerifericos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltarPerifericos.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoltarPerifericos.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarPerifericos.Image")));
+            this.btnVoltarPerifericos.Location = new System.Drawing.Point(832, 0);
+            this.btnVoltarPerifericos.Name = "btnVoltarPerifericos";
+            this.btnVoltarPerifericos.Size = new System.Drawing.Size(110, 60);
+            this.btnVoltarPerifericos.TabIndex = 9;
+            this.btnVoltarPerifericos.Text = "Voltar";
+            this.btnVoltarPerifericos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVoltarPerifericos.UseVisualStyleBackColor = true;
+            this.btnVoltarPerifericos.Click += new System.EventHandler(this.btnVoltarPerifericos_Click);
             // 
             // button3
             // 
@@ -300,43 +285,46 @@ namespace TCC_3_M
             this.btn_Novo_CastroDisp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_Novo_CastroDisp.UseVisualStyleBackColor = true;
             // 
-            // frm_CadastroDisp
+            // btn_Pesquisar_CadastroDispo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.btn_Pesquisar_CadastroDispo.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Pesquisar_CadastroDispo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Pesquisar_CadastroDispo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pesquisar_CadastroDispo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Pesquisar_CadastroDispo.Image = global::TCC_3_M.Properties.Resources.big_search_len;
+            this.btn_Pesquisar_CadastroDispo.Location = new System.Drawing.Point(824, 475);
+            this.btn_Pesquisar_CadastroDispo.Name = "btn_Pesquisar_CadastroDispo";
+            this.btn_Pesquisar_CadastroDispo.Size = new System.Drawing.Size(108, 30);
+            this.btn_Pesquisar_CadastroDispo.TabIndex = 26;
+            this.btn_Pesquisar_CadastroDispo.Text = "Pesquisar";
+            this.btn_Pesquisar_CadastroDispo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Pesquisar_CadastroDispo.UseVisualStyleBackColor = false;
+            // 
+            // frm_Perifericos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(944, 511);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Pesquisar_CadastroDispo);
             this.Controls.Add(this.pnl_Menu);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frm_CadastroDisp";
+            this.Name = "frm_Perifericos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu - [Cadastro de Dispositivos]";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnl_Menu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Text = "Menu - [Perifericos]";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnl_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_Pesquisar_CadastroDispo;
-        private System.Windows.Forms.Panel pnl_Menu;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btn_Novo_CastroDisp;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnVoltar_pnlCadastroDevice;
-        private System.Windows.Forms.Label label1;
+
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cmb_Status_Usuario;
         private System.Windows.Forms.Label lblOrderBy;
@@ -344,6 +332,16 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txt_Procurar_Usuario;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Button btnVoltarHardware;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnVoltar_pnlCadastroDevice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_Pesquisar_CadastroDispo;
+        private System.Windows.Forms.Panel pnl_Menu;
+        private System.Windows.Forms.Button btnVoltarPerifericos;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btn_Novo_CastroDisp;
     }
 }
