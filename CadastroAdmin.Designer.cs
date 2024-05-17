@@ -35,7 +35,6 @@ namespace TCC_3_M
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCpfCadastroAdmin = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtNumeroCadastroAdmin = new System.Windows.Forms.TextBox();
             this.txtSenhaCadastroAdmin = new System.Windows.Forms.TextBox();
             this.txtEmailCadastroAdmin = new System.Windows.Forms.TextBox();
             this.txtNomeCadstroAdmin = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@ namespace TCC_3_M
             this.lnkTermosCondicoes = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,9 +77,9 @@ namespace TCC_3_M
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.maskedTextBox1);
             this.panel2.Controls.Add(this.txtCpfCadastroAdmin);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtNumeroCadastroAdmin);
             this.panel2.Controls.Add(this.txtSenhaCadastroAdmin);
             this.panel2.Controls.Add(this.txtEmailCadastroAdmin);
             this.panel2.Controls.Add(this.txtNomeCadstroAdmin);
@@ -118,14 +118,6 @@ namespace TCC_3_M
             this.label11.Size = new System.Drawing.Size(42, 18);
             this.label11.TabIndex = 16;
             this.label11.Text = "CPF:";
-            // 
-            // txtNumeroCadastroAdmin
-            // 
-            this.txtNumeroCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumeroCadastroAdmin.Location = new System.Drawing.Point(30, 215);
-            this.txtNumeroCadastroAdmin.Name = "txtNumeroCadastroAdmin";
-            this.txtNumeroCadastroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtNumeroCadastroAdmin.TabIndex = 15;
             // 
             // txtSenhaCadastroAdmin
             // 
@@ -275,6 +267,15 @@ namespace TCC_3_M
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maskedTextBox1.Location = new System.Drawing.Point(30, 211);
+            this.maskedTextBox1.Mask = "(00)00000-9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(250, 22);
+            this.maskedTextBox1.TabIndex = 18;
+            // 
             // frm_CadastroAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,7 +305,6 @@ namespace TCC_3_M
         private System.Windows.Forms.CheckBox cnkTermosCondicoes;
         private System.Windows.Forms.LinkLabel lnkTermosCondicoes;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNumeroCadastroAdmin;
         private System.Windows.Forms.TextBox txtSenhaCadastroAdmin;
         private System.Windows.Forms.TextBox txtEmailCadastroAdmin;
         private System.Windows.Forms.TextBox txtNomeCadstroAdmin;
@@ -317,5 +317,6 @@ namespace TCC_3_M
         private System.Windows.Forms.TextBox txtCpfCadastroAdmin;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
