@@ -118,19 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnVoltarEstoque.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGGSURBVFhH7Ze9
-        SgNREEYXRH0C0wmKYO9L2AYUH0BJZeM7iA9g509iG9BOEBt7Cx/AWAtiqaRQkeh65t65JFf3upv9iYV7
-        4EB27rczAwmbJIrj+BA/sGwG2I7SIFTFcMdAx4TRYBb6eIFnGbxHg44Jo7msvOIV7uC8tvgBZ6do0FIY
-        zeVlX9t4UJ/YAu/axoP6xBZIHEC5XuDPFzixp3Ffrxexg+smMIqkiqBtPCgv4DE29bqNgjz0WibksPX8
-        aJtfIbaG7onrL2Fr+dE2qRDdQrfEJ267g0KYJsDLKdzDpEez8xEdssxmmQus2spYPJW5QAN7ppidbmkL
-        pEF0GR/MTZZLnJ3IAsSWcHT4Oc64w0KYJt+gLB9I+Uw09No9B4ThcMHW8qNtPCjv2tO4p9dNfMYuDocL
-        FAqhbTwo119G9QL/aAHYSPAaDTomjOYqQ8eEIXNno5Vwq2PCEJJvsRYe4A2+4TgkvQWi/Aqa0zHZ4aZp
-        XMEsS6X/+SwDBiUt9YJHGslJFH0BJwBnaLLcQvoAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btn_NovoUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
