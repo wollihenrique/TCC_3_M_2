@@ -32,10 +32,10 @@
             this.btnEntrarLog = new System.Windows.Forms.Button();
             this.pnl_Cadastro_Cad = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkCadastrar = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtNome_CadstroAdmin = new System.Windows.Forms.TextBox();
+            this.txtUsuarioLogin = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSenhaLogin = new System.Windows.Forms.TextBox();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -80,17 +80,17 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
+            // lnkCadastrar
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(449, 326);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(95, 15);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cadastre-se aqui";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkCadastrar.AutoSize = true;
+            this.lnkCadastrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastrar.Location = new System.Drawing.Point(449, 326);
+            this.lnkCadastrar.Name = "lnkCadastrar";
+            this.lnkCadastrar.Size = new System.Drawing.Size(95, 15);
+            this.lnkCadastrar.TabIndex = 5;
+            this.lnkCadastrar.TabStop = true;
+            this.lnkCadastrar.Text = "Cadastre-se aqui";
+            this.lnkCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastrar_LinkClicked);
             // 
             // label4
             // 
@@ -112,14 +112,14 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Nome de Usuário:";
             // 
-            // txtNome_CadstroAdmin
+            // txtUsuarioLogin
             // 
-            this.txtNome_CadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome_CadstroAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome_CadstroAdmin.Location = new System.Drawing.Point(335, 215);
-            this.txtNome_CadstroAdmin.Name = "txtNome_CadstroAdmin";
-            this.txtNome_CadstroAdmin.Size = new System.Drawing.Size(290, 22);
-            this.txtNome_CadstroAdmin.TabIndex = 13;
+            this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuarioLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(335, 215);
+            this.txtUsuarioLogin.Name = "txtUsuarioLogin";
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(290, 22);
+            this.txtUsuarioLogin.TabIndex = 13;
             // 
             // label8
             // 
@@ -140,7 +140,6 @@
             this.txtSenhaLogin.Size = new System.Drawing.Size(290, 22);
             this.txtSenhaLogin.TabIndex = 15;
             this.txtSenhaLogin.UseSystemPasswordChar = true;
-            this.txtSenhaLogin.TextChanged += new System.EventHandler(this.txtSenhaLogin_TextChanged);
             // 
             // btnFechar
             // 
@@ -162,10 +161,10 @@
             this.panel1.Controls.Add(this.txtSenhaLogin);
             this.panel1.Controls.Add(this.btnEntrarLog);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtNome_CadstroAdmin);
+            this.panel1.Controls.Add(this.txtUsuarioLogin);
             this.panel1.Controls.Add(this.btnFechar);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.lnkCadastrar);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -210,10 +209,10 @@
         #endregion
         private System.Windows.Forms.Button btnEntrarLog;
         private System.Windows.Forms.Panel pnl_Cadastro_Cad;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkCadastrar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNome_CadstroAdmin;
+        private System.Windows.Forms.TextBox txtUsuarioLogin;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSenhaLogin;
         private System.Windows.Forms.Button btnFechar;
