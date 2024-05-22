@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace TCC_3_M
 {
@@ -69,9 +70,9 @@ namespace TCC_3_M
                 return;
             }
 
-            if (!Regex.IsMatch(txtNomeCadastro.Text, @"^[a-zA-Z]+$"))
+            if (!Regex.IsMatch(txtNomeCadastro.Text, @"^[a-zA-Z\s]+$"))
             {
-                MessageBox.Show("Nome de usuário inválido. Deve conter apenas letras.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nome de usuário inválido. Deve conter apenas letras e espaços.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -87,10 +88,13 @@ namespace TCC_3_M
                 {
                     connection.Open();
 
+                    // Encriptar a senha antes de inserir no banco de dados
+                    string hashedPassword = HashPassword(txtSenhaCadastro.Text);
+
                     string sql = "INSERT INTO admin (`name`, `password`, cpf, email, phone) VALUES (@name, @password, @cpf, @email, @phone)";
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@name", txtNomeCadastro.Text);
-                    cmd.Parameters.AddWithValue("@password", txtSenhaCadastro.Text);
+                    cmd.Parameters.AddWithValue("@password", hashedPassword); // Utilizando a senha encriptada
                     cmd.Parameters.AddWithValue("@cpf", txtCpfCadastro.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmailCadastro.Text);
                     cmd.Parameters.AddWithValue("@phone", txtNumeroCadastro.Text);
@@ -112,6 +116,28 @@ namespace TCC_3_M
                 MessageBox.Show("Erro ao cadastrar: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private string HashPassword(string password)
+        {
+            string[] specialCharacters = { "'", "\"", "\\", "`", "*", "?", "[", "]", "{", "}", "(", ")", "<", ">", "|", ";", ",", "=", "&", "$", "#", "@" };
+
+            foreach (var character in specialCharacters)
+            {
+                password = password.Replace(character, "\\" + character);
+            }
+
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
 
         private void LimparCampos()
         {
