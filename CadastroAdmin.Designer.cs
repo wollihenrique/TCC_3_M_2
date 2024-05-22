@@ -33,19 +33,19 @@ namespace TCC_3_M
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtCpfCadastroAdmin = new System.Windows.Forms.TextBox();
+            this.txtCpfCadastro = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtNumeroCadastroAdmin = new System.Windows.Forms.TextBox();
-            this.txtSenhaCadastroAdmin = new System.Windows.Forms.TextBox();
-            this.txtEmailCadastroAdmin = new System.Windows.Forms.TextBox();
-            this.txtNomeCadstroAdmin = new System.Windows.Forms.TextBox();
+            this.txtNumeroCadastro = new System.Windows.Forms.TextBox();
+            this.txtSenhaCadastro = new System.Windows.Forms.TextBox();
+            this.txtEmailCadastro = new System.Windows.Forms.TextBox();
+            this.txtNomeCadastro = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCadastrarCadastro = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.cnkTermosCondicoes = new System.Windows.Forms.CheckBox();
             this.lnkTermosCondicoes = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,19 +77,19 @@ namespace TCC_3_M
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtCpfCadastroAdmin);
+            this.panel2.Controls.Add(this.txtCpfCadastro);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtNumeroCadastroAdmin);
-            this.panel2.Controls.Add(this.txtSenhaCadastroAdmin);
-            this.panel2.Controls.Add(this.txtEmailCadastroAdmin);
-            this.panel2.Controls.Add(this.txtNomeCadstroAdmin);
+            this.panel2.Controls.Add(this.txtNumeroCadastro);
+            this.panel2.Controls.Add(this.txtSenhaCadastro);
+            this.panel2.Controls.Add(this.txtEmailCadastro);
+            this.panel2.Controls.Add(this.txtNomeCadastro);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.btnCadastrarCadastro);
+            this.panel2.Controls.Add(this.btnCadastrar);
             this.panel2.Controls.Add(this.cnkTermosCondicoes);
             this.panel2.Controls.Add(this.lnkTermosCondicoes);
             this.panel2.Controls.Add(this.label4);
@@ -101,13 +101,13 @@ namespace TCC_3_M
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 1;
             // 
-            // txtCpfCadastroAdmin
+            // txtCpfCadastro
             // 
-            this.txtCpfCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCpfCadastroAdmin.Location = new System.Drawing.Point(30, 155);
-            this.txtCpfCadastroAdmin.Name = "txtCpfCadastroAdmin";
-            this.txtCpfCadastroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtCpfCadastroAdmin.TabIndex = 17;
+            this.txtCpfCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpfCadastro.Location = new System.Drawing.Point(30, 155);
+            this.txtCpfCadastro.Name = "txtCpfCadastro";
+            this.txtCpfCadastro.Size = new System.Drawing.Size(250, 22);
+            this.txtCpfCadastro.TabIndex = 17;
             // 
             // label11
             // 
@@ -119,39 +119,38 @@ namespace TCC_3_M
             this.label11.TabIndex = 16;
             this.label11.Text = "CPF:";
             // 
-            // txtNumeroCadastroAdmin
+            // txtNumeroCadastro
             // 
-            this.txtNumeroCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumeroCadastroAdmin.Location = new System.Drawing.Point(30, 215);
-            this.txtNumeroCadastroAdmin.Name = "txtNumeroCadastroAdmin";
-            this.txtNumeroCadastroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtNumeroCadastroAdmin.TabIndex = 15;
+            this.txtNumeroCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumeroCadastro.Location = new System.Drawing.Point(30, 215);
+            this.txtNumeroCadastro.Name = "txtNumeroCadastro";
+            this.txtNumeroCadastro.Size = new System.Drawing.Size(250, 22);
+            this.txtNumeroCadastro.TabIndex = 15;
             // 
-            // txtSenhaCadastroAdmin
+            // txtSenhaCadastro
             // 
-            this.txtSenhaCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSenhaCadastroAdmin.Location = new System.Drawing.Point(30, 335);
-            this.txtSenhaCadastroAdmin.Name = "txtSenhaCadastroAdmin";
-            this.txtSenhaCadastroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtSenhaCadastroAdmin.TabIndex = 14;
-            this.txtSenhaCadastroAdmin.UseSystemPasswordChar = true;
-            this.txtSenhaCadastroAdmin.TextChanged += new System.EventHandler(this.txtSenha_CadastroAdmin_TextChanged);
+            this.txtSenhaCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(30, 335);
+            this.txtSenhaCadastro.Name = "txtSenhaCadastro";
+            this.txtSenhaCadastro.Size = new System.Drawing.Size(250, 22);
+            this.txtSenhaCadastro.TabIndex = 14;
+            this.txtSenhaCadastro.UseSystemPasswordChar = true;
             // 
-            // txtEmailCadastroAdmin
+            // txtEmailCadastro
             // 
-            this.txtEmailCadastroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailCadastroAdmin.Location = new System.Drawing.Point(30, 275);
-            this.txtEmailCadastroAdmin.Name = "txtEmailCadastroAdmin";
-            this.txtEmailCadastroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtEmailCadastroAdmin.TabIndex = 13;
+            this.txtEmailCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailCadastro.Location = new System.Drawing.Point(30, 275);
+            this.txtEmailCadastro.Name = "txtEmailCadastro";
+            this.txtEmailCadastro.Size = new System.Drawing.Size(250, 22);
+            this.txtEmailCadastro.TabIndex = 13;
             // 
-            // txtNomeCadstroAdmin
+            // txtNomeCadastro
             // 
-            this.txtNomeCadstroAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeCadstroAdmin.Location = new System.Drawing.Point(30, 95);
-            this.txtNomeCadstroAdmin.Name = "txtNomeCadstroAdmin";
-            this.txtNomeCadstroAdmin.Size = new System.Drawing.Size(250, 22);
-            this.txtNomeCadstroAdmin.TabIndex = 12;
+            this.txtNomeCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeCadastro.Location = new System.Drawing.Point(30, 95);
+            this.txtNomeCadastro.Name = "txtNomeCadastro";
+            this.txtNomeCadastro.Size = new System.Drawing.Size(250, 22);
+            this.txtNomeCadastro.TabIndex = 12;
             // 
             // label10
             // 
@@ -215,19 +214,19 @@ namespace TCC_3_M
             this.label6.TabIndex = 6;
             this.label6.Text = "Já possui uma conta? Vá para a";
             // 
-            // btnCadastrarCadastro
+            // btnCadastrar
             // 
-            this.btnCadastrarCadastro.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCadastrarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarCadastro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCadastro.Location = new System.Drawing.Point(300, 460);
-            this.btnCadastrarCadastro.Name = "btnCadastrarCadastro";
-            this.btnCadastrarCadastro.Size = new System.Drawing.Size(85, 35);
-            this.btnCadastrarCadastro.TabIndex = 4;
-            this.btnCadastrarCadastro.Text = "Cadastrar";
-            this.btnCadastrarCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastrarCadastro.Click += new System.EventHandler(this.btnCadstrarCadastro_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(300, 460);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(85, 35);
+            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += btnCadastrar_Click;
             // 
             // cnkTermosCondicoes
             // 
@@ -249,7 +248,6 @@ namespace TCC_3_M
             this.lnkTermosCondicoes.TabIndex = 2;
             this.lnkTermosCondicoes.TabStop = true;
             this.lnkTermosCondicoes.Text = "Termos de Condições de uso do sistema.";
-            this.lnkTermosCondicoes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label4
             // 
@@ -300,21 +298,21 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnCadastrarCadastro;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.CheckBox cnkTermosCondicoes;
         private System.Windows.Forms.LinkLabel lnkTermosCondicoes;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNumeroCadastroAdmin;
-        private System.Windows.Forms.TextBox txtSenhaCadastroAdmin;
-        private System.Windows.Forms.TextBox txtEmailCadastroAdmin;
-        private System.Windows.Forms.TextBox txtNomeCadstroAdmin;
+        private System.Windows.Forms.TextBox txtNumeroCadastro;
+        private System.Windows.Forms.TextBox txtSenhaCadastro;
+        private System.Windows.Forms.TextBox txtEmailCadastro;
+        private System.Windows.Forms.TextBox txtNomeCadastro;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCpfCadastroAdmin;
+        private System.Windows.Forms.TextBox txtCpfCadastro;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
