@@ -55,15 +55,15 @@ namespace TCC_3_M
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new frm_Usuario());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void btnDispositivos_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new frm_CadastroDisp());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
@@ -86,7 +86,7 @@ namespace TCC_3_M
 
         private void btnNossaEquipe_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new teste2());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
