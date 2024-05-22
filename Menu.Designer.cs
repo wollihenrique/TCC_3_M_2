@@ -51,6 +51,7 @@ namespace TCC_3_M
             this.pnlFilhoCabecalhoPrincipal = new System.Windows.Forms.Panel();
             this.pnlFilhoConteinerPrincipal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlMenuPrincipal.SuspendLayout();
             this.pnlSubMenuAjuda.SuspendLayout();
             this.pnlSubMenuCreditos.SuspendLayout();
@@ -64,7 +65,8 @@ namespace TCC_3_M
             // pnlMenuPrincipal
             // 
             this.pnlMenuPrincipal.AutoScroll = true;
-            this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.pnlMenuPrincipal.Controls.Add(this.button1);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuCreditos);
@@ -80,7 +82,7 @@ namespace TCC_3_M
             // 
             // pnlSubMenuAjuda
             // 
-            this.pnlSubMenuAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.pnlSubMenuAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.pnlSubMenuAjuda.Controls.Add(this.btnDuvidas);
             this.pnlSubMenuAjuda.Controls.Add(this.btnTutoriais);
             this.pnlSubMenuAjuda.Controls.Add(this.btnContatos);
@@ -92,7 +94,7 @@ namespace TCC_3_M
             // 
             // btnDuvidas
             // 
-            this.btnDuvidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnDuvidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnDuvidas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDuvidas.FlatAppearance.BorderSize = 0;
             this.btnDuvidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,7 +112,7 @@ namespace TCC_3_M
             // 
             // btnTutoriais
             // 
-            this.btnTutoriais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnTutoriais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnTutoriais.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTutoriais.FlatAppearance.BorderSize = 0;
             this.btnTutoriais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,7 +130,7 @@ namespace TCC_3_M
             // 
             // btnContatos
             // 
-            this.btnContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnContatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContatos.FlatAppearance.BorderSize = 0;
             this.btnContatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -146,7 +148,7 @@ namespace TCC_3_M
             // 
             // btnAjuda
             // 
-            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(205)))));
+            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.btnAjuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAjuda.FlatAppearance.BorderSize = 0;
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,7 +166,7 @@ namespace TCC_3_M
             // 
             // pnlSubMenuCreditos
             // 
-            this.pnlSubMenuCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.pnlSubMenuCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.pnlSubMenuCreditos.Controls.Add(this.btnNossaEquipe);
             this.pnlSubMenuCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuCreditos.Location = new System.Drawing.Point(0, 305);
@@ -174,7 +176,7 @@ namespace TCC_3_M
             // 
             // btnNossaEquipe
             // 
-            this.btnNossaEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnNossaEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnNossaEquipe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNossaEquipe.FlatAppearance.BorderSize = 0;
             this.btnNossaEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -193,7 +195,7 @@ namespace TCC_3_M
             // 
             // btnCreditos
             // 
-            this.btnCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(205)))));
+            this.btnCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.btnCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCreditos.FlatAppearance.BorderSize = 0;
             this.btnCreditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -211,7 +213,7 @@ namespace TCC_3_M
             // 
             // pnlSubUserMenu
             // 
-            this.pnlSubUserMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.pnlSubUserMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.pnlSubUserMenu.Controls.Add(this.btnPerifericos);
             this.pnlSubUserMenu.Controls.Add(this.btnDispositivos);
             this.pnlSubUserMenu.Controls.Add(this.btnUsuarios);
@@ -223,7 +225,7 @@ namespace TCC_3_M
             // 
             // btnPerifericos
             // 
-            this.btnPerifericos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnPerifericos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnPerifericos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPerifericos.FlatAppearance.BorderSize = 0;
             this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,7 +243,7 @@ namespace TCC_3_M
             // 
             // btnDispositivos
             // 
-            this.btnDispositivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnDispositivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnDispositivos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDispositivos.FlatAppearance.BorderSize = 0;
             this.btnDispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,7 +261,7 @@ namespace TCC_3_M
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(134)))), ((int)(((byte)(238)))));
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -277,7 +279,7 @@ namespace TCC_3_M
             // 
             // btnRegistros
             // 
-            this.btnRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(205)))));
+            this.btnRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.btnRegistros.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistros.FlatAppearance.BorderSize = 0;
             this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -340,7 +342,7 @@ namespace TCC_3_M
             // 
             // pnlFilhoCabecalhoPrincipal
             // 
-            this.pnlFilhoCabecalhoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(95)))), ((int)(((byte)(161)))));
+            this.pnlFilhoCabecalhoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
             this.pnlFilhoCabecalhoPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(219, 0);
             this.pnlFilhoCabecalhoPrincipal.Name = "pnlFilhoCabecalhoPrincipal";
@@ -349,7 +351,7 @@ namespace TCC_3_M
             // 
             // pnlFilhoConteinerPrincipal
             // 
-            this.pnlFilhoConteinerPrincipal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnlFilhoConteinerPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
             this.pnlFilhoConteinerPrincipal.Controls.Add(this.pictureBox1);
             this.pnlFilhoConteinerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(219, 100);
@@ -367,6 +369,23 @@ namespace TCC_3_M
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 597);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(219, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Sair";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frm_Inicio
             // 
@@ -417,5 +436,6 @@ namespace TCC_3_M
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
