@@ -117,36 +117,40 @@
             // 
             // btnNovoUsuario
             // 
+            this.btnNovoUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoUsuario.Location = new System.Drawing.Point(384, 468);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.Size = new System.Drawing.Size(90, 30);
+            this.btnNovoUsuario.Size = new System.Drawing.Size(100, 50);
             this.btnNovoUsuario.TabIndex = 26;
             this.btnNovoUsuario.Text = "Novo Usuario";
             this.btnNovoUsuario.UseVisualStyleBackColor = true;
             // 
             // btnEditarRegistroUsuario
             // 
+            this.btnEditarRegistroUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarRegistroUsuario.Location = new System.Drawing.Point(604, 468);
             this.btnEditarRegistroUsuario.Name = "btnEditarRegistroUsuario";
-            this.btnEditarRegistroUsuario.Size = new System.Drawing.Size(90, 30);
+            this.btnEditarRegistroUsuario.Size = new System.Drawing.Size(100, 50);
             this.btnEditarRegistroUsuario.TabIndex = 27;
             this.btnEditarRegistroUsuario.Text = "Editar Registro";
             this.btnEditarRegistroUsuario.UseVisualStyleBackColor = true;
             // 
             // btnAtualizarUsuario
             // 
+            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarUsuario.Location = new System.Drawing.Point(278, 468);
             this.btnAtualizarUsuario.Name = "btnAtualizarUsuario";
-            this.btnAtualizarUsuario.Size = new System.Drawing.Size(90, 30);
+            this.btnAtualizarUsuario.Size = new System.Drawing.Size(100, 50);
             this.btnAtualizarUsuario.TabIndex = 28;
             this.btnAtualizarUsuario.Text = "Atualizar";
             this.btnAtualizarUsuario.UseVisualStyleBackColor = true;
             // 
             // btnExcluirUsuario
             // 
+            this.btnExcluirUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluirUsuario.Location = new System.Drawing.Point(495, 468);
             this.btnExcluirUsuario.Name = "btnExcluirUsuario";
-            this.btnExcluirUsuario.Size = new System.Drawing.Size(90, 30);
+            this.btnExcluirUsuario.Size = new System.Drawing.Size(100, 50);
             this.btnExcluirUsuario.TabIndex = 29;
             this.btnExcluirUsuario.Text = "Excluir Usuário";
             this.btnExcluirUsuario.UseVisualStyleBackColor = true;
