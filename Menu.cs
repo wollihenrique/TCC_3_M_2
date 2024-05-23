@@ -154,5 +154,12 @@ namespace TCC_3_M
             childForm.BringToFront();
             childForm.Show();
         }
+
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            frm_Creditos formCreditos = new frm_Creditos();
+            formCreditos.Show();
+            this.Hide();
+        }
     }
 }

@@ -30,31 +30,31 @@ namespace TCC_3_M
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMarcaEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtModeloEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblModel = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtProcessadorEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblProcessor = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtRamEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblRamMemory = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtDiscoEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblDisc = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPlacaVideoEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblVideoCard = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtPlacaRedeEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblNetworkCard = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLatitudeEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblLatitude = new System.Windows.Forms.Label();
-            this.txtTag = new System.Windows.Forms.TextBox();
+            this.txtTagEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblTag = new System.Windows.Forms.Label();
-            this.txtGuarantee = new System.Windows.Forms.TextBox();
+            this.txtGarantiaEditarRegistro = new System.Windows.Forms.TextBox();
             this.lblGuarantee = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbStatusEditarRegistro = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,8 +68,21 @@ namespace TCC_3_M
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 59);
+            this.panel1.Size = new System.Drawing.Size(744, 59);
             this.panel1.TabIndex = 0;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnFechar.Location = new System.Drawing.Point(705, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(45, 46);
+            this.btnFechar.TabIndex = 42;
+            this.btnFechar.Text = "X";
+            this.btnFechar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -93,14 +106,14 @@ namespace TCC_3_M
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // txtMarcaEditarRegistro
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(12, 77);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 20);
-            this.textBox2.TabIndex = 21;
+            this.txtMarcaEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMarcaEditarRegistro.Location = new System.Drawing.Point(12, 77);
+            this.txtMarcaEditarRegistro.Multiline = true;
+            this.txtMarcaEditarRegistro.Name = "txtMarcaEditarRegistro";
+            this.txtMarcaEditarRegistro.Size = new System.Drawing.Size(237, 20);
+            this.txtMarcaEditarRegistro.TabIndex = 21;
             // 
             // lblBrand
             // 
@@ -112,14 +125,14 @@ namespace TCC_3_M
             this.lblBrand.TabIndex = 20;
             this.lblBrand.Text = "Marca :";
             // 
-            // textBox3
+            // txtModeloEditarRegistro
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(12, 114);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 20);
-            this.textBox3.TabIndex = 23;
+            this.txtModeloEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtModeloEditarRegistro.Location = new System.Drawing.Point(12, 114);
+            this.txtModeloEditarRegistro.Multiline = true;
+            this.txtModeloEditarRegistro.Name = "txtModeloEditarRegistro";
+            this.txtModeloEditarRegistro.Size = new System.Drawing.Size(237, 20);
+            this.txtModeloEditarRegistro.TabIndex = 23;
             // 
             // lblModel
             // 
@@ -131,14 +144,14 @@ namespace TCC_3_M
             this.lblModel.TabIndex = 22;
             this.lblModel.Text = "Modelo :";
             // 
-            // textBox5
+            // txtProcessadorEditarRegistro
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(12, 153);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(237, 20);
-            this.textBox5.TabIndex = 25;
+            this.txtProcessadorEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProcessadorEditarRegistro.Location = new System.Drawing.Point(12, 153);
+            this.txtProcessadorEditarRegistro.Multiline = true;
+            this.txtProcessadorEditarRegistro.Name = "txtProcessadorEditarRegistro";
+            this.txtProcessadorEditarRegistro.Size = new System.Drawing.Size(237, 20);
+            this.txtProcessadorEditarRegistro.TabIndex = 25;
             // 
             // lblProcessor
             // 
@@ -150,14 +163,14 @@ namespace TCC_3_M
             this.lblProcessor.TabIndex = 24;
             this.lblProcessor.Text = "Processador :";
             // 
-            // textBox6
+            // txtRamEditarRegistro
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(12, 192);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(237, 20);
-            this.textBox6.TabIndex = 27;
+            this.txtRamEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRamEditarRegistro.Location = new System.Drawing.Point(12, 192);
+            this.txtRamEditarRegistro.Multiline = true;
+            this.txtRamEditarRegistro.Name = "txtRamEditarRegistro";
+            this.txtRamEditarRegistro.Size = new System.Drawing.Size(237, 20);
+            this.txtRamEditarRegistro.TabIndex = 27;
             // 
             // lblRamMemory
             // 
@@ -169,14 +182,14 @@ namespace TCC_3_M
             this.lblRamMemory.TabIndex = 26;
             this.lblRamMemory.Text = "Memória Ram :";
             // 
-            // textBox7
+            // txtDiscoEditarRegistro
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(293, 77);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(264, 20);
-            this.textBox7.TabIndex = 29;
+            this.txtDiscoEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiscoEditarRegistro.Location = new System.Drawing.Point(293, 77);
+            this.txtDiscoEditarRegistro.Multiline = true;
+            this.txtDiscoEditarRegistro.Name = "txtDiscoEditarRegistro";
+            this.txtDiscoEditarRegistro.Size = new System.Drawing.Size(264, 20);
+            this.txtDiscoEditarRegistro.TabIndex = 29;
             // 
             // lblDisc
             // 
@@ -188,14 +201,14 @@ namespace TCC_3_M
             this.lblDisc.TabIndex = 28;
             this.lblDisc.Text = "Disco :";
             // 
-            // textBox8
+            // txtPlacaVideoEditarRegistro
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(292, 114);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(265, 20);
-            this.textBox8.TabIndex = 31;
+            this.txtPlacaVideoEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlacaVideoEditarRegistro.Location = new System.Drawing.Point(292, 114);
+            this.txtPlacaVideoEditarRegistro.Multiline = true;
+            this.txtPlacaVideoEditarRegistro.Name = "txtPlacaVideoEditarRegistro";
+            this.txtPlacaVideoEditarRegistro.Size = new System.Drawing.Size(265, 20);
+            this.txtPlacaVideoEditarRegistro.TabIndex = 31;
             // 
             // lblVideoCard
             // 
@@ -207,14 +220,14 @@ namespace TCC_3_M
             this.lblVideoCard.TabIndex = 30;
             this.lblVideoCard.Text = "Placa de vídeo :";
             // 
-            // textBox9
+            // txtPlacaRedeEditarRegistro
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(292, 155);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(266, 20);
-            this.textBox9.TabIndex = 33;
+            this.txtPlacaRedeEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlacaRedeEditarRegistro.Location = new System.Drawing.Point(292, 155);
+            this.txtPlacaRedeEditarRegistro.Multiline = true;
+            this.txtPlacaRedeEditarRegistro.Name = "txtPlacaRedeEditarRegistro";
+            this.txtPlacaRedeEditarRegistro.Size = new System.Drawing.Size(266, 20);
+            this.txtPlacaRedeEditarRegistro.TabIndex = 33;
             // 
             // lblNetworkCard
             // 
@@ -226,14 +239,14 @@ namespace TCC_3_M
             this.lblNetworkCard.TabIndex = 32;
             this.lblNetworkCard.Text = "Placa de Rede :";
             // 
-            // textBox4
+            // txtLatitudeEditarRegistro
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(293, 192);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 35;
+            this.txtLatitudeEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLatitudeEditarRegistro.Location = new System.Drawing.Point(293, 192);
+            this.txtLatitudeEditarRegistro.Multiline = true;
+            this.txtLatitudeEditarRegistro.Name = "txtLatitudeEditarRegistro";
+            this.txtLatitudeEditarRegistro.Size = new System.Drawing.Size(121, 20);
+            this.txtLatitudeEditarRegistro.TabIndex = 35;
             // 
             // lblLatitude
             // 
@@ -245,14 +258,14 @@ namespace TCC_3_M
             this.lblLatitude.TabIndex = 34;
             this.lblLatitude.Text = "Latitude :";
             // 
-            // txtTag
+            // txtTagEditarRegistro
             // 
-            this.txtTag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTag.Location = new System.Drawing.Point(420, 192);
-            this.txtTag.Multiline = true;
-            this.txtTag.Name = "txtTag";
-            this.txtTag.Size = new System.Drawing.Size(121, 20);
-            this.txtTag.TabIndex = 37;
+            this.txtTagEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTagEditarRegistro.Location = new System.Drawing.Point(420, 192);
+            this.txtTagEditarRegistro.Multiline = true;
+            this.txtTagEditarRegistro.Name = "txtTagEditarRegistro";
+            this.txtTagEditarRegistro.Size = new System.Drawing.Size(121, 20);
+            this.txtTagEditarRegistro.TabIndex = 37;
             // 
             // lblTag
             // 
@@ -264,14 +277,14 @@ namespace TCC_3_M
             this.lblTag.TabIndex = 36;
             this.lblTag.Text = "Tag :";
             // 
-            // txtGuarantee
+            // txtGarantiaEditarRegistro
             // 
-            this.txtGuarantee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGuarantee.Location = new System.Drawing.Point(574, 77);
-            this.txtGuarantee.Multiline = true;
-            this.txtGuarantee.Name = "txtGuarantee";
-            this.txtGuarantee.Size = new System.Drawing.Size(121, 20);
-            this.txtGuarantee.TabIndex = 39;
+            this.txtGarantiaEditarRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGarantiaEditarRegistro.Location = new System.Drawing.Point(574, 77);
+            this.txtGarantiaEditarRegistro.Multiline = true;
+            this.txtGarantiaEditarRegistro.Name = "txtGarantiaEditarRegistro";
+            this.txtGarantiaEditarRegistro.Size = new System.Drawing.Size(121, 20);
+            this.txtGarantiaEditarRegistro.TabIndex = 39;
             // 
             // lblGuarantee
             // 
@@ -283,21 +296,21 @@ namespace TCC_3_M
             this.lblGuarantee.TabIndex = 38;
             this.lblGuarantee.Text = "Garantia :";
             // 
-            // cmbStatus
+            // cmbStatusEditarRegistro
             // 
-            this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
+            this.cmbStatusEditarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStatusEditarRegistro.FormattingEnabled = true;
+            this.cmbStatusEditarRegistro.Items.AddRange(new object[] {
             "Em uso",
             "Em estoque",
             "Em manutenção",
             "Em conserto",
             "Indisponível",
             "Para descarte"});
-            this.cmbStatus.Location = new System.Drawing.Point(574, 114);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatus.TabIndex = 41;
+            this.cmbStatusEditarRegistro.Location = new System.Drawing.Point(574, 114);
+            this.cmbStatusEditarRegistro.Name = "cmbStatusEditarRegistro";
+            this.cmbStatusEditarRegistro.Size = new System.Drawing.Size(121, 21);
+            this.cmbStatusEditarRegistro.TabIndex = 41;
             // 
             // lblStatus
             // 
@@ -309,45 +322,32 @@ namespace TCC_3_M
             this.lblStatus.TabIndex = 40;
             this.lblStatus.Text = "Status :";
             // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFechar.Location = new System.Drawing.Point(705, 0);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(45, 46);
-            this.btnFechar.TabIndex = 42;
-            this.btnFechar.Text = "X";
-            this.btnFechar.UseVisualStyleBackColor = true;
-            // 
             // frm_Editar_Dispositivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 500);
-            this.Controls.Add(this.cmbStatus);
+            this.ClientSize = new System.Drawing.Size(744, 500);
+            this.Controls.Add(this.cmbStatusEditarRegistro);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.txtGuarantee);
+            this.Controls.Add(this.txtGarantiaEditarRegistro);
             this.Controls.Add(this.lblGuarantee);
-            this.Controls.Add(this.txtTag);
+            this.Controls.Add(this.txtTagEditarRegistro);
             this.Controls.Add(this.lblTag);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtLatitudeEditarRegistro);
             this.Controls.Add(this.lblLatitude);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtPlacaRedeEditarRegistro);
             this.Controls.Add(this.lblNetworkCard);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtPlacaVideoEditarRegistro);
             this.Controls.Add(this.lblVideoCard);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtDiscoEditarRegistro);
             this.Controls.Add(this.lblDisc);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtRamEditarRegistro);
             this.Controls.Add(this.lblRamMemory);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtProcessadorEditarRegistro);
             this.Controls.Add(this.lblProcessor);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtModeloEditarRegistro);
             this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMarcaEditarRegistro);
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -367,27 +367,27 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMarcaEditarRegistro;
         private System.Windows.Forms.Label lblBrand;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtModeloEditarRegistro;
         private System.Windows.Forms.Label lblModel;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtProcessadorEditarRegistro;
         private System.Windows.Forms.Label lblProcessor;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtRamEditarRegistro;
         private System.Windows.Forms.Label lblRamMemory;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtDiscoEditarRegistro;
         private System.Windows.Forms.Label lblDisc;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtPlacaVideoEditarRegistro;
         private System.Windows.Forms.Label lblVideoCard;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPlacaRedeEditarRegistro;
         private System.Windows.Forms.Label lblNetworkCard;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLatitudeEditarRegistro;
         private System.Windows.Forms.Label lblLatitude;
-        private System.Windows.Forms.TextBox txtTag;
+        private System.Windows.Forms.TextBox txtTagEditarRegistro;
         private System.Windows.Forms.Label lblTag;
-        private System.Windows.Forms.TextBox txtGuarantee;
+        private System.Windows.Forms.TextBox txtGarantiaEditarRegistro;
         private System.Windows.Forms.Label lblGuarantee;
-        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.ComboBox cmbStatusEditarRegistro;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnFechar;
     }
