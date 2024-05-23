@@ -15,41 +15,144 @@ namespace TCC_3_M
         public frm_Inicio()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
-        private void btnCadastrarDispositivo_Click(object sender, EventArgs e)
+        private void customizeDesign()
         {
-            frm_CadastroDisp frm_Inicio = new frm_CadastroDisp();
-            frm_Inicio.Show();
-            this.Hide();
+            pnlSubUserMenu.Visible = false;
+            pnlSubMenuCreditos.Visible = false;
+            pnlSubMenuAjuda.Visible = false;
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void hideSubMenu()
         {
-            frm_ExcluirDispositivo frmExcluirDisp = new frm_ExcluirDispositivo();
-            frmExcluirDisp.Show();
-            this.Hide();
+            if (pnlSubUserMenu.Visible == true)
+                pnlSubUserMenu.Visible = false;
+            if (pnlSubMenuAjuda.Visible == true)
+                pnlSubMenuAjuda.Visible = false;
+            if (pnlSubMenuCreditos.Visible == true)
+                pnlSubMenuCreditos.Visible = false;
         }
 
-        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        private void showSubMenu( Panel subMenu)
         {
-            frm_Usuario formUsuario = new frm_Usuario();
-            formUsuario.Show();
-            this.Hide();
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+
+            else
+                subMenu.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        #region MENU USUÀRIO
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
-            frm_Login formLogin = new frm_Login();
-            formLogin.Show();
-            this.Hide();
+            showSubMenu(pnlSubUserMenu);
         }
 
-        private void btnEstoque_Click(object sender, EventArgs e)
+        private void btnPerfil_Click(object sender, EventArgs e)
         {
-            frm_Estoque formEstoque = new frm_Estoque();
-            formEstoque.Show();
-            this.Hide();
+            openChildForm(new frm_Usuario());
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void btnDispositivos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_CadastroDisp());
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void btnMudarConta_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+        #endregion
+
+        #region MENU CRÉDITOS
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuCreditos);
+        }
+
+        private void btnNossaEquipe_Click(object sender, EventArgs e)
+        {
+            openChildForm(new teste2());
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+        #endregion
+
+        #region MENU AJUDA
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuAjuda);
+        }
+
+        private void btnContatos_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void btnTutoriais_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+
+        private void btnDuvidas_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            hideSubMenu();
+        }
+        #endregion
+
+        private Form activeForm = null;
+        private void openChildForm( Form childForm )
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlFilhoConteinerPrincipal.Controls.Add(childForm);
+            pnlFilhoConteinerPrincipal.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void btnCreditos_Click(object sender, EventArgs e)
