@@ -86,7 +86,7 @@ namespace TCC_3_M
 
         private void btnNossaEquipe_Click(object sender, EventArgs e)
         {
-            openChildForm(new teste2());
+            openChildForm(new frm_Creditos());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();

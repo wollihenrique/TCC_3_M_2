@@ -46,5 +46,11 @@ namespace TCC_3_M
         {
             this.Close();
         }
+
+        private void btnNovoHardware_Click(object sender, EventArgs e)
+        {
+            frm_RegistroDisp registroDisp = new frm_RegistroDisp();
+            registroDisp.Show();
+        }
     }
 }
