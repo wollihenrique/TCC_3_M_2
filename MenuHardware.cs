@@ -52,5 +52,12 @@ namespace TCC_3_M
             frm_RegistroDisp registroDisp = new frm_RegistroDisp();
             registroDisp.Show();
         }
+
+        private void btnEditarRegistroHardware_Click(object sender, EventArgs e)
+        {
+            frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos();
+            editarDisp.Show();
+
+        }
     }
 }

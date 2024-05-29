@@ -206,6 +206,7 @@ namespace TCC_3_M
             this.btnEditarRegistroHardware.TabIndex = 31;
             this.btnEditarRegistroHardware.Text = "Editar Registro";
             this.btnEditarRegistroHardware.UseVisualStyleBackColor = true;
+            this.btnEditarRegistroHardware.Click += new System.EventHandler(this.btnEditarRegistroHardware_Click);
             // 
             // btnNovoHardware
             // 
