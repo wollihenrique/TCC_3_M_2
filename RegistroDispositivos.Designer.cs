@@ -56,11 +56,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.panelHardwareInfos = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.pnlCadastroP.SuspendLayout();
-            this.panelHardwareInfos.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCadastroP
@@ -72,7 +71,7 @@
             this.pnlCadastroP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCadastroP.Location = new System.Drawing.Point(0, 0);
             this.pnlCadastroP.Name = "pnlCadastroP";
-            this.pnlCadastroP.Size = new System.Drawing.Size(605, 42);
+            this.pnlCadastroP.Size = new System.Drawing.Size(600, 42);
             this.pnlCadastroP.TabIndex = 28;
             // 
             // btnVoltarPnlCadastroDevice
@@ -259,7 +258,7 @@
             this.button2.BackColor = System.Drawing.Color.LimeGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(480, 177);
+            this.button2.Location = new System.Drawing.Point(500, 360);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 31);
             this.button2.TabIndex = 48;
@@ -318,56 +317,44 @@
             this.label13.TabIndex = 53;
             this.label13.Text = "Observações:";
             // 
-            // panelHardwareInfos
+            // panel1
             // 
-            this.panelHardwareInfos.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelHardwareInfos.Controls.Add(this.label13);
-            this.panelHardwareInfos.Controls.Add(this.textBox11);
-            this.panelHardwareInfos.Controls.Add(this.label7);
-            this.panelHardwareInfos.Controls.Add(this.textBox5);
-            this.panelHardwareInfos.Controls.Add(this.label6);
-            this.panelHardwareInfos.Controls.Add(this.label8);
-            this.panelHardwareInfos.Controls.Add(this.textBox7);
-            this.panelHardwareInfos.Controls.Add(this.textBox8);
-            this.panelHardwareInfos.Controls.Add(this.textBox6);
-            this.panelHardwareInfos.Controls.Add(this.textBox9);
-            this.panelHardwareInfos.Controls.Add(this.label9);
-            this.panelHardwareInfos.Controls.Add(this.label10);
-            this.panelHardwareInfos.Location = new System.Drawing.Point(4, 254);
-            this.panelHardwareInfos.Name = "panelHardwareInfos";
-            this.panelHardwareInfos.Size = new System.Drawing.Size(601, 234);
-            this.panelHardwareInfos.TabIndex = 55;
-            this.panelHardwareInfos.Visible = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Location = new System.Drawing.Point(12, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(564, 212);
+            this.panel1.TabIndex = 55;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Firebrick;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(389, 177);
+            this.button1.Location = new System.Drawing.Point(404, 360);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 31);
             this.button1.TabIndex = 56;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 214);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(602, 40);
-            this.button3.TabIndex = 57;
-            this.button3.Text = "Adicionar mais informações";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // frm_RegistroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(605, 500);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
@@ -383,7 +370,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCadastroP);
-            this.Controls.Add(this.panelHardwareInfos);
+            this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_RegistroDisp";
@@ -391,8 +378,8 @@
             this.Text = "Novo Dispositivo";
             this.pnlCadastroP.ResumeLayout(false);
             this.pnlCadastroP.PerformLayout();
-            this.panelHardwareInfos.ResumeLayout(false);
-            this.panelHardwareInfos.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,8 +414,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panelHardwareInfos;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
     }
 }
