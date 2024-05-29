@@ -1,7 +1,7 @@
 ﻿
 namespace TCC_3_M
 {
-    partial class frm_CadastroDisp
+    partial class frm_Perifericos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace TCC_3_M
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlFilter = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -40,10 +40,10 @@ namespace TCC_3_M
             this.lblStatus = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.btnExcluirHardware = new System.Windows.Forms.Button();
-            this.btnAtualizarHardware = new System.Windows.Forms.Button();
-            this.btnEditarRegistroHardware = new System.Windows.Forms.Button();
-            this.btnNovoHardware = new System.Windows.Forms.Button();
+            this.btnExcluirPeriferico = new System.Windows.Forms.Button();
+            this.btnAtualizarPerifericos = new System.Windows.Forms.Button();
+            this.btnEditarRegistroPeriferico = new System.Windows.Forms.Button();
+            this.btnNovoPeriferico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlFilter.SuspendLayout();
             this.SuspendLayout();
@@ -53,13 +53,13 @@ namespace TCC_3_M
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 85);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 288);
-            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.Size = new System.Drawing.Size(739, 288);
+            this.dataGridView1.TabIndex = 22;
             // 
             // pnlFilter
             // 
             this.pnlFilter.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlFilter.Controls.Add(this.button2);
+            this.pnlFilter.Controls.Add(this.button3);
             this.pnlFilter.Controls.Add(this.textBox1);
             this.pnlFilter.Controls.Add(this.label2);
             this.pnlFilter.Controls.Add(this.cmbStatus);
@@ -73,17 +73,17 @@ namespace TCC_3_M
             this.pnlFilter.Location = new System.Drawing.Point(0, 0);
             this.pnlFilter.Name = "pnlFilter";
             this.pnlFilter.Size = new System.Drawing.Size(740, 84);
-            this.pnlFilter.TabIndex = 18;
+            this.pnlFilter.TabIndex = 21;
             // 
-            // button2
+            // button3
             // 
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 31);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(59, 31);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -177,64 +177,61 @@ namespace TCC_3_M
             this.lblSearch.TabIndex = 1;
             this.lblSearch.Text = "Procurar:";
             // 
-            // btnExcluirHardware
+            // btnExcluirPeriferico
             // 
-            this.btnExcluirHardware.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirHardware.Location = new System.Drawing.Point(499, 459);
-            this.btnExcluirHardware.Name = "btnExcluirHardware";
-            this.btnExcluirHardware.Size = new System.Drawing.Size(100, 50);
-            this.btnExcluirHardware.TabIndex = 33;
-            this.btnExcluirHardware.Text = "Excluir Dispositivo";
-            this.btnExcluirHardware.UseVisualStyleBackColor = true;
+            this.btnExcluirPeriferico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirPeriferico.Location = new System.Drawing.Point(513, 441);
+            this.btnExcluirPeriferico.Name = "btnExcluirPeriferico";
+            this.btnExcluirPeriferico.Size = new System.Drawing.Size(100, 50);
+            this.btnExcluirPeriferico.TabIndex = 37;
+            this.btnExcluirPeriferico.Text = "Excluir Periferico";
+            this.btnExcluirPeriferico.UseVisualStyleBackColor = true;
             // 
-            // btnAtualizarHardware
+            // btnAtualizarPerifericos
             // 
-            this.btnAtualizarHardware.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarHardware.Location = new System.Drawing.Point(282, 459);
-            this.btnAtualizarHardware.Name = "btnAtualizarHardware";
-            this.btnAtualizarHardware.Size = new System.Drawing.Size(100, 50);
-            this.btnAtualizarHardware.TabIndex = 32;
-            this.btnAtualizarHardware.Text = "Atualizar";
-            this.btnAtualizarHardware.UseVisualStyleBackColor = true;
+            this.btnAtualizarPerifericos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarPerifericos.Location = new System.Drawing.Point(296, 441);
+            this.btnAtualizarPerifericos.Name = "btnAtualizarPerifericos";
+            this.btnAtualizarPerifericos.Size = new System.Drawing.Size(100, 50);
+            this.btnAtualizarPerifericos.TabIndex = 36;
+            this.btnAtualizarPerifericos.Text = "Atualizar";
+            this.btnAtualizarPerifericos.UseVisualStyleBackColor = true;
             // 
-            // btnEditarRegistroHardware
+            // btnEditarRegistroPeriferico
             // 
-            this.btnEditarRegistroHardware.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarRegistroHardware.Location = new System.Drawing.Point(608, 459);
-            this.btnEditarRegistroHardware.Name = "btnEditarRegistroHardware";
-            this.btnEditarRegistroHardware.Size = new System.Drawing.Size(100, 50);
-            this.btnEditarRegistroHardware.TabIndex = 31;
-            this.btnEditarRegistroHardware.Text = "Editar Registro";
-            this.btnEditarRegistroHardware.UseVisualStyleBackColor = true;
+            this.btnEditarRegistroPeriferico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarRegistroPeriferico.Location = new System.Drawing.Point(622, 441);
+            this.btnEditarRegistroPeriferico.Name = "btnEditarRegistroPeriferico";
+            this.btnEditarRegistroPeriferico.Size = new System.Drawing.Size(100, 50);
+            this.btnEditarRegistroPeriferico.TabIndex = 35;
+            this.btnEditarRegistroPeriferico.Text = "Editar Registro";
+            this.btnEditarRegistroPeriferico.UseVisualStyleBackColor = true;
             // 
-            // btnNovoHardware
+            // btnNovoPeriferico
             // 
-            this.btnNovoHardware.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoHardware.Location = new System.Drawing.Point(388, 459);
-            this.btnNovoHardware.Name = "btnNovoHardware";
-            this.btnNovoHardware.Size = new System.Drawing.Size(100, 50);
-            this.btnNovoHardware.TabIndex = 30;
-            this.btnNovoHardware.Text = "Novo Dispositivo";
-            this.btnNovoHardware.UseVisualStyleBackColor = true;
-            this.btnNovoHardware.Click += new System.EventHandler(this.btnNovoHardware_Click);
+            this.btnNovoPeriferico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoPeriferico.Location = new System.Drawing.Point(402, 441);
+            this.btnNovoPeriferico.Name = "btnNovoPeriferico";
+            this.btnNovoPeriferico.Size = new System.Drawing.Size(100, 50);
+            this.btnNovoPeriferico.TabIndex = 34;
+            this.btnNovoPeriferico.Text = "Novo Periferico";
+            this.btnNovoPeriferico.UseVisualStyleBackColor = true;
             // 
-            // frm_CadastroDisp
+            // frm_Perifericos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 534);
-            this.Controls.Add(this.btnExcluirHardware);
-            this.Controls.Add(this.btnAtualizarHardware);
-            this.Controls.Add(this.btnEditarRegistroHardware);
-            this.Controls.Add(this.btnNovoHardware);
+            this.Controls.Add(this.btnExcluirPeriferico);
+            this.Controls.Add(this.btnAtualizarPerifericos);
+            this.Controls.Add(this.btnEditarRegistroPeriferico);
+            this.Controls.Add(this.btnNovoPeriferico);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlFilter);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_CadastroDisp";
+            this.Name = "frm_Perifericos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu - [Cadastro de Dispositivos]";
+            this.Text = "MenuPerifericos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlFilter.ResumeLayout(false);
             this.pnlFilter.PerformLayout();
@@ -246,6 +243,7 @@ namespace TCC_3_M
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel pnlFilter;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStatus;
@@ -254,10 +252,9 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnExcluirHardware;
-        private System.Windows.Forms.Button btnAtualizarHardware;
-        private System.Windows.Forms.Button btnEditarRegistroHardware;
-        private System.Windows.Forms.Button btnNovoHardware;
+        private System.Windows.Forms.Button btnExcluirPeriferico;
+        private System.Windows.Forms.Button btnAtualizarPerifericos;
+        private System.Windows.Forms.Button btnEditarRegistroPeriferico;
+        private System.Windows.Forms.Button btnNovoPeriferico;
     }
 }

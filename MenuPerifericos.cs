@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_Usuario : Form
+    public partial class frm_Perifericos : Form
     {
-        public frm_Usuario()
+        public frm_Perifericos()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_Inicio formInicio = new frm_Inicio();
-            formInicio.Show();
-            this.Hide();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }

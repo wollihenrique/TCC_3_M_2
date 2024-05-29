@@ -44,12 +44,5 @@ namespace TCC_3_M
             formLogin.Show();
             this.Hide();
         }
-
-        private void btnEstoque_Click(object sender, EventArgs e)
-        {
-            frmEstoque formEstoque = new frmEstoque();
-            formEstoque.Show();
-            this.Hide();
-        }
     }
 }
