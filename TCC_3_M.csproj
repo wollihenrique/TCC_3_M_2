@@ -116,12 +116,6 @@
     <Compile Include="Editar_Dispositivos.Designer.cs">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirDispositivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExcluirDispositivo.Designer.cs">
-      <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Dispositivos.resx">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirDispositivo.resx">
-      <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
