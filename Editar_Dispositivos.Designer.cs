@@ -33,30 +33,28 @@ namespace TCC_3_M
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmbStatusFrmEditarH = new System.Windows.Forms.ComboBox();
+            this.cmbStatusHardware = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtGarantiaFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtGarantiaHardware = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnAtualizarFrmEditarRegistro = new System.Windows.Forms.Button();
+            this.btnAtualizarHardware = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMarcaFrmEditarH = new System.Windows.Forms.TextBox();
-            this.txtLatitudeFrmEditarH = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtModeloFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtMarcaHardware = new System.Windows.Forms.TextBox();
+            this.txtModeloHardware = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTagFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtTagHardware = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelHardwareInfos = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtObsFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtObsHardware = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtProcessadorFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtProcessadorHardware = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtRamFrmEditarH = new System.Windows.Forms.TextBox();
-            this.txtPVideoFrmEditarH = new System.Windows.Forms.TextBox();
-            this.txtDiscoFrmEditarH = new System.Windows.Forms.TextBox();
-            this.txtPRedeFrmEditarH = new System.Windows.Forms.TextBox();
+            this.txtRamHardware = new System.Windows.Forms.TextBox();
+            this.txtPVideoHardware = new System.Windows.Forms.TextBox();
+            this.txtDiscoHardware = new System.Windows.Forms.TextBox();
+            this.txtPRedeHardware = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -113,13 +111,13 @@ namespace TCC_3_M
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // cmbStatusFrmEditarH
+            // cmbStatusHardware
             // 
-            this.cmbStatusFrmEditarH.FormattingEnabled = true;
-            this.cmbStatusFrmEditarH.Location = new System.Drawing.Point(419, 127);
-            this.cmbStatusFrmEditarH.Name = "cmbStatusFrmEditarH";
-            this.cmbStatusFrmEditarH.Size = new System.Drawing.Size(137, 21);
-            this.cmbStatusFrmEditarH.TabIndex = 70;
+            this.cmbStatusHardware.FormattingEnabled = true;
+            this.cmbStatusHardware.Location = new System.Drawing.Point(419, 127);
+            this.cmbStatusHardware.Name = "cmbStatusHardware";
+            this.cmbStatusHardware.Size = new System.Drawing.Size(137, 21);
+            this.cmbStatusHardware.TabIndex = 70;
             // 
             // label12
             // 
@@ -131,12 +129,12 @@ namespace TCC_3_M
             this.label12.TabIndex = 69;
             this.label12.Text = "Status:";
             // 
-            // txtGarantiaFrmEditarH
+            // txtGarantiaHardware
             // 
-            this.txtGarantiaFrmEditarH.Location = new System.Drawing.Point(389, 80);
-            this.txtGarantiaFrmEditarH.Name = "txtGarantiaFrmEditarH";
-            this.txtGarantiaFrmEditarH.Size = new System.Drawing.Size(167, 20);
-            this.txtGarantiaFrmEditarH.TabIndex = 68;
+            this.txtGarantiaHardware.Location = new System.Drawing.Point(389, 80);
+            this.txtGarantiaHardware.Name = "txtGarantiaHardware";
+            this.txtGarantiaHardware.Size = new System.Drawing.Size(167, 20);
+            this.txtGarantiaHardware.TabIndex = 68;
             // 
             // label11
             // 
@@ -148,17 +146,18 @@ namespace TCC_3_M
             this.label11.TabIndex = 67;
             this.label11.Text = "Garantia:";
             // 
-            // btnAtualizarFrmEditarRegistro
+            // btnAtualizarHardware
             // 
-            this.btnAtualizarFrmEditarRegistro.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAtualizarFrmEditarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarFrmEditarRegistro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarFrmEditarRegistro.Location = new System.Drawing.Point(510, 468);
-            this.btnAtualizarFrmEditarRegistro.Name = "btnAtualizarFrmEditarRegistro";
-            this.btnAtualizarFrmEditarRegistro.Size = new System.Drawing.Size(83, 31);
-            this.btnAtualizarFrmEditarRegistro.TabIndex = 66;
-            this.btnAtualizarFrmEditarRegistro.Text = "Atualizar";
-            this.btnAtualizarFrmEditarRegistro.UseVisualStyleBackColor = false;
+            this.btnAtualizarHardware.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAtualizarHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarHardware.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarHardware.Location = new System.Drawing.Point(510, 468);
+            this.btnAtualizarHardware.Name = "btnAtualizarHardware";
+            this.btnAtualizarHardware.Size = new System.Drawing.Size(83, 31);
+            this.btnAtualizarHardware.TabIndex = 66;
+            this.btnAtualizarHardware.Text = "Atualizar";
+            this.btnAtualizarHardware.UseVisualStyleBackColor = false;
+            this.btnAtualizarHardware.Click += new System.EventHandler(this.btnAtualizarHardware_Click_1);
             // 
             // label5
             // 
@@ -170,36 +169,19 @@ namespace TCC_3_M
             this.label5.TabIndex = 65;
             this.label5.Text = "Marca:";
             // 
-            // txtMarcaFrmEditarH
+            // txtMarcaHardware
             // 
-            this.txtMarcaFrmEditarH.Location = new System.Drawing.Point(288, 126);
-            this.txtMarcaFrmEditarH.Name = "txtMarcaFrmEditarH";
-            this.txtMarcaFrmEditarH.Size = new System.Drawing.Size(117, 20);
-            this.txtMarcaFrmEditarH.TabIndex = 64;
+            this.txtMarcaHardware.Location = new System.Drawing.Point(288, 126);
+            this.txtMarcaHardware.Name = "txtMarcaHardware";
+            this.txtMarcaHardware.Size = new System.Drawing.Size(117, 20);
+            this.txtMarcaHardware.TabIndex = 64;
             // 
-            // txtLatitudeFrmEditarH
+            // txtModeloHardware
             // 
-            this.txtLatitudeFrmEditarH.Location = new System.Drawing.Point(158, 80);
-            this.txtLatitudeFrmEditarH.Name = "txtLatitudeFrmEditarH";
-            this.txtLatitudeFrmEditarH.Size = new System.Drawing.Size(197, 20);
-            this.txtLatitudeFrmEditarH.TabIndex = 63;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Latitude:";
-            // 
-            // txtModeloFrmEditarH
-            // 
-            this.txtModeloFrmEditarH.Location = new System.Drawing.Point(16, 126);
-            this.txtModeloFrmEditarH.Name = "txtModeloFrmEditarH";
-            this.txtModeloFrmEditarH.Size = new System.Drawing.Size(242, 20);
-            this.txtModeloFrmEditarH.TabIndex = 61;
+            this.txtModeloHardware.Location = new System.Drawing.Point(16, 126);
+            this.txtModeloHardware.Name = "txtModeloHardware";
+            this.txtModeloHardware.Size = new System.Drawing.Size(242, 20);
+            this.txtModeloHardware.TabIndex = 61;
             // 
             // label3
             // 
@@ -211,12 +193,12 @@ namespace TCC_3_M
             this.label3.TabIndex = 60;
             this.label3.Text = "Modelo:";
             // 
-            // txtTagFrmEditarH
+            // txtTagHardware
             // 
-            this.txtTagFrmEditarH.Location = new System.Drawing.Point(16, 80);
-            this.txtTagFrmEditarH.Name = "txtTagFrmEditarH";
-            this.txtTagFrmEditarH.Size = new System.Drawing.Size(110, 20);
-            this.txtTagFrmEditarH.TabIndex = 59;
+            this.txtTagHardware.Location = new System.Drawing.Point(16, 80);
+            this.txtTagHardware.Name = "txtTagHardware";
+            this.txtTagHardware.Size = new System.Drawing.Size(110, 20);
+            this.txtTagHardware.TabIndex = 59;
             // 
             // label2
             // 
@@ -232,15 +214,15 @@ namespace TCC_3_M
             // 
             this.panelHardwareInfos.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelHardwareInfos.Controls.Add(this.label13);
-            this.panelHardwareInfos.Controls.Add(this.txtObsFrmEditarH);
+            this.panelHardwareInfos.Controls.Add(this.txtObsHardware);
             this.panelHardwareInfos.Controls.Add(this.label7);
-            this.panelHardwareInfos.Controls.Add(this.txtProcessadorFrmEditarH);
+            this.panelHardwareInfos.Controls.Add(this.txtProcessadorHardware);
             this.panelHardwareInfos.Controls.Add(this.label6);
             this.panelHardwareInfos.Controls.Add(this.label8);
-            this.panelHardwareInfos.Controls.Add(this.txtRamFrmEditarH);
-            this.panelHardwareInfos.Controls.Add(this.txtPVideoFrmEditarH);
-            this.panelHardwareInfos.Controls.Add(this.txtDiscoFrmEditarH);
-            this.panelHardwareInfos.Controls.Add(this.txtPRedeFrmEditarH);
+            this.panelHardwareInfos.Controls.Add(this.txtRamHardware);
+            this.panelHardwareInfos.Controls.Add(this.txtPVideoHardware);
+            this.panelHardwareInfos.Controls.Add(this.txtDiscoHardware);
+            this.panelHardwareInfos.Controls.Add(this.txtPRedeHardware);
             this.panelHardwareInfos.Controls.Add(this.label9);
             this.panelHardwareInfos.Controls.Add(this.label10);
             this.panelHardwareInfos.Location = new System.Drawing.Point(4, 188);
@@ -258,12 +240,12 @@ namespace TCC_3_M
             this.label13.TabIndex = 53;
             this.label13.Text = "Observações:";
             // 
-            // txtObsFrmEditarH
+            // txtObsHardware
             // 
-            this.txtObsFrmEditarH.Location = new System.Drawing.Point(7, 149);
-            this.txtObsFrmEditarH.Name = "txtObsFrmEditarH";
-            this.txtObsFrmEditarH.Size = new System.Drawing.Size(537, 20);
-            this.txtObsFrmEditarH.TabIndex = 54;
+            this.txtObsHardware.Location = new System.Drawing.Point(7, 149);
+            this.txtObsHardware.Name = "txtObsHardware";
+            this.txtObsHardware.Size = new System.Drawing.Size(537, 20);
+            this.txtObsHardware.TabIndex = 54;
             // 
             // label7
             // 
@@ -275,12 +257,12 @@ namespace TCC_3_M
             this.label7.TabIndex = 39;
             this.label7.Text = "Disco:";
             // 
-            // txtProcessadorFrmEditarH
+            // txtProcessadorHardware
             // 
-            this.txtProcessadorFrmEditarH.Location = new System.Drawing.Point(7, 21);
-            this.txtProcessadorFrmEditarH.Name = "txtProcessadorFrmEditarH";
-            this.txtProcessadorFrmEditarH.Size = new System.Drawing.Size(239, 20);
-            this.txtProcessadorFrmEditarH.TabIndex = 38;
+            this.txtProcessadorHardware.Location = new System.Drawing.Point(7, 21);
+            this.txtProcessadorHardware.Name = "txtProcessadorHardware";
+            this.txtProcessadorHardware.Size = new System.Drawing.Size(239, 20);
+            this.txtProcessadorHardware.TabIndex = 38;
             // 
             // label6
             // 
@@ -302,33 +284,33 @@ namespace TCC_3_M
             this.label8.TabIndex = 41;
             this.label8.Text = "Memóriam RAM:";
             // 
-            // txtRamFrmEditarH
+            // txtRamHardware
             // 
-            this.txtRamFrmEditarH.Location = new System.Drawing.Point(265, 25);
-            this.txtRamFrmEditarH.Name = "txtRamFrmEditarH";
-            this.txtRamFrmEditarH.Size = new System.Drawing.Size(279, 20);
-            this.txtRamFrmEditarH.TabIndex = 42;
+            this.txtRamHardware.Location = new System.Drawing.Point(265, 25);
+            this.txtRamHardware.Name = "txtRamHardware";
+            this.txtRamHardware.Size = new System.Drawing.Size(279, 20);
+            this.txtRamHardware.TabIndex = 42;
             // 
-            // txtPVideoFrmEditarH
+            // txtPVideoHardware
             // 
-            this.txtPVideoFrmEditarH.Location = new System.Drawing.Point(7, 106);
-            this.txtPVideoFrmEditarH.Name = "txtPVideoFrmEditarH";
-            this.txtPVideoFrmEditarH.Size = new System.Drawing.Size(239, 20);
-            this.txtPVideoFrmEditarH.TabIndex = 44;
+            this.txtPVideoHardware.Location = new System.Drawing.Point(7, 106);
+            this.txtPVideoHardware.Name = "txtPVideoHardware";
+            this.txtPVideoHardware.Size = new System.Drawing.Size(239, 20);
+            this.txtPVideoHardware.TabIndex = 44;
             // 
-            // txtDiscoFrmEditarH
+            // txtDiscoHardware
             // 
-            this.txtDiscoFrmEditarH.Location = new System.Drawing.Point(7, 63);
-            this.txtDiscoFrmEditarH.Name = "txtDiscoFrmEditarH";
-            this.txtDiscoFrmEditarH.Size = new System.Drawing.Size(239, 20);
-            this.txtDiscoFrmEditarH.TabIndex = 40;
+            this.txtDiscoHardware.Location = new System.Drawing.Point(7, 63);
+            this.txtDiscoHardware.Name = "txtDiscoHardware";
+            this.txtDiscoHardware.Size = new System.Drawing.Size(239, 20);
+            this.txtDiscoHardware.TabIndex = 40;
             // 
-            // txtPRedeFrmEditarH
+            // txtPRedeHardware
             // 
-            this.txtPRedeFrmEditarH.Location = new System.Drawing.Point(276, 106);
-            this.txtPRedeFrmEditarH.Name = "txtPRedeFrmEditarH";
-            this.txtPRedeFrmEditarH.Size = new System.Drawing.Size(268, 20);
-            this.txtPRedeFrmEditarH.TabIndex = 46;
+            this.txtPRedeHardware.Location = new System.Drawing.Point(276, 106);
+            this.txtPRedeHardware.Name = "txtPRedeHardware";
+            this.txtPRedeHardware.Size = new System.Drawing.Size(268, 20);
+            this.txtPRedeHardware.TabIndex = 46;
             // 
             // label9
             // 
@@ -368,18 +350,16 @@ namespace TCC_3_M
             this.ClientSize = new System.Drawing.Size(605, 500);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmbStatusFrmEditarH);
+            this.Controls.Add(this.cmbStatusHardware);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtGarantiaFrmEditarH);
+            this.Controls.Add(this.txtGarantiaHardware);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnAtualizarFrmEditarRegistro);
+            this.Controls.Add(this.btnAtualizarHardware);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMarcaFrmEditarH);
-            this.Controls.Add(this.txtLatitudeFrmEditarH);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtModeloFrmEditarH);
+            this.Controls.Add(this.txtMarcaHardware);
+            this.Controls.Add(this.txtModeloHardware);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTagFrmEditarH);
+            this.Controls.Add(this.txtTagHardware);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelHardwareInfos);
             this.Controls.Add(this.panel1);
@@ -402,30 +382,28 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cmbStatusFrmEditarH;
+        private System.Windows.Forms.ComboBox cmbStatusHardware;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtGarantiaFrmEditarH;
+        private System.Windows.Forms.TextBox txtGarantiaHardware;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnAtualizarFrmEditarRegistro;
+        private System.Windows.Forms.Button btnAtualizarHardware;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMarcaFrmEditarH;
-        private System.Windows.Forms.TextBox txtLatitudeFrmEditarH;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtModeloFrmEditarH;
+        private System.Windows.Forms.TextBox txtMarcaHardware;
+        private System.Windows.Forms.TextBox txtModeloHardware;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTagFrmEditarH;
+        private System.Windows.Forms.TextBox txtTagHardware;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelHardwareInfos;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtObsFrmEditarH;
+        private System.Windows.Forms.TextBox txtObsHardware;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtProcessadorFrmEditarH;
+        private System.Windows.Forms.TextBox txtProcessadorHardware;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtRamFrmEditarH;
-        private System.Windows.Forms.TextBox txtPVideoFrmEditarH;
-        private System.Windows.Forms.TextBox txtDiscoFrmEditarH;
-        private System.Windows.Forms.TextBox txtPRedeFrmEditarH;
+        private System.Windows.Forms.TextBox txtRamHardware;
+        private System.Windows.Forms.TextBox txtPVideoHardware;
+        private System.Windows.Forms.TextBox txtDiscoHardware;
+        private System.Windows.Forms.TextBox txtPRedeHardware;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;

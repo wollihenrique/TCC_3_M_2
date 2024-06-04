@@ -32,32 +32,30 @@
             this.btnVoltarPnlCadastroDevice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTagFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtTagCadH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtModeloFrmCadastroH = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtLatitudeFrmCadastroH = new System.Windows.Forms.TextBox();
-            this.txtMarcaFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtModeloCadH = new System.Windows.Forms.TextBox();
+            this.txtMarcaCadH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProcessadorFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtProcessadorCadH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtDiscoFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtDiscoCadH = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtRamFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtRamCadH = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPVideoFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtPVideoCadH = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPRFrmCadastroH = new System.Windows.Forms.TextBox();
-            this.btnSalvarFrmCadastroH = new System.Windows.Forms.Button();
-            this.txtGarantiaFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.txtPRedeCadH = new System.Windows.Forms.TextBox();
+            this.btnSalvarCadH = new System.Windows.Forms.Button();
+            this.txtGarantiaCadH = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmbStatusFrmCadastroH = new System.Windows.Forms.ComboBox();
-            this.txtObsFrmCadastroH = new System.Windows.Forms.TextBox();
+            this.cmbStatusCadH = new System.Windows.Forms.ComboBox();
+            this.txtObsCadH = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panelHardwareInfos = new System.Windows.Forms.Panel();
-            this.btnCancelarFrmCadastroH = new System.Windows.Forms.Button();
+            this.btnLimparCadH = new System.Windows.Forms.Button();
             this.btnAddInfosFrmCadastroH = new System.Windows.Forms.Button();
             this.pnlCadastroP.SuspendLayout();
             this.panelHardwareInfos.SuspendLayout();
@@ -111,12 +109,12 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Tag:";
             // 
-            // txtTagFrmCadastroH
+            // txtTagCadH
             // 
-            this.txtTagFrmCadastroH.Location = new System.Drawing.Point(16, 69);
-            this.txtTagFrmCadastroH.Name = "txtTagFrmCadastroH";
-            this.txtTagFrmCadastroH.Size = new System.Drawing.Size(110, 20);
-            this.txtTagFrmCadastroH.TabIndex = 30;
+            this.txtTagCadH.Location = new System.Drawing.Point(16, 69);
+            this.txtTagCadH.Name = "txtTagCadH";
+            this.txtTagCadH.Size = new System.Drawing.Size(110, 20);
+            this.txtTagCadH.TabIndex = 30;
             // 
             // label3
             // 
@@ -128,36 +126,19 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Modelo:";
             // 
-            // txtModeloFrmCadastroH
+            // txtModeloCadH
             // 
-            this.txtModeloFrmCadastroH.Location = new System.Drawing.Point(16, 115);
-            this.txtModeloFrmCadastroH.Name = "txtModeloFrmCadastroH";
-            this.txtModeloFrmCadastroH.Size = new System.Drawing.Size(242, 20);
-            this.txtModeloFrmCadastroH.TabIndex = 32;
+            this.txtModeloCadH.Location = new System.Drawing.Point(16, 115);
+            this.txtModeloCadH.Name = "txtModeloCadH";
+            this.txtModeloCadH.Size = new System.Drawing.Size(242, 20);
+            this.txtModeloCadH.TabIndex = 32;
             // 
-            // label4
+            // txtMarcaCadH
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Latitude:";
-            // 
-            // txtLatitudeFrmCadastroH
-            // 
-            this.txtLatitudeFrmCadastroH.Location = new System.Drawing.Point(158, 69);
-            this.txtLatitudeFrmCadastroH.Name = "txtLatitudeFrmCadastroH";
-            this.txtLatitudeFrmCadastroH.Size = new System.Drawing.Size(197, 20);
-            this.txtLatitudeFrmCadastroH.TabIndex = 34;
-            // 
-            // txtMarcaFrmCadastroH
-            // 
-            this.txtMarcaFrmCadastroH.Location = new System.Drawing.Point(288, 115);
-            this.txtMarcaFrmCadastroH.Name = "txtMarcaFrmCadastroH";
-            this.txtMarcaFrmCadastroH.Size = new System.Drawing.Size(117, 20);
-            this.txtMarcaFrmCadastroH.TabIndex = 35;
+            this.txtMarcaCadH.Location = new System.Drawing.Point(288, 115);
+            this.txtMarcaCadH.Name = "txtMarcaCadH";
+            this.txtMarcaCadH.Size = new System.Drawing.Size(117, 20);
+            this.txtMarcaCadH.TabIndex = 35;
             // 
             // label5
             // 
@@ -179,12 +160,12 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Processador:";
             // 
-            // txtProcessadorFrmCadastroH
+            // txtProcessadorCadH
             // 
-            this.txtProcessadorFrmCadastroH.Location = new System.Drawing.Point(7, 21);
-            this.txtProcessadorFrmCadastroH.Name = "txtProcessadorFrmCadastroH";
-            this.txtProcessadorFrmCadastroH.Size = new System.Drawing.Size(239, 20);
-            this.txtProcessadorFrmCadastroH.TabIndex = 38;
+            this.txtProcessadorCadH.Location = new System.Drawing.Point(7, 21);
+            this.txtProcessadorCadH.Name = "txtProcessadorCadH";
+            this.txtProcessadorCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtProcessadorCadH.TabIndex = 38;
             // 
             // label7
             // 
@@ -196,12 +177,12 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Disco:";
             // 
-            // txtDiscoFrmCadastroH
+            // txtDiscoCadH
             // 
-            this.txtDiscoFrmCadastroH.Location = new System.Drawing.Point(7, 63);
-            this.txtDiscoFrmCadastroH.Name = "txtDiscoFrmCadastroH";
-            this.txtDiscoFrmCadastroH.Size = new System.Drawing.Size(239, 20);
-            this.txtDiscoFrmCadastroH.TabIndex = 40;
+            this.txtDiscoCadH.Location = new System.Drawing.Point(7, 63);
+            this.txtDiscoCadH.Name = "txtDiscoCadH";
+            this.txtDiscoCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtDiscoCadH.TabIndex = 40;
             // 
             // label8
             // 
@@ -213,12 +194,12 @@
             this.label8.TabIndex = 41;
             this.label8.Text = "Memóriam RAM:";
             // 
-            // txtRamFrmCadastroH
+            // txtRamCadH
             // 
-            this.txtRamFrmCadastroH.Location = new System.Drawing.Point(265, 25);
-            this.txtRamFrmCadastroH.Name = "txtRamFrmCadastroH";
-            this.txtRamFrmCadastroH.Size = new System.Drawing.Size(279, 20);
-            this.txtRamFrmCadastroH.TabIndex = 42;
+            this.txtRamCadH.Location = new System.Drawing.Point(265, 25);
+            this.txtRamCadH.Name = "txtRamCadH";
+            this.txtRamCadH.Size = new System.Drawing.Size(279, 20);
+            this.txtRamCadH.TabIndex = 42;
             // 
             // label9
             // 
@@ -230,12 +211,12 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Placa de vídeo:";
             // 
-            // txtPVideoFrmCadastroH
+            // txtPVideoCadH
             // 
-            this.txtPVideoFrmCadastroH.Location = new System.Drawing.Point(7, 106);
-            this.txtPVideoFrmCadastroH.Name = "txtPVideoFrmCadastroH";
-            this.txtPVideoFrmCadastroH.Size = new System.Drawing.Size(239, 20);
-            this.txtPVideoFrmCadastroH.TabIndex = 44;
+            this.txtPVideoCadH.Location = new System.Drawing.Point(7, 106);
+            this.txtPVideoCadH.Name = "txtPVideoCadH";
+            this.txtPVideoCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtPVideoCadH.TabIndex = 44;
             // 
             // label10
             // 
@@ -247,31 +228,31 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Placa de rede:";
             // 
-            // txtPRFrmCadastroH
+            // txtPRedeCadH
             // 
-            this.txtPRFrmCadastroH.Location = new System.Drawing.Point(276, 106);
-            this.txtPRFrmCadastroH.Name = "txtPRFrmCadastroH";
-            this.txtPRFrmCadastroH.Size = new System.Drawing.Size(268, 20);
-            this.txtPRFrmCadastroH.TabIndex = 46;
+            this.txtPRedeCadH.Location = new System.Drawing.Point(276, 106);
+            this.txtPRedeCadH.Name = "txtPRedeCadH";
+            this.txtPRedeCadH.Size = new System.Drawing.Size(268, 20);
+            this.txtPRedeCadH.TabIndex = 46;
             // 
-            // btnSalvarFrmCadastroH
+            // btnSalvarCadH
             // 
-            this.btnSalvarFrmCadastroH.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSalvarFrmCadastroH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarFrmCadastroH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarFrmCadastroH.Location = new System.Drawing.Point(480, 177);
-            this.btnSalvarFrmCadastroH.Name = "btnSalvarFrmCadastroH";
-            this.btnSalvarFrmCadastroH.Size = new System.Drawing.Size(76, 31);
-            this.btnSalvarFrmCadastroH.TabIndex = 48;
-            this.btnSalvarFrmCadastroH.Text = "Salvar";
-            this.btnSalvarFrmCadastroH.UseVisualStyleBackColor = false;
+            this.btnSalvarCadH.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarCadH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarCadH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarCadH.Location = new System.Drawing.Point(480, 177);
+            this.btnSalvarCadH.Name = "btnSalvarCadH";
+            this.btnSalvarCadH.Size = new System.Drawing.Size(76, 31);
+            this.btnSalvarCadH.TabIndex = 48;
+            this.btnSalvarCadH.Text = "Salvar";
+            this.btnSalvarCadH.UseVisualStyleBackColor = false;
             // 
-            // txtGarantiaFrmCadastroH
+            // txtGarantiaCadH
             // 
-            this.txtGarantiaFrmCadastroH.Location = new System.Drawing.Point(389, 69);
-            this.txtGarantiaFrmCadastroH.Name = "txtGarantiaFrmCadastroH";
-            this.txtGarantiaFrmCadastroH.Size = new System.Drawing.Size(167, 20);
-            this.txtGarantiaFrmCadastroH.TabIndex = 50;
+            this.txtGarantiaCadH.Location = new System.Drawing.Point(389, 69);
+            this.txtGarantiaCadH.Name = "txtGarantiaCadH";
+            this.txtGarantiaCadH.Size = new System.Drawing.Size(167, 20);
+            this.txtGarantiaCadH.TabIndex = 50;
             // 
             // label11
             // 
@@ -293,20 +274,20 @@
             this.label12.TabIndex = 51;
             this.label12.Text = "Status:";
             // 
-            // cmbStatusFrmCadastroH
+            // cmbStatusCadH
             // 
-            this.cmbStatusFrmCadastroH.FormattingEnabled = true;
-            this.cmbStatusFrmCadastroH.Location = new System.Drawing.Point(419, 116);
-            this.cmbStatusFrmCadastroH.Name = "cmbStatusFrmCadastroH";
-            this.cmbStatusFrmCadastroH.Size = new System.Drawing.Size(137, 21);
-            this.cmbStatusFrmCadastroH.TabIndex = 52;
+            this.cmbStatusCadH.FormattingEnabled = true;
+            this.cmbStatusCadH.Location = new System.Drawing.Point(419, 116);
+            this.cmbStatusCadH.Name = "cmbStatusCadH";
+            this.cmbStatusCadH.Size = new System.Drawing.Size(137, 21);
+            this.cmbStatusCadH.TabIndex = 52;
             // 
-            // txtObsFrmCadastroH
+            // txtObsCadH
             // 
-            this.txtObsFrmCadastroH.Location = new System.Drawing.Point(7, 149);
-            this.txtObsFrmCadastroH.Name = "txtObsFrmCadastroH";
-            this.txtObsFrmCadastroH.Size = new System.Drawing.Size(537, 20);
-            this.txtObsFrmCadastroH.TabIndex = 54;
+            this.txtObsCadH.Location = new System.Drawing.Point(7, 149);
+            this.txtObsCadH.Name = "txtObsCadH";
+            this.txtObsCadH.Size = new System.Drawing.Size(537, 20);
+            this.txtObsCadH.TabIndex = 54;
             // 
             // label13
             // 
@@ -322,15 +303,15 @@
             // 
             this.panelHardwareInfos.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelHardwareInfos.Controls.Add(this.label13);
-            this.panelHardwareInfos.Controls.Add(this.txtObsFrmCadastroH);
+            this.panelHardwareInfos.Controls.Add(this.txtObsCadH);
             this.panelHardwareInfos.Controls.Add(this.label7);
-            this.panelHardwareInfos.Controls.Add(this.txtProcessadorFrmCadastroH);
+            this.panelHardwareInfos.Controls.Add(this.txtProcessadorCadH);
             this.panelHardwareInfos.Controls.Add(this.label6);
             this.panelHardwareInfos.Controls.Add(this.label8);
-            this.panelHardwareInfos.Controls.Add(this.txtRamFrmCadastroH);
-            this.panelHardwareInfos.Controls.Add(this.txtPVideoFrmCadastroH);
-            this.panelHardwareInfos.Controls.Add(this.txtDiscoFrmCadastroH);
-            this.panelHardwareInfos.Controls.Add(this.txtPRFrmCadastroH);
+            this.panelHardwareInfos.Controls.Add(this.txtRamCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtPVideoCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtDiscoCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtPRedeCadH);
             this.panelHardwareInfos.Controls.Add(this.label9);
             this.panelHardwareInfos.Controls.Add(this.label10);
             this.panelHardwareInfos.Location = new System.Drawing.Point(4, 254);
@@ -339,17 +320,17 @@
             this.panelHardwareInfos.TabIndex = 55;
             this.panelHardwareInfos.Visible = false;
             // 
-            // btnCancelarFrmCadastroH
+            // btnLimparCadH
             // 
-            this.btnCancelarFrmCadastroH.BackColor = System.Drawing.Color.Firebrick;
-            this.btnCancelarFrmCadastroH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarFrmCadastroH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFrmCadastroH.Location = new System.Drawing.Point(389, 177);
-            this.btnCancelarFrmCadastroH.Name = "btnCancelarFrmCadastroH";
-            this.btnCancelarFrmCadastroH.Size = new System.Drawing.Size(76, 31);
-            this.btnCancelarFrmCadastroH.TabIndex = 56;
-            this.btnCancelarFrmCadastroH.Text = "Cancelar";
-            this.btnCancelarFrmCadastroH.UseVisualStyleBackColor = false;
+            this.btnLimparCadH.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnLimparCadH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparCadH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparCadH.Location = new System.Drawing.Point(389, 177);
+            this.btnLimparCadH.Name = "btnLimparCadH";
+            this.btnLimparCadH.Size = new System.Drawing.Size(76, 31);
+            this.btnLimparCadH.TabIndex = 56;
+            this.btnLimparCadH.Text = "Limpar";
+            this.btnLimparCadH.UseVisualStyleBackColor = false;
             // 
             // btnAddInfosFrmCadastroH
             // 
@@ -368,19 +349,17 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(605, 500);
             this.Controls.Add(this.btnAddInfosFrmCadastroH);
-            this.Controls.Add(this.btnCancelarFrmCadastroH);
-            this.Controls.Add(this.cmbStatusFrmCadastroH);
+            this.Controls.Add(this.btnLimparCadH);
+            this.Controls.Add(this.cmbStatusCadH);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtGarantiaFrmCadastroH);
+            this.Controls.Add(this.txtGarantiaCadH);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnSalvarFrmCadastroH);
+            this.Controls.Add(this.btnSalvarCadH);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMarcaFrmCadastroH);
-            this.Controls.Add(this.txtLatitudeFrmCadastroH);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtModeloFrmCadastroH);
+            this.Controls.Add(this.txtMarcaCadH);
+            this.Controls.Add(this.txtModeloCadH);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTagFrmCadastroH);
+            this.Controls.Add(this.txtTagCadH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCadastroP);
             this.Controls.Add(this.panelHardwareInfos);
@@ -403,32 +382,30 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltarPnlCadastroDevice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTagFrmCadastroH;
+        private System.Windows.Forms.TextBox txtTagCadH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtModeloFrmCadastroH;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLatitudeFrmCadastroH;
-        private System.Windows.Forms.TextBox txtMarcaFrmCadastroH;
+        private System.Windows.Forms.TextBox txtModeloCadH;
+        private System.Windows.Forms.TextBox txtMarcaCadH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProcessadorFrmCadastroH;
+        private System.Windows.Forms.TextBox txtProcessadorCadH;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDiscoFrmCadastroH;
+        private System.Windows.Forms.TextBox txtDiscoCadH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtRamFrmCadastroH;
+        private System.Windows.Forms.TextBox txtRamCadH;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPVideoFrmCadastroH;
+        private System.Windows.Forms.TextBox txtPVideoCadH;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPRFrmCadastroH;
-        private System.Windows.Forms.Button btnSalvarFrmCadastroH;
-        private System.Windows.Forms.TextBox txtGarantiaFrmCadastroH;
+        private System.Windows.Forms.TextBox txtPRedeCadH;
+        private System.Windows.Forms.Button btnSalvarCadH;
+        private System.Windows.Forms.TextBox txtGarantiaCadH;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbStatusFrmCadastroH;
-        private System.Windows.Forms.TextBox txtObsFrmCadastroH;
+        private System.Windows.Forms.ComboBox cmbStatusCadH;
+        private System.Windows.Forms.TextBox txtObsCadH;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panelHardwareInfos;
-        private System.Windows.Forms.Button btnCancelarFrmCadastroH;
+        private System.Windows.Forms.Button btnLimparCadH;
         private System.Windows.Forms.Button btnAddInfosFrmCadastroH;
     }
 }

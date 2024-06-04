@@ -34,8 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblOrderBy = new System.Windows.Forms.Label();
             this.cmb_OrderBy_Usuario = new System.Windows.Forms.ComboBox();
-            this.txt_Procurar_Usuario = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.btnEditarRegistroUsuario = new System.Windows.Forms.Button();
@@ -53,7 +51,7 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.lblOrderBy);
             this.panel3.Controls.Add(this.cmb_OrderBy_Usuario);
-            this.panel3.Controls.Add(this.txt_Procurar_Usuario);
+            this.panel3.Controls.Add(this.txtNomeUsuario);
             this.panel3.Controls.Add(this.lblSearch);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -115,25 +113,6 @@
             this.cmb_OrderBy_Usuario.Name = "cmb_OrderBy_Usuario";
             this.cmb_OrderBy_Usuario.Size = new System.Drawing.Size(145, 23);
             this.cmb_OrderBy_Usuario.TabIndex = 11;
-            // 
-            // txt_Procurar_Usuario
-            // 
-            this.txt_Procurar_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Procurar_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Procurar_Usuario.Location = new System.Drawing.Point(171, 53);
-            this.txt_Procurar_Usuario.Name = "txt_Procurar_Usuario";
-            this.txt_Procurar_Usuario.Size = new System.Drawing.Size(244, 22);
-            this.txt_Procurar_Usuario.TabIndex = 10;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(168, 33);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(116, 17);
-            this.lblSearch.TabIndex = 7;
-            this.lblSearch.Text = "Pesquisar Usuário:";
             // 
             // dgvUsuarios
             // 
@@ -210,8 +189,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.ComboBox cmb_OrderBy_Usuario;
-        private System.Windows.Forms.TextBox txt_Procurar_Usuario;
-        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNovoUsuario;
@@ -220,5 +197,7 @@
         private System.Windows.Forms.Button btnExcluirUsuario;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNomeUsuario;
+        private System.Windows.Forms.Label lblSearch;
     }
 }
