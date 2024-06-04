@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_RegistroUsuario : Form
+    public partial class frm_RegistroPeriferico : Form
     {
-        public frm_RegistroUsuario()
+        public frm_RegistroPeriferico()
         {
             InitializeComponent();
         }
 
-        private void btnCloseFrmCadastroU_Click(object sender, EventArgs e)
+        private void btnCloseFrmRegistroPerifericos_Click(object sender, EventArgs e)
         {
             this.Close();
         }

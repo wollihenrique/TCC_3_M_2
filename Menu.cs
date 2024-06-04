@@ -71,7 +71,7 @@ namespace TCC_3_M
 
         private void btnMudarConta_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new frm_MenuPerifericos());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
