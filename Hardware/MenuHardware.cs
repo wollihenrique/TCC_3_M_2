@@ -27,7 +27,7 @@ namespace TCC_3_M
 
         private void InitializeDatabaseConnection()
         {
-            string connectionString = "server=localhost;database=inventory_system;user=root;password=vini";
+            string connectionString = "server=localhost;database=inventory_system;user=root;password=etec";
             connection = new MySqlConnection(connectionString);
         }
 

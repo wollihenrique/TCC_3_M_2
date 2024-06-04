@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_Editar_Dispositivos : Form
+    public partial class frm_ExcluirPerifericos : Form
     {
-        public frm_Editar_Dispositivos()
+        public frm_ExcluirPerifericos()
         {
             InitializeComponent();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void btnCloseFrmExcluirPerifericos_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

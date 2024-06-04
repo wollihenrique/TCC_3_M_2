@@ -28,5 +28,11 @@ namespace TCC_3_M
         {
             this.Close();
         }
+
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            frm_RegistroUsuario FormRegistroUsuario = new frm_RegistroUsuario();
+            FormRegistroUsuario.Show();
+        }
     }
 }

@@ -24,13 +24,6 @@ namespace TCC_3_M
             this.Hide();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            frm_ExcluirDispositivo frmExcluirDisp = new frm_ExcluirDispositivo();
-            frmExcluirDisp.Show();
-            this.Hide();
-        }
-
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)
         {
             frm_Usuario formUsuario = new frm_Usuario();

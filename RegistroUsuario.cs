@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_Editar_Dispositivos : Form
+    public partial class frm_RegistroUsuario : Form
     {
-        public frm_Editar_Dispositivos()
+        public frm_RegistroUsuario()
         {
             InitializeComponent();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void btnCloseFrmCadastroU_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
