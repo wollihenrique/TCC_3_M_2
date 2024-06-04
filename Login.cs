@@ -14,7 +14,7 @@ namespace TCC_3_M
 {
     public partial class frm_Login : Form
     {
-        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=vini";
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
 
         public frm_Login()
         {

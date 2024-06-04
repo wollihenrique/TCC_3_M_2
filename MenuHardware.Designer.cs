@@ -38,8 +38,6 @@ namespace TCC_3_M
             this.lblOrderBy = new System.Windows.Forms.Label();
             this.cmbOrderBy = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
             this.btnExcluirHardware = new System.Windows.Forms.Button();
             this.btnAtualizarHardware = new System.Windows.Forms.Button();
             this.btnEditarRegistroHardware = new System.Windows.Forms.Button();
@@ -66,8 +64,6 @@ namespace TCC_3_M
             this.pnlFilter.Controls.Add(this.lblOrderBy);
             this.pnlFilter.Controls.Add(this.cmbOrderBy);
             this.pnlFilter.Controls.Add(this.lblStatus);
-            this.pnlFilter.Controls.Add(this.txtSearch);
-            this.pnlFilter.Controls.Add(this.lblSearch);
             this.pnlFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlFilter.Location = new System.Drawing.Point(0, 0);
@@ -91,7 +87,7 @@ namespace TCC_3_M
             this.txtTag.Location = new System.Drawing.Point(7, 50);
             this.txtTag.Multiline = true;
             this.txtTag.Name = "txtTag";
-            this.txtTag.Size = new System.Drawing.Size(97, 22);
+            this.txtTag.Size = new System.Drawing.Size(97, 25);
             this.txtTag.TabIndex = 8;
             // 
             // label2
@@ -100,7 +96,7 @@ namespace TCC_3_M
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "TAG:";
             // 
@@ -110,7 +106,7 @@ namespace TCC_3_M
             this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(618, 50);
+            this.cmbStatus.Location = new System.Drawing.Point(323, 49);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(100, 25);
             this.cmbStatus.TabIndex = 6;
@@ -119,9 +115,9 @@ namespace TCC_3_M
             // 
             this.lblOrderBy.AutoSize = true;
             this.lblOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderBy.Location = new System.Drawing.Point(431, 31);
+            this.lblOrderBy.Location = new System.Drawing.Point(127, 30);
             this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(82, 16);
+            this.lblOrderBy.Size = new System.Drawing.Size(83, 16);
             this.lblOrderBy.TabIndex = 3;
             this.lblOrderBy.Text = "Ordenar por:";
             // 
@@ -131,7 +127,7 @@ namespace TCC_3_M
             this.cmbOrderBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbOrderBy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOrderBy.FormattingEnabled = true;
-            this.cmbOrderBy.Location = new System.Drawing.Point(434, 51);
+            this.cmbOrderBy.Location = new System.Drawing.Point(130, 50);
             this.cmbOrderBy.Name = "cmbOrderBy";
             this.cmbOrderBy.Size = new System.Drawing.Size(165, 25);
             this.cmbOrderBy.TabIndex = 5;
@@ -140,30 +136,11 @@ namespace TCC_3_M
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(615, 30);
+            this.lblStatus.Location = new System.Drawing.Point(320, 29);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(47, 16);
+            this.lblStatus.Size = new System.Drawing.Size(48, 16);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Location = new System.Drawing.Point(133, 50);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(284, 24);
-            this.txtSearch.TabIndex = 4;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(130, 30);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(61, 16);
-            this.lblSearch.TabIndex = 1;
-            this.lblSearch.Text = "Procurar:";
             // 
             // btnExcluirHardware
             // 
@@ -184,6 +161,7 @@ namespace TCC_3_M
             this.btnAtualizarHardware.TabIndex = 32;
             this.btnAtualizarHardware.Text = "Atualizar";
             this.btnAtualizarHardware.UseVisualStyleBackColor = true;
+            this.btnAtualizarHardware.Click += btnAtualizarHardware_Click;
             // 
             // btnEditarRegistroHardware
             // 
@@ -241,8 +219,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.ComboBox cmbOrderBy;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnExcluirHardware;
         private System.Windows.Forms.Button btnAtualizarHardware;
