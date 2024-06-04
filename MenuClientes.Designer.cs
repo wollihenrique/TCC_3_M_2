@@ -39,8 +39,6 @@
             this.btnEditarRegistroUsuario = new System.Windows.Forms.Button();
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnExcluirUsuario = new System.Windows.Forms.Button();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.txtNomeUsuario = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +132,7 @@
             this.btnNovoUsuario.TabIndex = 26;
             this.btnNovoUsuario.Text = "Novo Usuario";
             this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
             // 
             // btnEditarRegistroUsuario
             // 
@@ -164,25 +163,6 @@
             this.btnExcluirUsuario.TabIndex = 29;
             this.btnExcluirUsuario.Text = "Excluir Usuário";
             this.btnExcluirUsuario.UseVisualStyleBackColor = true;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(168, 33);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(47, 17);
-            this.lblSearch.TabIndex = 7;
-            this.lblSearch.Text = "Nome:";
-            // 
-            // txtNomeUsuario
-            // 
-            this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeUsuario.Location = new System.Drawing.Point(171, 53);
-            this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(225, 22);
-            this.txtNomeUsuario.TabIndex = 10;
             // 
             // frm_Usuario
             // 

@@ -91,13 +91,13 @@ namespace TCC_3_M
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(59, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 28);
+            this.label1.Size = new System.Drawing.Size(127, 30);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Editar registro de dispositivos ";
+            this.label1.Text = "Hardware";
             // 
             // button1
             // 
