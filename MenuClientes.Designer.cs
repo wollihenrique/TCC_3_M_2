@@ -51,8 +51,6 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.lblOrderBy);
             this.panel3.Controls.Add(this.cmb_OrderBy_Usuario);
-            this.panel3.Controls.Add(this.txtNomeUsuario);
-            this.panel3.Controls.Add(this.lblSearch);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -197,7 +195,5 @@
         private System.Windows.Forms.Button btnExcluirUsuario;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNomeUsuario;
-        private System.Windows.Forms.Label lblSearch;
     }
 }
