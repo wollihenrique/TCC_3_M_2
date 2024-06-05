@@ -24,13 +24,6 @@ namespace TCC_3_M
             this.Hide();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            frm_ExcluirDispositivo frmExcluirDisp = new frm_ExcluirDispositivo();
-            frmExcluirDisp.Show();
-            this.Hide();
-        }
-
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)
         {
             frm_Usuario formUsuario = new frm_Usuario();
@@ -42,13 +35,6 @@ namespace TCC_3_M
         {
             frm_Login formLogin = new frm_Login();
             formLogin.Show();
-            this.Hide();
-        }
-
-        private void btnEstoque_Click(object sender, EventArgs e)
-        {
-            frmEstoque formEstoque = new frmEstoque();
-            formEstoque.Show();
             this.Hide();
         }
     }

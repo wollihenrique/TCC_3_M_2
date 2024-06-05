@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace TCC_3_M
 {
     public partial class frm_Login : Form
     {
-        string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
 
         public frm_Login()
         {
@@ -36,6 +37,7 @@ namespace TCC_3_M
                 MessageBox.Show("Usuário ou senha incorretos", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private bool VerificarLogin(string usuario, string senha)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -44,14 +46,21 @@ namespace TCC_3_M
                 {
                     connection.Open();
 
-                    string sql = "SELECT COUNT(*) FROM (SELECT id, name, password, 'admin' AS role FROM admin UNION SELECT id, name, password, 'user' AS role FROM user) AS combined_users WHERE name = @usuario AND password = @senha";
+                    string sql = "SELECT password FROM (SELECT id, name, password, 'admin' AS role FROM admin UNION SELECT id, name, password, 'user' AS role FROM user) AS combined_users WHERE name = @usuario";
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.Parameters.AddWithValue("@senha", senha);
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    object result = cmd.ExecuteScalar();
 
-                    return count > 0;
+                    if (result != null)
+                    {
+                        string storedHash = result.ToString();
+                        return PasswordHelper.VerifyPassword(senha, storedHash);
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -60,6 +69,7 @@ namespace TCC_3_M
                 }
             }
         }
+
         private void lnkCadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frm_CadastroAdmin formCadastroAdmin = new frm_CadastroAdmin();
@@ -67,9 +77,37 @@ namespace TCC_3_M
             this.Hide();
         }
 
+        private void txtSenhaLogin_TextChanged(object sender, EventArgs e)
+        {
+            txtSenhaLogin.PasswordChar = '*';
+        }
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+    }
+
+    public static class PasswordHelper
+    {
+        public static string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        public static bool VerifyPassword(string enteredPassword, string storedHash)
+        {
+            string hashOfEnteredPassword = HashPassword(enteredPassword);
+            return string.Equals(hashOfEnteredPassword, storedHash, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -71,7 +71,7 @@ namespace TCC_3_M
 
         private void btnMudarConta_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new frm_MenuPerifericos());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
@@ -86,7 +86,7 @@ namespace TCC_3_M
 
         private void btnNossaEquipe_Click(object sender, EventArgs e)
         {
-            openChildForm(new teste2());
+            openChildForm(new frm_Creditos());
             //...EScrever o resto dos códigos
             //...
             hideSubMenu();
@@ -153,13 +153,6 @@ namespace TCC_3_M
             pnlFilhoConteinerPrincipal.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void btnCreditos_Click(object sender, EventArgs e)
-        {
-            frm_Creditos formCreditos = new frm_Creditos();
-            formCreditos.Show();
-            this.Hide();
         }
     }
 }

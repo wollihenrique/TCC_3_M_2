@@ -16,5 +16,11 @@ namespace TCC_3_M
         {
             InitializeComponent();
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

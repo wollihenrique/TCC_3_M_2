@@ -116,11 +116,11 @@
     <Compile Include="Editar_Dispositivos.Designer.cs">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirDispositivo.cs">
+    <Compile Include="ExcluirPerifericos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirDispositivo.Designer.cs">
-      <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
+    <Compile Include="ExcluirPerifericos.Designer.cs">
+      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -134,23 +134,41 @@
     <Compile Include="MenuClientes.Designer.cs">
       <DependentUpon>MenuClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuPerifericos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPerifericos.Designer.cs">
+      <DependentUpon>MenuPerifericos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPerifericos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPerifericos.Designer.cs">
+      <DependentUpon>EditarPerifericos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rascunho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rascunho.Designer.cs">
       <DependentUpon>Rascunho.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroPerifericos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPerifericos.Designer.cs">
+      <DependentUpon>RegistroPerifericos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuario.Designer.cs">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="teste.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="teste.Designer.cs">
       <DependentUpon>teste.cs</DependentUpon>
-    </Compile>
-    <Compile Include="teste2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="teste2.Designer.cs">
-      <DependentUpon>teste2.cs</DependentUpon>
     </Compile>
     <Compile Include="Vinculacao.cs">
       <SubType>Form</SubType>
@@ -205,8 +223,8 @@
     <EmbeddedResource Include="Editar_Dispositivos.resx">
       <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirDispositivo.resx">
-      <DependentUpon>ExcluirDispositivo.cs</DependentUpon>
+    <EmbeddedResource Include="ExcluirPerifericos.resx">
+      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -219,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuClientes.resx">
       <DependentUpon>MenuClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPerifericos.resx">
+      <DependentUpon>MenuPerifericos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPerifericos.resx">
+      <DependentUpon>EditarPerifericos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -233,11 +257,14 @@
     <EmbeddedResource Include="Rascunho.resx">
       <DependentUpon>Rascunho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPerifericos.resx">
+      <DependentUpon>RegistroPerifericos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroUsuario.resx">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="teste.resx">
       <DependentUpon>teste.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="teste2.resx">
-      <DependentUpon>teste2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vinculacao.resx">
       <DependentUpon>Vinculacao.cs</DependentUpon>
