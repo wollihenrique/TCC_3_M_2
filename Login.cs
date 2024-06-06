@@ -21,23 +21,6 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btn_Entrar_Log_Click(object sender, EventArgs e)
-        {
-            string usuario = txtUsuarioLogin.Text;
-            string senha = txtSenhaLogin.Text;
-
-            if (VerificarLogin(usuario, senha))
-            {
-                frm_Inicio frm_Inicio = new frm_Inicio();
-                frm_Inicio.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha incorretos", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private bool VerificarLogin(string usuario, string senha)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -85,6 +68,12 @@ namespace TCC_3_M
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEntrarLog_Click(object sender, EventArgs e)
+        {
+            frm_Inicio inicio = new frm_Inicio();
+            inicio.Show();
         }
     }
 

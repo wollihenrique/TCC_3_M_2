@@ -104,17 +104,23 @@
     <Compile Include="Creditos.Designer.cs">
       <DependentUpon>Creditos.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estoque.Designer.cs">
       <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editar_Dispositivos.cs">
+    <Compile Include="EditarDispositivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar_Dispositivos.Designer.cs">
-      <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
+    <Compile Include="EditarDispositivos.Designer.cs">
+      <DependentUpon>EditarDispositivos.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcluirPerifericos.cs">
       <SubType>Form</SubType>
@@ -128,11 +134,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuClientes.cs">
+    <Compile Include="MenuUsuários.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuClientes.Designer.cs">
-      <DependentUpon>MenuClientes.cs</DependentUpon>
+    <Compile Include="MenuUsuários.Designer.cs">
+      <DependentUpon>MenuUsuários.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPerifericos.cs">
       <SubType>Form</SubType>
@@ -151,6 +157,18 @@
     </Compile>
     <Compile Include="Rascunho.Designer.cs">
       <DependentUpon>Rascunho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFornecedor.Designer.cs">
+      <DependentUpon>RegistroFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroLote.Designer.cs">
+      <DependentUpon>RegistroLote.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroPerifericos.cs">
       <SubType>Form</SubType>
@@ -217,11 +235,14 @@
     <EmbeddedResource Include="Creditos.resx">
       <DependentUpon>Creditos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estoque.resx">
       <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Dispositivos.resx">
-      <DependentUpon>Editar_Dispositivos.cs</DependentUpon>
+    <EmbeddedResource Include="EditarDispositivos.resx">
+      <DependentUpon>EditarDispositivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirPerifericos.resx">
       <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
@@ -235,8 +256,8 @@
     <EmbeddedResource Include="MenuHardware.resx">
       <DependentUpon>MenuHardware.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuClientes.resx">
-      <DependentUpon>MenuClientes.cs</DependentUpon>
+    <EmbeddedResource Include="MenuUsuários.resx">
+      <DependentUpon>MenuUsuários.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPerifericos.resx">
       <DependentUpon>MenuPerifericos.cs</DependentUpon>
@@ -256,6 +277,12 @@
     </Compile>
     <EmbeddedResource Include="Rascunho.resx">
       <DependentUpon>Rascunho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFornecedor.resx">
+      <DependentUpon>RegistroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroLote.resx">
+      <DependentUpon>RegistroLote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroPerifericos.resx">
       <DependentUpon>RegistroPerifericos.cs</DependentUpon>
