@@ -32,11 +32,9 @@ namespace TCC_3_M
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnNovoFornecedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCpfCnpjMenu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblOrderBy = new System.Windows.Forms.Label();
-            this.cmbOrderByFornecedor = new System.Windows.Forms.ComboBox();
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
             this.btnEditarRegistroUsuario = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
@@ -52,6 +50,7 @@ namespace TCC_3_M
             this.btnAtualizarUsuario.TabIndex = 34;
             this.btnAtualizarUsuario.Text = "Atualizar";
             this.btnAtualizarUsuario.UseVisualStyleBackColor = true;
+            this.btnAtualizarUsuario.Click += new System.EventHandler(this.btnAtualizarUsuario_Click);
             // 
             // btnNovoFornecedor
             // 
@@ -67,25 +66,24 @@ namespace TCC_3_M
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtCpfCnpjMenu);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.lblOrderBy);
-            this.panel3.Controls.Add(this.cmbOrderByFornecedor);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(740, 84);
             this.panel3.TabIndex = 31;
             // 
-            // textBox1
+            // txtCpfCnpjMenu
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 22);
-            this.textBox1.TabIndex = 15;
+            this.txtCpfCnpjMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpfCnpjMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfCnpjMenu.Location = new System.Drawing.Point(15, 53);
+            this.txtCpfCnpjMenu.Name = "txtCpfCnpjMenu";
+            this.txtCpfCnpjMenu.Size = new System.Drawing.Size(130, 22);
+            this.txtCpfCnpjMenu.TabIndex = 15;
+            this.txtCpfCnpjMenu.TextChanged += new System.EventHandler(this.txtCpfCnpjMenu_TextChanged);
             // 
             // label1
             // 
@@ -93,9 +91,9 @@ namespace TCC_3_M
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 17);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 14;
-            this.label1.Text = "ID:";
+            this.label1.Text = "CPF/CNPJ:";
             // 
             // button1
             // 
@@ -105,32 +103,6 @@ namespace TCC_3_M
             this.button1.TabIndex = 13;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblOrderBy
-            // 
-            this.lblOrderBy.AutoSize = true;
-            this.lblOrderBy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderBy.Location = new System.Drawing.Point(418, 30);
-            this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(85, 17);
-            this.lblOrderBy.TabIndex = 9;
-            this.lblOrderBy.Text = "Ordenar por:";
-            // 
-            // cmbOrderByFornecedor
-            // 
-            this.cmbOrderByFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbOrderByFornecedor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbOrderByFornecedor.FormattingEnabled = true;
-            this.cmbOrderByFornecedor.Items.AddRange(new object[] {
-            "Ultima hora",
-            "Hoje",
-            "Esta semana",
-            "Este mês",
-            "Este ano"});
-            this.cmbOrderByFornecedor.Location = new System.Drawing.Point(421, 52);
-            this.cmbOrderByFornecedor.Name = "cmbOrderByFornecedor";
-            this.cmbOrderByFornecedor.Size = new System.Drawing.Size(145, 23);
-            this.cmbOrderByFornecedor.TabIndex = 11;
             // 
             // dgvFornecedor
             // 
@@ -176,11 +148,9 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btnAtualizarUsuario;
         private System.Windows.Forms.Button btnNovoFornecedor;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCpfCnpjMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblOrderBy;
-        private System.Windows.Forms.ComboBox cmbOrderByFornecedor;
         private System.Windows.Forms.DataGridView dgvFornecedor;
         private System.Windows.Forms.Button btnEditarRegistroUsuario;
     }

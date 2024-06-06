@@ -72,8 +72,20 @@ namespace TCC_3_M
 
         private void btnEntrarLog_Click(object sender, EventArgs e)
         {
-            frm_Inicio inicio = new frm_Inicio();
-            inicio.Show();
+            string usuario = txtUsuarioLogin.Text;
+            string senha = txtSenhaLogin.Text;
+
+            if (VerificarLogin(usuario, senha))
+            {
+                frm_Inicio menu = new frm_Inicio();
+                menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha incorretos. Tente novamente.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 

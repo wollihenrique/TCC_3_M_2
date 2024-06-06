@@ -170,6 +170,7 @@ namespace TCC_3_M
             this.btnLimparCadF.TabIndex = 58;
             this.btnLimparCadF.Text = "Limpar";
             this.btnLimparCadF.UseVisualStyleBackColor = false;
+            this.btnLimparCadF.Click += new System.EventHandler(this.btnLimparCadF_Click);
             // 
             // btnSalvarCadF
             // 
@@ -182,6 +183,7 @@ namespace TCC_3_M
             this.btnSalvarCadF.TabIndex = 57;
             this.btnSalvarCadF.Text = "Salvar";
             this.btnSalvarCadF.UseVisualStyleBackColor = false;
+            this.btnSalvarCadF.Click += new System.EventHandler(this.btnSalvarCadF_Click);
             // 
             // frm_RegistroFornecedor
             // 
