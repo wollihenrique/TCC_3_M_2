@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_EditarUsuario : Form
+    public partial class frm_MenuFornecedores : Form
     {
-        public frm_EditarUsuario()
+        public frm_MenuFornecedores()
         {
             InitializeComponent();
         }
 
-        private void btnCloseFrmCadastroU_Click(object sender, EventArgs e)
+        private void btnNovoFornecedor_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frm_RegistroFornecedor registroFornecedor = new frm_RegistroFornecedor();
+            registroFornecedor.Show();
         }
     }
 }

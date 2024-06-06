@@ -29,21 +29,6 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbStatusEditU = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtComplementoEditU = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtNumeroEditU = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtRuaEditU = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtBairroEditU = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCidadeEditU = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCepEditU = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtConfirmSenhaEditU = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtUsernameEditU = new System.Windows.Forms.TextBox();
@@ -66,160 +51,13 @@ namespace TCC_3_M
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmbStatusEditU
-            // 
-            this.cmbStatusEditU.FormattingEnabled = true;
-            this.cmbStatusEditU.Items.AddRange(new object[] {
-            "Ativo",
-            "Inativo"});
-            this.cmbStatusEditU.Location = new System.Drawing.Point(351, 440);
-            this.cmbStatusEditU.Name = "cmbStatusEditU";
-            this.cmbStatusEditU.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatusEditU.TabIndex = 108;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(347, 416);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 21);
-            this.label16.TabIndex = 107;
-            this.label16.Text = "Status:";
-            // 
-            // txtComplementoEditU
-            // 
-            this.txtComplementoEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtComplementoEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplementoEditU.Location = new System.Drawing.Point(17, 440);
-            this.txtComplementoEditU.Name = "txtComplementoEditU";
-            this.txtComplementoEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtComplementoEditU.TabIndex = 106;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 416);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(128, 21);
-            this.label15.TabIndex = 105;
-            this.label15.Text = "Complemento:";
-            // 
-            // txtNumeroEditU
-            // 
-            this.txtNumeroEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumeroEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroEditU.Location = new System.Drawing.Point(348, 374);
-            this.txtNumeroEditU.Name = "txtNumeroEditU";
-            this.txtNumeroEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtNumeroEditU.TabIndex = 104;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(347, 350);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 21);
-            this.label13.TabIndex = 103;
-            this.label13.Text = "Número:";
-            // 
-            // txtRuaEditU
-            // 
-            this.txtRuaEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRuaEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuaEditU.Location = new System.Drawing.Point(14, 374);
-            this.txtRuaEditU.Name = "txtRuaEditU";
-            this.txtRuaEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtRuaEditU.TabIndex = 102;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 350);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 21);
-            this.label12.TabIndex = 101;
-            this.label12.Text = "Rua:";
-            // 
-            // txtBairroEditU
-            // 
-            this.txtBairroEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBairroEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairroEditU.Location = new System.Drawing.Point(345, 321);
-            this.txtBairroEditU.Name = "txtBairroEditU";
-            this.txtBairroEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtBairroEditU.TabIndex = 100;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(344, 297);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 21);
-            this.label11.TabIndex = 99;
-            this.label11.Text = "Bairro:";
-            // 
-            // txtCidadeEditU
-            // 
-            this.txtCidadeEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCidadeEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidadeEditU.Location = new System.Drawing.Point(17, 321);
-            this.txtCidadeEditU.Name = "txtCidadeEditU";
-            this.txtCidadeEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtCidadeEditU.TabIndex = 98;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 297);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 21);
-            this.label9.TabIndex = 97;
-            this.label9.Text = "Cidade:";
-            // 
-            // txtCepEditU
-            // 
-            this.txtCepEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCepEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCepEditU.Location = new System.Drawing.Point(17, 268);
-            this.txtCepEditU.Name = "txtCepEditU";
-            this.txtCepEditU.Size = new System.Drawing.Size(296, 26);
-            this.txtCepEditU.TabIndex = 96;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 244);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
-            this.label8.TabIndex = 95;
-            this.label8.Text = "CEP:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(11, 223);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(656, 17);
-            this.label14.TabIndex = 94;
-            this.label14.Text = "_________________________________________________________________________________" +
-    "___________________________";
-            // 
             // txtConfirmSenhaEditU
             // 
             this.txtConfirmSenhaEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmSenhaEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmSenhaEditU.Location = new System.Drawing.Point(348, 128);
+            this.txtConfirmSenhaEditU.Location = new System.Drawing.Point(351, 128);
             this.txtConfirmSenhaEditU.Name = "txtConfirmSenhaEditU";
-            this.txtConfirmSenhaEditU.Size = new System.Drawing.Size(296, 26);
+            this.txtConfirmSenhaEditU.Size = new System.Drawing.Size(300, 26);
             this.txtConfirmSenhaEditU.TabIndex = 93;
             // 
             // label7
@@ -256,7 +94,7 @@ namespace TCC_3_M
             this.btnCancelarFrmEditarU.BackColor = System.Drawing.Color.Firebrick;
             this.btnCancelarFrmEditarU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmEditarU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFrmEditarU.Location = new System.Drawing.Point(466, 481);
+            this.btnCancelarFrmEditarU.Location = new System.Drawing.Point(466, 238);
             this.btnCancelarFrmEditarU.Name = "btnCancelarFrmEditarU";
             this.btnCancelarFrmEditarU.Size = new System.Drawing.Size(76, 31);
             this.btnCancelarFrmEditarU.TabIndex = 89;
@@ -268,7 +106,7 @@ namespace TCC_3_M
             this.btnSalvarFrmEditarU.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSalvarFrmEditarU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmEditarU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarFrmEditarU.Location = new System.Drawing.Point(568, 481);
+            this.btnSalvarFrmEditarU.Location = new System.Drawing.Point(568, 238);
             this.btnSalvarFrmEditarU.Name = "btnSalvarFrmEditarU";
             this.btnSalvarFrmEditarU.Size = new System.Drawing.Size(76, 31);
             this.btnSalvarFrmEditarU.TabIndex = 88;
@@ -281,7 +119,7 @@ namespace TCC_3_M
             this.txtSenhaEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaEditU.Location = new System.Drawing.Point(14, 128);
             this.txtSenhaEditU.Name = "txtSenhaEditU";
-            this.txtSenhaEditU.Size = new System.Drawing.Size(296, 26);
+            this.txtSenhaEditU.Size = new System.Drawing.Size(300, 26);
             this.txtSenhaEditU.TabIndex = 87;
             // 
             // label10
@@ -300,14 +138,14 @@ namespace TCC_3_M
             this.txtEmailEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailEditU.Location = new System.Drawing.Point(14, 181);
             this.txtEmailEditU.Name = "txtEmailEditU";
-            this.txtEmailEditU.Size = new System.Drawing.Size(296, 26);
+            this.txtEmailEditU.Size = new System.Drawing.Size(300, 26);
             this.txtEmailEditU.TabIndex = 85;
             // 
             // masktxtTelefoneEditU
             // 
             this.masktxtTelefoneEditU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.masktxtTelefoneEditU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masktxtTelefoneEditU.Location = new System.Drawing.Point(497, 181);
+            this.masktxtTelefoneEditU.Location = new System.Drawing.Point(498, 181);
             this.masktxtTelefoneEditU.Mask = "(00) 00000-0000";
             this.masktxtTelefoneEditU.Name = "masktxtTelefoneEditU";
             this.masktxtTelefoneEditU.Size = new System.Drawing.Size(154, 26);
@@ -407,28 +245,14 @@ namespace TCC_3_M
             this.btnCloseFrmCadastroU.TabIndex = 43;
             this.btnCloseFrmCadastroU.Text = "X";
             this.btnCloseFrmCadastroU.UseVisualStyleBackColor = true;
+            this.btnCloseFrmCadastroU.Click += new System.EventHandler(this.btnCloseFrmCadastroU_Click);
             // 
             // frm_EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 534);
+            this.ClientSize = new System.Drawing.Size(677, 289);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cmbStatusEditU);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtComplementoEditU);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtNumeroEditU);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtRuaEditU);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtBairroEditU);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtCidadeEditU);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtCepEditU);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.txtConfirmSenhaEditU);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtUsernameEditU);
@@ -457,22 +281,6 @@ namespace TCC_3_M
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbStatusEditU;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtComplementoEditU;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtNumeroEditU;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtRuaEditU;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtBairroEditU;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtCidadeEditU;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCepEditU;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtConfirmSenhaEditU;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUsernameEditU;

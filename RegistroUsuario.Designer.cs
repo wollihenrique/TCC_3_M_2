@@ -48,21 +48,6 @@ namespace TCC_3_M
             this.label2 = new System.Windows.Forms.Label();
             this.txtConfirmSenhaCadU = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCepCadU = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCidadeCadU = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtBairroCadU = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtRuaCadU = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtNumeroCadU = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtComplementoCadU = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.cmbStatusCadU = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,7 +151,7 @@ namespace TCC_3_M
             // 
             this.masktxtTelefoneCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.masktxtTelefoneCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masktxtTelefoneCadU.Location = new System.Drawing.Point(503, 184);
+            this.masktxtTelefoneCadU.Location = new System.Drawing.Point(502, 184);
             this.masktxtTelefoneCadU.Mask = "(00) 00000-0000";
             this.masktxtTelefoneCadU.Name = "masktxtTelefoneCadU";
             this.masktxtTelefoneCadU.Size = new System.Drawing.Size(154, 26);
@@ -178,7 +163,7 @@ namespace TCC_3_M
             this.txtEmailCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailCadU.Location = new System.Drawing.Point(20, 184);
             this.txtEmailCadU.Name = "txtEmailCadU";
-            this.txtEmailCadU.Size = new System.Drawing.Size(296, 26);
+            this.txtEmailCadU.Size = new System.Drawing.Size(300, 26);
             this.txtEmailCadU.TabIndex = 9;
             // 
             // txtSenhaCadU
@@ -187,7 +172,7 @@ namespace TCC_3_M
             this.txtSenhaCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaCadU.Location = new System.Drawing.Point(20, 131);
             this.txtSenhaCadU.Name = "txtSenhaCadU";
-            this.txtSenhaCadU.Size = new System.Drawing.Size(296, 26);
+            this.txtSenhaCadU.Size = new System.Drawing.Size(300, 26);
             this.txtSenhaCadU.TabIndex = 17;
             // 
             // label10
@@ -205,7 +190,7 @@ namespace TCC_3_M
             this.btnCancelarFrmCadastroU.BackColor = System.Drawing.Color.Firebrick;
             this.btnCancelarFrmCadastroU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmCadastroU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFrmCadastroU.Location = new System.Drawing.Point(472, 484);
+            this.btnCancelarFrmCadastroU.Location = new System.Drawing.Point(472, 243);
             this.btnCancelarFrmCadastroU.Name = "btnCancelarFrmCadastroU";
             this.btnCancelarFrmCadastroU.Size = new System.Drawing.Size(76, 31);
             this.btnCancelarFrmCadastroU.TabIndex = 58;
@@ -217,7 +202,7 @@ namespace TCC_3_M
             this.btnSalvarFrmCadastroU.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSalvarFrmCadastroU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmCadastroU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarFrmCadastroU.Location = new System.Drawing.Point(574, 484);
+            this.btnSalvarFrmCadastroU.Location = new System.Drawing.Point(574, 243);
             this.btnSalvarFrmCadastroU.Name = "btnSalvarFrmCadastroU";
             this.btnSalvarFrmCadastroU.Size = new System.Drawing.Size(76, 31);
             this.btnSalvarFrmCadastroU.TabIndex = 57;
@@ -228,7 +213,7 @@ namespace TCC_3_M
             // 
             this.txtUsernameCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsernameCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsernameCadU.Location = new System.Drawing.Point(357, 78);
+            this.txtUsernameCadU.Location = new System.Drawing.Point(356, 78);
             this.txtUsernameCadU.Name = "txtUsernameCadU";
             this.txtUsernameCadU.Size = new System.Drawing.Size(300, 26);
             this.txtUsernameCadU.TabIndex = 60;
@@ -247,9 +232,9 @@ namespace TCC_3_M
             // 
             this.txtConfirmSenhaCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmSenhaCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmSenhaCadU.Location = new System.Drawing.Point(354, 131);
+            this.txtConfirmSenhaCadU.Location = new System.Drawing.Point(356, 131);
             this.txtConfirmSenhaCadU.Name = "txtConfirmSenhaCadU";
-            this.txtConfirmSenhaCadU.Size = new System.Drawing.Size(296, 26);
+            this.txtConfirmSenhaCadU.Size = new System.Drawing.Size(300, 26);
             this.txtConfirmSenhaCadU.TabIndex = 62;
             // 
             // label7
@@ -262,173 +247,11 @@ namespace TCC_3_M
             this.label7.TabIndex = 61;
             this.label7.Text = "Confirmação de Senha:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(17, 226);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(656, 17);
-            this.label14.TabIndex = 63;
-            this.label14.Text = "_________________________________________________________________________________" +
-    "___________________________";
-            // 
-            // txtCepCadU
-            // 
-            this.txtCepCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCepCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCepCadU.Location = new System.Drawing.Point(23, 271);
-            this.txtCepCadU.Name = "txtCepCadU";
-            this.txtCepCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtCepCadU.TabIndex = 65;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 247);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "CEP:";
-            // 
-            // txtCidadeCadU
-            // 
-            this.txtCidadeCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCidadeCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidadeCadU.Location = new System.Drawing.Point(23, 324);
-            this.txtCidadeCadU.Name = "txtCidadeCadU";
-            this.txtCidadeCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtCidadeCadU.TabIndex = 67;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 300);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 21);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "Cidade:";
-            // 
-            // txtBairroCadU
-            // 
-            this.txtBairroCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBairroCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairroCadU.Location = new System.Drawing.Point(351, 324);
-            this.txtBairroCadU.Name = "txtBairroCadU";
-            this.txtBairroCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtBairroCadU.TabIndex = 69;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(350, 300);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 21);
-            this.label11.TabIndex = 68;
-            this.label11.Text = "Bairro:";
-            // 
-            // txtRuaCadU
-            // 
-            this.txtRuaCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRuaCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuaCadU.Location = new System.Drawing.Point(20, 377);
-            this.txtRuaCadU.Name = "txtRuaCadU";
-            this.txtRuaCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtRuaCadU.TabIndex = 71;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 353);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 21);
-            this.label12.TabIndex = 70;
-            this.label12.Text = "Rua:";
-            // 
-            // txtNumeroCadU
-            // 
-            this.txtNumeroCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumeroCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroCadU.Location = new System.Drawing.Point(354, 377);
-            this.txtNumeroCadU.Name = "txtNumeroCadU";
-            this.txtNumeroCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtNumeroCadU.TabIndex = 73;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(353, 353);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 21);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "Número:";
-            // 
-            // txtComplementoCadU
-            // 
-            this.txtComplementoCadU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtComplementoCadU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplementoCadU.Location = new System.Drawing.Point(23, 443);
-            this.txtComplementoCadU.Name = "txtComplementoCadU";
-            this.txtComplementoCadU.Size = new System.Drawing.Size(296, 26);
-            this.txtComplementoCadU.TabIndex = 75;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(22, 419);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(128, 21);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "Complemento:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(353, 419);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 21);
-            this.label16.TabIndex = 76;
-            this.label16.Text = "Status:";
-            // 
-            // cmbStatusCadU
-            // 
-            this.cmbStatusCadU.FormattingEnabled = true;
-            this.cmbStatusCadU.Items.AddRange(new object[] {
-            "Ativo",
-            "Inativo"});
-            this.cmbStatusCadU.Location = new System.Drawing.Point(357, 443);
-            this.cmbStatusCadU.Name = "cmbStatusCadU";
-            this.cmbStatusCadU.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatusCadU.TabIndex = 77;
-            // 
             // frm_RegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 534);
-            this.Controls.Add(this.cmbStatusCadU);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtComplementoCadU);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtNumeroCadU);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtRuaCadU);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtBairroCadU);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtCidadeCadU);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtCepCadU);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label14);
+            this.ClientSize = new System.Drawing.Size(677, 291);
             this.Controls.Add(this.txtConfirmSenhaCadU);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtUsernameCadU);
@@ -478,20 +301,5 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtConfirmSenhaCadU;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCepCadU;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCidadeCadU;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtBairroCadU;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtRuaCadU;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNumeroCadU;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtComplementoCadU;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox cmbStatusCadU;
     }
 }

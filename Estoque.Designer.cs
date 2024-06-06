@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltarPnlEstoque = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVoltarEstoque = new System.Windows.Forms.Button();
             this.btnPerifericosEstoque = new System.Windows.Forms.Button();
             this.btnRegistrosEstoque = new System.Windows.Forms.Button();
             this.btnHardwareEstoque = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnPesquisarHardwareEstoque = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnVoltarEstoque = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlOpcoes_Estoque.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,6 +118,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(904, 70);
             this.panel2.TabIndex = 0;
+            // 
+            // btnVoltarEstoque
+            // 
+            this.btnVoltarEstoque.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnVoltarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarEstoque.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltarEstoque.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoltarEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarEstoque.Image")));
+            this.btnVoltarEstoque.Location = new System.Drawing.Point(794, 0);
+            this.btnVoltarEstoque.Name = "btnVoltarEstoque";
+            this.btnVoltarEstoque.Size = new System.Drawing.Size(110, 70);
+            this.btnVoltarEstoque.TabIndex = 8;
+            this.btnVoltarEstoque.Text = "Voltar";
+            this.btnVoltarEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVoltarEstoque.UseVisualStyleBackColor = true;
+            this.btnVoltarEstoque.Click += new System.EventHandler(this.btnVoltarCreditos_Click);
             // 
             // btnPerifericosEstoque
             // 
@@ -306,22 +322,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(885, 226);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnVoltarEstoque
-            // 
-            this.btnVoltarEstoque.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnVoltarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarEstoque.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltarEstoque.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltarEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarEstoque.Image")));
-            this.btnVoltarEstoque.Location = new System.Drawing.Point(794, 0);
-            this.btnVoltarEstoque.Name = "btnVoltarEstoque";
-            this.btnVoltarEstoque.Size = new System.Drawing.Size(110, 70);
-            this.btnVoltarEstoque.TabIndex = 8;
-            this.btnVoltarEstoque.Text = "Voltar";
-            this.btnVoltarEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVoltarEstoque.UseVisualStyleBackColor = true;
-            this.btnVoltarEstoque.Click += new System.EventHandler(this.btnVoltarCreditos_Click);
             // 
             // frm_Estoque
             // 

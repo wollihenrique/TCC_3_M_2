@@ -79,7 +79,7 @@ namespace TCC_3_M
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_RegistroFornecedor());
+            openChildForm(new frm_MenuFornecedores());
             hideSubMenu();
         }
         #endregion

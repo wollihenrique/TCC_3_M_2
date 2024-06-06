@@ -32,34 +32,33 @@
             this.btnVoltarPnlCadastroDevice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTagCadH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtModeloCadH = new System.Windows.Forms.TextBox();
+            this.txtMarcaCadH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtProcessadorCadH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDiscoCadH = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtRamCadH = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPVideoCadH = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtPRedeCadH = new System.Windows.Forms.TextBox();
+            this.btnSalvarCadH = new System.Windows.Forms.Button();
+            this.txtGarantiaCadH = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.cmbStatusCadH = new System.Windows.Forms.ComboBox();
+            this.txtObsCadH = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelHardwareInfos = new System.Windows.Forms.Panel();
+            this.btnLimparCadH = new System.Windows.Forms.Button();
+            this.btnAddInfosFrmCadastroH = new System.Windows.Forms.Button();
             this.pnlCadastroP.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelHardwareInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCadastroP
@@ -71,7 +70,7 @@
             this.pnlCadastroP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCadastroP.Location = new System.Drawing.Point(0, 0);
             this.pnlCadastroP.Name = "pnlCadastroP";
-            this.pnlCadastroP.Size = new System.Drawing.Size(600, 42);
+            this.pnlCadastroP.Size = new System.Drawing.Size(605, 42);
             this.pnlCadastroP.TabIndex = 28;
             // 
             // btnVoltarPnlCadastroDevice
@@ -110,12 +109,12 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Tag:";
             // 
-            // textBox1
+            // txtTagCadH
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 30;
+            this.txtTagCadH.Location = new System.Drawing.Point(16, 69);
+            this.txtTagCadH.Name = "txtTagCadH";
+            this.txtTagCadH.Size = new System.Drawing.Size(110, 20);
+            this.txtTagCadH.TabIndex = 30;
             // 
             // label3
             // 
@@ -127,36 +126,19 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Modelo:";
             // 
-            // textBox2
+            // txtModeloCadH
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 32;
+            this.txtModeloCadH.Location = new System.Drawing.Point(16, 115);
+            this.txtModeloCadH.Name = "txtModeloCadH";
+            this.txtModeloCadH.Size = new System.Drawing.Size(242, 20);
+            this.txtModeloCadH.TabIndex = 32;
             // 
-            // label4
+            // txtMarcaCadH
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Latitude:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(158, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 34;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(288, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 20);
-            this.textBox4.TabIndex = 35;
+            this.txtMarcaCadH.Location = new System.Drawing.Point(288, 115);
+            this.txtMarcaCadH.Name = "txtMarcaCadH";
+            this.txtMarcaCadH.Size = new System.Drawing.Size(117, 20);
+            this.txtMarcaCadH.TabIndex = 35;
             // 
             // label5
             // 
@@ -178,12 +160,12 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Processador:";
             // 
-            // textBox5
+            // txtProcessadorCadH
             // 
-            this.textBox5.Location = new System.Drawing.Point(7, 21);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(239, 20);
-            this.textBox5.TabIndex = 38;
+            this.txtProcessadorCadH.Location = new System.Drawing.Point(7, 21);
+            this.txtProcessadorCadH.Name = "txtProcessadorCadH";
+            this.txtProcessadorCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtProcessadorCadH.TabIndex = 38;
             // 
             // label7
             // 
@@ -195,12 +177,12 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Disco:";
             // 
-            // textBox6
+            // txtDiscoCadH
             // 
-            this.textBox6.Location = new System.Drawing.Point(7, 63);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(239, 20);
-            this.textBox6.TabIndex = 40;
+            this.txtDiscoCadH.Location = new System.Drawing.Point(7, 63);
+            this.txtDiscoCadH.Name = "txtDiscoCadH";
+            this.txtDiscoCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtDiscoCadH.TabIndex = 40;
             // 
             // label8
             // 
@@ -212,12 +194,12 @@
             this.label8.TabIndex = 41;
             this.label8.Text = "Memóriam RAM:";
             // 
-            // textBox7
+            // txtRamCadH
             // 
-            this.textBox7.Location = new System.Drawing.Point(265, 25);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(279, 20);
-            this.textBox7.TabIndex = 42;
+            this.txtRamCadH.Location = new System.Drawing.Point(265, 25);
+            this.txtRamCadH.Name = "txtRamCadH";
+            this.txtRamCadH.Size = new System.Drawing.Size(279, 20);
+            this.txtRamCadH.TabIndex = 42;
             // 
             // label9
             // 
@@ -229,12 +211,12 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Placa de vídeo:";
             // 
-            // textBox8
+            // txtPVideoCadH
             // 
-            this.textBox8.Location = new System.Drawing.Point(7, 106);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(239, 20);
-            this.textBox8.TabIndex = 44;
+            this.txtPVideoCadH.Location = new System.Drawing.Point(7, 106);
+            this.txtPVideoCadH.Name = "txtPVideoCadH";
+            this.txtPVideoCadH.Size = new System.Drawing.Size(239, 20);
+            this.txtPVideoCadH.TabIndex = 44;
             // 
             // label10
             // 
@@ -246,31 +228,31 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Placa de rede:";
             // 
-            // textBox9
+            // txtPRedeCadH
             // 
-            this.textBox9.Location = new System.Drawing.Point(276, 106);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(268, 20);
-            this.textBox9.TabIndex = 46;
+            this.txtPRedeCadH.Location = new System.Drawing.Point(276, 106);
+            this.txtPRedeCadH.Name = "txtPRedeCadH";
+            this.txtPRedeCadH.Size = new System.Drawing.Size(268, 20);
+            this.txtPRedeCadH.TabIndex = 46;
             // 
-            // button2
+            // btnSalvarCadH
             // 
-            this.button2.BackColor = System.Drawing.Color.LimeGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(500, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 31);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSalvarCadH.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarCadH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarCadH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarCadH.Location = new System.Drawing.Point(480, 177);
+            this.btnSalvarCadH.Name = "btnSalvarCadH";
+            this.btnSalvarCadH.Size = new System.Drawing.Size(76, 31);
+            this.btnSalvarCadH.TabIndex = 48;
+            this.btnSalvarCadH.Text = "Salvar";
+            this.btnSalvarCadH.UseVisualStyleBackColor = false;
             // 
-            // textBox10
+            // txtGarantiaCadH
             // 
-            this.textBox10.Location = new System.Drawing.Point(389, 69);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(167, 20);
-            this.textBox10.TabIndex = 50;
+            this.txtGarantiaCadH.Location = new System.Drawing.Point(389, 69);
+            this.txtGarantiaCadH.Name = "txtGarantiaCadH";
+            this.txtGarantiaCadH.Size = new System.Drawing.Size(167, 20);
+            this.txtGarantiaCadH.TabIndex = 50;
             // 
             // label11
             // 
@@ -292,20 +274,20 @@
             this.label12.TabIndex = 51;
             this.label12.Text = "Status:";
             // 
-            // comboBox1
+            // cmbStatusCadH
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(419, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 52;
+            this.cmbStatusCadH.FormattingEnabled = true;
+            this.cmbStatusCadH.Location = new System.Drawing.Point(419, 116);
+            this.cmbStatusCadH.Name = "cmbStatusCadH";
+            this.cmbStatusCadH.Size = new System.Drawing.Size(137, 21);
+            this.cmbStatusCadH.TabIndex = 52;
             // 
-            // textBox11
+            // txtObsCadH
             // 
-            this.textBox11.Location = new System.Drawing.Point(7, 149);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(537, 20);
-            this.textBox11.TabIndex = 54;
+            this.txtObsCadH.Location = new System.Drawing.Point(7, 149);
+            this.txtObsCadH.Name = "txtObsCadH";
+            this.txtObsCadH.Size = new System.Drawing.Size(537, 20);
+            this.txtObsCadH.TabIndex = 54;
             // 
             // label13
             // 
@@ -317,60 +299,70 @@
             this.label13.TabIndex = 53;
             this.label13.Text = "Observações:";
             // 
-            // panel1
+            // panelHardwareInfos
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(12, 142);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 212);
-            this.panel1.TabIndex = 55;
+            this.panelHardwareInfos.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelHardwareInfos.Controls.Add(this.label13);
+            this.panelHardwareInfos.Controls.Add(this.txtObsCadH);
+            this.panelHardwareInfos.Controls.Add(this.label7);
+            this.panelHardwareInfos.Controls.Add(this.txtProcessadorCadH);
+            this.panelHardwareInfos.Controls.Add(this.label6);
+            this.panelHardwareInfos.Controls.Add(this.label8);
+            this.panelHardwareInfos.Controls.Add(this.txtRamCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtPVideoCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtDiscoCadH);
+            this.panelHardwareInfos.Controls.Add(this.txtPRedeCadH);
+            this.panelHardwareInfos.Controls.Add(this.label9);
+            this.panelHardwareInfos.Controls.Add(this.label10);
+            this.panelHardwareInfos.Location = new System.Drawing.Point(4, 254);
+            this.panelHardwareInfos.Name = "panelHardwareInfos";
+            this.panelHardwareInfos.Size = new System.Drawing.Size(601, 234);
+            this.panelHardwareInfos.TabIndex = 55;
+            this.panelHardwareInfos.Visible = false;
             // 
-            // button1
+            // btnLimparCadH
             // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(404, 360);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 31);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLimparCadH.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnLimparCadH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparCadH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparCadH.Location = new System.Drawing.Point(389, 177);
+            this.btnLimparCadH.Name = "btnLimparCadH";
+            this.btnLimparCadH.Size = new System.Drawing.Size(76, 31);
+            this.btnLimparCadH.TabIndex = 56;
+            this.btnLimparCadH.Text = "Limpar";
+            this.btnLimparCadH.UseVisualStyleBackColor = false;
+            // 
+            // btnAddInfosFrmCadastroH
+            // 
+            this.btnAddInfosFrmCadastroH.Location = new System.Drawing.Point(3, 214);
+            this.btnAddInfosFrmCadastroH.Name = "btnAddInfosFrmCadastroH";
+            this.btnAddInfosFrmCadastroH.Size = new System.Drawing.Size(602, 40);
+            this.btnAddInfosFrmCadastroH.TabIndex = 57;
+            this.btnAddInfosFrmCadastroH.Text = "Adicionar mais informações";
+            this.btnAddInfosFrmCadastroH.UseVisualStyleBackColor = true;
+            this.btnAddInfosFrmCadastroH.Click += new System.EventHandler(this.button3_Click);
             // 
             // frm_RegistroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(605, 500);
+            this.Controls.Add(this.btnAddInfosFrmCadastroH);
+            this.Controls.Add(this.btnLimparCadH);
+            this.Controls.Add(this.cmbStatusCadH);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtGarantiaCadH);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSalvarCadH);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMarcaCadH);
+            this.Controls.Add(this.txtModeloCadH);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTagCadH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCadastroP);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelHardwareInfos);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_RegistroDisp";
@@ -378,8 +370,8 @@
             this.Text = "Novo Dispositivo";
             this.pnlCadastroP.ResumeLayout(false);
             this.pnlCadastroP.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHardwareInfos.ResumeLayout(false);
+            this.panelHardwareInfos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,31 +382,30 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltarPnlCadastroDevice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTagCadH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtModeloCadH;
+        private System.Windows.Forms.TextBox txtMarcaCadH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtProcessadorCadH;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDiscoCadH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtRamCadH;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtPVideoCadH;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtPRedeCadH;
+        private System.Windows.Forms.Button btnSalvarCadH;
+        private System.Windows.Forms.TextBox txtGarantiaCadH;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox cmbStatusCadH;
+        private System.Windows.Forms.TextBox txtObsCadH;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelHardwareInfos;
+        private System.Windows.Forms.Button btnLimparCadH;
+        private System.Windows.Forms.Button btnAddInfosFrmCadastroH;
     }
 }
