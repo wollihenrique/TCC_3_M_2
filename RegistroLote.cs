@@ -118,5 +118,10 @@ namespace TCC_3_M
             Random rnd = new Random();
             return "B" + rnd.Next(1000, 9999).ToString();
         }
+
+        private void btnCloseFrmCadastroLote_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

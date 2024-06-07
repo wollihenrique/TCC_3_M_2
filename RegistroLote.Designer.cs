@@ -68,6 +68,7 @@ namespace TCC_3_M
             this.btnCloseFrmCadastroLote.TabIndex = 50;
             this.btnCloseFrmCadastroLote.Text = "X";
             this.btnCloseFrmCadastroLote.UseVisualStyleBackColor = false;
+            this.btnCloseFrmCadastroLote.Click += new System.EventHandler(this.btnCloseFrmCadastroLote_Click_1);
             // 
             // label1
             // 
