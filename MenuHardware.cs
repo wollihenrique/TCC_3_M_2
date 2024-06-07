@@ -169,5 +169,11 @@ namespace TCC_3_M
         {
             LoadHardwareData();
         }
+
+        private void btnNovoLote_Click(object sender, EventArgs e)
+        {
+            frm_RegistroLote registroLote = new frm_RegistroLote();
+            registroLote.Show();
+        }
     }
 }

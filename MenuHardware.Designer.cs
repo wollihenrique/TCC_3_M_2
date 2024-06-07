@@ -42,6 +42,7 @@ namespace TCC_3_M
             this.btnAtualizarHardware = new System.Windows.Forms.Button();
             this.btnEditarRegistroHardware = new System.Windows.Forms.Button();
             this.btnNovoHardware = new System.Windows.Forms.Button();
+            this.btnNovoLote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHardware)).BeginInit();
             this.pnlFilter.SuspendLayout();
             this.SuspendLayout();
@@ -161,7 +162,6 @@ namespace TCC_3_M
             this.btnAtualizarHardware.TabIndex = 32;
             this.btnAtualizarHardware.Text = "Atualizar";
             this.btnAtualizarHardware.UseVisualStyleBackColor = true;
-            this.btnAtualizarHardware.Click += btnAtualizarHardware_Click;
             // 
             // btnEditarRegistroHardware
             // 
@@ -185,12 +185,24 @@ namespace TCC_3_M
             this.btnNovoHardware.UseVisualStyleBackColor = true;
             this.btnNovoHardware.Click += new System.EventHandler(this.btnNovoHardware_Click);
             // 
+            // btnNovoLote
+            // 
+            this.btnNovoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoLote.Location = new System.Drawing.Point(21, 459);
+            this.btnNovoLote.Name = "btnNovoLote";
+            this.btnNovoLote.Size = new System.Drawing.Size(100, 50);
+            this.btnNovoLote.TabIndex = 34;
+            this.btnNovoLote.Text = "Novo Lote";
+            this.btnNovoLote.UseVisualStyleBackColor = true;
+            this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
+            // 
             // frm_CadastroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 534);
+            this.Controls.Add(this.btnNovoLote);
             this.Controls.Add(this.btnExcluirHardware);
             this.Controls.Add(this.btnAtualizarHardware);
             this.Controls.Add(this.btnEditarRegistroHardware);
@@ -224,5 +236,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btnAtualizarHardware;
         private System.Windows.Forms.Button btnEditarRegistroHardware;
         private System.Windows.Forms.Button btnNovoHardware;
+        private System.Windows.Forms.Button btnNovoLote;
     }
 }

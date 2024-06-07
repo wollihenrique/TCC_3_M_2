@@ -47,13 +47,13 @@ namespace TCC_3_M
                 subMenu.Visible = false;
         }
 
-        #region MENU USUÀRIO
+        #region MENU REGISTROS
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlSubUserMenu);
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Usuario());
             //...EScrever o resto dos códigos
@@ -69,11 +69,17 @@ namespace TCC_3_M
             hideSubMenu();
         }
 
-        private void btnMudarConta_Click(object sender, EventArgs e)
+        private void btnPerifericos_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_MenuPerifericos());
             //...EScrever o resto dos códigos
             //...
+            hideSubMenu();
+        }
+
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_MenuFornecedores());
             hideSubMenu();
         }
         #endregion
@@ -153,6 +159,13 @@ namespace TCC_3_M
             pnlFilhoConteinerPrincipal.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login login = new frm_Login();
+            login.Show();
         }
     }
 }
