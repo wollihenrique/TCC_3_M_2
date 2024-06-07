@@ -57,6 +57,8 @@
             this.panelHardwareInfos = new System.Windows.Forms.Panel();
             this.btnLimparCadH = new System.Windows.Forms.Button();
             this.btnAddInfosFrmCadastroH = new System.Windows.Forms.Button();
+            this.cmbLote = new System.Windows.Forms.ComboBox();
+            this.lblLote = new System.Windows.Forms.Label();
             this.pnlCadastroP.SuspendLayout();
             this.panelHardwareInfos.SuspendLayout();
             this.SuspendLayout();
@@ -342,12 +344,32 @@
             this.btnAddInfosFrmCadastroH.UseVisualStyleBackColor = true;
             this.btnAddInfosFrmCadastroH.Click += new System.EventHandler(this.button3_Click);
             // 
+            // cmbLote
+            // 
+            this.cmbLote.FormattingEnabled = true;
+            this.cmbLote.Location = new System.Drawing.Point(181, 68);
+            this.cmbLote.Name = "cmbLote";
+            this.cmbLote.Size = new System.Drawing.Size(137, 21);
+            this.cmbLote.TabIndex = 58;
+            // 
+            // lblLote
+            // 
+            this.lblLote.AutoSize = true;
+            this.lblLote.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLote.Location = new System.Drawing.Point(180, 49);
+            this.lblLote.Name = "lblLote";
+            this.lblLote.Size = new System.Drawing.Size(40, 17);
+            this.lblLote.TabIndex = 59;
+            this.lblLote.Text = "Lote:";
+            // 
             // frm_RegistroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(605, 500);
+            this.Controls.Add(this.lblLote);
+            this.Controls.Add(this.cmbLote);
             this.Controls.Add(this.btnAddInfosFrmCadastroH);
             this.Controls.Add(this.btnLimparCadH);
             this.Controls.Add(this.cmbStatusCadH);
@@ -407,5 +429,7 @@
         private System.Windows.Forms.Panel panelHardwareInfos;
         private System.Windows.Forms.Button btnLimparCadH;
         private System.Windows.Forms.Button btnAddInfosFrmCadastroH;
+        private System.Windows.Forms.ComboBox cmbLote;
+        private System.Windows.Forms.Label lblLote;
     }
 }
