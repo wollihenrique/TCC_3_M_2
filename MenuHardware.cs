@@ -16,6 +16,7 @@ namespace TCC_3_M
         private MySqlConnection connection;
         private DataTable dataTable;
         private DataRow selectedHardware;
+        private DataGridView dgvHardware;
 
         public frm_CadastroDisp()
         {
