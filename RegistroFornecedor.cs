@@ -14,7 +14,7 @@ namespace TCC_3_M
 {
     public partial class frm_RegistroFornecedor : Form
     {
-        private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
 
         public frm_RegistroFornecedor()
         {
