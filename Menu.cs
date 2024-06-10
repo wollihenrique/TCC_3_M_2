@@ -12,51 +12,181 @@ namespace TCC_3_M
 {
     public partial class frm_Inicio : Form
     {
+
         public frm_Inicio()
         {
             InitializeComponent();
+            customizeDesign();
+            // Configura o intervalo do timer para 1 segundo
+            timerRelogio.Interval = 1000;
+
+            // Adiciona um manipulador de evento para o evento Tick do Timer
+            timerRelogio.Tick += TimerRelogio_Tick;
+
+            // Inicia o timer
+            timerRelogio.Start();
         }
 
-        private void btnCadastrarDispositivo_Click(object sender, EventArgs e)
+        private void TimerRelogio_Tick(object sender, EventArgs e)
         {
-            frm_CadastroDisp frm_Inicio = new frm_CadastroDisp();
-            frm_Inicio.Show();
-            this.Hide();
+            // Atualiza o texto do Label para exibir a hora atual
+            labelRelogio.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void SeuFormulario_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frm_ExcluirDispositivo frmExcluirDisp = new frm_ExcluirDispositivo();
-            frmExcluirDisp.Show();
-            this.Hide();
+            // Para o timer quando o formulário estiver fechado
+            timerRelogio.Stop();
         }
 
-        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        private void customizeDesign()
         {
-            frm_Usuario formUsuario = new frm_Usuario();
-            formUsuario.Show();
-            this.Hide();
+            pnlSubUserMenu.Visible = false;
+            pnlSubMenuCreditos.Visible = false;
+            pnlSubMenuAjuda.Visible = false;
+        }
+
+        //private void hideSubMenu()
+        //{
+        //    if (pnlSubUserMenu.Visible == true)
+        //        pnlSubUserMenu.Visible = false;
+        //    if (pnlSubMenuAjuda.Visible == true)
+        //        pnlSubMenuAjuda.Visible = false;
+        //    if (pnlSubMenuCreditos.Visible == true)
+        //        pnlSubMenuCreditos.Visible = false;
+        //}
+
+        private void showSubMenu( Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                //hideSubMenu();
+                subMenu.Visible = true;
+            }
+
+            else
+                subMenu.Visible = false;
+        }
+
+        #region MENU REGISTROS
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubUserMenu);
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Usuario());
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void btnDispositivos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_CadastroDisp());
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void btnPerifericos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_MenuPerifericos());
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_MenuFornecedores());
+            //hideSubMenu();
+        }
+        #endregion
+
+        #region MENU CRÉDITOS
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuCreditos);
+        }
+
+        private void btnNossaEquipe_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Creditos());
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+        #endregion
+
+        #region MENU AJUDA
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuAjuda);
+        }
+
+        private void btnContatos_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void btnTutoriais_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+
+        private void btnDuvidas_Click(object sender, EventArgs e)
+        {
+            //...
+            //...EScrever o resto dos códigos
+            //...
+            //hideSubMenu();
+        }
+        #endregion
+
+        private Form activeForm = null;
+        private void openChildForm( Form childForm )
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlFilhoConteinerPrincipal.Controls.Add(childForm);
+            pnlFilhoConteinerPrincipal.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frm_Login formLogin = new frm_Login();
-            formLogin.Show();
-            this.Hide();
-        }
-
-        private void btnEstoque_Click(object sender, EventArgs e)
-        {
-            frm_Estoque formEstoque = new frm_Estoque();
-            formEstoque.Show();
-            this.Hide();
-        }
-
-        private void btnCreditos_Click(object sender, EventArgs e)
-        {
-            frm_Creditos formCreditos = new frm_Creditos();
-            formCreditos.Show();
-            this.Hide();
+            this.Close();
+            frm_Login login = new frm_Login();
+            login.Show();
         }
     }
 }

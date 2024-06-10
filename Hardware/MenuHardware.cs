@@ -15,8 +15,6 @@ namespace TCC_3_M
     {
         private MySqlConnection connection;
         private DataTable dataTable;
-        private DataRow selectedHardware;
-        private DataGridView dgvHardware;
 
         public frm_CadastroDisp()
         {
@@ -25,7 +23,6 @@ namespace TCC_3_M
             LoadHardwareData();
             SetupComboBoxes();
             txtTag.TextChanged += new EventHandler(txtTag_TextChanged);
-            dgvHardware.SelectionChanged += new EventHandler(dgvHardware_SelectionChanged);
         }
 
         private void InitializeDatabaseConnection()
@@ -40,7 +37,7 @@ namespace TCC_3_M
             {
                 connection.Open();
                 string query = @"
-                    SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, b.entering_date 
+                    SELECT h.tag, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, b.entering_date 
                     FROM hardware h
                     JOIN batch b ON h.batch_id = b.id
                     WHERE 1=1";
@@ -118,14 +115,6 @@ namespace TCC_3_M
             LoadHardwareData(selectedOrder, selectedStatus);
         }
 
-        private void dgvHardware_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvHardware.SelectedRows.Count > 0)
-            {
-                selectedHardware = ((DataRowView)dgvHardware.SelectedRows[0].DataBoundItem).Row;
-            }
-        }
-
         private void btn_Pesquisar_CadastroDispo_Click(object sender, EventArgs e)
         {
             string tagFilter = txtTag.Text.Trim();
@@ -147,15 +136,8 @@ namespace TCC_3_M
 
         private void btnEditarRegistroHardware_Click(object sender, EventArgs e)
         {
-            if (selectedHardware != null)
-            {
-                frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos(selectedHardware);
-                editarDisp.Show();
-            }
-            else
-            {
-                MessageBox.Show("Selecione um hardware para editar.");
-            }
+            frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos();
+            editarDisp.Show();
         }
 
         private void txtTag_TextChanged(object sender, EventArgs e)
@@ -164,17 +146,6 @@ namespace TCC_3_M
             DataView dv = new DataView(dataTable);
             dv.RowFilter = $"tag LIKE '%{tagFilter}%'";
             dgvHardware.DataSource = dv;
-        }
-
-        private void btnNovoLote_Click(object sender, EventArgs e)
-        {
-            frm_RegistroLote registroLote = new frm_RegistroLote();
-            registroLote.Show();
-        }
-
-        private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
-        {
-            LoadHardwareData();
         }
     }
 }
