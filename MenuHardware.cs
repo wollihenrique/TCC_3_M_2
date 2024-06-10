@@ -30,7 +30,7 @@ namespace TCC_3_M
 
         private void InitializeDatabaseConnection()
         {
-            string connectionString = "server=localhost;database=inventory_system;user=root;password=etec";
+            string connectionString = "server=localhost;database=inventory_system;user=root;password=vini";
             connection = new MySqlConnection(connectionString);
         }
 
@@ -166,15 +166,15 @@ namespace TCC_3_M
             dgvHardware.DataSource = dv;
         }
 
-        private void btnAtualizarHardware_Click(object sender, EventArgs e)
-        {
-            LoadHardwareData();
-        }
-
         private void btnNovoLote_Click(object sender, EventArgs e)
         {
             frm_RegistroLote registroLote = new frm_RegistroLote();
             registroLote.Show();
+        }
+
+        private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
+        {
+            LoadHardwareData();
         }
     }
 }

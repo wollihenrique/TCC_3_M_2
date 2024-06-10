@@ -58,7 +58,7 @@ namespace TCC_3_M
                 string networkCard = txtPRedeHardware.Text.Trim();
                 string observations = txtObsHardware.Text.Trim();
 
-                using (MySqlConnection connection = new MySqlConnection("server=localhost;database=inventory_system;user=root;password=etec"))
+                using (MySqlConnection connection = new MySqlConnection("server=localhost;database=inventory_system;user=root;password=vini"))
                 {
                     connection.Open();
 

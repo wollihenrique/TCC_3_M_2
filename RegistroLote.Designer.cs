@@ -93,20 +93,20 @@ namespace TCC_3_M
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.Size = new System.Drawing.Size(107, 18);
             this.label2.TabIndex = 32;
             this.label2.Text = "Nome do Lote:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(222, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(89, 18);
             this.label3.TabIndex = 34;
             this.label3.Text = "Fornecedor:";
             // 
@@ -130,10 +130,10 @@ namespace TCC_3_M
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 20);
+            this.label5.Size = new System.Drawing.Size(155, 18);
             this.label5.TabIndex = 39;
             this.label5.Text = "Data de Recebimento:";
             // 
@@ -148,6 +148,7 @@ namespace TCC_3_M
             this.btnLimparCadLote.TabIndex = 60;
             this.btnLimparCadLote.Text = "Limpar";
             this.btnLimparCadLote.UseVisualStyleBackColor = false;
+            this.btnLimparCadLote.Click += new System.EventHandler(this.btnLimparCadLote_Click);
             // 
             // btnSalvarCadLote
             // 
@@ -160,6 +161,7 @@ namespace TCC_3_M
             this.btnSalvarCadLote.TabIndex = 59;
             this.btnSalvarCadLote.Text = "Salvar";
             this.btnSalvarCadLote.UseVisualStyleBackColor = false;
+            this.btnSalvarCadLote.Click += new System.EventHandler(this.btnSalvarCadLote_Click);
             // 
             // frm_RegistroLote
             // 
