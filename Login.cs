@@ -14,28 +14,11 @@ namespace TCC_3_M
 {
     public partial class frm_Login : Form
     {
-        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=vini";
 
         public frm_Login()
         {
             InitializeComponent();
-        }
-
-        private void btn_Entrar_Log_Click(object sender, EventArgs e)
-        {
-            string usuario = txtUsuarioLogin.Text;
-            string senha = txtSenhaLogin.Text;
-
-            if (VerificarLogin(usuario, senha))
-            {
-                frm_Inicio frm_Inicio = new frm_Inicio();
-                frm_Inicio.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha incorretos", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private bool VerificarLogin(string usuario, string senha)
@@ -85,6 +68,24 @@ namespace TCC_3_M
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEntrarLog_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuarioLogin.Text;
+            string senha = txtSenhaLogin.Text;
+
+            if (VerificarLogin(usuario, senha))
+            {
+                frm_Inicio menu = new frm_Inicio();
+                menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha incorretos. Tente novamente.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 

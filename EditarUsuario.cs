@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class EditarUsuario : Form
+    public partial class frm_EditarUsuario : Form
     {
-        public EditarUsuario()
+        public frm_EditarUsuario()
         {
             InitializeComponent();
+        }
+
+        private void btnCloseFrmCadastroU_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

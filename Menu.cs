@@ -12,10 +12,31 @@ namespace TCC_3_M
 {
     public partial class frm_Inicio : Form
     {
+
         public frm_Inicio()
         {
             InitializeComponent();
             customizeDesign();
+            // Configura o intervalo do timer para 1 segundo
+            timerRelogio.Interval = 1000;
+
+            // Adiciona um manipulador de evento para o evento Tick do Timer
+            timerRelogio.Tick += TimerRelogio_Tick;
+
+            // Inicia o timer
+            timerRelogio.Start();
+        }
+
+        private void TimerRelogio_Tick(object sender, EventArgs e)
+        {
+            // Atualiza o texto do Label para exibir a hora atual
+            labelRelogio.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void SeuFormulario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Para o timer quando o formulário estiver fechado
+            timerRelogio.Stop();
         }
 
         private void customizeDesign()
@@ -25,21 +46,21 @@ namespace TCC_3_M
             pnlSubMenuAjuda.Visible = false;
         }
 
-        private void hideSubMenu()
-        {
-            if (pnlSubUserMenu.Visible == true)
-                pnlSubUserMenu.Visible = false;
-            if (pnlSubMenuAjuda.Visible == true)
-                pnlSubMenuAjuda.Visible = false;
-            if (pnlSubMenuCreditos.Visible == true)
-                pnlSubMenuCreditos.Visible = false;
-        }
+        //private void hideSubMenu()
+        //{
+        //    if (pnlSubUserMenu.Visible == true)
+        //        pnlSubUserMenu.Visible = false;
+        //    if (pnlSubMenuAjuda.Visible == true)
+        //        pnlSubMenuAjuda.Visible = false;
+        //    if (pnlSubMenuCreditos.Visible == true)
+        //        pnlSubMenuCreditos.Visible = false;
+        //}
 
         private void showSubMenu( Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
+                //hideSubMenu();
                 subMenu.Visible = true;
             }
 
@@ -47,18 +68,18 @@ namespace TCC_3_M
                 subMenu.Visible = false;
         }
 
-        #region MENU USUÀRIO
+        #region MENU REGISTROS
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlSubUserMenu);
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Usuario());
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)
@@ -66,15 +87,21 @@ namespace TCC_3_M
             openChildForm(new frm_CadastroDisp());
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
-        private void btnMudarConta_Click(object sender, EventArgs e)
+        private void btnPerifericos_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_MenuPerifericos());
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
+        }
+
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_MenuFornecedores());
+            //hideSubMenu();
         }
         #endregion
 
@@ -89,7 +116,7 @@ namespace TCC_3_M
             openChildForm(new frm_Creditos());
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -97,7 +124,7 @@ namespace TCC_3_M
             //...
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -105,7 +132,7 @@ namespace TCC_3_M
             //...
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
         #endregion
 
@@ -120,7 +147,7 @@ namespace TCC_3_M
             //...
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void btnTutoriais_Click(object sender, EventArgs e)
@@ -128,7 +155,7 @@ namespace TCC_3_M
             //...
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void btnDuvidas_Click(object sender, EventArgs e)
@@ -136,7 +163,7 @@ namespace TCC_3_M
             //...
             //...EScrever o resto dos códigos
             //...
-            hideSubMenu();
+            //hideSubMenu();
         }
         #endregion
 
@@ -153,6 +180,13 @@ namespace TCC_3_M
             pnlFilhoConteinerPrincipal.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login login = new frm_Login();
+            login.Show();
         }
     }
 }

@@ -58,7 +58,7 @@
             this.btnEntrarLog.TabIndex = 4;
             this.btnEntrarLog.Text = "Entrar";
             this.btnEntrarLog.UseVisualStyleBackColor = false;
-            this.btnEntrarLog.Click += new System.EventHandler(this.btn_Entrar_Log_Click);
+            this.btnEntrarLog.Click += new System.EventHandler(this.btnEntrarLog_Click);
             // 
             // pnl_Cadastro_Cad
             // 

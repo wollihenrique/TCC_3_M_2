@@ -141,6 +141,7 @@
             this.btnEditarRegistroUsuario.TabIndex = 27;
             this.btnEditarRegistroUsuario.Text = "Editar Registro";
             this.btnEditarRegistroUsuario.UseVisualStyleBackColor = true;
+            this.btnEditarRegistroUsuario.Click += new System.EventHandler(this.btnEditarRegistroUsuario_Click);
             // 
             // btnAtualizarUsuario
             // 

@@ -34,5 +34,11 @@ namespace TCC_3_M
             frm_RegistroUsuario FormRegistroUsuario = new frm_RegistroUsuario();
             FormRegistroUsuario.Show();
         }
+
+        private void btnEditarRegistroUsuario_Click(object sender, EventArgs e)
+        {
+            frm_EditarUsuario _EditarUsuario = new frm_EditarUsuario();
+            _EditarUsuario.Show();
+        }
     }
 }
