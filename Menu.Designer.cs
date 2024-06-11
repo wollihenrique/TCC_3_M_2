@@ -29,9 +29,10 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Inicio));
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pnlSubMenuAjuda = new System.Windows.Forms.Panel();
             this.btnDuvidas = new System.Windows.Forms.Button();
             this.btnTutoriais = new System.Windows.Forms.Button();
@@ -51,14 +52,18 @@ namespace TCC_3_M
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlFilhoCabecalhoPrincipal = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlFilhoConteinerPrincipal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelRelogio = new System.Windows.Forms.Label();
+            this.timerRelogio = new System.Windows.Forms.Timer(this.components);
             this.pnlMenuPrincipal.SuspendLayout();
             this.pnlSubMenuAjuda.SuspendLayout();
             this.pnlSubMenuCreditos.SuspendLayout();
             this.pnlSubUserMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlFilhoCabecalhoPrincipal.SuspendLayout();
             this.pnlFilhoConteinerPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +72,7 @@ namespace TCC_3_M
             // 
             this.pnlMenuPrincipal.AutoScroll = true;
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
-            this.pnlMenuPrincipal.Controls.Add(this.button1);
+            this.pnlMenuPrincipal.Controls.Add(this.btnSair);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuCreditos);
@@ -81,23 +86,26 @@ namespace TCC_3_M
             this.pnlMenuPrincipal.Size = new System.Drawing.Size(219, 634);
             this.pnlMenuPrincipal.TabIndex = 0;
             // 
-            // button1
+            // btnSair
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 597);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(219, 37);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sair";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Image = global::TCC_3_M.Properties.Resources.sair;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.Location = new System.Drawing.Point(0, 583);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSair.Size = new System.Drawing.Size(219, 51);
+            this.btnSair.TabIndex = 7;
+            this.btnSair.Text = "  Sair";
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnlSubMenuAjuda
             // 
@@ -350,7 +358,7 @@ namespace TCC_3_M
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(156, 38);
+            this.label3.Location = new System.Drawing.Point(154, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 24);
             this.label3.TabIndex = 3;
@@ -361,7 +369,7 @@ namespace TCC_3_M
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(86, 38);
+            this.label1.Location = new System.Drawing.Point(84, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 24);
             this.label1.TabIndex = 2;
@@ -371,7 +379,7 @@ namespace TCC_3_M
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(10, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,15 +389,34 @@ namespace TCC_3_M
             // pnlFilhoCabecalhoPrincipal
             // 
             this.pnlFilhoCabecalhoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.labelRelogio);
+            this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.button1);
             this.pnlFilhoCabecalhoPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(219, 0);
             this.pnlFilhoCabecalhoPrincipal.Name = "pnlFilhoCabecalhoPrincipal";
             this.pnlFilhoCabecalhoPrincipal.Size = new System.Drawing.Size(740, 100);
             this.pnlFilhoCabecalhoPrincipal.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::TCC_3_M.Properties.Resources.do_utilizador32px;
+            this.button1.Location = new System.Drawing.Point(538, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 59);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Administrador";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // pnlFilhoConteinerPrincipal
             // 
-            this.pnlFilhoConteinerPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.pnlFilhoConteinerPrincipal.BackColor = System.Drawing.SystemColors.Control;
             this.pnlFilhoConteinerPrincipal.Controls.Add(this.pictureBox1);
             this.pnlFilhoConteinerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(219, 100);
@@ -408,6 +435,22 @@ namespace TCC_3_M
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // labelRelogio
+            // 
+            this.labelRelogio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelRelogio.AutoSize = true;
+            this.labelRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRelogio.ForeColor = System.Drawing.Color.White;
+            this.labelRelogio.Location = new System.Drawing.Point(583, 62);
+            this.labelRelogio.Name = "labelRelogio";
+            this.labelRelogio.Size = new System.Drawing.Size(86, 16);
+            this.labelRelogio.TabIndex = 1;
+            this.labelRelogio.Text = "labelRelogio";
+            // 
+            // timerRelogio
+            // 
+            this.timerRelogio.Interval = 1000;
+            // 
             // frm_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +464,7 @@ namespace TCC_3_M
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenuPrincipal.ResumeLayout(false);
             this.pnlSubMenuAjuda.ResumeLayout(false);
             this.pnlSubMenuCreditos.ResumeLayout(false);
@@ -428,6 +472,8 @@ namespace TCC_3_M
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlFilhoCabecalhoPrincipal.ResumeLayout(false);
+            this.pnlFilhoCabecalhoPrincipal.PerformLayout();
             this.pnlFilhoConteinerPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -457,7 +503,10 @@ namespace TCC_3_M
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnFornecedores;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelRelogio;
+        private System.Windows.Forms.Timer timerRelogio;
     }
 }

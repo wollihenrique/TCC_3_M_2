@@ -7,21 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TCC_3_M
 {
     public partial class frm_Usuario : Form
     {
+        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=vini";
+
         public frm_Usuario()
         {
             InitializeComponent();
+            AtualizarDataGridView();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AtualizarDataGridView()
         {
-            frm_Inicio formInicio = new frm_Inicio();
-            formInicio.Show();
-            this.Hide();
+            string query = "SELECT id, `name`, cpf, phone, email, 'User' as user_type FROM `user` " +
+                           "UNION " +
+                           "SELECT id, `name`, cpf, phone, email, 'Admin' as user_type FROM `admin`";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dgvUsuarios.DataSource = table;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar os dados: " + ex.Message);
+                }
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -39,6 +60,11 @@ namespace TCC_3_M
         {
             frm_EditarUsuario _EditarUsuario = new frm_EditarUsuario();
             _EditarUsuario.Show();
+        }
+
+        private void btnAtualizarUsuario_Click(object sender, EventArgs e)
+        {
+            AtualizarDataGridView();
         }
     }
 }

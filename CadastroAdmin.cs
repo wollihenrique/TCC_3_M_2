@@ -15,7 +15,7 @@ namespace TCC_3_M
 {
     public partial class frm_CadastroAdmin : Form
     {
-        string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
+        string connectionString = "server=localhost;database=inventory_system;uid=root;password=vini";
 
         public frm_CadastroAdmin()
         {
@@ -104,6 +104,11 @@ namespace TCC_3_M
                     {
                         MessageBox.Show("Cadastro realizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos();
+
+                        // Redirecionar para a tela de login após o cadastro
+                        frm_Login formLogin = new frm_Login();
+                        formLogin.Show();
+                        this.Hide();
                     }
                     else
                     {
