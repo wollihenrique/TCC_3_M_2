@@ -22,14 +22,9 @@ namespace TCC_3_M
             CarregarFornecedores();
         }
 
-        private void btnCloseFrmCadastroLote_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void LimparCampos()
         {
-            txtNomeF.Text = "";
+            txtLoteF.Text = "";
             txtDataRecebimentoLote.Text = "";
             cmbFornecedorLote.SelectedIndex = -1;
         }
@@ -64,17 +59,6 @@ namespace TCC_3_M
             return Regex.IsMatch(data, @"^(0?[1-9]|[12][0-9]|3[01])[/](0?[1-9]|1[012])[/]\d{4}$");
         }
 
-        private string GenerateBatchId()
-        {
-            Random rnd = new Random();
-            return "B" + rnd.Next(1000, 9999).ToString();
-        }
-
-        private void btnCloseFrmCadastroLote_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnLimparCadLote_Click(object sender, EventArgs e)
         {
             LimparCampos();
@@ -82,7 +66,7 @@ namespace TCC_3_M
 
         private void btnSalvarCadLote_Click(object sender, EventArgs e)
         {
-            string nomeLote = txtNomeF.Text;
+            string nomeLote = txtLoteF.Text;
             string dataRecebimento = txtDataRecebimentoLote.Text;
             string fornecedor = cmbFornecedorLote.Text;
 
@@ -106,7 +90,8 @@ namespace TCC_3_M
                     string query = "INSERT INTO batch (id, supplier_id, entering_date) VALUES (@id, @supplier_id, @entering_date)";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@id", GenerateBatchId());
+                        // Remover a geração aleatória do ID e usar o valor inserido pelo usuário
+                        command.Parameters.AddWithValue("@id", nomeLote);
                         command.Parameters.AddWithValue("@supplier_id", cmbFornecedorLote.SelectedIndex + 1);
                         command.Parameters.AddWithValue("@entering_date", Convert.ToDateTime(dataRecebimento));
 
@@ -121,6 +106,11 @@ namespace TCC_3_M
                     MessageBox.Show("Erro ao cadastrar lote: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCloseFrmCadastroLote_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -217,6 +217,7 @@ namespace TCC_3_M
             this.btnExcluirHardware.TabIndex = 33;
             this.btnExcluirHardware.Text = "Excluir Dispositivo";
             this.btnExcluirHardware.UseVisualStyleBackColor = false;
+            this.btnExcluirHardware.Click += new System.EventHandler(this.btnExcluirHardware_Click);
             // 
             // btnAtualizarHardware
             // 
