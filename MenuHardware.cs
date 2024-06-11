@@ -40,7 +40,7 @@ namespace TCC_3_M
             {
                 connection.Open();
                 string query = @"
-                    SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, b.entering_date 
+                    SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date 
                     FROM hardware h
                     JOIN batch b ON h.batch_id = b.id
                     WHERE 1=1";
@@ -77,6 +77,17 @@ namespace TCC_3_M
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 dataTable = new DataTable();
                 adapter.Fill(dataTable);
+
+                // Adiciona uma nova coluna para o lote
+                DataColumn column = new DataColumn("Lote", typeof(string));
+                dataTable.Columns.Add(column);
+
+                // Preenche a coluna do lote com os dados
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    row["Lote"] = row["batch_id"].ToString();
+                }
+
                 dgvHardware.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -175,6 +186,40 @@ namespace TCC_3_M
         private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
         {
             LoadHardwareData();
+        }
+
+        private void btnExcluirHardware_Click(object sender, EventArgs e)
+        {
+            if (selectedHardware != null)
+            {
+                DialogResult result = MessageBox.Show("Você tem certeza que deseja excluir este hardware?", "Confirmação de Exclusão", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connection.Open();
+                        string query = "DELETE FROM hardware WHERE tag = @Tag";
+                        MySqlCommand cmd = new MySqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@Tag", selectedHardware["tag"]);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Hardware excluído com sucesso.");
+                        LoadHardwareData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao excluir hardware: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um hardware para excluir.");
+            }
         }
     }
 }
