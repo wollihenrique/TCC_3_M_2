@@ -15,7 +15,7 @@ namespace TCC_3_M
 {
     public partial class frm_CadastroAdmin : Form
     {
-        string connectionString = "server=localhost;database=inventory_system;uid=root;password=vini";
+        string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
 
         public frm_CadastroAdmin()
         {
