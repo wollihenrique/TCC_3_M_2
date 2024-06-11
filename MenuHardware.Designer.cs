@@ -29,12 +29,12 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHardware = new System.Windows.Forms.DataGridView();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.panelDataGrid = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCloseFrmMenuFornecedores = new System.Windows.Forms.Button();
             this.txtTag = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -48,7 +48,6 @@ namespace TCC_3_M
             this.btnNovoHardware = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNovoLote = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHardware)).BeginInit();
             this.pnlFilter.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,28 +55,28 @@ namespace TCC_3_M
             // 
             // dgvHardware
             // 
-            this.dgvHardware.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHardware.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvHardware.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHardware.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHardware.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHardware.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHardware.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHardware.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvHardware.Location = new System.Drawing.Point(0, 0);
             this.dgvHardware.Name = "dgvHardware";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvHardware.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvHardware.Size = new System.Drawing.Size(971, 441);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHardware.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHardware.Size = new System.Drawing.Size(995, 448);
             this.dgvHardware.TabIndex = 20;
             this.dgvHardware.SelectionChanged += new System.EventHandler(this.dgvHardware_SelectionChanged);
             // 
@@ -85,7 +84,7 @@ namespace TCC_3_M
             // 
             this.pnlFilter.BackColor = System.Drawing.Color.SteelBlue;
             this.pnlFilter.Controls.Add(this.panelDataGrid);
-            this.pnlFilter.Controls.Add(this.button2);
+            this.pnlFilter.Controls.Add(this.btnCloseFrmMenuFornecedores);
             this.pnlFilter.Controls.Add(this.txtTag);
             this.pnlFilter.Controls.Add(this.label2);
             this.pnlFilter.Controls.Add(this.cmbStatus);
@@ -115,20 +114,21 @@ namespace TCC_3_M
             this.panelDataGrid.TabIndex = 15;
             this.panelDataGrid.Text = "Filtros de Pesquisa";
             // 
-            // button2
+            // btnCloseFrmMenuFornecedores
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 38);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCloseFrmMenuFornecedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnCloseFrmMenuFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseFrmMenuFornecedores.FlatAppearance.BorderSize = 0;
+            this.btnCloseFrmMenuFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseFrmMenuFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseFrmMenuFornecedores.ForeColor = System.Drawing.Color.White;
+            this.btnCloseFrmMenuFornecedores.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseFrmMenuFornecedores.Name = "btnCloseFrmMenuFornecedores";
+            this.btnCloseFrmMenuFornecedores.Size = new System.Drawing.Size(53, 38);
+            this.btnCloseFrmMenuFornecedores.TabIndex = 14;
+            this.btnCloseFrmMenuFornecedores.Text = "X";
+            this.btnCloseFrmMenuFornecedores.UseVisualStyleBackColor = false;
+            this.btnCloseFrmMenuFornecedores.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtTag
             // 
@@ -207,9 +207,9 @@ namespace TCC_3_M
             // 
             this.btnExcluirHardware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluirHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnExcluirHardware.FlatAppearance.BorderSize = 0;
+            this.btnExcluirHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluirHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirHardware.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluirHardware.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExcluirHardware.Location = new System.Drawing.Point(731, 557);
             this.btnExcluirHardware.Name = "btnExcluirHardware";
@@ -223,8 +223,9 @@ namespace TCC_3_M
             // 
             this.btnAtualizarHardware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtualizarHardware.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnAtualizarHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarHardware.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarHardware.ForeColor = System.Drawing.Color.Gold;
             this.btnAtualizarHardware.Location = new System.Drawing.Point(465, 557);
             this.btnAtualizarHardware.Name = "btnAtualizarHardware";
@@ -238,8 +239,9 @@ namespace TCC_3_M
             // 
             this.btnEditarRegistroHardware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditarRegistroHardware.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEditarRegistroHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarRegistroHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRegistroHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarRegistroHardware.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarRegistroHardware.ForeColor = System.Drawing.Color.DarkGray;
             this.btnEditarRegistroHardware.Location = new System.Drawing.Point(599, 557);
             this.btnEditarRegistroHardware.Name = "btnEditarRegistroHardware";
@@ -253,8 +255,9 @@ namespace TCC_3_M
             // 
             this.btnNovoHardware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovoHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnNovoHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoHardware.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoHardware.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNovoHardware.Location = new System.Drawing.Point(863, 557);
             this.btnNovoHardware.Name = "btnNovoHardware";
@@ -271,17 +274,18 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.dgvHardware);
-            this.panel3.Location = new System.Drawing.Point(12, 110);
+            this.panel3.Location = new System.Drawing.Point(0, 103);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(971, 441);
+            this.panel3.Size = new System.Drawing.Size(995, 448);
             this.panel3.TabIndex = 36;
             // 
             // btnNovoLote
             // 
             this.btnNovoLote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNovoLote.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNovoLote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoLote.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoLote.ForeColor = System.Drawing.Color.DarkGray;
             this.btnNovoLote.Location = new System.Drawing.Point(21, 557);
             this.btnNovoLote.Name = "btnNovoLote";
@@ -290,17 +294,6 @@ namespace TCC_3_M
             this.btnNovoLote.Text = "Novo Lote";
             this.btnNovoLote.UseVisualStyleBackColor = false;
             this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(0, 96);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 465);
-            this.panel2.TabIndex = 37;
             // 
             // frm_CadastroDisp
             // 
@@ -315,7 +308,6 @@ namespace TCC_3_M
             this.Controls.Add(this.btnEditarRegistroHardware);
             this.Controls.Add(this.btnNovoHardware);
             this.Controls.Add(this.pnlFilter);
-            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_CadastroDisp";
@@ -337,7 +329,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.ComboBox cmbOrderBy;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCloseFrmMenuFornecedores;
         private System.Windows.Forms.Button btnExcluirHardware;
         private System.Windows.Forms.Button btnAtualizarHardware;
         private System.Windows.Forms.Button btnEditarRegistroHardware;
@@ -346,6 +338,5 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnNovoLote;
-        private System.Windows.Forms.Panel panel2;
     }
 }

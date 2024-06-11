@@ -34,6 +34,7 @@ namespace TCC_3_M
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvHistoric = new System.Windows.Forms.DataGridView();
             this.pnlFilterHistoric = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseHistoric = new System.Windows.Forms.Button();
             this.txtIdHistoric = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@ namespace TCC_3_M
             this.cmbOrderByHistoric = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoric)).BeginInit();
             this.pnlFilterHistoric.SuspendLayout();
@@ -104,6 +104,15 @@ namespace TCC_3_M
             this.pnlFilterHistoric.Size = new System.Drawing.Size(999, 112);
             this.pnlFilterHistoric.TabIndex = 38;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(513, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panelDataGrid
             // 
             this.panelDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -122,6 +131,7 @@ namespace TCC_3_M
             // btnCloseHistoric
             // 
             this.btnCloseHistoric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnCloseHistoric.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseHistoric.FlatAppearance.BorderSize = 0;
             this.btnCloseHistoric.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseHistoric.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,15 +210,6 @@ namespace TCC_3_M
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1015, 547);
             this.panel2.TabIndex = 45;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(513, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_Historico
             // 

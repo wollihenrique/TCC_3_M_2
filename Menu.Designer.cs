@@ -175,6 +175,7 @@ namespace TCC_3_M
             // btnDuvidas
             // 
             this.btnDuvidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnDuvidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDuvidas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDuvidas.FlatAppearance.BorderSize = 0;
             this.btnDuvidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -193,6 +194,7 @@ namespace TCC_3_M
             // btnTutoriais
             // 
             this.btnTutoriais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnTutoriais.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTutoriais.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTutoriais.FlatAppearance.BorderSize = 0;
             this.btnTutoriais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -211,6 +213,7 @@ namespace TCC_3_M
             // btnContatos
             // 
             this.btnContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnContatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContatos.FlatAppearance.BorderSize = 0;
             this.btnContatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -229,6 +232,7 @@ namespace TCC_3_M
             // btnAjuda
             // 
             this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnAjuda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAjuda.FlatAppearance.BorderSize = 0;
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -257,6 +261,7 @@ namespace TCC_3_M
             // btnNossaEquipe
             // 
             this.btnNossaEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnNossaEquipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNossaEquipe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNossaEquipe.FlatAppearance.BorderSize = 0;
             this.btnNossaEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -276,6 +281,7 @@ namespace TCC_3_M
             // btnCreditos
             // 
             this.btnCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCreditos.FlatAppearance.BorderSize = 0;
             this.btnCreditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -307,6 +313,7 @@ namespace TCC_3_M
             // btnFornecedores
             // 
             this.btnFornecedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFornecedores.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFornecedores.FlatAppearance.BorderSize = 0;
             this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -325,6 +332,7 @@ namespace TCC_3_M
             // btnPerifericos
             // 
             this.btnPerifericos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerifericos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPerifericos.FlatAppearance.BorderSize = 0;
             this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -343,6 +351,7 @@ namespace TCC_3_M
             // btnDispositivos
             // 
             this.btnDispositivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnDispositivos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDispositivos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDispositivos.FlatAppearance.BorderSize = 0;
             this.btnDispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -361,6 +370,7 @@ namespace TCC_3_M
             // btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -379,6 +389,7 @@ namespace TCC_3_M
             // btnRegistros
             // 
             this.btnRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.btnRegistros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistros.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistros.FlatAppearance.BorderSize = 0;
             this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -456,7 +467,7 @@ namespace TCC_3_M
             this.labelRelogio.AutoSize = true;
             this.labelRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRelogio.ForeColor = System.Drawing.Color.White;
-            this.labelRelogio.Location = new System.Drawing.Point(583, 62);
+            this.labelRelogio.Location = new System.Drawing.Point(594, 60);
             this.labelRelogio.Name = "labelRelogio";
             this.labelRelogio.Size = new System.Drawing.Size(86, 16);
             this.labelRelogio.TabIndex = 1;
@@ -513,6 +524,7 @@ namespace TCC_3_M
             this.Controls.Add(this.pnlFilhoConteinerPrincipal);
             this.Controls.Add(this.pnlFilhoCabecalhoPrincipal);
             this.Controls.Add(this.pnlMenuPrincipal);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
