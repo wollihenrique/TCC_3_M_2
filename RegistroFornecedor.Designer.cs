@@ -201,6 +201,7 @@ namespace TCC_3_M
             this.Controls.Add(this.txtNomeF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCadastroP);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_RegistroFornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

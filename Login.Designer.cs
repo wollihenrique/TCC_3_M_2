@@ -49,6 +49,7 @@
             // btnEntrarLog
             // 
             this.btnEntrarLog.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEntrarLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrarLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrarLog.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrarLog.ForeColor = System.Drawing.Color.White;
@@ -143,6 +144,7 @@
             // 
             // btnFechar
             // 
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
