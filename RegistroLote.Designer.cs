@@ -58,6 +58,7 @@ namespace TCC_3_M
             // btnCloseFrmCadastroLote
             // 
             this.btnCloseFrmCadastroLote.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCloseFrmCadastroLote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmCadastroLote.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmCadastroLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmCadastroLote.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

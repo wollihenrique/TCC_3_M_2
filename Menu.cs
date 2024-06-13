@@ -44,6 +44,7 @@ namespace TCC_3_M
             pnlSubUserMenu.Visible = false;
             pnlSubMenuCreditos.Visible = false;
             pnlSubMenuAjuda.Visible = false;
+            pnlSubMenuHistoric.Visible = false;
         }
 
         //private void hideSubMenu()
@@ -118,22 +119,6 @@ namespace TCC_3_M
             //...
             //hideSubMenu();
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //...
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //...
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
-        }
         #endregion
 
         #region MENU AJUDA
@@ -167,6 +152,17 @@ namespace TCC_3_M
         }
         #endregion
 
+        #region MENU HISTÓRICO
+        private void btnHistórico_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuHistoric);
+        }
+        private void btnHistoricRegisters_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Historico());
+        }
+        #endregion
+
         private Form activeForm = null;
         private void openChildForm( Form childForm )
         {
@@ -188,5 +184,6 @@ namespace TCC_3_M
             frm_Login login = new frm_Login();
             login.Show();
         }
+
     }
 }

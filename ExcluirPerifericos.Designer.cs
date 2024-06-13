@@ -60,6 +60,7 @@ namespace TCC_3_M
             // btnCloseFrmExcluirPerifericos
             // 
             this.btnCloseFrmExcluirPerifericos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCloseFrmExcluirPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmExcluirPerifericos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmExcluirPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmExcluirPerifericos.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,6 +112,7 @@ namespace TCC_3_M
             // btnCancelarFrmExcluirP
             // 
             this.btnCancelarFrmExcluirP.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancelarFrmExcluirP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarFrmExcluirP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmExcluirP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarFrmExcluirP.Location = new System.Drawing.Point(426, 163);
@@ -123,6 +125,7 @@ namespace TCC_3_M
             // btnSalvarFrmExcluirP
             // 
             this.btnSalvarFrmExcluirP.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarFrmExcluirP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarFrmExcluirP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmExcluirP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFrmExcluirP.Location = new System.Drawing.Point(527, 163);

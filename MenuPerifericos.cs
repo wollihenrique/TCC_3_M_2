@@ -17,11 +17,6 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btnClosePerifericos_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnNovoPeriferico_Click(object sender, EventArgs e)
         {
             frm_RegistroPeriferico formNovoPeriferico = new frm_RegistroPeriferico();
@@ -38,6 +33,11 @@ namespace TCC_3_M
         {
             frm_EditarPerifericos formEditarPerifericos = new frm_EditarPerifericos();
             formEditarPerifericos.Show();
+        }
+
+        private void btnCloseMenuPerifericos_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

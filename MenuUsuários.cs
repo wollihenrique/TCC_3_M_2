@@ -13,7 +13,7 @@ namespace TCC_3_M
 {
     public partial class frm_Usuario : Form
     {
-        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=vini";
+        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
 
         public frm_Usuario()
         {
@@ -45,11 +45,6 @@ namespace TCC_3_M
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnNovoUsuario_Click(object sender, EventArgs e)
         {
             frm_RegistroUsuario FormRegistroUsuario = new frm_RegistroUsuario();
@@ -65,6 +60,11 @@ namespace TCC_3_M
         private void btnAtualizarUsuario_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView();
+        }
+
+        private void btnCloseMenuUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
