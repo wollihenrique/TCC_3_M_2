@@ -13,7 +13,7 @@ namespace TCC_3_M
 {
     public partial class frm_Usuario : Form
     {
-        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=vini";
+        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
 
         public frm_Usuario()
         {
