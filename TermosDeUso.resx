@@ -117,4 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label20.Text" xml:space="preserve">
+    <value>10. Em caso de dúvidas ou preocupações sobre estes Termos e Condições de Uso, o usuário deve entrar em contato com o proprietário através do e-mail: DeviceStock@gmail.com. 
+Ao utilizar o sistema DeviceStock, você reconhece que leu, compreendeu e concorda em estar vinculado a estes Termos e Condições de Uso.
+</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>9.1. Estes Termos e Condições de Uso serão regidos e interpretados de acordo com as leis do país onde o proprietário está localizado. 
+9.2. Quaisquer disputas decorrentes ou relacionadas a estes Termos serão resolvidas no foro da comarca onde o proprietário está sediado.
+</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>8.1. O proprietário reserva-se o direito de modificar estes Termos e Condições de Uso a qualquer momento. As modificações entrarão em vigor imediatamente após sua publicação no sistema. 
+8.2. O uso continuado do sistema após a publicação das modificações constituirá aceitação das mesmas. 
+</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>7.1. O sistema DeviceStock é fornecido "como está" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas. 
+7.2. O proprietário não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais resultantes do uso ou da incapacidade de uso do sistema DeviceStock.
+</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>6.1. Todos os direitos, títulos e interesses relacionados ao sistema DeviceStock, incluindo, mas não se limitando a, software, textos, gráficos, logotipos, ícones, imagens e compilações de dados, são de propriedade do proprietário. 
+6.2. É proibido ao usuário copiar, modificar, distribuir, vender ou alugar qualquer parte do sistema DeviceStock sem a autorização expressa do proprietário. 
+</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>5.1. O proprietário coleta, armazena e utiliza informações pessoais do usuário de acordo com a política de privacidade do sistema DeviceStock. 
+5.2. O usuário concorda com a coleta e uso de informações pessoais conforme descrito na política de privacidade. 
+</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>4.1. Para utilizar o sistema DeviceStock, o usuário deve se registrar fornecendo informações precisas e completas. 
+4.2. O usuário é responsável por manter a confidencialidade de suas credenciais de acesso e por todas as atividades que ocorrerem em sua conta. 
+4.3. O usuário deve notificar imediatamente o proprietário sobre qualquer uso não autorizado de sua conta ou qualquer outra violação de segurança.
+</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>3.1. O sistema DeviceStock deve ser utilizado exclusivamente para fins legais e legítimos relacionados ao gerenciamento de inventário de dispositivos. 
+3.2. É proibido: 
+Utilizar o sistema para qualquer atividade ilegal ou não autorizada. 
+Interferir no funcionamento do sistema ou tentar acessar dados que não lhe pertencem. 
+
+</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Sistema: refere-se ao DeviceStock, a plataforma para gerenciamento de inventário. 
+Usuário: qualquer pessoa ou entidade que utiliza o sistema DeviceStock. 
+Proprietário: a entidade responsável pelos direitos do sistema DeviceStock. 
+</value>
+  </data>
 </root>
