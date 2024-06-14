@@ -69,5 +69,10 @@ namespace TCC_3_M
                 dataTable.DefaultView.RowFilter = $"document LIKE '%{txtCpfCnpjMenu.Text}%'";
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

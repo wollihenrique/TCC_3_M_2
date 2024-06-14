@@ -60,6 +60,7 @@ namespace TCC_3_M
             // btnCloseFrmEditarPerifericos
             // 
             this.btnCloseFrmEditarPerifericos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCloseFrmEditarPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmEditarPerifericos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmEditarPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmEditarPerifericos.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +87,7 @@ namespace TCC_3_M
             // btnCancelarFrmEditarP
             // 
             this.btnCancelarFrmEditarP.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancelarFrmEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarFrmEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmEditarP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarFrmEditarP.Location = new System.Drawing.Point(431, 164);
@@ -98,6 +100,7 @@ namespace TCC_3_M
             // btnSalvarFrmEditarP
             // 
             this.btnSalvarFrmEditarP.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarFrmEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarFrmEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmEditarP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFrmEditarP.Location = new System.Drawing.Point(532, 164);

@@ -32,7 +32,7 @@ namespace TCC_3_M
             this.pnlCadastroP = new System.Windows.Forms.Panel();
             this.btnCloseFrmCadastroLote = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNomeF = new System.Windows.Forms.TextBox();
+            this.txtLoteF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFornecedorLote = new System.Windows.Forms.ComboBox();
@@ -58,6 +58,7 @@ namespace TCC_3_M
             // btnCloseFrmCadastroLote
             // 
             this.btnCloseFrmCadastroLote.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCloseFrmCadastroLote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmCadastroLote.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmCadastroLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmCadastroLote.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,24 +82,24 @@ namespace TCC_3_M
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro de lote";
             // 
-            // txtNomeF
+            // txtLoteF
             // 
-            this.txtNomeF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeF.Location = new System.Drawing.Point(16, 80);
-            this.txtNomeF.Name = "txtNomeF";
-            this.txtNomeF.Size = new System.Drawing.Size(184, 22);
-            this.txtNomeF.TabIndex = 33;
+            this.txtLoteF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLoteF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoteF.Location = new System.Drawing.Point(16, 80);
+            this.txtLoteF.Name = "txtLoteF";
+            this.txtLoteF.Size = new System.Drawing.Size(184, 22);
+            this.txtLoteF.TabIndex = 33;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 56);
+            this.label2.Location = new System.Drawing.Point(13, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
+            this.label2.Size = new System.Drawing.Size(128, 18);
             this.label2.TabIndex = 32;
-            this.label2.Text = "Nome do Lote:";
+            this.label2.Text = "Lote / Nota Fiscal:";
             // 
             // label3
             // 
@@ -174,7 +175,7 @@ namespace TCC_3_M
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbFornecedorLote);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNomeF);
+            this.Controls.Add(this.txtLoteF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCadastroP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -193,7 +194,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel pnlCadastroP;
         private System.Windows.Forms.Button btnCloseFrmCadastroLote;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNomeF;
+        private System.Windows.Forms.TextBox txtLoteF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbFornecedorLote;

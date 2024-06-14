@@ -92,6 +92,7 @@ namespace TCC_3_M
             // btnCancelarFrmEditarU
             // 
             this.btnCancelarFrmEditarU.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancelarFrmEditarU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarFrmEditarU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmEditarU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarFrmEditarU.Location = new System.Drawing.Point(466, 238);
@@ -104,6 +105,7 @@ namespace TCC_3_M
             // btnSalvarFrmEditarU
             // 
             this.btnSalvarFrmEditarU.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvarFrmEditarU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarFrmEditarU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmEditarU.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFrmEditarU.Location = new System.Drawing.Point(568, 238);
@@ -234,6 +236,7 @@ namespace TCC_3_M
             // 
             // btnCloseFrmCadastroU
             // 
+            this.btnCloseFrmCadastroU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmCadastroU.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmCadastroU.FlatAppearance.BorderSize = 0;
             this.btnCloseFrmCadastroU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -269,6 +272,7 @@ namespace TCC_3_M
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_EditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

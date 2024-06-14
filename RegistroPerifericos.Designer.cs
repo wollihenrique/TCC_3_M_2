@@ -58,6 +58,7 @@ namespace TCC_3_M
             // btnCloseFrmRegistroPerifericos
             // 
             this.btnCloseFrmRegistroPerifericos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCloseFrmRegistroPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmRegistroPerifericos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseFrmRegistroPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmRegistroPerifericos.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
