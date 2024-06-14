@@ -76,6 +76,7 @@ namespace TCC_3_M
             // 
             this.pnlMenuPrincipal.AutoScroll = true;
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
+            this.pnlMenuPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuHistoric);
             this.pnlMenuPrincipal.Controls.Add(this.btnHistórico);
             this.pnlMenuPrincipal.Controls.Add(this.btnSair);
@@ -99,7 +100,7 @@ namespace TCC_3_M
             this.pnlSubMenuHistoric.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuHistoric.Location = new System.Drawing.Point(0, 593);
             this.pnlSubMenuHistoric.Name = "pnlSubMenuHistoric";
-            this.pnlSubMenuHistoric.Size = new System.Drawing.Size(219, 45);
+            this.pnlSubMenuHistoric.Size = new System.Drawing.Size(200, 45);
             this.pnlSubMenuHistoric.TabIndex = 9;
             // 
             // btnHistoricRegisters
@@ -113,7 +114,7 @@ namespace TCC_3_M
             this.btnHistoricRegisters.Location = new System.Drawing.Point(0, 0);
             this.btnHistoricRegisters.Name = "btnHistoricRegisters";
             this.btnHistoricRegisters.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnHistoricRegisters.Size = new System.Drawing.Size(219, 40);
+            this.btnHistoricRegisters.Size = new System.Drawing.Size(200, 40);
             this.btnHistoricRegisters.TabIndex = 0;
             this.btnHistoricRegisters.Text = "Histórico de Registros";
             this.btnHistoricRegisters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +133,7 @@ namespace TCC_3_M
             this.btnHistórico.Location = new System.Drawing.Point(0, 556);
             this.btnHistórico.Name = "btnHistórico";
             this.btnHistórico.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHistórico.Size = new System.Drawing.Size(219, 37);
+            this.btnHistórico.Size = new System.Drawing.Size(200, 37);
             this.btnHistórico.TabIndex = 8;
             this.btnHistórico.Text = "Histórico";
             this.btnHistórico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,7 +153,7 @@ namespace TCC_3_M
             this.btnSair.Location = new System.Drawing.Point(0, 638);
             this.btnSair.Name = "btnSair";
             this.btnSair.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(219, 51);
+            this.btnSair.Size = new System.Drawing.Size(200, 50);
             this.btnSair.TabIndex = 7;
             this.btnSair.Text = "  Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,7 +170,7 @@ namespace TCC_3_M
             this.pnlSubMenuAjuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAjuda.Location = new System.Drawing.Point(0, 428);
             this.pnlSubMenuAjuda.Name = "pnlSubMenuAjuda";
-            this.pnlSubMenuAjuda.Size = new System.Drawing.Size(219, 128);
+            this.pnlSubMenuAjuda.Size = new System.Drawing.Size(200, 128);
             this.pnlSubMenuAjuda.TabIndex = 6;
             // 
             // btnDuvidas
@@ -184,7 +185,7 @@ namespace TCC_3_M
             this.btnDuvidas.Location = new System.Drawing.Point(0, 80);
             this.btnDuvidas.Name = "btnDuvidas";
             this.btnDuvidas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDuvidas.Size = new System.Drawing.Size(219, 40);
+            this.btnDuvidas.Size = new System.Drawing.Size(200, 40);
             this.btnDuvidas.TabIndex = 2;
             this.btnDuvidas.Text = "Duvidas";
             this.btnDuvidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +204,7 @@ namespace TCC_3_M
             this.btnTutoriais.Location = new System.Drawing.Point(0, 40);
             this.btnTutoriais.Name = "btnTutoriais";
             this.btnTutoriais.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTutoriais.Size = new System.Drawing.Size(219, 40);
+            this.btnTutoriais.Size = new System.Drawing.Size(200, 40);
             this.btnTutoriais.TabIndex = 1;
             this.btnTutoriais.Text = "Tutoriais";
             this.btnTutoriais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +223,7 @@ namespace TCC_3_M
             this.btnContatos.Location = new System.Drawing.Point(0, 0);
             this.btnContatos.Name = "btnContatos";
             this.btnContatos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnContatos.Size = new System.Drawing.Size(219, 40);
+            this.btnContatos.Size = new System.Drawing.Size(200, 40);
             this.btnContatos.TabIndex = 0;
             this.btnContatos.Text = "Contatos";
             this.btnContatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,7 +242,7 @@ namespace TCC_3_M
             this.btnAjuda.Location = new System.Drawing.Point(0, 388);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAjuda.Size = new System.Drawing.Size(219, 40);
+            this.btnAjuda.Size = new System.Drawing.Size(200, 40);
             this.btnAjuda.TabIndex = 5;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,7 +256,7 @@ namespace TCC_3_M
             this.pnlSubMenuCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuCreditos.Location = new System.Drawing.Point(0, 343);
             this.pnlSubMenuCreditos.Name = "pnlSubMenuCreditos";
-            this.pnlSubMenuCreditos.Size = new System.Drawing.Size(219, 45);
+            this.pnlSubMenuCreditos.Size = new System.Drawing.Size(200, 45);
             this.pnlSubMenuCreditos.TabIndex = 4;
             // 
             // btnNossaEquipe
@@ -270,7 +271,7 @@ namespace TCC_3_M
             this.btnNossaEquipe.Location = new System.Drawing.Point(0, 0);
             this.btnNossaEquipe.Name = "btnNossaEquipe";
             this.btnNossaEquipe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNossaEquipe.Size = new System.Drawing.Size(219, 40);
+            this.btnNossaEquipe.Size = new System.Drawing.Size(200, 40);
             this.btnNossaEquipe.TabIndex = 0;
             this.btnNossaEquipe.Text = "Lista de Créditos";
             this.btnNossaEquipe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +291,7 @@ namespace TCC_3_M
             this.btnCreditos.Location = new System.Drawing.Point(0, 303);
             this.btnCreditos.Name = "btnCreditos";
             this.btnCreditos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCreditos.Size = new System.Drawing.Size(219, 40);
+            this.btnCreditos.Size = new System.Drawing.Size(200, 40);
             this.btnCreditos.TabIndex = 3;
             this.btnCreditos.Text = "Creditos";
             this.btnCreditos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,7 +308,7 @@ namespace TCC_3_M
             this.pnlSubUserMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubUserMenu.Location = new System.Drawing.Point(0, 137);
             this.pnlSubUserMenu.Name = "pnlSubUserMenu";
-            this.pnlSubUserMenu.Size = new System.Drawing.Size(219, 166);
+            this.pnlSubUserMenu.Size = new System.Drawing.Size(200, 166);
             this.pnlSubUserMenu.TabIndex = 2;
             // 
             // btnFornecedores
@@ -322,7 +323,7 @@ namespace TCC_3_M
             this.btnFornecedores.Location = new System.Drawing.Point(0, 120);
             this.btnFornecedores.Name = "btnFornecedores";
             this.btnFornecedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFornecedores.Size = new System.Drawing.Size(219, 40);
+            this.btnFornecedores.Size = new System.Drawing.Size(200, 40);
             this.btnFornecedores.TabIndex = 3;
             this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,7 +342,7 @@ namespace TCC_3_M
             this.btnPerifericos.Location = new System.Drawing.Point(0, 80);
             this.btnPerifericos.Name = "btnPerifericos";
             this.btnPerifericos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPerifericos.Size = new System.Drawing.Size(219, 40);
+            this.btnPerifericos.Size = new System.Drawing.Size(200, 40);
             this.btnPerifericos.TabIndex = 2;
             this.btnPerifericos.Text = "Periféricos";
             this.btnPerifericos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -360,7 +361,7 @@ namespace TCC_3_M
             this.btnDispositivos.Location = new System.Drawing.Point(0, 40);
             this.btnDispositivos.Name = "btnDispositivos";
             this.btnDispositivos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDispositivos.Size = new System.Drawing.Size(219, 40);
+            this.btnDispositivos.Size = new System.Drawing.Size(200, 40);
             this.btnDispositivos.TabIndex = 1;
             this.btnDispositivos.Text = "Dispositivos";
             this.btnDispositivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,7 +380,7 @@ namespace TCC_3_M
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(219, 40);
+            this.btnUsuarios.Size = new System.Drawing.Size(200, 40);
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -398,7 +399,7 @@ namespace TCC_3_M
             this.btnRegistros.Location = new System.Drawing.Point(0, 100);
             this.btnRegistros.Name = "btnRegistros";
             this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistros.Size = new System.Drawing.Size(219, 37);
+            this.btnRegistros.Size = new System.Drawing.Size(200, 37);
             this.btnRegistros.TabIndex = 1;
             this.btnRegistros.Text = "Registros";
             this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,7 +415,7 @@ namespace TCC_3_M
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(219, 100);
+            this.panelLogo.Size = new System.Drawing.Size(200, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // label3
@@ -443,7 +444,7 @@ namespace TCC_3_M
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
