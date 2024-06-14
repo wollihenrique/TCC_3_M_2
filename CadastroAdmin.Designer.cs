@@ -195,6 +195,7 @@
             this.lnkTermosCondicoes.TabIndex = 2;
             this.lnkTermosCondicoes.TabStop = true;
             this.lnkTermosCondicoes.Text = "Termos de Condições de uso do sistema.";
+            this.lnkTermosCondicoes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkTermosCondicoes_LinkClicked);
             // 
             // label4
             // 
