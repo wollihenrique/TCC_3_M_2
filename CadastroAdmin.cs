@@ -108,7 +108,7 @@ namespace TCC_3_M
                         // Redirecionar para a tela de login após o cadastro
                         frm_Login formLogin = new frm_Login();
                         formLogin.Show();
-                        this.Hide();
+                        this.Close();
                     }
                     else
                     {
@@ -151,6 +151,12 @@ namespace TCC_3_M
             txtEmailCadastro.Text = "";
             txtSenhaCadastro.Text = "";
             cnkTermosCondicoes.Checked = false;
+        }
+
+        private void lnkTermosCondicoes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_TermosDeUso termosDeUso = new frm_TermosDeUso();
+            termosDeUso.Show();
         }
     }
 }

@@ -19,7 +19,14 @@ namespace TCC_3_M
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnEntrarLog_Click(object sender, EventArgs e)
+        {
+            frm_CadastroAdmin cadastroAdmin = new frm_CadastroAdmin();
+            cadastroAdmin.Show();
+            this.Close();
         }
     }
 }

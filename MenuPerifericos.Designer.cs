@@ -29,6 +29,7 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExcluirPeriferico = new System.Windows.Forms.Button();
             this.btnAtualizarPeriferico = new System.Windows.Forms.Button();
             this.btnEditarRegistroPerifericos = new System.Windows.Forms.Button();
@@ -116,11 +117,28 @@ namespace TCC_3_M
             // 
             // dgvPerifericos
             // 
-            this.dgvPerifericos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerifericos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPerifericos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPerifericos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPerifericos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvPerifericos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPerifericos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPerifericos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPerifericos.ColumnHeadersHeight = 30;
+            this.dgvPerifericos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPerifericos.EnableHeadersVisualStyles = false;
+            this.dgvPerifericos.GridColor = System.Drawing.Color.DarkGray;
             this.dgvPerifericos.Location = new System.Drawing.Point(0, 0);
             this.dgvPerifericos.Name = "dgvPerifericos";
-            this.dgvPerifericos.Size = new System.Drawing.Size(983, 454);
+            this.dgvPerifericos.Size = new System.Drawing.Size(995, 454);
             this.dgvPerifericos.TabIndex = 35;
             // 
             // lblStatus
@@ -257,7 +275,7 @@ namespace TCC_3_M
             this.panel2.Controls.Add(this.dgvPerifericos);
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(983, 454);
+            this.panel2.Size = new System.Drawing.Size(995, 454);
             this.panel2.TabIndex = 40;
             // 
             // frm_MenuPerifericos
