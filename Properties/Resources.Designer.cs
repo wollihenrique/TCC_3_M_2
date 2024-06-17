@@ -203,6 +203,16 @@ namespace TCC_3_M.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foto_rafa {
+            get {
+                object obj = ResourceManager.GetObject("foto-rafa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap github {
             get {
                 object obj = ResourceManager.GetObject("github", resourceCulture);
@@ -236,6 +246,16 @@ namespace TCC_3_M.Properties {
         internal static System.Drawing.Bitmap ligar {
             get {
                 object obj = ResourceManager.GetObject("ligar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nome {
+            get {
+                object obj = ResourceManager.GetObject("nome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,5 +44,10 @@ namespace TCC_3_M
 
             label1.TextAlign = ContentAlignment.MiddleLeft;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
