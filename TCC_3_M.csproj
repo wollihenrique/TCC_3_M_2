@@ -409,5 +409,17 @@
   <ItemGroup>
     <None Include="Resources\foto-wallace.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yasmin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinicius cruz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yasmin1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\victor hugo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
