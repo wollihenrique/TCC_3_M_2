@@ -63,6 +63,16 @@ namespace TCC_3_M.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar_usuario {
             get {
                 object obj = ResourceManager.GetObject("adicionar-usuario", resourceCulture);
@@ -206,6 +216,16 @@ namespace TCC_3_M.Properties {
         internal static System.Drawing.Bitmap foto_rafa {
             get {
                 object obj = ResourceManager.GetObject("foto-rafa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_wallace {
+            get {
+                object obj = ResourceManager.GetObject("foto-wallace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
