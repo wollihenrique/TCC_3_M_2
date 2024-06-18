@@ -53,7 +53,7 @@ namespace TCC_3_M
         {
             cmbLoteHardware.Items.Clear();
 
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             string query = "SELECT id FROM batch";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -101,7 +101,7 @@ namespace TCC_3_M
                 // Obter o novo lote selecionado
                 string newBatchId = cmbLoteHardware.SelectedItem.ToString();
 
-                using (MySqlConnection connection = new MySqlConnection("server=localhost;database=inventory_system;user=root;password=vini"))
+                using (MySqlConnection connection = new MySqlConnection("server=localhost;database=inventory_system;user=root;password=etec"))
                 {
                     connection.Open();
 

@@ -29,7 +29,7 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExcluirPeriferico = new System.Windows.Forms.Button();
             this.btnAtualizarPeriferico = new System.Windows.Forms.Button();
             this.btnEditarRegistroPerifericos = new System.Windows.Forms.Button();
@@ -40,8 +40,10 @@ namespace TCC_3_M
             this.lblOrderBy = new System.Windows.Forms.Label();
             this.cmbStatusPerifericos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdPeriferico = new System.Windows.Forms.TextBox();
+            this.txtModeloPerifericos = new System.Windows.Forms.TextBox();
             this.pnlFilter = new System.Windows.Forms.Panel();
+            this.cmbTipoPerifericos = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseMenuPerifericos = new System.Windows.Forms.Button();
@@ -82,6 +84,7 @@ namespace TCC_3_M
             this.btnAtualizarPeriferico.TabIndex = 38;
             this.btnAtualizarPeriferico.Text = "Atualizar";
             this.btnAtualizarPeriferico.UseVisualStyleBackColor = false;
+            this.btnAtualizarPeriferico.Click += new System.EventHandler(this.btnAtualizarPeriferico_Click);
             // 
             // btnEditarRegistroPerifericos
             // 
@@ -124,14 +127,14 @@ namespace TCC_3_M
             this.dgvPerifericos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvPerifericos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPerifericos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPerifericos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPerifericos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPerifericos.ColumnHeadersHeight = 30;
             this.dgvPerifericos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPerifericos.EnableHeadersVisualStyles = false;
@@ -192,25 +195,27 @@ namespace TCC_3_M
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(4, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 20);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "ID:";
+            this.label2.Text = "Modelo:";
             // 
-            // txtIdPeriferico
+            // txtModeloPerifericos
             // 
-            this.txtIdPeriferico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdPeriferico.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPeriferico.Location = new System.Drawing.Point(7, 64);
-            this.txtIdPeriferico.Multiline = true;
-            this.txtIdPeriferico.Name = "txtIdPeriferico";
-            this.txtIdPeriferico.Size = new System.Drawing.Size(97, 22);
-            this.txtIdPeriferico.TabIndex = 8;
+            this.txtModeloPerifericos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtModeloPerifericos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModeloPerifericos.Location = new System.Drawing.Point(7, 64);
+            this.txtModeloPerifericos.Multiline = true;
+            this.txtModeloPerifericos.Name = "txtModeloPerifericos";
+            this.txtModeloPerifericos.Size = new System.Drawing.Size(97, 22);
+            this.txtModeloPerifericos.TabIndex = 8;
             // 
             // pnlFilter
             // 
             this.pnlFilter.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlFilter.Controls.Add(this.cmbTipoPerifericos);
+            this.pnlFilter.Controls.Add(this.label1);
             this.pnlFilter.Controls.Add(this.panel1);
-            this.pnlFilter.Controls.Add(this.txtIdPeriferico);
+            this.pnlFilter.Controls.Add(this.txtModeloPerifericos);
             this.pnlFilter.Controls.Add(this.label2);
             this.pnlFilter.Controls.Add(this.cmbStatusPerifericos);
             this.pnlFilter.Controls.Add(this.lblOrderBy);
@@ -222,6 +227,28 @@ namespace TCC_3_M
             this.pnlFilter.Name = "pnlFilter";
             this.pnlFilter.Size = new System.Drawing.Size(995, 97);
             this.pnlFilter.TabIndex = 34;
+            // 
+            // cmbTipoPerifericos
+            // 
+            this.cmbTipoPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTipoPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoPerifericos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoPerifericos.FormattingEnabled = true;
+            this.cmbTipoPerifericos.Location = new System.Drawing.Point(504, 62);
+            this.cmbTipoPerifericos.Name = "cmbTipoPerifericos";
+            this.cmbTipoPerifericos.Size = new System.Drawing.Size(100, 25);
+            this.cmbTipoPerifericos.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(501, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Tipo:";
             // 
             // panel1
             // 
@@ -315,11 +342,13 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.ComboBox cmbStatusPerifericos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdPeriferico;
+        private System.Windows.Forms.TextBox txtModeloPerifericos;
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label panelDataGrid;
         private System.Windows.Forms.Button btnCloseMenuPerifericos;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cmbTipoPerifericos;
+        private System.Windows.Forms.Label label1;
     }
 }

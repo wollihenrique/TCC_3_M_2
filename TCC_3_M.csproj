@@ -116,12 +116,6 @@
     <Compile Include="EditarDispositivos.Designer.cs">
       <DependentUpon>EditarDispositivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirPerifericos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExcluirPerifericos.Designer.cs">
-      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Historico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarDispositivos.resx">
       <DependentUpon>EditarDispositivos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirPerifericos.resx">
-      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
