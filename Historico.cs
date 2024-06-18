@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_ExcluirPerifericos : Form
+    public partial class frm_Historico : Form
     {
-        public frm_ExcluirPerifericos()
+        public frm_Historico()
         {
             InitializeComponent();
         }
 
-        private void btnCloseFrmExcluirPerifericos_Click(object sender, EventArgs e)
+        private void btnCloseHistoric_Click(object sender, EventArgs e)
         {
             this.Close();
         }

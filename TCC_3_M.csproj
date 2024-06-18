@@ -110,23 +110,17 @@
     <Compile Include="EditarUsuario.Designer.cs">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Estoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estoque.Designer.cs">
-      <DependentUpon>Estoque.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditarDispositivos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarDispositivos.Designer.cs">
       <DependentUpon>EditarDispositivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirPerifericos.cs">
+    <Compile Include="Historico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirPerifericos.Designer.cs">
-      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
+    <Compile Include="Historico.Designer.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -244,14 +238,11 @@
     <EmbeddedResource Include="EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Estoque.resx">
-      <DependentUpon>Estoque.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditarDispositivos.resx">
       <DependentUpon>EditarDispositivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirPerifericos.resx">
-      <DependentUpon>ExcluirPerifericos.cs</DependentUpon>
+    <EmbeddedResource Include="Historico.resx">
+      <DependentUpon>Historico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -14,7 +14,7 @@ namespace TCC_3_M
     public partial class frm_MenuFornecedores : Form
     {
         private MySqlConnection connection;
-        private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
         private DataTable dataTable;
 
         public frm_MenuFornecedores()
@@ -68,6 +68,11 @@ namespace TCC_3_M
             {
                 dataTable.DefaultView.RowFilter = $"document LIKE '%{txtCpfCnpjMenu.Text}%'";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
