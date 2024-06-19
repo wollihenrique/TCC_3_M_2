@@ -18,10 +18,16 @@ namespace TCC_3_M
         public frm_Usuario()
         {
             InitializeComponent();
-            AtualizarDataGridView();
+            // Adiciona o evento Load para carregar os dados ao abrir o formulário
+            this.Load += frm_Usuario_Load;
         }
 
-        private void AtualizarDataGridView()
+        private void frm_Usuario_Load(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
+        }
+
+        private void CarregarDadosUsuarios()
         {
             string query = "SELECT id, `name`, cpf, phone, email, 'User' as user_type FROM `user` " +
                            "UNION " +
@@ -53,13 +59,22 @@ namespace TCC_3_M
 
         private void btnEditarRegistroUsuario_Click(object sender, EventArgs e)
         {
-            frm_EditarUsuario _EditarUsuario = new frm_EditarUsuario();
-            _EditarUsuario.Show();
+            if (dgvUsuarios.SelectedRows.Count > 0)
+            {
+                int idUsuario = Convert.ToInt32(dgvUsuarios.SelectedRows[0].Cells["id"].Value);
+
+                frm_EditarUsuario _EditarUsuario = new frm_EditarUsuario(idUsuario);
+                _EditarUsuario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um usuário para editar.");
+            }
         }
 
         private void btnAtualizarUsuario_Click(object sender, EventArgs e)
         {
-            AtualizarDataGridView();
+            CarregarDadosUsuarios();
         }
 
         private void btnCloseMenuUsuarios_Click(object sender, EventArgs e)
