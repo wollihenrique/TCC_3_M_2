@@ -34,7 +34,6 @@ namespace TCC_3_M
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvHistoric = new System.Windows.Forms.DataGridView();
             this.pnlFilterHistoric = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseHistoric = new System.Windows.Forms.Button();
             this.txtIdHistoric = new System.Windows.Forms.TextBox();
@@ -55,9 +54,10 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.dgvHistoric);
-            this.panel3.Location = new System.Drawing.Point(4, 107);
+            this.panel3.Location = new System.Drawing.Point(5, 132);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(991, 468);
+            this.panel3.Size = new System.Drawing.Size(1321, 576);
             this.panel3.TabIndex = 44;
             // 
             // dgvHistoric
@@ -76,20 +76,21 @@ namespace TCC_3_M
             this.dgvHistoric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHistoric.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvHistoric.Location = new System.Drawing.Point(0, 0);
+            this.dgvHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvHistoric.Name = "dgvHistoric";
+            this.dgvHistoric.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHistoric.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvHistoric.Size = new System.Drawing.Size(991, 468);
+            this.dgvHistoric.Size = new System.Drawing.Size(1321, 576);
             this.dgvHistoric.TabIndex = 20;
             // 
             // pnlFilterHistoric
             // 
             this.pnlFilterHistoric.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlFilterHistoric.Controls.Add(this.button1);
             this.pnlFilterHistoric.Controls.Add(this.panelDataGrid);
             this.pnlFilterHistoric.Controls.Add(this.btnCloseHistoric);
             this.pnlFilterHistoric.Controls.Add(this.txtIdHistoric);
@@ -100,18 +101,10 @@ namespace TCC_3_M
             this.pnlFilterHistoric.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilterHistoric.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlFilterHistoric.Location = new System.Drawing.Point(0, 0);
+            this.pnlFilterHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlFilterHistoric.Name = "pnlFilterHistoric";
-            this.pnlFilterHistoric.Size = new System.Drawing.Size(999, 112);
+            this.pnlFilterHistoric.Size = new System.Drawing.Size(1332, 138);
             this.pnlFilterHistoric.TabIndex = 38;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(513, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panelDataGrid
             // 
@@ -122,9 +115,10 @@ namespace TCC_3_M
             this.panelDataGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.panelDataGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDataGrid.ForeColor = System.Drawing.Color.Gainsboro;
-            this.panelDataGrid.Location = new System.Drawing.Point(59, 4);
+            this.panelDataGrid.Location = new System.Drawing.Point(79, 5);
+            this.panelDataGrid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDataGrid.Name = "panelDataGrid";
-            this.panelDataGrid.Size = new System.Drawing.Size(117, 29);
+            this.panelDataGrid.Size = new System.Drawing.Size(141, 36);
             this.panelDataGrid.TabIndex = 15;
             this.panelDataGrid.Text = "Histórico";
             // 
@@ -137,8 +131,9 @@ namespace TCC_3_M
             this.btnCloseHistoric.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseHistoric.ForeColor = System.Drawing.Color.White;
             this.btnCloseHistoric.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseHistoric.Name = "btnCloseHistoric";
-            this.btnCloseHistoric.Size = new System.Drawing.Size(53, 38);
+            this.btnCloseHistoric.Size = new System.Drawing.Size(71, 47);
             this.btnCloseHistoric.TabIndex = 14;
             this.btnCloseHistoric.Text = "X";
             this.btnCloseHistoric.UseVisualStyleBackColor = false;
@@ -148,9 +143,10 @@ namespace TCC_3_M
             // 
             this.txtIdHistoric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdHistoric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdHistoric.Location = new System.Drawing.Point(21, 64);
+            this.txtIdHistoric.Location = new System.Drawing.Point(28, 79);
+            this.txtIdHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdHistoric.Name = "txtIdHistoric";
-            this.txtIdHistoric.Size = new System.Drawing.Size(122, 22);
+            this.txtIdHistoric.Size = new System.Drawing.Size(162, 26);
             this.txtIdHistoric.TabIndex = 8;
             // 
             // label2
@@ -158,9 +154,10 @@ namespace TCC_3_M
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 44);
+            this.label2.Location = new System.Drawing.Point(25, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 20);
+            this.label2.Size = new System.Drawing.Size(37, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "ID:";
             // 
@@ -169,9 +166,10 @@ namespace TCC_3_M
             this.lblOrderBy.AutoSize = true;
             this.lblOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderBy.ForeColor = System.Drawing.Color.White;
-            this.lblOrderBy.Location = new System.Drawing.Point(221, 45);
+            this.lblOrderBy.Location = new System.Drawing.Point(295, 55);
+            this.lblOrderBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(98, 20);
+            this.lblOrderBy.Size = new System.Drawing.Size(123, 25);
             this.lblOrderBy.TabIndex = 3;
             this.lblOrderBy.Text = "Ordenar por:";
             // 
@@ -186,9 +184,10 @@ namespace TCC_3_M
             "Dispositivos",
             "Periféricos",
             "Funcionários"});
-            this.cmbOrderByHistoric.Location = new System.Drawing.Point(223, 66);
+            this.cmbOrderByHistoric.Location = new System.Drawing.Point(297, 81);
+            this.cmbOrderByHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbOrderByHistoric.Name = "cmbOrderByHistoric";
-            this.cmbOrderByHistoric.Size = new System.Drawing.Size(165, 24);
+            this.cmbOrderByHistoric.Size = new System.Drawing.Size(219, 28);
             this.cmbOrderByHistoric.TabIndex = 5;
             // 
             // panel1
@@ -196,8 +195,9 @@ namespace TCC_3_M
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(999, 38);
+            this.panel1.Size = new System.Drawing.Size(1332, 47);
             this.panel1.TabIndex = 16;
             // 
             // panel2
@@ -206,20 +206,22 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(-8, 86);
+            this.panel2.Location = new System.Drawing.Point(-11, 106);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1015, 547);
+            this.panel2.Size = new System.Drawing.Size(1353, 673);
             this.panel2.TabIndex = 45;
             // 
             // frm_Historico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 633);
+            this.ClientSize = new System.Drawing.Size(1332, 779);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlFilterHistoric);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Historico";
             this.Text = "Historico";
             this.panel3.ResumeLayout(false);
@@ -242,6 +244,5 @@ namespace TCC_3_M
         private System.Windows.Forms.ComboBox cmbOrderByHistoric;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
     }
 }
