@@ -109,9 +109,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(335, 190);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 18);
+            this.label7.Size = new System.Drawing.Size(49, 18);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Nome de Usuário:";
+            this.label7.Text = "Email:";
             // 
             // txtUsuarioLogin
             // 
@@ -181,7 +181,7 @@
             this.lblLogin.ForeColor = System.Drawing.SystemColors.MenuText;
             this.lblLogin.Location = new System.Drawing.Point(335, 90);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(122, 44);
+            this.lblLogin.Size = new System.Drawing.Size(121, 44);
             this.lblLogin.TabIndex = 17;
             this.lblLogin.Text = "Login";
             // 

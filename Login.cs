@@ -21,7 +21,8 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private bool VerificarLogin(string usuario, string senha)
+        // Método para obter o tenant_id do administrador
+        public int ObterTenantId(string email)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -29,26 +30,25 @@ namespace TCC_3_M
                 {
                     connection.Open();
 
-                    string sql = "SELECT password FROM (SELECT id, name, password, 'admin' AS role FROM admin UNION SELECT id, name, password, 'user' AS role FROM user) AS combined_users WHERE name = @usuario";
+                    string sql = "SELECT tenant_id FROM admin WHERE email = @usuario";
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
-                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@usuario", email);
 
                     object result = cmd.ExecuteScalar();
 
                     if (result != null)
                     {
-                        string storedHash = result.ToString();
-                        return PasswordHelper.VerifyPassword(senha, storedHash);
+                        return Convert.ToInt32(result);
                     }
                     else
                     {
-                        return false;
+                        return -1; // Retorna -1 se o email não existir ou se o tenant_id não for encontrado
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao verificar o login: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
+                    MessageBox.Show("Erro ao obter tenant_id: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return -1;
                 }
             }
         }
@@ -72,20 +72,65 @@ namespace TCC_3_M
 
         private void btnEntrarLog_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuarioLogin.Text;
+            string email = txtUsuarioLogin.Text;
             string senha = txtSenhaLogin.Text;
 
-            if (VerificarLogin(usuario, senha))
+            int tenantId = ObterTenantId(email); // Obtém o tenantId usando o email
+
+            if (VerificarLogin(email, senha, tenantId)) // Passa o tenantId para VerificarLogin
             {
-                frm_Inicio menu = new frm_Inicio();
+                frm_Inicio menu = new frm_Inicio(); // Cria o formulário de início
                 menu.Show();
+                menu.DefinirEmailDoAdministrador(email); // Passa o email para frm_Inicio
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuário ou senha incorretos. Tente novamente.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("E-mail ou senha incorretos. Tente novamente.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private bool VerificarLogin(string email, string senha, int tenantId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = @"
+                        SELECT password
+                        FROM (
+                            SELECT id, email, password, tenant_id, 'admin' AS role 
+                            FROM admin 
+                            UNION 
+                            SELECT id, email, password, tenant_id, 'user' AS role 
+                            FROM user
+                        ) AS combined_users 
+                        WHERE email = @usuario AND tenant_id = @tenantId";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@usuario", email);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        string storedHash = result.ToString();
+                        return PasswordHelper.VerifyPassword(senha, storedHash);
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao verificar o login: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
         }
     }
 

@@ -40,15 +40,16 @@ namespace TCC_3_M
                 string.IsNullOrWhiteSpace(txtCpfCadastro.Text) ||
                 string.IsNullOrWhiteSpace(txtNumeroCadastro.Text) ||
                 string.IsNullOrWhiteSpace(txtEmailCadastro.Text) ||
-                string.IsNullOrWhiteSpace(txtSenhaCadastro.Text))
+                string.IsNullOrWhiteSpace(txtSenhaCadastro.Text) ||
+                string.IsNullOrWhiteSpace(txtConfirmSenha.Text))
             {
                 MessageBox.Show("Todos os campos devem ser preenchidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!Regex.IsMatch(txtCpfCadastro.Text, @"^\d{11}$"))
+            if (!IsCpfValid(txtCpfCadastro.Text))
             {
-                MessageBox.Show("CPF inválido. Deve conter apenas números e ter 11 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CPF inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -70,6 +71,12 @@ namespace TCC_3_M
                 return;
             }
 
+            if (txtSenhaCadastro.Text != txtConfirmSenha.Text)
+            {
+                MessageBox.Show("As senhas não coincidem.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (!Regex.IsMatch(txtNomeCadastro.Text, @"^[a-zA-Z\s]+$"))
             {
                 MessageBox.Show("Nome de usuário inválido. Deve conter apenas letras e espaços.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,17 +89,27 @@ namespace TCC_3_M
                 return;
             }
 
+            if (IsDataAlreadyRegistered(txtCpfCadastro.Text, txtEmailCadastro.Text, txtNumeroCadastro.Text))
+            {
+                MessageBox.Show("O CPF, e-mail ou telefone já está cadastrado em outra conta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
+                    // Geração automática do tenant_id
+                    int tenantId = GenerateTenantId();
+
                     // Encriptar a senha antes de inserir no banco de dados
                     string hashedPassword = HashPassword(txtSenhaCadastro.Text);
 
-                    string sql = "INSERT INTO admin (`name`, `password`, cpf, email, phone) VALUES (@name, @password, @cpf, @email, @phone)";
+                    string sql = "INSERT INTO admin (`tenant_id`, `name`, `password`, `cpf`, `email`, `phone`) VALUES (@tenantId, @name, @password, @cpf, @email, @phone)";
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId); // Inserindo tenant_id
                     cmd.Parameters.AddWithValue("@name", txtNomeCadastro.Text);
                     cmd.Parameters.AddWithValue("@password", hashedPassword); // Utilizando a senha encriptada
                     cmd.Parameters.AddWithValue("@cpf", txtCpfCadastro.Text);
@@ -119,6 +136,73 @@ namespace TCC_3_M
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool IsCpfValid(string cpf)
+        {
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+
+            for (int j = 0; j < 10; j++)
+                if (j.ToString().PadLeft(11, char.Parse(j.ToString())) == cpf)
+                    return false;
+
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            string tempCpf = cpf.Substring(0, 9);
+            int soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+            int resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            string digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            digito = digito + resto.ToString();
+
+            return cpf.EndsWith(digito);
+        }
+
+        private bool IsDataAlreadyRegistered(string cpf, string email, string phone)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = @"
+                SELECT COUNT(*) FROM (
+                    SELECT cpf, email, phone FROM admin
+                    UNION ALL
+                    SELECT cpf, email, phone FROM user
+                ) AS combined
+                WHERE cpf = @cpf OR email = @mail OR phone = @phone";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                cmd.Parameters.AddWithValue("@mail", email);
+                cmd.Parameters.AddWithValue("@phone", phone);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
             }
         }
 
@@ -157,6 +241,12 @@ namespace TCC_3_M
         {
             frm_TermosDeUso termosDeUso = new frm_TermosDeUso();
             termosDeUso.Show();
+        }
+
+        private int GenerateTenantId()
+        {
+            Random random = new Random();
+            return random.Next(1000, 9999);
         }
     }
 }
