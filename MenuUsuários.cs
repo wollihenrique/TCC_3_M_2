@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -22,7 +16,7 @@ namespace TCC_3_M
             InitializeComponent();
             this.Load += frm_Usuario_Load;
             emailDoAdministradorLogado = email; // Recebe o email do administrador logado
-            tenantId = ObterTenantId(email);
+            tenantId = ObterTenantId(emailDoAdministradorLogado);
         }
 
         private void frm_Usuario_Load(object sender, EventArgs e)
@@ -32,9 +26,25 @@ namespace TCC_3_M
 
         private void CarregarDadosUsuarios()
         {
-            string query = "SELECT id, `name`, cpf, phone, email, 'User' as user_type FROM `user` WHERE tenant_id = @tenantId " +
-                           "UNION " +
-                           "SELECT id, `name`, cpf, phone, email, 'Admin' as user_type FROM `admin` WHERE tenant_id = @tenantId";
+            string nomeUsuario = txtNomeUsuario.Text.Trim();
+            string cpfUsuario = txtCpfUsuario.Text.Trim();
+            string orderByUsuario = cmbOrderByUsuario.SelectedItem?.ToString() ?? "";
+
+            string query = "SELECT `name`, cpf, phone, email, 'User' as user_type FROM `user` WHERE tenant_id = @tenantId ";
+            if (!string.IsNullOrWhiteSpace(nomeUsuario))
+                query += $"AND `name` LIKE '%{nomeUsuario}%' ";
+            if (!string.IsNullOrWhiteSpace(cpfUsuario))
+                query += $"AND cpf LIKE '%{cpfUsuario}%' ";
+
+            if (orderByUsuario == "Admin")
+            {
+                query += "UNION " +
+                         "SELECT `name`, cpf, phone, email, 'Admin' as user_type FROM `admin` WHERE tenant_id = @tenantId ";
+                if (!string.IsNullOrWhiteSpace(nomeUsuario))
+                    query += $"AND `name` LIKE '%{nomeUsuario}%' ";
+                if (!string.IsNullOrWhiteSpace(cpfUsuario))
+                    query += $"AND cpf LIKE '%{cpfUsuario}%' ";
+            }
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -99,7 +109,6 @@ namespace TCC_3_M
             formRegistroUsuario.ShowDialog();
             CarregarDadosUsuarios();
         }
-
 
         private void btnEditarRegistroUsuario_Click(object sender, EventArgs e)
         {
@@ -174,6 +183,21 @@ namespace TCC_3_M
                     MessageBox.Show("Erro ao excluir usuário: " + ex.Message);
                 }
             }
+        }
+
+        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
+        }
+
+        private void txtCpfUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
+        }
+
+        private void cmbOrderByUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
         }
     }
 }

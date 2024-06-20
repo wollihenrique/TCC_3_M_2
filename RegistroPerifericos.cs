@@ -14,10 +14,12 @@ namespace TCC_3_M
     public partial class frm_RegistroPeriferico : Form
     {
         private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec;";
+        private int tenantId;
 
-        public frm_RegistroPeriferico()
+        public frm_RegistroPeriferico(int tenantId)
         {
             InitializeComponent();
+            this.tenantId = tenantId; // Atribui o tenantId recebido ao campo privado
             PopulateTipoComboBox();
             PopulateStatusComboBox();
             PopulateLoteComboBox();
@@ -46,14 +48,15 @@ namespace TCC_3_M
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO peripherals (batch_id, type, model, status)
-                                     VALUES (@BatchId, @Type, @Model, @Status)";
+                    string query = @"INSERT INTO peripherals (batch_id, type, model, status, tenant_id)
+                                     VALUES (@BatchId, @Type, @Model, @Status, @TenantId)";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@BatchId", loteId);
                     cmd.Parameters.AddWithValue("@Type", tipo);
                     cmd.Parameters.AddWithValue("@Model", modelo);
                     cmd.Parameters.AddWithValue("@Status", status);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId); // Adiciona o tenantId como parâmetro
 
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)

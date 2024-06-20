@@ -72,31 +72,29 @@ namespace TCC_3_M
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado); // Obter o tenantId usando o email
-            frm_Usuario frmUsuario = new frm_Usuario(emailDoAdministradorLogado); // Passar email para frm_Usuario
+            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
+            frm_Usuario frmUsuario = new frm_Usuario(emailDoAdministradorLogado);
             openChildForm(frmUsuario);
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_CadastroDisp());
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
+                int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
+                frm_CadastroDisp frmCadastroDisp = new frm_CadastroDisp(emailDoAdministradorLogado, tenantId);
+                openChildForm(frmCadastroDisp);
         }
 
         private void btnPerifericos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_MenuPerifericos());
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
+            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
+            frm_MenuPerifericos frmMenuPerifericos = new frm_MenuPerifericos(emailDoAdministradorLogado, tenantId);
+            openChildForm(frmMenuPerifericos);
         }
-
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_MenuFornecedores());
-            //hideSubMenu();
+            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
+            frm_MenuFornecedores frmMenuFornecedores = new frm_MenuFornecedores(emailDoAdministradorLogado, tenantId);
+            openChildForm(frmMenuFornecedores);
         }
         #endregion
 

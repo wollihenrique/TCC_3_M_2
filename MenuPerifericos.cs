@@ -14,10 +14,13 @@ namespace TCC_3_M
     public partial class frm_MenuPerifericos : Form
     {
         private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec;";
+        private int tenantId;
 
-        public frm_MenuPerifericos()
+        public frm_MenuPerifericos(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
+            this.tenantId = tenantId; // Atribui o tenantId recebido ao campo privado
+
             LoadPeripheralsData();
             PopulateStatusComboBox();
             PopulateOrderByComboBox();
@@ -39,11 +42,12 @@ namespace TCC_3_M
                     conn.Open();
                     string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
                                      FROM peripherals p
-                                     JOIN batch b ON p.batch_id = b.id";
+                                     JOIN batch b ON p.batch_id = b.id
+                                     WHERE b.tenant_id = @TenantId"; // Filtra pelo tenantId
 
                     if (!string.IsNullOrEmpty(statusFilter))
                     {
-                        query += $" WHERE p.status = '{statusFilter}'";
+                        query += $" AND p.status = '{statusFilter}'";
                     }
 
                     if (!string.IsNullOrEmpty(orderBy))
@@ -65,7 +69,10 @@ namespace TCC_3_M
                         }
                     }
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -120,11 +127,14 @@ namespace TCC_3_M
                     string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
                                      FROM peripherals p
                                      JOIN batch b ON p.batch_id = b.id
-                                     WHERE p.type = @Tipo";
+                                     WHERE p.type = @Tipo
+                                     AND b.tenant_id = @TenantId"; // Filtra pelo tenantId
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    da.SelectCommand.Parameters.AddWithValue("@Tipo", tipoSelecionado);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Tipo", tipoSelecionado);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
 
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -149,11 +159,14 @@ namespace TCC_3_M
                     string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
                                      FROM peripherals p
                                      JOIN batch b ON p.batch_id = b.id
-                                     WHERE p.model LIKE @Modelo";
+                                     WHERE p.model LIKE @Modelo
+                                     AND b.tenant_id = @TenantId"; // Filtra pelo tenantId
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    da.SelectCommand.Parameters.AddWithValue("@Modelo", "%" + modeloDigitado + "%");
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Modelo", "%" + modeloDigitado + "%");
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
 
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -167,14 +180,23 @@ namespace TCC_3_M
 
         private void btnNovoPeriferico_Click(object sender, EventArgs e)
         {
-            frm_RegistroPeriferico formNovoPeriferico = new frm_RegistroPeriferico();
+            frm_RegistroPeriferico formNovoPeriferico = new frm_RegistroPeriferico(tenantId);
             formNovoPeriferico.Show();
         }
 
         private void btnEditarRegistroPerifericos_Click(object sender, EventArgs e)
         {
-            frm_EditarPerifericos formEditarPerifericos = new frm_EditarPerifericos();
-            formEditarPerifericos.Show();
+            if (dgvPerifericos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvPerifericos.SelectedRows[0];
+                int idPeriferico = Convert.ToInt32(selectedRow.Cells["id"].Value);
+                string tipoPeriferico = Convert.ToString(selectedRow.Cells["type"].Value);
+                string modeloPeriferico = Convert.ToString(selectedRow.Cells["model"].Value);
+                string statusPeriferico = Convert.ToString(selectedRow.Cells["status"].Value);
+                int batchId = Convert.ToInt32(selectedRow.Cells["batch_id"].Value);
+                frm_EditarPerifericos formEditarPerifericos = new frm_EditarPerifericos(idPeriferico, tipoPeriferico, modeloPeriferico, statusPeriferico, batchId);
+                formEditarPerifericos.ShowDialog();
+            }
         }
 
         private void btnCloseMenuPerifericos_Click(object sender, EventArgs e)
