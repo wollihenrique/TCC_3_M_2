@@ -273,6 +273,26 @@ namespace TCC_3_M.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap linkedin__2_ {
+            get {
+                object obj = ResourceManager.GetObject("linkedin (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap linkedinCerto {
+            get {
+                object obj = ResourceManager.GetObject("linkedinCerto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nome {
             get {
                 object obj = ResourceManager.GetObject("nome", resourceCulture);
@@ -336,6 +356,16 @@ namespace TCC_3_M.Properties {
         internal static System.Drawing.Bitmap vinicius_cruz {
             get {
                 object obj = ResourceManager.GetObject("vinicius cruz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallace22 {
+            get {
+                object obj = ResourceManager.GetObject("wallace22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

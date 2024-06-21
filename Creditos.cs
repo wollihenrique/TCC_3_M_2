@@ -26,26 +26,40 @@ namespace TCC_3_M
 
         private void labDescricao_Click(object sender, EventArgs e)
         {
-           
-            label1.Text = "No projeto, as responsabilidades incluíam foco no desenvolvimento em C#, colaboração com o designer das telas para garantir uma integração fluida entre a lógica de backend e a apresentação visual,\ne contribuições para a documentação abrangente do sistema. Além disso, era crucial manter-se atualizado com as diferentes áreas do projeto,\nincluindo o banco de dados e a integração deste com a camada de C#, assegurando uma sincronia eficiente entre os componentes do sistema.";
-
-            
-            label1.AutoSize = false;
-           
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+                   
         }
 
         private void labAnderson_Click(object sender, EventArgs e)
         {
-            label1.Text = "No projeto, as responsabilidades incluíam foco no desenvolvimento em C#, colaboração com o designer das telas para garantir uma integração fluida entre a lógica de backend e a apresentação visual,\ne contribuições para a documentação abrangente do sistema. Além disso, era crucial manter-se atualizado com as diferentes áreas do projeto,\nincluindo o banco de dados e a integração deste com a camada de C#, assegurando uma sincronia eficiente entre os componentes do sistema.";
-
-
-            label1.AutoSize = false;
-
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
