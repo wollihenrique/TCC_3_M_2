@@ -30,21 +30,27 @@ namespace TCC_3_M
             string cpfUsuario = txtCpfUsuario.Text.Trim();
             string orderByUsuario = cmbOrderByUsuario.SelectedItem?.ToString() ?? "";
 
-            string query = "SELECT `name`, cpf, phone, email, 'User' as user_type FROM `user` WHERE tenant_id = @tenantId ";
-            if (!string.IsNullOrWhiteSpace(nomeUsuario))
-                query += $"AND `name` LIKE '%{nomeUsuario}%' ";
-            if (!string.IsNullOrWhiteSpace(cpfUsuario))
-                query += $"AND cpf LIKE '%{cpfUsuario}%' ";
-
-            if (orderByUsuario == "Admin")
-            {
-                query += "UNION " +
-                         "SELECT `name`, cpf, phone, email, 'Admin' as user_type FROM `admin` WHERE tenant_id = @tenantId ";
-                if (!string.IsNullOrWhiteSpace(nomeUsuario))
-                    query += $"AND `name` LIKE '%{nomeUsuario}%' ";
-                if (!string.IsNullOrWhiteSpace(cpfUsuario))
-                    query += $"AND cpf LIKE '%{cpfUsuario}%' ";
-            }
+            string query = @"
+        SELECT id, `name`, cpf, phone, email, 'User' as user_type 
+        FROM `user` 
+        WHERE tenant_id = @tenantId 
+        AND (email = @emailDoAdministradorLogado 
+            OR (
+                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
+                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
+            )
+        )
+        UNION
+        SELECT id, `name`, cpf, phone, email, 'Admin' as user_type 
+        FROM `admin` 
+        WHERE tenant_id = @tenantId 
+        AND (email = @emailDoAdministradorLogado 
+            OR (
+                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
+                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
+            )
+        )
+    ";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -52,6 +58,9 @@ namespace TCC_3_M
                 try
                 {
                     command.Parameters.AddWithValue("@tenantId", tenantId);
+                    command.Parameters.AddWithValue("@emailDoAdministradorLogado", emailDoAdministradorLogado);
+                    command.Parameters.AddWithValue("@nomeUsuario", string.IsNullOrWhiteSpace(nomeUsuario) ? (object)DBNull.Value : $"%{nomeUsuario}%");
+                    command.Parameters.AddWithValue("@cpfUsuario", string.IsNullOrWhiteSpace(cpfUsuario) ? (object)DBNull.Value : $"%{cpfUsuario}%");
 
                     connection.Open();
 
@@ -59,7 +68,32 @@ namespace TCC_3_M
                     {
                         DataTable table = new DataTable();
                         adapter.Fill(table);
-                        dgvUsuarios.DataSource = table;
+
+                        if (table.Rows.Count > 0)
+                        {
+                            dgvUsuarios.DataSource = table;
+
+                            // Configurar as colunas do DataGridView
+                            dgvUsuarios.Columns["id"].Visible = false; // Ocultar a coluna ID
+                            dgvUsuarios.Columns["name"].HeaderText = "Nome";
+                            dgvUsuarios.Columns["cpf"].HeaderText = "CPF";
+                            dgvUsuarios.Columns["phone"].HeaderText = "Telefone";
+                            dgvUsuarios.Columns["email"].HeaderText = "Email";
+                            dgvUsuarios.Columns["user_type"].HeaderText = "Tipo de Usuário";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nenhum dado encontrado.");
+                            dgvUsuarios.DataSource = null;
+                        }
+
+                        // Verificações adicionais
+                        dgvUsuarios.Visible = true;
+                        dgvUsuarios.Enabled = true;
+                        dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgvUsuarios.Dock = DockStyle.Fill;
+                        dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+                        dgvUsuarios.AutoGenerateColumns = true;
                     }
                 }
                 catch (Exception ex)
@@ -183,21 +217,6 @@ namespace TCC_3_M
                     MessageBox.Show("Erro ao excluir usuário: " + ex.Message);
                 }
             }
-        }
-
-        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
-        {
-            CarregarDadosUsuarios();
-        }
-
-        private void txtCpfUsuario_TextChanged(object sender, EventArgs e)
-        {
-            CarregarDadosUsuarios();
-        }
-
-        private void cmbOrderByUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregarDadosUsuarios();
         }
     }
 }
