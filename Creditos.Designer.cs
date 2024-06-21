@@ -73,8 +73,8 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnVoltarCreditos = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlCreditos.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
@@ -101,13 +101,13 @@
             // pnlCreditos
             // 
             this.pnlCreditos.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlCreditos.Controls.Add(this.label1);
             this.pnlCreditos.Controls.Add(this.pictureBox1);
-            this.pnlCreditos.Controls.Add(this.btnVoltarCreditos);
             this.pnlCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCreditos.Location = new System.Drawing.Point(0, 0);
             this.pnlCreditos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCreditos.Name = "pnlCreditos";
-            this.pnlCreditos.Size = new System.Drawing.Size(1067, 86);
+            this.pnlCreditos.Size = new System.Drawing.Size(1067, 54);
             this.pnlCreditos.TabIndex = 8;
             // 
             // linkLabel1
@@ -305,9 +305,9 @@
             this.panel1.Controls.Add(this.labDescricao);
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 86);
+            this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 468);
+            this.panel1.Size = new System.Drawing.Size(1067, 500);
             this.panel1.TabIndex = 48;
             // 
             // label14
@@ -579,27 +579,10 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(83, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnVoltarCreditos
-            // 
-            this.btnVoltarCreditos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnVoltarCreditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltarCreditos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltarCreditos.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltarCreditos.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarCreditos.Image")));
-            this.btnVoltarCreditos.Location = new System.Drawing.Point(920, 0);
-            this.btnVoltarCreditos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVoltarCreditos.Name = "btnVoltarCreditos";
-            this.btnVoltarCreditos.Size = new System.Drawing.Size(147, 86);
-            this.btnVoltarCreditos.TabIndex = 7;
-            this.btnVoltarCreditos.Text = "Voltar";
-            this.btnVoltarCreditos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVoltarCreditos.UseVisualStyleBackColor = true;
-            this.btnVoltarCreditos.Click += new System.EventHandler(this.btnVoltarCreditos_Click);
             // 
             // label15
             // 
@@ -610,6 +593,17 @@
             this.label15.Size = new System.Drawing.Size(126, 20);
             this.label15.TabIndex = 68;
             this.label15.Text = "Documentação";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(98, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 37);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Créditos";
             // 
             // frm_Creditos
             // 
@@ -625,6 +619,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creditos";
             this.pnlCreditos.ResumeLayout(false);
+            this.pnlCreditos.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
@@ -654,7 +649,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlCreditos;
-        private System.Windows.Forms.Button btnVoltarCreditos;
         private System.Windows.Forms.PictureBox picturRafa;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -698,5 +692,6 @@
         private System.Windows.Forms.LinkLabel linkLabel11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label1;
     }
 }
