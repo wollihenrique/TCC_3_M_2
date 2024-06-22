@@ -29,7 +29,7 @@ namespace TCC_3_M
 
         private void PreencherComboBoxStatus()
         {
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             string query = "SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'hardware' AND COLUMN_NAME = 'status'";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))

@@ -11,11 +11,18 @@ namespace TCC_3_M
 {
     public partial class frm_RegistroUsuario : Form
     {
-        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=vini";
+        private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
+        private int tenantId;
 
         public frm_RegistroUsuario()
         {
             InitializeComponent();
+        }
+
+        public frm_RegistroUsuario(int tenantId)
+        {
+            InitializeComponent();
+            this.tenantId = tenantId; // Recebe o tenant_id passado como parâmetro
         }
 
         private bool IsValidCPF(string cpf)
@@ -193,8 +200,9 @@ namespace TCC_3_M
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO user (name, password, email, cpf, phone) VALUES (@Name, @Password, @Email, @CPF, @Phone)";
+                    string query = "INSERT INTO user (tenant_id, name, password, email, cpf, phone) VALUES (@TenantId, @Name, @Password, @Email, @CPF, @Phone)";
                     MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@TenantId", tenantId); // Adiciona o tenant_id ao parâmetro
                     command.Parameters.AddWithValue("@Name", nome);
                     command.Parameters.AddWithValue("@Password", HashPassword(senha));
                     command.Parameters.AddWithValue("@Email", email);
@@ -202,6 +210,7 @@ namespace TCC_3_M
                     command.Parameters.AddWithValue("@Phone", telefone);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Usuário registrado com sucesso!");
+                    this.Close(); // Fecha o formulário após o registro
                 }
                 catch (Exception ex)
                 {

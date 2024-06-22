@@ -19,8 +19,6 @@ namespace TCC_3_M
 
         private void btnVoltarCreditos_Click(object sender, EventArgs e)
         {
-            frm_Inicio frm_Menu = new frm_Inicio();
-            frm_Menu.Show();
             this.Hide();
         }
     }

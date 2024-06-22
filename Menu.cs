@@ -12,6 +12,7 @@ namespace TCC_3_M
 {
     public partial class frm_Inicio : Form
     {
+        private string emailDoAdministradorLogado;
 
         public frm_Inicio()
         {
@@ -25,6 +26,11 @@ namespace TCC_3_M
 
             // Inicia o timer
             timerRelogio.Start();
+        }
+
+        public void DefinirEmailDoAdministrador(string email)
+        {
+            emailDoAdministradorLogado = email;
         }
 
         private void TimerRelogio_Tick(object sender, EventArgs e)
@@ -47,24 +53,13 @@ namespace TCC_3_M
             pnlSubMenuHistoric.Visible = false;
         }
 
-        //private void hideSubMenu()
-        //{
-        //    if (pnlSubUserMenu.Visible == true)
-        //        pnlSubUserMenu.Visible = false;
-        //    if (pnlSubMenuAjuda.Visible == true)
-        //        pnlSubMenuAjuda.Visible = false;
-        //    if (pnlSubMenuCreditos.Visible == true)
-        //        pnlSubMenuCreditos.Visible = false;
-        //}
-
-        private void showSubMenu( Panel subMenu)
+        private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
                 //hideSubMenu();
                 subMenu.Visible = true;
             }
-
             else
                 subMenu.Visible = false;
         }
@@ -77,10 +72,9 @@ namespace TCC_3_M
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Usuario());
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
+            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado); // Obter o tenantId usando o email
+            frm_Usuario frmUsuario = new frm_Usuario(emailDoAdministradorLogado); // Passar email para frm_Usuario
+            openChildForm(frmUsuario);
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)
@@ -157,6 +151,7 @@ namespace TCC_3_M
         {
             showSubMenu(pnlSubMenuHistoric);
         }
+
         private void btnHistoricRegisters_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Historico());
@@ -164,7 +159,7 @@ namespace TCC_3_M
         #endregion
 
         private Form activeForm = null;
-        private void openChildForm( Form childForm )
+        private void openChildForm(Form childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -184,6 +179,5 @@ namespace TCC_3_M
             frm_Login login = new frm_Login();
             login.Show();
         }
-
     }
 }
