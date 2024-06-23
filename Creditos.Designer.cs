@@ -30,30 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Creditos));
             this.pnlCreditos = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ll_rafaLinkd = new System.Windows.Forms.LinkLabel();
+            this.ll_gitRafa = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.labDescricao = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.ll_anderLinked = new System.Windows.Forms.LinkLabel();
+            this.ll_gitAnder = new System.Windows.Forms.LinkLabel();
             this.label = new System.Windows.Forms.Label();
             this.labAnderson = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.ll_victorLinked = new System.Windows.Forms.LinkLabel();
+            this.ll_gitVictor = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.ll_vinyLinked = new System.Windows.Forms.LinkLabel();
+            this.ll_gitViny = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
+            this.ll_gitYasmin = new System.Windows.Forms.LinkLabel();
+            this.ll_yasminLinked = new System.Windows.Forms.LinkLabel();
             this.label12 = new System.Windows.Forms.Label();
-            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.ll_gitWallace = new System.Windows.Forms.LinkLabel();
+            this.ll_wallaceLinked = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
@@ -63,20 +69,17 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picturRafa = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlCreditos.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -86,9 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturRafa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -109,25 +109,49 @@
             this.pnlCreditos.Size = new System.Drawing.Size(1067, 54);
             this.pnlCreditos.TabIndex = 8;
             // 
-            // linkLabel1
+            // label3
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(658, 198);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(282, 16);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "www.linkedin.com/in/rafael-moraes-22621320a";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 36);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "X";
             // 
-            // linkLabel2
+            // label1
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(658, 244);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(202, 16);
-            this.linkLabel2.TabIndex = 14;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "https://github.com/RAFAELDM22";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(74, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 37);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Créditos";
+            // 
+            // ll_rafaLinkd
+            // 
+            this.ll_rafaLinkd.AutoSize = true;
+            this.ll_rafaLinkd.Location = new System.Drawing.Point(658, 198);
+            this.ll_rafaLinkd.Name = "ll_rafaLinkd";
+            this.ll_rafaLinkd.Size = new System.Drawing.Size(282, 16);
+            this.ll_rafaLinkd.TabIndex = 13;
+            this.ll_rafaLinkd.TabStop = true;
+            this.ll_rafaLinkd.Text = "www.linkedin.com/in/rafael-moraes-22621320a";
+            this.ll_rafaLinkd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_rafaLinkd_LinkClicked);
+            // 
+            // ll_gitRafa
+            // 
+            this.ll_gitRafa.AutoSize = true;
+            this.ll_gitRafa.Location = new System.Drawing.Point(658, 244);
+            this.ll_gitRafa.Name = "ll_gitRafa";
+            this.ll_gitRafa.Size = new System.Drawing.Size(202, 16);
+            this.ll_gitRafa.TabIndex = 14;
+            this.ll_gitRafa.TabStop = true;
+            this.ll_gitRafa.Text = "https://github.com/RAFAELDM22";
+            this.ll_gitRafa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitRafa_LinkClicked);
             // 
             // label2
             // 
@@ -148,25 +172,26 @@
             this.labDescricao.TabIndex = 17;
             this.labDescricao.Text = "C# Design Documentação";
             // 
-            // linkLabel3
+            // ll_anderLinked
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(123, 197);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(68, 16);
-            this.linkLabel3.TabIndex = 22;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "linkLabel3";
+            this.ll_anderLinked.AutoSize = true;
+            this.ll_anderLinked.Location = new System.Drawing.Point(123, 197);
+            this.ll_anderLinked.Name = "ll_anderLinked";
+            this.ll_anderLinked.Size = new System.Drawing.Size(68, 16);
+            this.ll_anderLinked.TabIndex = 22;
+            this.ll_anderLinked.TabStop = true;
+            this.ll_anderLinked.Text = "linkLabel3";
             // 
-            // linkLabel4
+            // ll_gitAnder
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(123, 243);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(234, 16);
-            this.linkLabel4.TabIndex = 23;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "https://github.com/AndersonRocha331";
+            this.ll_gitAnder.AutoSize = true;
+            this.ll_gitAnder.Location = new System.Drawing.Point(123, 243);
+            this.ll_gitAnder.Name = "ll_gitAnder";
+            this.ll_gitAnder.Size = new System.Drawing.Size(234, 16);
+            this.ll_gitAnder.TabIndex = 23;
+            this.ll_gitAnder.TabStop = true;
+            this.ll_gitAnder.Text = "https://github.com/AndersonRocha331";
+            this.ll_gitAnder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitAnder_LinkClicked);
             // 
             // label
             // 
@@ -198,25 +223,27 @@
             this.label5.Text = "Victor Hugo Gomes silva";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // linkLabel5
+            // ll_victorLinked
             // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(126, 482);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(211, 16);
-            this.linkLabel5.TabIndex = 36;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "https://www.linkedin.com/in/victurs/";
+            this.ll_victorLinked.AutoSize = true;
+            this.ll_victorLinked.Location = new System.Drawing.Point(126, 482);
+            this.ll_victorLinked.Name = "ll_victorLinked";
+            this.ll_victorLinked.Size = new System.Drawing.Size(211, 16);
+            this.ll_victorLinked.TabIndex = 36;
+            this.ll_victorLinked.TabStop = true;
+            this.ll_victorLinked.Text = "https://www.linkedin.com/in/victurs/";
+            this.ll_victorLinked.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_victorLinked_LinkClicked);
             // 
-            // linkLabel6
+            // ll_gitVictor
             // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(126, 524);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(153, 16);
-            this.linkLabel6.TabIndex = 37;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "https://github.com/victurs";
+            this.ll_gitVictor.AutoSize = true;
+            this.ll_gitVictor.Location = new System.Drawing.Point(126, 524);
+            this.ll_gitVictor.Name = "ll_gitVictor";
+            this.ll_gitVictor.Size = new System.Drawing.Size(153, 16);
+            this.ll_gitVictor.TabIndex = 37;
+            this.ll_gitVictor.TabStop = true;
+            this.ll_gitVictor.Text = "https://github.com/victurs";
+            this.ll_gitVictor.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitVictor_LinkClicked);
             // 
             // label6
             // 
@@ -228,25 +255,27 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Vinicius Da Ceuz Costa";
             // 
-            // linkLabel7
+            // ll_vinyLinked
             // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(657, 481);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(314, 16);
-            this.linkLabel7.TabIndex = 45;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "https://www.linkedin.com/in/vinicius-cruz-ba2502288/";
+            this.ll_vinyLinked.AutoSize = true;
+            this.ll_vinyLinked.Location = new System.Drawing.Point(657, 481);
+            this.ll_vinyLinked.Name = "ll_vinyLinked";
+            this.ll_vinyLinked.Size = new System.Drawing.Size(314, 16);
+            this.ll_vinyLinked.TabIndex = 45;
+            this.ll_vinyLinked.TabStop = true;
+            this.ll_vinyLinked.Text = "https://www.linkedin.com/in/vinicius-cruz-ba2502288/";
+            this.ll_vinyLinked.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_vinyLinked_LinkClicked);
             // 
-            // linkLabel8
+            // ll_gitViny
             // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(656, 522);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(97, 16);
-            this.linkLabel8.TabIndex = 46;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "ViniciusCruzSP";
+            this.ll_gitViny.AutoSize = true;
+            this.ll_gitViny.Location = new System.Drawing.Point(656, 522);
+            this.ll_gitViny.Name = "ll_gitViny";
+            this.ll_gitViny.Size = new System.Drawing.Size(205, 16);
+            this.ll_gitViny.TabIndex = 46;
+            this.ll_gitViny.TabStop = true;
+            this.ll_gitViny.Text = "https://github.com/ViniciusCruzSP";
+            this.ll_gitViny.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitViny_LinkClicked);
             // 
             // label8
             // 
@@ -266,18 +295,18 @@
             this.panel1.Controls.Add(this.pictureBox19);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.pictureBox20);
-            this.panel1.Controls.Add(this.linkLabel12);
+            this.panel1.Controls.Add(this.ll_gitYasmin);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.linkLabel11);
-            this.panel1.Controls.Add(this.linkLabel7);
+            this.panel1.Controls.Add(this.ll_yasminLinked);
+            this.panel1.Controls.Add(this.ll_vinyLinked);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.linkLabel8);
+            this.panel1.Controls.Add(this.ll_gitViny);
             this.panel1.Controls.Add(this.pictureBox30);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox29);
             this.panel1.Controls.Add(this.pictureBox26);
-            this.panel1.Controls.Add(this.linkLabel10);
-            this.panel1.Controls.Add(this.linkLabel9);
+            this.panel1.Controls.Add(this.ll_gitWallace);
+            this.panel1.Controls.Add(this.ll_wallaceLinked);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox25);
             this.panel1.Controls.Add(this.pictureBox24);
@@ -286,19 +315,19 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.linkLabel3);
-            this.panel1.Controls.Add(this.linkLabel4);
+            this.panel1.Controls.Add(this.ll_anderLinked);
+            this.panel1.Controls.Add(this.ll_gitAnder);
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.labAnderson);
             this.panel1.Controls.Add(this.picturRafa);
-            this.panel1.Controls.Add(this.linkLabel6);
-            this.panel1.Controls.Add(this.linkLabel5);
+            this.panel1.Controls.Add(this.ll_gitVictor);
+            this.panel1.Controls.Add(this.ll_victorLinked);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.ll_rafaLinkd);
             this.panel1.Controls.Add(this.pictureBox16);
-            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.ll_gitRafa);
             this.panel1.Controls.Add(this.pictureBox15);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labDescricao);
@@ -308,6 +337,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 500);
             this.panel1.TabIndex = 48;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(131, 441);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 20);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "Documentação";
             // 
             // label14
             // 
@@ -319,25 +358,27 @@
             this.label14.TabIndex = 67;
             this.label14.Text = "Yasmin Da Siva Nascimento";
             // 
-            // linkLabel12
+            // ll_gitYasmin
             // 
-            this.linkLabel12.AutoSize = true;
-            this.linkLabel12.Location = new System.Drawing.Point(657, 821);
-            this.linkLabel12.Name = "linkLabel12";
-            this.linkLabel12.Size = new System.Drawing.Size(67, 16);
-            this.linkLabel12.TabIndex = 66;
-            this.linkLabel12.TabStop = true;
-            this.linkLabel12.Text = "yasminnst";
+            this.ll_gitYasmin.AutoSize = true;
+            this.ll_gitYasmin.Location = new System.Drawing.Point(657, 821);
+            this.ll_gitYasmin.Name = "ll_gitYasmin";
+            this.ll_gitYasmin.Size = new System.Drawing.Size(175, 16);
+            this.ll_gitYasmin.TabIndex = 66;
+            this.ll_gitYasmin.TabStop = true;
+            this.ll_gitYasmin.Text = "https://github.com/yasminnst";
+            this.ll_gitYasmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitYasmin_LinkClicked);
             // 
-            // linkLabel11
+            // ll_yasminLinked
             // 
-            this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Location = new System.Drawing.Point(657, 783);
-            this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(245, 16);
-            this.linkLabel11.TabIndex = 65;
-            this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "https://www.linkedin.com/in/yasminnasc/";
+            this.ll_yasminLinked.AutoSize = true;
+            this.ll_yasminLinked.Location = new System.Drawing.Point(657, 783);
+            this.ll_yasminLinked.Name = "ll_yasminLinked";
+            this.ll_yasminLinked.Size = new System.Drawing.Size(245, 16);
+            this.ll_yasminLinked.TabIndex = 65;
+            this.ll_yasminLinked.TabStop = true;
+            this.ll_yasminLinked.Text = "https://www.linkedin.com/in/yasminnasc/";
+            this.ll_yasminLinked.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_yasminLinked_LinkClicked);
             // 
             // label12
             // 
@@ -350,25 +391,27 @@
             this.label12.Text = "Lider Do Projeto Documentação";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // linkLabel10
+            // ll_gitWallace
             // 
-            this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Location = new System.Drawing.Point(126, 819);
-            this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(85, 16);
-            this.linkLabel10.TabIndex = 57;
-            this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "wollihenrique";
+            this.ll_gitWallace.AutoSize = true;
+            this.ll_gitWallace.Location = new System.Drawing.Point(126, 819);
+            this.ll_gitWallace.Name = "ll_gitWallace";
+            this.ll_gitWallace.Size = new System.Drawing.Size(193, 16);
+            this.ll_gitWallace.TabIndex = 57;
+            this.ll_gitWallace.TabStop = true;
+            this.ll_gitWallace.Text = "https://github.com/wollihenrique";
+            this.ll_gitWallace.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_gitWallace_LinkClicked);
             // 
-            // linkLabel9
+            // ll_wallaceLinked
             // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(123, 781);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(330, 16);
-            this.linkLabel9.TabIndex = 56;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "https://www.linkedin.com/in/wallace-batista-375205281/";
+            this.ll_wallaceLinked.AutoSize = true;
+            this.ll_wallaceLinked.Location = new System.Drawing.Point(123, 781);
+            this.ll_wallaceLinked.Name = "ll_wallaceLinked";
+            this.ll_wallaceLinked.Size = new System.Drawing.Size(330, 16);
+            this.ll_wallaceLinked.TabIndex = 56;
+            this.ll_wallaceLinked.TabStop = true;
+            this.ll_wallaceLinked.Text = "https://www.linkedin.com/in/wallace-batista-375205281/";
+            this.ll_wallaceLinked.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_wallaceLinked_LinkClicked);
             // 
             // label10
             // 
@@ -391,6 +434,36 @@
             this.label9.TabIndex = 49;
             this.label9.Text = "C# Design Documentação";
             this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TCC_3_M.Properties.Resources.vinicius_cruz;
+            this.pictureBox2.Location = new System.Drawing.Point(690, 304);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(134, 118);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::TCC_3_M.Properties.Resources.github1;
+            this.pictureBox19.Location = new System.Drawing.Point(611, 511);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox19.TabIndex = 41;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::TCC_3_M.Properties.Resources.linkedinCerto;
+            this.pictureBox20.Location = new System.Drawing.Point(612, 471);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox20.TabIndex = 42;
+            this.pictureBox20.TabStop = false;
             // 
             // pictureBox30
             // 
@@ -454,11 +527,11 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::TCC_3_M.Properties.Resources.adicionar_usuario__1_;
+            this.pictureBox6.Image = global::TCC_3_M.Properties.Resources.imgAnderson;
             this.pictureBox6.Location = new System.Drawing.Point(137, 13);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(134, 118);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             // 
@@ -481,36 +554,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::TCC_3_M.Properties.Resources.linkedinCerto;
-            this.pictureBox20.Location = new System.Drawing.Point(612, 471);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox20.TabIndex = 42;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::TCC_3_M.Properties.Resources.github1;
-            this.pictureBox19.Location = new System.Drawing.Point(611, 511);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox19.TabIndex = 41;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TCC_3_M.Properties.Resources.vinicius_cruz;
-            this.pictureBox2.Location = new System.Drawing.Point(690, 304);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(134, 118);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 38;
-            this.pictureBox2.TabStop = false;
             // 
             // picturRafa
             // 
@@ -572,38 +615,6 @@
             this.pictureBox12.TabIndex = 29;
             this.pictureBox12.TabStop = false;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(131, 441);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 20);
-            this.label15.TabIndex = 68;
-            this.label15.Text = "Documentação";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(74, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 37);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Créditos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 36);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "X";
-            // 
             // frm_Creditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,6 +632,9 @@
             this.pnlCreditos.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
@@ -630,9 +644,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturRafa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -648,35 +659,35 @@
         private System.Windows.Forms.PictureBox picturRafa;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel ll_rafaLinkd;
+        private System.Windows.Forms.LinkLabel ll_gitRafa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labDescricao;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel ll_anderLinked;
+        private System.Windows.Forms.LinkLabel ll_gitAnder;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label labAnderson;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel ll_victorLinked;
+        private System.Windows.Forms.LinkLabel ll_gitVictor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel ll_vinyLinked;
+        private System.Windows.Forms.LinkLabel ll_gitViny;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.LinkLabel linkLabel10;
-        private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.LinkLabel ll_gitWallace;
+        private System.Windows.Forms.LinkLabel ll_wallaceLinked;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox24;
@@ -684,8 +695,8 @@
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.LinkLabel linkLabel12;
-        private System.Windows.Forms.LinkLabel linkLabel11;
+        private System.Windows.Forms.LinkLabel ll_gitYasmin;
+        private System.Windows.Forms.LinkLabel ll_yasminLinked;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;

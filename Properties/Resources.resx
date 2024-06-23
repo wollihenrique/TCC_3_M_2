@@ -178,6 +178,9 @@
   <data name="foto-wallace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto-wallace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="linkedinCerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedinCerto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="foto-rafa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto-rafa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,7 +217,7 @@
   <data name="victor hugo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\victor hugo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linkedinCerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linkedinCerto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgAnderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgAnderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

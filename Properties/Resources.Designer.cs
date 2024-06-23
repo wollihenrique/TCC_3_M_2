@@ -263,6 +263,16 @@ namespace TCC_3_M.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgAnderson {
+            get {
+                object obj = ResourceManager.GetObject("imgAnderson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ligar {
             get {
                 object obj = ResourceManager.GetObject("ligar", resourceCulture);
