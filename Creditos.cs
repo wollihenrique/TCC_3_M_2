@@ -116,5 +116,10 @@ namespace TCC_3_M
         {
             System.Diagnostics.Process.Start("explorer.exe", "https://github.com/yasminnst");
         }
+
+        private void ll_anderLinked_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", "https://www.linkedin.com/in/anderson-rocha-de-souza-939309315");
+        }
     }
 }

@@ -175,12 +175,13 @@
             // ll_anderLinked
             // 
             this.ll_anderLinked.AutoSize = true;
-            this.ll_anderLinked.Location = new System.Drawing.Point(123, 197);
+            this.ll_anderLinked.Location = new System.Drawing.Point(123, 198);
             this.ll_anderLinked.Name = "ll_anderLinked";
-            this.ll_anderLinked.Size = new System.Drawing.Size(68, 16);
+            this.ll_anderLinked.Size = new System.Drawing.Size(391, 16);
             this.ll_anderLinked.TabIndex = 22;
             this.ll_anderLinked.TabStop = true;
-            this.ll_anderLinked.Text = "linkLabel3";
+            this.ll_anderLinked.Text = "https://www.linkedin.com/in/anderson-rocha-de-souza-939309315";
+            this.ll_anderLinked.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_anderLinked_LinkClicked);
             // 
             // ll_gitAnder
             // 
