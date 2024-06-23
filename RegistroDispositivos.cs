@@ -120,7 +120,7 @@ namespace TCC_3_M
                 return;
             }
 
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
