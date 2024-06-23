@@ -74,5 +74,11 @@ namespace TCC_3_M
         {
             this.Close();
         }
+
+        private void btnNovoLote_Click(object sender, EventArgs e)
+        {
+            frm_RegistroLote frm_RegistroLote = new frm_RegistroLote(); 
+            frm_RegistroLote.Show();
+        }
     }
 }

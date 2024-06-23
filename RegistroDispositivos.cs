@@ -51,7 +51,7 @@ namespace TCC_3_M
 
         private void PreencherComboBoxLote()
         {
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             string query = "SELECT id FROM batch";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
