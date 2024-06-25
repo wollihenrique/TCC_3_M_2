@@ -322,9 +322,6 @@
             // 
             this.cmbStatusCadH.BackColor = System.Drawing.Color.White;
             this.cmbStatusCadH.FormattingEnabled = true;
-            this.cmbStatusCadH.Items.AddRange(new object[] {
-            "Em estoque",
-            "Em uso"});
             this.cmbStatusCadH.Location = new System.Drawing.Point(457, 112);
             this.cmbStatusCadH.Name = "cmbStatusCadH";
             this.cmbStatusCadH.Size = new System.Drawing.Size(137, 21);

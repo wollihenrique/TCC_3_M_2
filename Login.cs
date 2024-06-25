@@ -21,7 +21,7 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        // Método para obter o tenant_id do administrador
+        // Método para obter o tenant_id do administrador ou do usuário
         public int ObterTenantId(string email)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -30,7 +30,13 @@ namespace TCC_3_M
                 {
                     connection.Open();
 
-                    string sql = "SELECT tenant_id FROM admin WHERE email = @usuario";
+                    string sql = @"
+                        SELECT tenant_id FROM (
+                            SELECT tenant_id FROM admin WHERE email = @usuario
+                            UNION
+                            SELECT tenant_id FROM user WHERE email = @usuario
+                        ) AS combined_users";
+
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@usuario", email);
 
@@ -80,8 +86,8 @@ namespace TCC_3_M
             if (VerificarLogin(email, senha, tenantId)) // Passa o tenantId para VerificarLogin
             {
                 frm_Inicio menu = new frm_Inicio(); // Cria o formulário de início
+                menu.DefinirEmailLogado(email, tenantId); // Passa o email e o tenant_id para frm_Inicio
                 menu.Show();
-                menu.DefinirEmailDoAdministrador(email); // Passa o email para frm_Inicio
                 this.Hide();
             }
             else
@@ -101,11 +107,9 @@ namespace TCC_3_M
                     string sql = @"
                         SELECT password
                         FROM (
-                            SELECT id, email, password, tenant_id, 'admin' AS role 
-                            FROM admin 
-                            UNION 
-                            SELECT id, email, password, tenant_id, 'user' AS role 
-                            FROM user
+                            SELECT email, password, tenant_id FROM admin
+                            UNION
+                            SELECT email, password, tenant_id FROM user
                         ) AS combined_users 
                         WHERE email = @usuario AND tenant_id = @tenantId";
 

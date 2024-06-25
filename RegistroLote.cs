@@ -5,20 +5,22 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Text.RegularExpressions;
 
 namespace TCC_3_M
 {
     public partial class frm_RegistroLote : Form
     {
         private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
+        private int tenantId;
 
-        public frm_RegistroLote()
+        public frm_RegistroLote(int tenantId)
         {
             InitializeComponent();
+            this.tenantId = tenantId;
             CarregarFornecedores();
         }
 
@@ -31,13 +33,15 @@ namespace TCC_3_M
 
         private void CarregarFornecedores()
         {
+            cmbFornecedorLote.Items.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "SELECT name FROM supplier";
+                    string query = "SELECT name FROM supplier WHERE tenant_id = @TenantId";
                     MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@TenantId", tenantId);
                     MySqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
@@ -87,13 +91,13 @@ namespace TCC_3_M
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO batch (id, supplier_id, entering_date) VALUES (@id, @supplier_id, @entering_date)";
+                    string query = "INSERT INTO batch (id, supplier_id, entering_date, tenant_id) VALUES (@id, @supplier_id, @entering_date, @tenantId)";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        // Remover a geração aleatória do ID e usar o valor inserido pelo usuário
                         command.Parameters.AddWithValue("@id", nomeLote);
                         command.Parameters.AddWithValue("@supplier_id", cmbFornecedorLote.SelectedIndex + 1);
                         command.Parameters.AddWithValue("@entering_date", Convert.ToDateTime(dataRecebimento));
+                        command.Parameters.AddWithValue("@tenantId", tenantId);
 
                         command.ExecuteNonQuery();
                     }
