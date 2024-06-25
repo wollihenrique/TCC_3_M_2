@@ -200,6 +200,36 @@
     <Compile Include="teste.Designer.cs">
       <DependentUpon>teste.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Dispositivos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Dispositivos.Designer.cs">
+      <DependentUpon>UC_Dispositivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Fornecedores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Fornecedores.Designer.cs">
+      <DependentUpon>UC_Fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Funcionarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Funcionarios.Designer.cs">
+      <DependentUpon>UC_Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Lotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Lotes.Designer.cs">
+      <DependentUpon>UC_Lotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Perifericos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Perifericos.Designer.cs">
+      <DependentUpon>UC_Perifericos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vinculacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +331,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teste.resx">
       <DependentUpon>teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Dispositivos.resx">
+      <DependentUpon>UC_Dispositivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Fornecedores.resx">
+      <DependentUpon>UC_Fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Funcionarios.resx">
+      <DependentUpon>UC_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Lotes.resx">
+      <DependentUpon>UC_Lotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Perifericos.resx">
+      <DependentUpon>UC_Perifericos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vinculacao.resx">
       <DependentUpon>Vinculacao.cs</DependentUpon>

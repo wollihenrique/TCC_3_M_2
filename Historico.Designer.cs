@@ -37,23 +37,24 @@ namespace TCC_3_M
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlLotesH = new System.Windows.Forms.Panel();
             this.btnLotesH = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlFornecedoresH = new System.Windows.Forms.Panel();
             this.btnFornecedoresH = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlPerifericosH = new System.Windows.Forms.Panel();
             this.btnPerifericosH = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlDispositivosH = new System.Windows.Forms.Panel();
             this.btnDispositivosH = new System.Windows.Forms.Button();
             this.pnlFuncionariosH = new System.Windows.Forms.Panel();
             this.btnFuncionariosH = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlFilterHistoric.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlLotesH.SuspendLayout();
+            this.pnlFornecedoresH.SuspendLayout();
+            this.pnlPerifericosH.SuspendLayout();
+            this.pnlDispositivosH.SuspendLayout();
             this.pnlFuncionariosH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -148,10 +149,10 @@ namespace TCC_3_M
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlLotesH, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlFornecedoresH, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlPerifericosH, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlDispositivosH, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlFuncionariosH, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 138);
@@ -162,17 +163,17 @@ namespace TCC_3_M
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 110);
             this.tableLayoutPanel1.TabIndex = 39;
             // 
-            // panel5
+            // pnlLotesH
             // 
-            this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel5.Controls.Add(this.btnLotesH);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(1067, 3);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel5.Size = new System.Drawing.Size(262, 107);
-            this.panel5.TabIndex = 4;
+            this.pnlLotesH.BackColor = System.Drawing.Color.Silver;
+            this.pnlLotesH.Controls.Add(this.btnLotesH);
+            this.pnlLotesH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLotesH.Location = new System.Drawing.Point(1067, 3);
+            this.pnlLotesH.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.pnlLotesH.Name = "pnlLotesH";
+            this.pnlLotesH.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlLotesH.Size = new System.Drawing.Size(262, 107);
+            this.pnlLotesH.TabIndex = 4;
             // 
             // btnLotesH
             // 
@@ -190,18 +191,19 @@ namespace TCC_3_M
             this.btnLotesH.Text = "Lotes";
             this.btnLotesH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLotesH.UseVisualStyleBackColor = false;
+            this.btnLotesH.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // panel4
+            // pnlFornecedoresH
             // 
-            this.panel4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel4.Controls.Add(this.btnFornecedoresH);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(801, 3);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel4.Size = new System.Drawing.Size(260, 107);
-            this.panel4.TabIndex = 3;
+            this.pnlFornecedoresH.BackColor = System.Drawing.Color.Silver;
+            this.pnlFornecedoresH.Controls.Add(this.btnFornecedoresH);
+            this.pnlFornecedoresH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFornecedoresH.Location = new System.Drawing.Point(801, 3);
+            this.pnlFornecedoresH.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.pnlFornecedoresH.Name = "pnlFornecedoresH";
+            this.pnlFornecedoresH.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlFornecedoresH.Size = new System.Drawing.Size(260, 107);
+            this.pnlFornecedoresH.TabIndex = 3;
             // 
             // btnFornecedoresH
             // 
@@ -219,18 +221,19 @@ namespace TCC_3_M
             this.btnFornecedoresH.Text = "Fornecedores";
             this.btnFornecedoresH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFornecedoresH.UseVisualStyleBackColor = false;
+            this.btnFornecedoresH.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // panel3
+            // pnlPerifericosH
             // 
-            this.panel3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel3.Controls.Add(this.btnPerifericosH);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(535, 3);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel3.Size = new System.Drawing.Size(260, 107);
-            this.panel3.TabIndex = 2;
+            this.pnlPerifericosH.BackColor = System.Drawing.Color.Silver;
+            this.pnlPerifericosH.Controls.Add(this.btnPerifericosH);
+            this.pnlPerifericosH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPerifericosH.Location = new System.Drawing.Point(535, 3);
+            this.pnlPerifericosH.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.pnlPerifericosH.Name = "pnlPerifericosH";
+            this.pnlPerifericosH.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlPerifericosH.Size = new System.Drawing.Size(260, 107);
+            this.pnlPerifericosH.TabIndex = 2;
             // 
             // btnPerifericosH
             // 
@@ -248,18 +251,19 @@ namespace TCC_3_M
             this.btnPerifericosH.Text = "Periféricos";
             this.btnPerifericosH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerifericosH.UseVisualStyleBackColor = false;
+            this.btnPerifericosH.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // panel2
+            // pnlDispositivosH
             // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.btnDispositivosH);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(269, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel2.Size = new System.Drawing.Size(260, 107);
-            this.panel2.TabIndex = 1;
+            this.pnlDispositivosH.BackColor = System.Drawing.Color.Silver;
+            this.pnlDispositivosH.Controls.Add(this.btnDispositivosH);
+            this.pnlDispositivosH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDispositivosH.Location = new System.Drawing.Point(269, 3);
+            this.pnlDispositivosH.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.pnlDispositivosH.Name = "pnlDispositivosH";
+            this.pnlDispositivosH.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlDispositivosH.Size = new System.Drawing.Size(260, 107);
+            this.pnlDispositivosH.TabIndex = 1;
             // 
             // btnDispositivosH
             // 
@@ -277,6 +281,7 @@ namespace TCC_3_M
             this.btnDispositivosH.Text = "Dispositivos";
             this.btnDispositivosH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDispositivosH.UseVisualStyleBackColor = false;
+            this.btnDispositivosH.Click += new System.EventHandler(this.Btn_Click);
             // 
             // pnlFuncionariosH
             // 
@@ -306,6 +311,7 @@ namespace TCC_3_M
             this.btnFuncionariosH.Text = "Funcionários";
             this.btnFuncionariosH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFuncionariosH.UseVisualStyleBackColor = false;
+            this.btnFuncionariosH.Click += new System.EventHandler(this.Btn_Click);
             // 
             // pictureBox1
             // 
@@ -319,11 +325,20 @@ namespace TCC_3_M
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlMain
+            // 
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 248);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1332, 531);
+            this.pnlMain.TabIndex = 41;
+            // 
             // frm_Historico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1332, 779);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnlFilterHistoric);
@@ -334,10 +349,10 @@ namespace TCC_3_M
             this.pnlFilterHistoric.ResumeLayout(false);
             this.pnlFilterHistoric.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlLotesH.ResumeLayout(false);
+            this.pnlFornecedoresH.ResumeLayout(false);
+            this.pnlPerifericosH.ResumeLayout(false);
+            this.pnlDispositivosH.ResumeLayout(false);
             this.pnlFuncionariosH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -354,14 +369,15 @@ namespace TCC_3_M
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel pnlFuncionariosH;
         private System.Windows.Forms.Button btnFuncionariosH;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlLotesH;
         private System.Windows.Forms.Button btnLotesH;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlFornecedoresH;
         private System.Windows.Forms.Button btnFornecedoresH;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlPerifericosH;
         private System.Windows.Forms.Button btnPerifericosH;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlDispositivosH;
         private System.Windows.Forms.Button btnDispositivosH;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlMain;
     }
 }
