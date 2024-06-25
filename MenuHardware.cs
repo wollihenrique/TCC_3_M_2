@@ -17,11 +17,13 @@ namespace TCC_3_M
         private DataTable dataTable;
         private DataRow selectedHardware;
         private DataGridView dgvHardware;
+        private int tenantId; // Variável para armazenar o tenant_id
 
-        public frm_CadastroDisp()
+        public frm_CadastroDisp(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
             InitializeDatabaseConnection();
+            this.tenantId = tenantId; // Atribui o tenant_id recebido do formulário pai
             LoadHardwareData();
             SetupComboBoxes();
             txtTag.TextChanged += new EventHandler(txtTag_TextChanged);
@@ -43,7 +45,7 @@ namespace TCC_3_M
                     SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date 
                     FROM hardware h
                     JOIN batch b ON h.batch_id = b.id
-                    WHERE 1=1";
+                    WHERE h.tenant_id = @tenantId"; // Adicionado filtro por tenant_id
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
@@ -68,6 +70,7 @@ namespace TCC_3_M
                 }
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
@@ -137,6 +140,14 @@ namespace TCC_3_M
             }
         }
 
+        private void txtTag_TextChanged(object sender, EventArgs e)
+        {
+            string tagFilter = txtTag.Text.Trim();
+            DataView dv = new DataView(dataTable);
+            dv.RowFilter = $"tag LIKE '%{tagFilter}%'";
+            dgvHardware.DataSource = dv;
+        }
+
         private void btn_Pesquisar_CadastroDispo_Click(object sender, EventArgs e)
         {
             string tagFilter = txtTag.Text.Trim();
@@ -152,7 +163,7 @@ namespace TCC_3_M
 
         private void btnNovoHardware_Click(object sender, EventArgs e)
         {
-            frm_RegistroDisp registroDisp = new frm_RegistroDisp();
+            frm_RegistroDisp registroDisp = new frm_RegistroDisp(tenantId); // Passa o tenant_id para o formulário de registro
             registroDisp.Show();
         }
 
@@ -160,7 +171,8 @@ namespace TCC_3_M
         {
             if (selectedHardware != null)
             {
-                frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos(selectedHardware);
+                DataRow hardwareData = selectedHardware;
+                frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos(hardwareData, tenantId);
                 editarDisp.Show();
             }
             else
@@ -169,17 +181,10 @@ namespace TCC_3_M
             }
         }
 
-        private void txtTag_TextChanged(object sender, EventArgs e)
-        {
-            string tagFilter = txtTag.Text.Trim();
-            DataView dv = new DataView(dataTable);
-            dv.RowFilter = $"tag LIKE '%{tagFilter}%'";
-            dgvHardware.DataSource = dv;
-        }
 
         private void btnNovoLote_Click(object sender, EventArgs e)
         {
-            frm_RegistroLote registroLote = new frm_RegistroLote();
+            frm_RegistroLote registroLote = new frm_RegistroLote(tenantId);
             registroLote.Show();
         }
 
@@ -198,9 +203,10 @@ namespace TCC_3_M
                     try
                     {
                         connection.Open();
-                        string query = "DELETE FROM hardware WHERE tag = @Tag";
+                        string query = "DELETE FROM hardware WHERE tag = @Tag AND tenant_id = @tenantId"; // Adicionado filtro por tenant_id
                         MySqlCommand cmd = new MySqlCommand(query, connection);
                         cmd.Parameters.AddWithValue("@Tag", selectedHardware["tag"]);
+                        cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Hardware excluído com sucesso.");

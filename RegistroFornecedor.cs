@@ -15,10 +15,14 @@ namespace TCC_3_M
     public partial class frm_RegistroFornecedor : Form
     {
         private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
+        private int tenantId;
+        private string emailDoAdministradorLogado;
 
-        public frm_RegistroFornecedor()
+        public frm_RegistroFornecedor(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
+            this.emailDoAdministradorLogado = emailDoAdministradorLogado;
+            this.tenantId = tenantId;
         }
 
         private void btnCloseFrmCadastroF_Click(object sender, EventArgs e)
@@ -50,13 +54,14 @@ namespace TCC_3_M
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO supplier (name, address, phone, document) VALUES (@name, @address, @phone, @document)";
+                    string query = "INSERT INTO supplier (name, address, phone, document, tenant_id) VALUES (@name, @address, @phone, @document, @tenantId)";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@name", nome);
                         command.Parameters.AddWithValue("@address", endereco);
                         command.Parameters.AddWithValue("@phone", telefone);
                         command.Parameters.AddWithValue("@document", cnpjCpf);
+                        command.Parameters.AddWithValue("@tenantId", tenantId);
 
                         command.ExecuteNonQuery();
                     }
