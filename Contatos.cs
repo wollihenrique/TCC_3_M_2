@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TCC_3_M
 {
-    public partial class frm_ExcluirPerifericos : Form
+    public partial class Contatos : Form
     {
-        public frm_ExcluirPerifericos()
+        public Contatos()
         {
             InitializeComponent();
-        }
-
-        private void btnCloseFrmExcluirPerifericos_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

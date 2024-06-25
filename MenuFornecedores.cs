@@ -16,10 +16,14 @@ namespace TCC_3_M
         private MySqlConnection connection;
         private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
         private DataTable dataTable;
+        private string emailDoAdministradorLogado; // Campo para armazenar o email do administrador logado
+        private int tenantId; // Campo para armazenar o tenantId
 
-        public frm_MenuFornecedores()
+        public frm_MenuFornecedores(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
+            this.emailDoAdministradorLogado = emailDoAdministradorLogado; // Atribui o email recebido ao campo privado
+            this.tenantId = tenantId; // Atribui o tenantId recebido ao campo privado
             InitializeDatabase();
             AtualizarDataGridView();
         }
@@ -33,14 +37,17 @@ namespace TCC_3_M
         {
             try
             {
-                string query = "SELECT * FROM supplier WHERE 1=1";
+                string query = "SELECT * FROM supplier WHERE tenant_id = @TenantId";
 
                 if (!string.IsNullOrEmpty(txtCpfCnpjMenu.Text))
                 {
                     query += $" AND document LIKE '%{txtCpfCnpjMenu.Text}%'";
                 }
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@TenantId", tenantId); // Usando o tenantId recebido
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 dgvFornecedor.DataSource = dataTable;
@@ -53,7 +60,7 @@ namespace TCC_3_M
 
         private void btnNovoFornecedor_Click(object sender, EventArgs e)
         {
-            frm_RegistroFornecedor registroFornecedor = new frm_RegistroFornecedor();
+            frm_RegistroFornecedor registroFornecedor = new frm_RegistroFornecedor(emailDoAdministradorLogado, tenantId);
             registroFornecedor.Show();
         }
 

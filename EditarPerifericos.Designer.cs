@@ -40,8 +40,8 @@ namespace TCC_3_M
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStatusFrmEditarP = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cmbLoteFrmEditarP = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlCadastroP.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@ namespace TCC_3_M
             this.pnlCadastroP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCadastroP.Location = new System.Drawing.Point(0, 0);
             this.pnlCadastroP.Name = "pnlCadastroP";
-            this.pnlCadastroP.Size = new System.Drawing.Size(620, 42);
+            this.pnlCadastroP.Size = new System.Drawing.Size(481, 42);
             this.pnlCadastroP.TabIndex = 30;
             // 
             // btnCloseFrmEditarPerifericos
@@ -90,7 +90,7 @@ namespace TCC_3_M
             this.btnCancelarFrmEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarFrmEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFrmEditarP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFrmEditarP.Location = new System.Drawing.Point(431, 164);
+            this.btnCancelarFrmEditarP.Location = new System.Drawing.Point(292, 115);
             this.btnCancelarFrmEditarP.Name = "btnCancelarFrmEditarP";
             this.btnCancelarFrmEditarP.Size = new System.Drawing.Size(76, 31);
             this.btnCancelarFrmEditarP.TabIndex = 66;
@@ -103,17 +103,18 @@ namespace TCC_3_M
             this.btnSalvarFrmEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarFrmEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFrmEditarP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarFrmEditarP.Location = new System.Drawing.Point(532, 164);
+            this.btnSalvarFrmEditarP.Location = new System.Drawing.Point(388, 115);
             this.btnSalvarFrmEditarP.Name = "btnSalvarFrmEditarP";
             this.btnSalvarFrmEditarP.Size = new System.Drawing.Size(76, 31);
             this.btnSalvarFrmEditarP.TabIndex = 65;
             this.btnSalvarFrmEditarP.Text = "Salvar";
             this.btnSalvarFrmEditarP.UseVisualStyleBackColor = false;
+            this.btnSalvarFrmEditarP.Click += new System.EventHandler(this.btnSalvarFrmEditarP_Click);
             // 
             // txtModeloFrmEditarP
             // 
             this.txtModeloFrmEditarP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtModeloFrmEditarP.Location = new System.Drawing.Point(15, 117);
+            this.txtModeloFrmEditarP.Location = new System.Drawing.Point(12, 75);
             this.txtModeloFrmEditarP.Name = "txtModeloFrmEditarP";
             this.txtModeloFrmEditarP.Size = new System.Drawing.Size(268, 20);
             this.txtModeloFrmEditarP.TabIndex = 60;
@@ -130,35 +131,35 @@ namespace TCC_3_M
             "Caixa de Som",
             "Fones de Ouvido",
             "WebCam"});
-            this.cmbTipoPerifericoFrmEditarP.Location = new System.Drawing.Point(314, 116);
+            this.cmbTipoPerifericoFrmEditarP.Location = new System.Drawing.Point(155, 122);
             this.cmbTipoPerifericoFrmEditarP.Name = "cmbTipoPerifericoFrmEditarP";
-            this.cmbTipoPerifericoFrmEditarP.Size = new System.Drawing.Size(137, 21);
+            this.cmbTipoPerifericoFrmEditarP.Size = new System.Drawing.Size(125, 21);
             this.cmbTipoPerifericoFrmEditarP.TabIndex = 64;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 59;
             this.label3.Text = "Modelo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(311, 96);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(152, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 17);
+            this.label2.Size = new System.Drawing.Size(38, 16);
             this.label2.TabIndex = 63;
             this.label2.Text = "Tipo:";
             // 
             // cmbStatusFrmEditarP
             // 
             this.cmbStatusFrmEditarP.FormattingEnabled = true;
-            this.cmbStatusFrmEditarP.Location = new System.Drawing.Point(471, 116);
+            this.cmbStatusFrmEditarP.Location = new System.Drawing.Point(312, 74);
             this.cmbStatusFrmEditarP.Name = "cmbStatusFrmEditarP";
             this.cmbStatusFrmEditarP.Size = new System.Drawing.Size(137, 21);
             this.cmbStatusFrmEditarP.TabIndex = 62;
@@ -166,43 +167,38 @@ namespace TCC_3_M
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(468, 96);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(309, 54);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 17);
+            this.label12.Size = new System.Drawing.Size(47, 16);
             this.label12.TabIndex = 61;
             this.label12.Text = "Status:";
             // 
-            // label4
+            // cmbLoteFrmEditarP
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(10, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(442, 26);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "Revise os dados antes de salvar as alterações";
+            this.cmbLoteFrmEditarP.FormattingEnabled = true;
+            this.cmbLoteFrmEditarP.Location = new System.Drawing.Point(12, 122);
+            this.cmbLoteFrmEditarP.Name = "cmbLoteFrmEditarP";
+            this.cmbLoteFrmEditarP.Size = new System.Drawing.Size(137, 21);
+            this.cmbLoteFrmEditarP.TabIndex = 70;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(5, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(608, 17);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "_________________________________________________________________________________" +
-    "___________________";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.TabIndex = 69;
+            this.label6.Text = "Lote:";
             // 
             // frm_EditarPerifericos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 215);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(481, 166);
+            this.Controls.Add(this.cmbLoteFrmEditarP);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancelarFrmEditarP);
             this.Controls.Add(this.btnSalvarFrmEditarP);
             this.Controls.Add(this.txtModeloFrmEditarP);
@@ -236,7 +232,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStatusFrmEditarP;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbLoteFrmEditarP;
+        private System.Windows.Forms.Label label6;
     }
 }

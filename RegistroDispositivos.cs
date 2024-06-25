@@ -18,10 +18,12 @@ namespace TCC_3_M
         private const int FormWidthExpandido = 605;
         private const int FormHeightExpandido = 500;
         private bool painelVisivel = false;
+        private int tenantId; // Variável para armazenar o tenant_id
 
-        public frm_RegistroDisp()
+        public frm_RegistroDisp(int tenantId)
         {
             InitializeComponent();
+            this.tenantId = tenantId; // Atribui o tenant_id recebido do formulário pai
             OcultarPainel();
             PreencherComboBoxStatus();
             PreencherComboBoxLote();
@@ -29,7 +31,7 @@ namespace TCC_3_M
 
         private void PreencherComboBoxStatus()
         {
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             string query = "SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'hardware' AND COLUMN_NAME = 'status'";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -51,8 +53,8 @@ namespace TCC_3_M
 
         private void PreencherComboBoxLote()
         {
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
-            string query = "SELECT id FROM batch";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
+            string query = "SELECT id FROM batch WHERE tenant_id = @TenantId";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -60,6 +62,7 @@ namespace TCC_3_M
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -95,7 +98,7 @@ namespace TCC_3_M
 
         private void MostrarPainel()
         {
-            this.Size = new Size(FormWidthExpandido, FormHeightExpandido);
+            this.Size = new System.Drawing.Size(FormWidthExpandido, FormHeightExpandido);
             panelHardwareInfos.Visible = true;
             painelVisivel = true;
         }
@@ -104,7 +107,7 @@ namespace TCC_3_M
         {
             panelHardwareInfos.Visible = false;
             painelVisivel = false;
-            this.Size = new Size(FormWidthNormal, FormHeightNormal);
+            this.Size = new System.Drawing.Size(FormWidthNormal, FormHeightNormal);
         }
 
         private void btnSalvarCadH_Click(object sender, EventArgs e)
@@ -120,14 +123,14 @@ namespace TCC_3_M
                 return;
             }
 
-            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=vini;";
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "INSERT INTO hardware (tag, batch_id, assurance, model, brand, status, processor, ram, disk, video_card, network_card, observations) " +
-                                   "VALUES (@tag, @batch_id, @assurance, @model, @brand, @status, @processor, @ram, @disk, @video_card, @network_card, @observations)";
+                    string query = "INSERT INTO hardware (tag, batch_id, assurance, model, brand, status, processor, ram, disk, video_card, network_card, observations, tenant_id) " +
+                                   "VALUES (@tag, @batch_id, @assurance, @model, @brand, @status, @processor, @ram, @disk, @video_card, @network_card, @observations, @tenantId)";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@tag", txtTagCadH.Text);
                     cmd.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
@@ -141,6 +144,7 @@ namespace TCC_3_M
                     cmd.Parameters.AddWithValue("@video_card", string.IsNullOrEmpty(txtPVideoCadH.Text) ? DBNull.Value : (object)txtPVideoCadH.Text);
                     cmd.Parameters.AddWithValue("@network_card", string.IsNullOrEmpty(txtPRedeCadH.Text) ? DBNull.Value : (object)txtPRedeCadH.Text);
                     cmd.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
