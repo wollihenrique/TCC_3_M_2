@@ -1,0 +1,5 @@
+﻿Compilação iniciada...
+1>------ Compilação iniciada: Projeto: TCC_3_M, Configuração: Debug Any CPU ------
+1>  TCC_3_M -> C:\Users\Corin\OneDrive\Documentos\2 Modulo\TCC\TCC_3_Modulo\tcc2\bin\Debug\TCC_3_M.exe
+========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
+========== Compilação começou em 16:28 e levou 00,539 segundos ==========
