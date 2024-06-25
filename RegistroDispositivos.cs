@@ -54,7 +54,7 @@ namespace TCC_3_M
         private void PreencherComboBoxLote()
         {
             string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
-            string query = "SELECT id FROM batch";
+            string query = "SELECT id FROM batch WHERE tenant_id = @TenantId";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -62,6 +62,7 @@ namespace TCC_3_M
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())

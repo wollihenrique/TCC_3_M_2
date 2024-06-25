@@ -112,8 +112,9 @@ namespace TCC_3_M
                 try
                 {
                     conn.Open();
-                    string query = "SELECT id FROM batch"; // Corrigido para 'batch' (nome correto da tabela)
+                    string query = "SELECT id FROM batch WHERE tenant_id = @TenantId";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())

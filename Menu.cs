@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TCC_3_M
 {
     public partial class frm_Inicio : Form
     {
-        private string emailDoAdministradorLogado;
+        private string emailLogado;
+        private int tenantIdLogado;
+
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
 
         public frm_Inicio()
         {
@@ -28,9 +32,11 @@ namespace TCC_3_M
             timerRelogio.Start();
         }
 
-        public void DefinirEmailDoAdministrador(string email)
+        public void DefinirEmailLogado(string email, int tenantId)
         {
-            emailDoAdministradorLogado = email;
+            emailLogado = email;
+            tenantIdLogado = tenantId;
+            AtualizarNomeUsuario(); // Atualiza o nome do usuário no botão
         }
 
         private void TimerRelogio_Tick(object sender, EventArgs e)
@@ -72,28 +78,25 @@ namespace TCC_3_M
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
-            frm_Usuario frmUsuario = new frm_Usuario(emailDoAdministradorLogado);
+            frm_Usuario frmUsuario = new frm_Usuario(emailLogado);
             openChildForm(frmUsuario);
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)
         {
-                int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
-                frm_CadastroDisp frmCadastroDisp = new frm_CadastroDisp(emailDoAdministradorLogado, tenantId);
-                openChildForm(frmCadastroDisp);
+            frm_CadastroDisp frmCadastroDisp = new frm_CadastroDisp(emailLogado, tenantIdLogado);
+            openChildForm(frmCadastroDisp);
         }
 
         private void btnPerifericos_Click(object sender, EventArgs e)
         {
-            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
-            frm_MenuPerifericos frmMenuPerifericos = new frm_MenuPerifericos(emailDoAdministradorLogado, tenantId);
+            frm_Menu_Perifericos frmMenuPerifericos = new frm_Menu_Perifericos(emailLogado, tenantIdLogado);
             openChildForm(frmMenuPerifericos);
         }
+
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado);
-            frm_MenuFornecedores frmMenuFornecedores = new frm_MenuFornecedores(emailDoAdministradorLogado, tenantId);
+            frm_MenuFornecedores frmMenuFornecedores = new frm_MenuFornecedores(emailLogado, tenantIdLogado);
             openChildForm(frmMenuFornecedores);
         }
         #endregion
@@ -171,11 +174,59 @@ namespace TCC_3_M
             childForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
             frm_Login login = new frm_Login();
             login.Show();
+        }
+
+        private void AtualizarNomeUsuario()
+        {
+            string nomeUsuario = ObterPrimeiroNomeUsuario(emailLogado, tenantIdLogado);
+            button1.Text = nomeUsuario;
+        }
+
+        private string ObterPrimeiroNomeUsuario(string email, int tenantId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = @"
+                        SELECT name
+                        FROM (
+                            SELECT name, email, tenant_id FROM admin
+                            UNION
+                            SELECT name, email, tenant_id FROM user
+                        ) AS combined_users 
+                        WHERE email = @usuario AND tenant_id = @tenantId";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@usuario", email);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        string nomeCompleto = result.ToString();
+                        string primeiroNome = nomeCompleto.Split(' ')[0]; // Pega o primeiro nome
+                        return primeiroNome;
+                    }
+                    else
+                    {
+                        return "Usuário"; // Valor padrão caso o nome não seja encontrado
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao obter o nome do usuário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "Usuário";
+                }
+            }
         }
     }
 }

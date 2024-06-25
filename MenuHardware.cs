@@ -171,7 +171,8 @@ namespace TCC_3_M
         {
             if (selectedHardware != null)
             {
-                frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos(selectedHardware);
+                DataRow hardwareData = selectedHardware;
+                frm_Editar_Dispositivos editarDisp = new frm_Editar_Dispositivos(hardwareData, tenantId);
                 editarDisp.Show();
             }
             else
@@ -179,6 +180,7 @@ namespace TCC_3_M
                 MessageBox.Show("Selecione um hardware para editar.");
             }
         }
+
 
         private void btnNovoLote_Click(object sender, EventArgs e)
         {

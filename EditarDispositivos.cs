@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -14,14 +8,14 @@ namespace TCC_3_M
     public partial class frm_Editar_Dispositivos : Form
     {
         private DataRow hardwareData;
+        private int tenantId;
 
-        public frm_Editar_Dispositivos(DataRow hardwareData)
+        public frm_Editar_Dispositivos(DataRow hardwareData, int tenantId)
         {
             InitializeComponent();
             this.hardwareData = hardwareData;
+            this.tenantId = tenantId;
             LoadHardwareData();
-
-            // Adiciona os manipuladores de eventos aos controles relevantes
             cmbLoteHardware.SelectedIndexChanged += cmbLoteHardware_SelectedIndexChanged;
         }
 
@@ -38,23 +32,24 @@ namespace TCC_3_M
             txtPRedeHardware.Text = hardwareData["network_card"].ToString();
             txtObsHardware.Text = hardwareData["observations"].ToString();
 
-            string[] statusOptions = { "Em Uso", "Estoque", "Defeituoso", "Manutenção" };
-            cmbStatusHardware.Items.AddRange(statusOptions);
-            cmbStatusHardware.SelectedItem = hardwareData["status"].ToString();
-
+            LoadStatusComboBox();
             LoadBatchComboBox();
+            cmbStatusHardware.SelectedItem = hardwareData["status"].ToString();
+            cmbLoteHardware.SelectedItem = hardwareData["batch_id"].ToString();
+        }
 
-            // Seleciona o lote atual do hardware
-            string currentBatchId = hardwareData["batch_id"].ToString();
-            cmbLoteHardware.SelectedItem = currentBatchId;
+        private void LoadStatusComboBox()
+        {
+            string[] statusOptions = { "Em Uso", "Estoque", "Defeituoso", "Manutenção" };
+            cmbStatusHardware.Items.Clear();
+            cmbStatusHardware.Items.AddRange(statusOptions);
         }
 
         private void LoadBatchComboBox()
         {
             cmbLoteHardware.Items.Clear();
-
             string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
-            string query = "SELECT id FROM batch";
+            string query = "SELECT id FROM batch WHERE tenant_id = @tenantId";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -62,6 +57,7 @@ namespace TCC_3_M
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -85,7 +81,6 @@ namespace TCC_3_M
         {
             try
             {
-                // Obter os dados do hardware dos controles
                 string tag = txtTagHardware.Text.Trim();
                 string assurance = txtGarantiaHardware.Text.Trim();
                 string model = txtModeloHardware.Text.Trim();
@@ -97,14 +92,11 @@ namespace TCC_3_M
                 string videoCard = txtPVideoHardware.Text.Trim();
                 string networkCard = txtPRedeHardware.Text.Trim();
                 string observations = txtObsHardware.Text.Trim();
-
-                // Obter o novo lote selecionado
                 string newBatchId = cmbLoteHardware.SelectedItem.ToString();
 
                 using (MySqlConnection connection = new MySqlConnection("server=localhost;database=inventory_system;user=root;password=etec"))
                 {
                     connection.Open();
-
                     string query = @"
                         UPDATE hardware
                         SET assurance = @assurance, model = @model, brand = @brand, status = @status,
@@ -125,14 +117,13 @@ namespace TCC_3_M
                     cmd.Parameters.AddWithValue("@videoCard", videoCard);
                     cmd.Parameters.AddWithValue("@networkCard", networkCard);
                     cmd.Parameters.AddWithValue("@observations", observations);
-                    cmd.Parameters.AddWithValue("@newBatchId", newBatchId); // Adiciona o novo lote como parâmetro
+                    cmd.Parameters.AddWithValue("@newBatchId", newBatchId);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Dados atualizados com sucesso!");
-
                         this.Close();
                     }
                     else
@@ -149,16 +140,11 @@ namespace TCC_3_M
 
         private void cmbLoteHardware_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Verifica se há um hardware selecionado
             if (hardwareData != null)
             {
-                // Obter o novo lote selecionado
                 string newBatchId = cmbLoteHardware.SelectedItem?.ToString();
-
-                // Verificar se o novo lote selecionado não é nulo
                 if (newBatchId != null)
                 {
-                    // Atualizar o valor do lote no hardware selecionado
                     hardwareData["batch_id"] = newBatchId;
                 }
             }

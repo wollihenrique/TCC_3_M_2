@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -13,28 +7,97 @@ namespace TCC_3_M
 {
     public partial class frm_EditarPerifericos : Form
     {
-        private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec;"; // Sua string de conexão MySQL
-        private int idPeriferico;
-        private int batchId;
+        private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec;";
+        private int perifericoId;
+        private int tenantId;
 
-        public frm_EditarPerifericos(int idPeriferico, string tipoPeriferico, string modeloPeriferico, string statusPeriferico, int batchId)
+        public frm_EditarPerifericos(int idPeriferico, int tenantId)
         {
             InitializeComponent();
+            perifericoId = idPeriferico;
+            this.tenantId = tenantId;
 
-            this.idPeriferico = idPeriferico;
-            this.batchId = batchId;
+            PopulateComboBoxes();
+            LoadPerifericoData();
+        }
 
-            txtModeloFrmEditarP.Text = modeloPeriferico;
+        private void PopulateComboBoxes()
+        {
+            PopulateTipoPerifericosComboBox();
+            PopulateStatusComboBox();
+            PopulateLoteComboBox();
+        }
 
-            // Preenchendo a ComboBox de Tipo de Periférico com as opções da tela de registro
-            string[] tiposPerifericos = { "Monitor", "Teclado", "Mouse", "Impressora", "Scanner", "Webcam", "Headset", "Caixa de som", "Pendrive", "HD Externo", "Microfone" };
-            cmbTipoPerifericoFrmEditarP.Items.AddRange(tiposPerifericos);
-            cmbTipoPerifericoFrmEditarP.SelectedItem = tipoPeriferico;
+        private void PopulateTipoPerifericosComboBox()
+        {
+            cmbTipoPerifericoFrmEditarP.Items.AddRange(new object[] { "Teclado", "Mouse", "Scanner", "Microfone", "Impressora", "Caixa de Som", "Fones de Ouvido", "WebCam" });
+        }
 
-            // Preenchendo a ComboBox de Status com as opções da tela de registro
-            string[] statusPerifericos = { "Em Uso", "Estoque", "Defeituoso", "Manutenção" };
-            cmbStatusFrmEditarP.Items.AddRange(statusPerifericos);
-            cmbStatusFrmEditarP.SelectedItem = statusPeriferico;
+        private void PopulateStatusComboBox()
+        {
+            cmbStatusFrmEditarP.Items.AddRange(new object[] { "Em Uso", "Estoque", "Defeituoso", "Manutenção" });
+        }
+
+        private void PopulateLoteComboBox()
+        {
+            cmbLoteFrmEditarP.Items.Clear(); // Limpar itens anteriores
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT id FROM batch WHERE tenant_id = @TenantId";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string id = reader.GetString(0); // Lê como string, já que o batch_id é VARCHAR
+                        cmbLoteFrmEditarP.Items.Add(id); // Adiciona apenas o ID do lote à ComboBox
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar lotes: " + ex.Message);
+                }
+            }
+        }
+
+        private void LoadPerifericoData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT p.model, p.type, p.status, p.batch_id
+                             FROM peripherals p
+                             WHERE p.id = @PerifericoId";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@PerifericoId", perifericoId);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        txtModeloFrmEditarP.Text = reader.GetString(0);
+                        cmbTipoPerifericoFrmEditarP.SelectedItem = reader.GetString(1);
+                        cmbStatusFrmEditarP.SelectedItem = reader.GetString(2);
+
+                        string loteId = reader.GetString(3); // Lê como string, já que o batch_id é VARCHAR
+                        cmbLoteFrmEditarP.SelectedItem = loteId;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar dados do periférico: " + ex.Message);
+                }
+            }
         }
 
         private void btnCloseFrmEditarPerifericos_Click(object sender, EventArgs e)
@@ -44,54 +107,48 @@ namespace TCC_3_M
 
         private void btnSalvarFrmEditarP_Click(object sender, EventArgs e)
         {
-            // Obtém os novos valores dos campos
             string modelo = txtModeloFrmEditarP.Text.Trim();
-            string tipo = cmbTipoPerifericoFrmEditarP.SelectedItem.ToString();
-            string status = cmbStatusFrmEditarP.SelectedItem.ToString();
+            string tipo = cmbTipoPerifericoFrmEditarP.SelectedItem?.ToString();
+            string status = cmbStatusFrmEditarP.SelectedItem?.ToString();
+            string loteId = cmbLoteFrmEditarP.SelectedItem?.ToString();
 
-            // Atualiza os dados no banco de dados MySQL
-            AtualizarPeriferico(idPeriferico, tipo, modelo, status);
+            if (string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(status) || string.IsNullOrEmpty(loteId))
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            MessageBox.Show("Periférico editado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close(); // Fecha o formulário após salvar
-        }
-
-        private void btnCancelarFrmEditarP_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Fecha o formulário sem salvar as alterações
-        }
-
-        private void AtualizarPeriferico(int id, string tipo, string modelo, string status)
-        {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = @"UPDATE peripherals 
-                                     SET type = @Tipo, model = @Modelo, status = @Status 
-                                     WHERE id = @Id";
+                    string query = @"UPDATE peripherals
+                                     SET model = @Modelo, type = @Tipo, status = @Status, batch_id = @LoteId
+                                     WHERE id = @PerifericoId";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@Tipo", tipo);
                     cmd.Parameters.AddWithValue("@Modelo", modelo);
+                    cmd.Parameters.AddWithValue("@Tipo", tipo);
                     cmd.Parameters.AddWithValue("@Status", status);
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@LoteId", loteId); // Passa loteId como string diretamente
+                    cmd.Parameters.AddWithValue("@PerifericoId", perifericoId);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        Console.WriteLine("Periférico atualizado com sucesso.");
+                        MessageBox.Show("Dados do periférico atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else
                     {
-                        Console.WriteLine("Falha ao atualizar periférico.");
+                        MessageBox.Show("Falha ao atualizar dados do periférico.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao tentar atualizar o periférico: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro ao atualizar dados do periférico: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

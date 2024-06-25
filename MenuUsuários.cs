@@ -9,14 +9,14 @@ namespace TCC_3_M
     {
         private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
         private int tenantId;
-        private string emailDoAdministradorLogado; // Adicione esta variável se ainda não existir
+        private string emailLogado; // Adicione esta variável se ainda não existir
 
         public frm_Usuario(string email)
         {
             InitializeComponent();
             this.Load += frm_Usuario_Load;
-            emailDoAdministradorLogado = email; // Recebe o email do administrador logado
-            tenantId = ObterTenantId(emailDoAdministradorLogado);
+            emailLogado = email; // Recebe o email do administrador logado
+            tenantId = ObterTenantId(emailLogado);
         }
 
         private void frm_Usuario_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace TCC_3_M
                 try
                 {
                     command.Parameters.AddWithValue("@tenantId", tenantId);
-                    command.Parameters.AddWithValue("@emailDoAdministradorLogado", emailDoAdministradorLogado);
+                    command.Parameters.AddWithValue("@emailDoAdministradorLogado", emailLogado);
                     command.Parameters.AddWithValue("@nomeUsuario", string.IsNullOrWhiteSpace(nomeUsuario) ? (object)DBNull.Value : $"%{nomeUsuario}%");
                     command.Parameters.AddWithValue("@cpfUsuario", string.IsNullOrWhiteSpace(cpfUsuario) ? (object)DBNull.Value : $"%{cpfUsuario}%");
 
