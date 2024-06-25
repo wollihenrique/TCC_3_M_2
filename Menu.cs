@@ -124,7 +124,7 @@ namespace TCC_3_M
 
         private void btnContatos_Click(object sender, EventArgs e)
         {
-            //...
+            openChildForm(new Contatos());
             //...EScrever o resto dos códigos
             //...
             //hideSubMenu();

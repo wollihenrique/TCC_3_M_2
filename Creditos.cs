@@ -17,50 +17,6 @@ namespace TCC_3_M
             InitializeComponent();
         }
 
-        private void btnVoltarCreditos_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void labDescricao_Click(object sender, EventArgs e)
-        {
-                   
-        }
-
-        private void labAnderson_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ll_gitAnder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -121,5 +77,6 @@ namespace TCC_3_M
         {
             System.Diagnostics.Process.Start("explorer.exe", "https://www.linkedin.com/in/anderson-rocha-de-souza-939309315");
         }
+
     }
 }
