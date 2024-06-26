@@ -29,10 +29,12 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHardware = new System.Windows.Forms.DataGridView();
             this.pnlFilter = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseFrmMenuFornecedores = new System.Windows.Forms.Button();
             this.txtTag = new System.Windows.Forms.TextBox();
@@ -47,9 +49,6 @@ namespace TCC_3_M
             this.btnEditarRegistroHardware = new System.Windows.Forms.Button();
             this.btnNovoHardware = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnNovoLote = new System.Windows.Forms.Button();
-            this.cmbUsuario = new System.Windows.Forms.ComboBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHardware)).BeginInit();
             this.pnlFilter.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,26 +63,26 @@ namespace TCC_3_M
             this.dgvHardware.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvHardware.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHardware.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHardware.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHardware.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHardware.ColumnHeadersHeight = 30;
             this.dgvHardware.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHardware.EnableHeadersVisualStyles = false;
             this.dgvHardware.GridColor = System.Drawing.Color.DarkGray;
             this.dgvHardware.Location = new System.Drawing.Point(0, 0);
             this.dgvHardware.Name = "dgvHardware";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvHardware.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHardware.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHardware.Size = new System.Drawing.Size(995, 448);
             this.dgvHardware.TabIndex = 22;
             this.dgvHardware.SelectionChanged += new System.EventHandler(this.dgvHardware_SelectionChanged);
@@ -108,6 +107,29 @@ namespace TCC_3_M
             this.pnlFilter.Name = "pnlFilter";
             this.pnlFilter.Size = new System.Drawing.Size(995, 104);
             this.pnlFilter.TabIndex = 18;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(643, 41);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
+            this.lblUsuario.TabIndex = 18;
+            this.lblUsuario.Text = "Usuário:";
+            // 
+            // cmbUsuario
+            // 
+            this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(647, 66);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(175, 24);
+            this.cmbUsuario.TabIndex = 17;
+            this.cmbUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbUsuario_SelectedIndexChanged);
             // 
             // panelDataGrid
             // 
@@ -289,52 +311,12 @@ namespace TCC_3_M
             this.panel3.Size = new System.Drawing.Size(995, 448);
             this.panel3.TabIndex = 36;
             // 
-            // btnNovoLote
-            // 
-            this.btnNovoLote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNovoLote.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNovoLote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoLote.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnNovoLote.Location = new System.Drawing.Point(21, 557);
-            this.btnNovoLote.Name = "btnNovoLote";
-            this.btnNovoLote.Size = new System.Drawing.Size(120, 70);
-            this.btnNovoLote.TabIndex = 34;
-            this.btnNovoLote.Text = "Novo Lote";
-            this.btnNovoLote.UseVisualStyleBackColor = false;
-            this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
-            // 
-            // cmbUsuario
-            // 
-            this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(647, 66);
-            this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(175, 24);
-            this.cmbUsuario.TabIndex = 17;
-            this.cmbUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbUsuario_SelectedIndexChanged);
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(643, 41);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
-            this.lblUsuario.TabIndex = 18;
-            this.lblUsuario.Text = "Usuário:";
-            // 
             // frm_CadastroDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(995, 645);
-            this.Controls.Add(this.btnNovoLote);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnExcluirHardware);
             this.Controls.Add(this.btnAtualizarHardware);
@@ -370,7 +352,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Label panelDataGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnNovoLote;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ComboBox cmbUsuario;
     }
