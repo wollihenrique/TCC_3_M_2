@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TCC_3_M
@@ -18,15 +13,18 @@ namespace TCC_3_M
         private const int FormWidthExpandido = 605;
         private const int FormHeightExpandido = 500;
         private bool painelVisivel = false;
-        private int tenantId; // Variável para armazenar o tenant_id
+        private int tenantId;
 
         public frm_RegistroDisp(int tenantId)
         {
             InitializeComponent();
-            this.tenantId = tenantId; // Atribui o tenant_id recebido do formulário pai
+            this.tenantId = tenantId;
             OcultarPainel();
             PreencherComboBoxStatus();
             PreencherComboBoxLote();
+            PreencherComboBoxUsuarios();
+            cmbUsuario.Visible = false;
+            lblUsuario.Visible = false;
         }
 
         private void PreencherComboBoxStatus()
@@ -73,6 +71,36 @@ namespace TCC_3_M
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao preencher ComboBox de lote: " + ex.Message);
+                }
+            }
+        }
+
+        private void PreencherComboBoxUsuarios()
+        {
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
+            string query = "SELECT id, name FROM ( " +
+                           "    SELECT id, name FROM `admin` WHERE tenant_id = @TenantId " +
+                           "    UNION ALL " +
+                           "    SELECT id, name FROM `user` WHERE tenant_id = @TenantId " +
+                           ") AS combined_users";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        cmbUsuario.Items.Add(new KeyValuePair<int, string>(Convert.ToInt32(reader["id"]), reader["name"].ToString()));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao preencher ComboBox de usuários: " + ex.Message);
                 }
             }
         }
@@ -146,6 +174,26 @@ namespace TCC_3_M
                     cmd.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
                     cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
                     cmd.ExecuteNonQuery();
+
+                    // Verificar se o status é "Em Uso" para inserir na tabela entity_hardware_peripherals
+                    if (cmbStatusCadH.SelectedItem.ToString() == "Em Uso" && cmbUsuario.SelectedItem != null)
+                    {
+                        int entityId = ((KeyValuePair<int, string>)cmbUsuario.SelectedItem).Key;
+                        string entityType = "User"; // Você pode ajustar isso conforme necessário
+                        query = "INSERT INTO entity_hardware_peripherals (tenant_id, entity_id, entity_type, hardware_tag) " +
+                                "VALUES (@tenantId, @entityId, @entityType, @hardwareTag)";
+                        cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@tenantId", tenantId);
+                        cmd.Parameters.AddWithValue("@entityId", entityId);
+                        cmd.Parameters.AddWithValue("@entityType", entityType);
+                        cmd.Parameters.AddWithValue("@hardwareTag", txtTagCadH.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                    else if (cmbStatusCadH.SelectedItem.ToString() != "Em Uso")
+                    {
+                        MessageBox.Show("O hardware não pode ser relacionado a um usuário porque não está em uso.");
+                    }
+
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
                 catch (Exception ex)
@@ -169,6 +217,22 @@ namespace TCC_3_M
             txtObsCadH.Text = "";
             cmbStatusCadH.SelectedIndex = -1;
             cmbLote.SelectedIndex = -1;
+            cmbUsuario.SelectedIndex = -1;
+        }
+
+        private void cmbStatusCadH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbStatusCadH.SelectedItem != null && cmbStatusCadH.SelectedItem.ToString().Equals("Em uso", StringComparison.OrdinalIgnoreCase))
+            {
+                cmbUsuario.Visible = true;
+                lblUsuario.Visible = true;
+            }
+            else
+            {
+                cmbUsuario.Visible = false;
+                lblUsuario.Visible = false;
+                cmbUsuario.SelectedItem = null;
+            }
         }
     }
 }

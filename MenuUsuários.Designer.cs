@@ -31,6 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCpfUsuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseMenuUsuarios = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnExcluirUsuario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtCpfUsuario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -67,6 +67,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(995, 97);
             this.panel3.TabIndex = 25;
+            // 
+            // txtCpfUsuario
+            // 
+            this.txtCpfUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpfUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfUsuario.Location = new System.Drawing.Point(167, 65);
+            this.txtCpfUsuario.Name = "txtCpfUsuario";
+            this.txtCpfUsuario.Size = new System.Drawing.Size(130, 22);
+            this.txtCpfUsuario.TabIndex = 20;
+            this.txtCpfUsuario.TextChanged += new System.EventHandler(this.txtCpfUsuario_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(164, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "CPF:";
             // 
             // panel1
             // 
@@ -119,6 +140,7 @@
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(130, 22);
             this.txtNomeUsuario.TabIndex = 15;
+            this.txtNomeUsuario.TextChanged += new System.EventHandler(this.txtNomeUsuario_TextChanged);
             // 
             // label1
             // 
@@ -265,26 +287,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(995, 455);
             this.panel2.TabIndex = 30;
-            // 
-            // txtCpfUsuario
-            // 
-            this.txtCpfUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCpfUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpfUsuario.Location = new System.Drawing.Point(167, 65);
-            this.txtCpfUsuario.Name = "txtCpfUsuario";
-            this.txtCpfUsuario.Size = new System.Drawing.Size(130, 22);
-            this.txtCpfUsuario.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(164, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "CPF:";
             // 
             // frm_Usuario
             // 

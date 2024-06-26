@@ -9,14 +9,18 @@ namespace TCC_3_M
     {
         private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
         private int tenantId;
-        private string emailLogado; // Adicione esta variável se ainda não existir
+        private string emailLogado;
 
         public frm_Usuario(string email)
         {
             InitializeComponent();
             this.Load += frm_Usuario_Load;
-            emailLogado = email; // Recebe o email do administrador logado
+            emailLogado = email;
             tenantId = ObterTenantId(emailLogado);
+
+            // Adicione os eventos TextChanged
+            txtCpfUsuario.TextChanged += txtCpfUsuario_TextChanged;
+            txtNomeUsuario.TextChanged += txtNomeUsuario_TextChanged;
         }
 
         private void frm_Usuario_Load(object sender, EventArgs e)
@@ -31,26 +35,26 @@ namespace TCC_3_M
             string orderByUsuario = cmbOrderByUsuario.SelectedItem?.ToString() ?? "";
 
             string query = @"
-        SELECT id, `name`, cpf, phone, email, 'User' as user_type 
-        FROM `user` 
-        WHERE tenant_id = @tenantId 
-        AND (email = @emailDoAdministradorLogado 
-            OR (
-                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
-                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
-            )
-        )
-        UNION
-        SELECT id, `name`, cpf, phone, email, 'Admin' as user_type 
-        FROM `admin` 
-        WHERE tenant_id = @tenantId 
-        AND (email = @emailDoAdministradorLogado 
-            OR (
-                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
-                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
-            )
-        )
-    ";
+                SELECT id, `name`, cpf, phone, email, 'User' as user_type 
+                FROM `user` 
+                WHERE tenant_id = @tenantId 
+                AND (email = @emailDoAdministradorLogado 
+                    OR (
+                        (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
+                        AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
+                    )
+                )
+                UNION
+                SELECT id, `name`, cpf, phone, email, 'Admin' as user_type 
+                FROM `admin` 
+                WHERE tenant_id = @tenantId 
+                AND (email = @emailDoAdministradorLogado 
+                    OR (
+                        (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
+                        AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
+                    )
+                )
+            ";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -74,7 +78,7 @@ namespace TCC_3_M
                             dgvUsuarios.DataSource = table;
 
                             // Configurar as colunas do DataGridView
-                            dgvUsuarios.Columns["id"].Visible = false; // Ocultar a coluna ID
+                            dgvUsuarios.Columns["id"].Visible = false;
                             dgvUsuarios.Columns["name"].HeaderText = "Nome";
                             dgvUsuarios.Columns["cpf"].HeaderText = "CPF";
                             dgvUsuarios.Columns["phone"].HeaderText = "Telefone";
@@ -87,7 +91,6 @@ namespace TCC_3_M
                             dgvUsuarios.DataSource = null;
                         }
 
-                        // Verificações adicionais
                         dgvUsuarios.Visible = true;
                         dgvUsuarios.Enabled = true;
                         dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -217,6 +220,16 @@ namespace TCC_3_M
                     MessageBox.Show("Erro ao excluir usuário: " + ex.Message);
                 }
             }
+        }
+
+        private void txtCpfUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
+        }
+
+        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
         }
     }
 }
