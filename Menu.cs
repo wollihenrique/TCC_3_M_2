@@ -78,8 +78,56 @@ namespace TCC_3_M
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            frm_Usuario frmUsuario = new frm_Usuario(emailLogado);
-            openChildForm(frmUsuario);
+            // Verifica se o usuário atual é um administrador
+            if (VerificarTipoUsuario(emailLogado, tenantIdLogado) == "Admin")
+            {
+                frm_Usuario frmUsuario = new frm_Usuario(emailLogado);
+                openChildForm(frmUsuario);
+            }
+            else
+            {
+                MessageBox.Show("Apenas usuários administradores podem acessar essa funcionalidade.");
+            }
+        }
+
+        private string VerificarTipoUsuario(string email, int tenantId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = @"
+                SELECT user_type
+                FROM (
+                    SELECT 'Admin' as user_type, email, tenant_id FROM admin
+                    UNION
+                    SELECT 'User' as user_type, email, tenant_id FROM user
+                ) AS combined_users 
+                WHERE email = @usuario AND tenant_id = @tenantId";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@usuario", email);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return result.ToString();
+                    }
+                    else
+                    {
+                        return "User";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao verificar o tipo de usuário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "User";
+                }
+            }
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)

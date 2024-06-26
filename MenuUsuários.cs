@@ -9,14 +9,18 @@ namespace TCC_3_M
     {
         private string connectionString = "Server=localhost;Database=inventory_system;Uid=root;Pwd=etec";
         private int tenantId;
-        private string emailLogado; // Adicione esta variável se ainda não existir
+        private string emailLogado;
 
         public frm_Usuario(string email)
         {
             InitializeComponent();
             this.Load += frm_Usuario_Load;
-            emailLogado = email; // Recebe o email do administrador logado
+            emailLogado = email;
             tenantId = ObterTenantId(emailLogado);
+
+            // Adicione os eventos TextChanged
+            txtCpfUsuario.TextChanged += txtCpfUsuario_TextChanged;
+            txtNomeUsuario.TextChanged += txtNomeUsuario_TextChanged;
         }
 
         private void frm_Usuario_Load(object sender, EventArgs e)
@@ -28,28 +32,23 @@ namespace TCC_3_M
         {
             string nomeUsuario = txtNomeUsuario.Text.Trim();
             string cpfUsuario = txtCpfUsuario.Text.Trim();
-            string orderByUsuario = cmbOrderByUsuario.SelectedItem?.ToString() ?? "";
 
             string query = @"
         SELECT id, `name`, cpf, phone, email, 'User' as user_type 
         FROM `user` 
         WHERE tenant_id = @tenantId 
-        AND (email = @emailDoAdministradorLogado 
-            OR (
-                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
-                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
-            )
-        )
+          AND (
+               (`name` LIKE @nomeUsuario OR @nomeUsuario IS NULL)
+               AND (cpf LIKE @cpfUsuario OR @cpfUsuario IS NULL)
+              )
         UNION
         SELECT id, `name`, cpf, phone, email, 'Admin' as user_type 
         FROM `admin` 
         WHERE tenant_id = @tenantId 
-        AND (email = @emailDoAdministradorLogado 
-            OR (
-                (@nomeUsuario IS NULL OR `name` LIKE @nomeUsuario) 
-                AND (@cpfUsuario IS NULL OR cpf LIKE @cpfUsuario)
-            )
-        )
+          AND (
+               (`name` LIKE @nomeUsuario OR @nomeUsuario IS NULL)
+               AND (cpf LIKE @cpfUsuario OR @cpfUsuario IS NULL)
+              )
     ";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -58,7 +57,6 @@ namespace TCC_3_M
                 try
                 {
                     command.Parameters.AddWithValue("@tenantId", tenantId);
-                    command.Parameters.AddWithValue("@emailDoAdministradorLogado", emailLogado);
                     command.Parameters.AddWithValue("@nomeUsuario", string.IsNullOrWhiteSpace(nomeUsuario) ? (object)DBNull.Value : $"%{nomeUsuario}%");
                     command.Parameters.AddWithValue("@cpfUsuario", string.IsNullOrWhiteSpace(cpfUsuario) ? (object)DBNull.Value : $"%{cpfUsuario}%");
 
@@ -69,31 +67,17 @@ namespace TCC_3_M
                         DataTable table = new DataTable();
                         adapter.Fill(table);
 
-                        if (table.Rows.Count > 0)
-                        {
-                            dgvUsuarios.DataSource = table;
+                        dgvUsuarios.DataSource = table;
 
-                            // Configurar as colunas do DataGridView
-                            dgvUsuarios.Columns["id"].Visible = false; // Ocultar a coluna ID
-                            dgvUsuarios.Columns["name"].HeaderText = "Nome";
-                            dgvUsuarios.Columns["cpf"].HeaderText = "CPF";
-                            dgvUsuarios.Columns["phone"].HeaderText = "Telefone";
-                            dgvUsuarios.Columns["email"].HeaderText = "Email";
-                            dgvUsuarios.Columns["user_type"].HeaderText = "Tipo de Usuário";
-                        }
-                        else
-                        {
-                            MessageBox.Show("Nenhum dado encontrado.");
-                            dgvUsuarios.DataSource = null;
-                        }
+                        // Configurar as colunas do DataGridView
+                        dgvUsuarios.Columns["id"].Visible = false;
+                        dgvUsuarios.Columns["name"].HeaderText = "Nome";
+                        dgvUsuarios.Columns["cpf"].HeaderText = "CPF";
+                        dgvUsuarios.Columns["phone"].HeaderText = "Telefone";
+                        dgvUsuarios.Columns["email"].HeaderText = "Email";
+                        dgvUsuarios.Columns["user_type"].HeaderText = "Tipo de Usuário";
 
-                        // Verificações adicionais
-                        dgvUsuarios.Visible = true;
-                        dgvUsuarios.Enabled = true;
                         dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        dgvUsuarios.Dock = DockStyle.Fill;
-                        dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-                        dgvUsuarios.AutoGenerateColumns = true;
                     }
                 }
                 catch (Exception ex)
@@ -103,6 +87,7 @@ namespace TCC_3_M
             }
         }
 
+
         private int ObterTenantId(string email)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -111,23 +96,34 @@ namespace TCC_3_M
                 {
                     connection.Open();
 
-                    string sql = "SELECT tenant_id FROM admin WHERE email = @usuario";
-                    using (MySqlCommand cmd = new MySqlCommand(sql, connection))
+                    string sqlAdmin = "SELECT tenant_id FROM admin WHERE email = @usuario";
+                    using (MySqlCommand cmdAdmin = new MySqlCommand(sqlAdmin, connection))
                     {
-                        cmd.Parameters.AddWithValue("@usuario", email);
+                        cmdAdmin.Parameters.AddWithValue("@usuario", email);
 
-                        object result = cmd.ExecuteScalar();
+                        object resultAdmin = cmdAdmin.ExecuteScalar();
 
-                        if (result != null && result != DBNull.Value)
+                        if (resultAdmin != null && resultAdmin != DBNull.Value)
                         {
-                            return Convert.ToInt32(result);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Não foi possível encontrar o tenant_id para o administrador logado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return -1;
+                            return Convert.ToInt32(resultAdmin);
                         }
                     }
+
+                    string sqlUser = "SELECT tenant_id FROM user WHERE email = @usuario";
+                    using (MySqlCommand cmdUser = new MySqlCommand(sqlUser, connection))
+                    {
+                        cmdUser.Parameters.AddWithValue("@usuario", email);
+
+                        object resultUser = cmdUser.ExecuteScalar();
+
+                        if (resultUser != null && resultUser != DBNull.Value)
+                        {
+                            return Convert.ToInt32(resultUser);
+                        }
+                    }
+
+                    MessageBox.Show("Não foi possível encontrar o tenant_id para o administrador logado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return -1;
                 }
                 catch (Exception ex)
                 {
@@ -217,6 +213,16 @@ namespace TCC_3_M
                     MessageBox.Show("Erro ao excluir usuário: " + ex.Message);
                 }
             }
+        }
+
+        private void txtCpfUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
+        }
+
+        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+            CarregarDadosUsuarios();
         }
     }
 }
