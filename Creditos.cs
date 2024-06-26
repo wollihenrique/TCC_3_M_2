@@ -78,5 +78,9 @@ namespace TCC_3_M
             System.Diagnostics.Process.Start("explorer.exe", "https://www.linkedin.com/in/anderson-rocha-de-souza-939309315");
         }
 
+        private void btnCloseHistoric_Click_1(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

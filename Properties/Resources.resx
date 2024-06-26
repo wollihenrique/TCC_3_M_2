@@ -172,8 +172,14 @@
   <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgAnderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgAnderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vinicius cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vinicius cruz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foto-wallace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto-wallace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,23 +193,23 @@
   <data name="adicionar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="wallace22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wallace22.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editarBranco.32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editarBranco.32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="computador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cadastrar.32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadastrar.32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="github1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\github1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,10 +223,7 @@
   <data name="victor hugo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\victor hugo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgAnderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgAnderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eu.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
