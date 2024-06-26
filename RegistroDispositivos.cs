@@ -78,11 +78,9 @@ namespace TCC_3_M
         private void PreencherComboBoxUsuarios()
         {
             string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
-            string query = "SELECT id, name FROM ( " +
-                           "    SELECT id, name FROM `admin` WHERE tenant_id = @TenantId " +
-                           "    UNION ALL " +
-                           "    SELECT id, name FROM `user` WHERE tenant_id = @TenantId " +
-                           ") AS combined_users";
+            string query = "SELECT 'admin' AS user_type, id, name FROM `admin` WHERE tenant_id = @TenantId " +
+                           "UNION ALL " +
+                           "SELECT 'user' AS user_type, id, name FROM `user` WHERE tenant_id = @TenantId";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -95,7 +93,10 @@ namespace TCC_3_M
 
                     while (reader.Read())
                     {
-                        cmbUsuario.Items.Add(new KeyValuePair<int, string>(Convert.ToInt32(reader["id"]), reader["name"].ToString()));
+                        string userType = reader["user_type"].ToString();
+                        int userId = Convert.ToInt32(reader["id"]);
+                        string userName = reader["name"].ToString();
+                        cmbUsuario.Items.Add(new KeyValuePair<string, KeyValuePair<int, string>>(userType, new KeyValuePair<int, string>(userId, userName)));
                     }
                 }
                 catch (Exception ex)
@@ -175,23 +176,23 @@ namespace TCC_3_M
                     cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
                     cmd.ExecuteNonQuery();
 
-                    // Verificar se o status é "Em Uso" para inserir na tabela entity_hardware_peripherals
-                    if (cmbStatusCadH.SelectedItem.ToString() == "Em Uso" && cmbUsuario.SelectedItem != null)
+                    if (cmbStatusCadH.SelectedItem.ToString().Equals("Em Uso", StringComparison.OrdinalIgnoreCase) && cmbUsuario.SelectedItem != null)
                     {
                         int entityId = ((KeyValuePair<int, string>)cmbUsuario.SelectedItem).Key;
-                        string entityType = "User"; // Você pode ajustar isso conforme necessário
-                        query = "INSERT INTO entity_hardware_peripherals (tenant_id, entity_id, entity_type, hardware_tag) " +
-                                "VALUES (@tenantId, @entityId, @entityType, @hardwareTag)";
-                        cmd = new MySqlCommand(query, conn);
+                        string queryInsert;
+                        if (cmbUsuario.SelectedItem.ToString().Contains("admin"))
+                        {
+                            queryInsert = "INSERT INTO entity_admin_hardware_peripherals (tenant_id, admin_id, hardware_tag) VALUES (@tenantId, @entityId, @hardwareTag)";
+                        }
+                        else
+                        {
+                            queryInsert = "INSERT INTO entity_user_hardware_peripherals (tenant_id, user_id, hardware_tag) VALUES (@tenantId, @entityId, @hardwareTag)";
+                        }
+                        cmd = new MySqlCommand(queryInsert, conn);
                         cmd.Parameters.AddWithValue("@tenantId", tenantId);
                         cmd.Parameters.AddWithValue("@entityId", entityId);
-                        cmd.Parameters.AddWithValue("@entityType", entityType);
                         cmd.Parameters.AddWithValue("@hardwareTag", txtTagCadH.Text);
                         cmd.ExecuteNonQuery();
-                    }
-                    else if (cmbStatusCadH.SelectedItem.ToString() != "Em Uso")
-                    {
-                        MessageBox.Show("O hardware não pode ser relacionado a um usuário porque não está em uso.");
                     }
 
                     MessageBox.Show("Dados inseridos com sucesso!");
@@ -202,6 +203,7 @@ namespace TCC_3_M
                 }
             }
         }
+
 
         private void btnLimparCadH_Click(object sender, EventArgs e)
         {

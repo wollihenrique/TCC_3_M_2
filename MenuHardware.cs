@@ -36,20 +36,34 @@ namespace TCC_3_M
             connection = new MySqlConnection(connectionString);
         }
 
-        private void LoadHardwareData(string orderBy = "", string statusFilter = "")
+        private void LoadHardwareData(string orderBy = "", string statusFilter = "", int userId = -1)
         {
             try
             {
-                connection.Open();
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
                 string query = @"
-                    SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date 
-                    FROM hardware h
-                    JOIN batch b ON h.batch_id = b.id
-                    WHERE h.tenant_id = @tenantId"; // Adicionado filtro por tenant_id
+        SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date,
+               COALESCE(u.name, a.name) AS user_name
+        FROM hardware h
+        JOIN batch b ON h.batch_id = b.id
+        LEFT JOIN entity_user_hardware_peripherals euhp ON h.tag = euhp.hardware_tag AND h.tenant_id = euhp.tenant_id
+        LEFT JOIN user u ON euhp.user_id = u.id AND euhp.tenant_id = u.tenant_id
+        LEFT JOIN entity_admin_hardware_peripherals eahp ON h.tag = eahp.hardware_tag AND h.tenant_id = eahp.tenant_id
+        LEFT JOIN admin a ON eahp.admin_id = a.id AND eahp.tenant_id = a.tenant_id
+        WHERE h.tenant_id = @tenantId";
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
                     query += " AND h.status = @status";
+                }
+
+                if (userId != -1)
+                {
+                    query += " AND (euhp.user_id = @userId OR eahp.admin_id = @userId)";
                 }
 
                 if (orderBy == "Mais recentes")
@@ -70,11 +84,16 @@ namespace TCC_3_M
                 }
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
+                cmd.Parameters.AddWithValue("@tenantId", tenantId);
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
                     cmd.Parameters.AddWithValue("@status", statusFilter);
+                }
+
+                if (userId != -1)
+                {
+                    cmd.Parameters.AddWithValue("@userId", userId);
                 }
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -99,7 +118,23 @@ namespace TCC_3_M
             }
             finally
             {
-                connection.Close();
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbUsuario.SelectedItem != null)
+            {
+                int userId = Convert.ToInt32(cmbUsuario.SelectedValue);
+                LoadHardwareData("", "", userId);
+            }
+            else
+            {
+                LoadHardwareData(); // Carregar todos os hardwares se nenhum usuário estiver selecionado
             }
         }
 
@@ -116,6 +151,42 @@ namespace TCC_3_M
             cmbStatus.Items.Add("Manutenção");
             cmbStatus.Items.Add("Defeituoso");
             cmbStatus.SelectedIndexChanged += new EventHandler(cmbStatus_SelectedIndexChanged);
+
+            // Carregar os usuários na ComboBox de usuários
+            LoadUserComboBox();
+
+            // Limpar seleção inicial da ComboBox de usuários
+            cmbUsuario.SelectedIndex = -1;
+        }
+
+        private void LoadUserComboBox()
+        {
+            try
+            {
+                connection.Open();
+                string query = @"
+                    SELECT id, name FROM user WHERE tenant_id = @tenantId
+                    UNION
+                    SELECT id, name FROM admin WHERE tenant_id = @tenantId";
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@tenantId", tenantId);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable users = new DataTable();
+                adapter.Fill(users);
+
+                cmbUsuario.DisplayMember = "name";
+                cmbUsuario.ValueMember = "id";
+                cmbUsuario.DataSource = users;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading users: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void cmbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,6 +201,16 @@ namespace TCC_3_M
             string selectedStatus = cmbStatus.SelectedItem.ToString();
             string selectedOrder = cmbOrderBy.SelectedItem?.ToString() ?? "";
             LoadHardwareData(selectedOrder, selectedStatus);
+
+            if (selectedStatus != "Em Uso")
+            {
+                cmbUsuario.SelectedIndex = -1; // Limpa a seleção da ComboBox de usuários
+                cmbUsuario.Enabled = false; // Desabilita a ComboBox de usuários
+            }
+            else
+            {
+                cmbUsuario.Enabled = true; // Habilita a ComboBox de usuários
+            }
         }
 
         private void dgvHardware_SelectionChanged(object sender, EventArgs e)
@@ -181,7 +262,6 @@ namespace TCC_3_M
             }
         }
 
-
         private void btnNovoLote_Click(object sender, EventArgs e)
         {
             frm_RegistroLote registroLote = new frm_RegistroLote(tenantId);
@@ -190,6 +270,12 @@ namespace TCC_3_M
 
         private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
         {
+            // Limpar seleção das comboboxes
+            cmbOrderBy.SelectedIndex = -1;
+            cmbStatus.SelectedIndex = -1;
+            cmbUsuario.SelectedIndex = -1;
+
+            // Carregar os dados atualizados
             LoadHardwareData();
         }
 
@@ -214,7 +300,7 @@ namespace TCC_3_M
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao excluir hardware: " + ex.Message);
+                        MessageBox.Show("Erro ao excluir hardware: ", ex.Message);
                     }
                     finally
                     {
