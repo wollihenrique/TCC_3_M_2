@@ -27,7 +27,7 @@ namespace TCC_3_M
         private void LimparCampos()
         {
             txtLoteF.Text = "";
-            txtDataRecebimentoLote.Text = "";
+            maskTxtDataEntradaLote.Text = "";
             cmbFornecedorLote.SelectedIndex = -1;
         }
 
@@ -71,7 +71,7 @@ namespace TCC_3_M
         private void btnSalvarCadLote_Click(object sender, EventArgs e)
         {
             string nomeLote = txtLoteF.Text;
-            string dataRecebimento = txtDataRecebimentoLote.Text;
+            string dataRecebimento = maskTxtDataEntradaLote.Text;
             string fornecedor = cmbFornecedorLote.Text;
 
             if (string.IsNullOrEmpty(nomeLote) || string.IsNullOrEmpty(dataRecebimento) || string.IsNullOrEmpty(fornecedor))

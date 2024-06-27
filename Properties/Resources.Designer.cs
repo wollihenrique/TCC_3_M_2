@@ -133,6 +133,16 @@ namespace TCC_3_M.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caixa {
+            get {
+                object obj = ResourceManager.GetObject("caixa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap computador {
             get {
                 object obj = ResourceManager.GetObject("computador", resourceCulture);
@@ -256,6 +266,16 @@ namespace TCC_3_M.Properties {
         internal static System.Drawing.Bitmap historia {
             get {
                 object obj = ResourceManager.GetObject("historia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptop {
+            get {
+                object obj = ResourceManager.GetObject("laptop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
