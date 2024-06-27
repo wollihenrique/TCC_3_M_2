@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TCC_3_M
 {
     public partial class frm_Inicio : Form
     {
-        private string emailDoAdministradorLogado;
+        private string emailLogado;
+        private int tenantIdLogado;
+
+        private string connectionString = "server=localhost;database=inventory_system;uid=root;password=etec";
 
         public frm_Inicio()
         {
@@ -28,9 +32,11 @@ namespace TCC_3_M
             timerRelogio.Start();
         }
 
-        public void DefinirEmailDoAdministrador(string email)
+        public void DefinirEmailLogado(string email, int tenantId)
         {
-            emailDoAdministradorLogado = email;
+            emailLogado = email;
+            tenantIdLogado = tenantId;
+            AtualizarNomeUsuario(); // Atualiza o nome do usuário no botão
         }
 
         private void TimerRelogio_Tick(object sender, EventArgs e)
@@ -72,31 +78,74 @@ namespace TCC_3_M
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            int tenantId = new frm_Login().ObterTenantId(emailDoAdministradorLogado); // Obter o tenantId usando o email
-            frm_Usuario frmUsuario = new frm_Usuario(emailDoAdministradorLogado); // Passar email para frm_Usuario
-            openChildForm(frmUsuario);
+            // Verifica se o usuário atual é um administrador
+            if (VerificarTipoUsuario(emailLogado, tenantIdLogado) == "Admin")
+            {
+                frm_Usuario frmUsuario = new frm_Usuario(emailLogado);
+                openChildForm(frmUsuario);
+            }
+            else
+            {
+                MessageBox.Show("Apenas usuários administradores podem acessar essa funcionalidade.");
+            }
+        }
+
+        private string VerificarTipoUsuario(string email, int tenantId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = @"
+                SELECT user_type
+                FROM (
+                    SELECT 'Admin' as user_type, email, tenant_id FROM admin
+                    UNION
+                    SELECT 'User' as user_type, email, tenant_id FROM user
+                ) AS combined_users 
+                WHERE email = @usuario AND tenant_id = @tenantId";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@usuario", email);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return result.ToString();
+                    }
+                    else
+                    {
+                        return "User";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao verificar o tipo de usuário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "User";
+                }
+            }
         }
 
         private void btnDispositivos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_CadastroDisp());
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
+            frm_CadastroDisp frmCadastroDisp = new frm_CadastroDisp(emailLogado, tenantIdLogado);
+            openChildForm(frmCadastroDisp);
         }
 
         private void btnPerifericos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_MenuPerifericos());
-            //...EScrever o resto dos códigos
-            //...
-            //hideSubMenu();
+            frm_Menu_Perifericos frmMenuPerifericos = new frm_Menu_Perifericos(emailLogado, tenantIdLogado);
+            openChildForm(frmMenuPerifericos);
         }
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_MenuFornecedores());
-            //hideSubMenu();
+            frm_MenuFornecedores frmMenuFornecedores = new frm_MenuFornecedores(emailLogado, tenantIdLogado);
+            openChildForm(frmMenuFornecedores);
         }
         #endregion
 
@@ -173,11 +222,59 @@ namespace TCC_3_M
             childForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
             frm_Login login = new frm_Login();
             login.Show();
+        }
+
+        private void AtualizarNomeUsuario()
+        {
+            string nomeUsuario = ObterPrimeiroNomeUsuario(emailLogado, tenantIdLogado);
+            button1.Text = nomeUsuario;
+        }
+
+        private string ObterPrimeiroNomeUsuario(string email, int tenantId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = @"
+                        SELECT name
+                        FROM (
+                            SELECT name, email, tenant_id FROM admin
+                            UNION
+                            SELECT name, email, tenant_id FROM user
+                        ) AS combined_users 
+                        WHERE email = @usuario AND tenant_id = @tenantId";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@usuario", email);
+                    cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        string nomeCompleto = result.ToString();
+                        string primeiroNome = nomeCompleto.Split(' ')[0]; // Pega o primeiro nome
+                        return primeiroNome;
+                    }
+                    else
+                    {
+                        return "Usuário"; // Valor padrão caso o nome não seja encontrado
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao obter o nome do usuário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "Usuário";
+                }
+            }
         }
     }
 }

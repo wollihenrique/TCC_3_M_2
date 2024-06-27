@@ -1,33 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace TCC_3_M
 {
-    public partial class frm_MenuPerifericos : Form
+    public partial class frm_Menu_Perifericos : Form
     {
         private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec;";
+        private int tenantId;
 
-        public frm_MenuPerifericos()
+        public frm_Menu_Perifericos(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
+            this.tenantId = tenantId;
+
+            DesvincularEventos();
+            VincularEventos();
+
+            PreencherComboBoxStatus();
+            PreencherComboBoxOrderBy();
+            PreencherComboBoxTipo();
+            PreencherComboBoxUsuarios();
             LoadPeripheralsData();
-            PopulateStatusComboBox();
-            PopulateOrderByComboBox();
-            PopulateTipoPerifericosComboBox();
+        }
+
+        private void VincularEventos()
+        {
             cmbStatusPerifericos.SelectedIndexChanged += cmbStatusPerifericos_SelectedIndexChanged;
             cmbOrderByPerifericos.SelectedIndexChanged += cmbOrderByPerifericos_SelectedIndexChanged;
             cmbTipoPerifericos.SelectedIndexChanged += cmbTipoPerifericos_SelectedIndexChanged;
             txtModeloPerifericos.TextChanged += txtModeloPerifericos_TextChanged;
             btnExcluirPeriferico.Click += btnExcluirPeriferico_Click;
             btnAtualizarPeriferico.Click += btnAtualizarPeriferico_Click;
+            btnEditarRegistroPerifericos.Click += btnEditarRegistroPerifericos_Click;
+            btnNovoPeriferico.Click += btnNovoPeriferico_Click;
+            btnCloseMenuPerifericos.Click += btnCloseMenuPerifericos_Click;
+        }
+
+        private void DesvincularEventos()
+        {
+            cmbStatusPerifericos.SelectedIndexChanged -= cmbStatusPerifericos_SelectedIndexChanged;
+            cmbOrderByPerifericos.SelectedIndexChanged -= cmbOrderByPerifericos_SelectedIndexChanged;
+            cmbTipoPerifericos.SelectedIndexChanged -= cmbTipoPerifericos_SelectedIndexChanged;
+            txtModeloPerifericos.TextChanged -= txtModeloPerifericos_TextChanged;
+            btnExcluirPeriferico.Click -= btnExcluirPeriferico_Click;
+            btnAtualizarPeriferico.Click -= btnAtualizarPeriferico_Click;
+            btnEditarRegistroPerifericos.Click -= btnEditarRegistroPerifericos_Click;
+            btnNovoPeriferico.Click -= btnNovoPeriferico_Click;
+            btnCloseMenuPerifericos.Click -= btnCloseMenuPerifericos_Click;
         }
 
         private void LoadPeripheralsData(string statusFilter = "", string orderBy = "")
@@ -37,13 +59,19 @@ namespace TCC_3_M
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
-                                     FROM peripherals p
-                                     JOIN batch b ON p.batch_id = b.id";
+                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date,
+                            CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
+                            FROM peripherals p
+                            JOIN batch b ON p.batch_id = b.id
+                            LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
+                            LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
+                            LEFT JOIN `user` u ON eup.user_id = u.id
+                            LEFT JOIN `admin` a ON eap.admin_id = a.id
+                            WHERE b.tenant_id = @TenantId"; // Filtra pelo tenantId
 
                     if (!string.IsNullOrEmpty(statusFilter))
                     {
-                        query += $" WHERE p.status = '{statusFilter}'";
+                        query += $" AND p.status = '{statusFilter}'";
                     }
 
                     if (!string.IsNullOrEmpty(orderBy))
@@ -65,7 +93,10 @@ namespace TCC_3_M
                         }
                     }
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -77,25 +108,58 @@ namespace TCC_3_M
             }
         }
 
-        private void PopulateStatusComboBox()
+        private void PreencherComboBoxStatus()
         {
             cmbStatusPerifericos.Items.AddRange(new string[] { "Em Uso", "Estoque", "Defeituoso", "Manutenção" });
-            cmbStatusPerifericos.SelectedIndex = -1; // Deixe sem seleção inicial
+            cmbStatusPerifericos.SelectedIndex = -1;
         }
 
-        private void PopulateOrderByComboBox()
+        private void PreencherComboBoxOrderBy()
         {
             cmbOrderByPerifericos.Items.AddRange(new string[] { "Mais recentes", "Mais antigos", "Este mês", "Este ano" });
-            cmbOrderByPerifericos.SelectedIndex = -1; // Deixe sem seleção inicial
+            cmbOrderByPerifericos.SelectedIndex = -1;
         }
 
-        private void PopulateTipoPerifericosComboBox()
+        private void PreencherComboBoxTipo()
         {
-            cmbTipoPerifericos.Items.Clear(); // Limpar itens anteriores
+            cmbTipoPerifericos.Items.Clear();
             string[] tipos = { "Monitor", "Teclado", "Mouse", "Impressora", "Scanner", "Webcam", "Headset", "Caixa de som", "Pendrive", "HD Externo", "Microfone" };
 
             cmbTipoPerifericos.Items.AddRange(tipos);
-            cmbTipoPerifericos.SelectedIndex = -1; // Deixe sem seleção inicial
+            cmbTipoPerifericos.SelectedIndex = -1;
+        }
+
+        private void PreencherComboBoxUsuarios()
+        {
+            cmbUsuario.Items.Clear();
+            string query = "SELECT 'admin' AS user_type, id, name FROM `admin` WHERE tenant_id = @TenantId " +
+                           "UNION ALL " +
+                           "SELECT 'user' AS user_type, id, name FROM `user` WHERE tenant_id = @TenantId";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string userType = reader["user_type"].ToString();
+                        int userId = Convert.ToInt32(reader["id"]);
+                        string userName = reader["name"].ToString();
+                        cmbUsuario.Items.Add(new KeyValuePair<string, KeyValuePair<int, string>>(userType, new KeyValuePair<int, string>(userId, userName)));
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao preencher ComboBox de usuários: " + ex.Message);
+                }
+            }
         }
 
         private void cmbStatusPerifericos_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,20 +175,28 @@ namespace TCC_3_M
         private void cmbTipoPerifericos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tipoSelecionado = cmbTipoPerifericos.SelectedItem.ToString();
-            // Filtrar a lista de periféricos pelo tipo selecionado
+
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
+                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date, 
+                                    CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
                                      FROM peripherals p
                                      JOIN batch b ON p.batch_id = b.id
-                                     WHERE p.type = @Tipo";
+                                     LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
+                                     LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
+                                     LEFT JOIN `user` u ON eup.user_id = u.id
+                                     LEFT JOIN `admin` a ON eap.admin_id = a.id
+                                     WHERE p.type = @Tipo
+                                     AND b.tenant_id = @TenantId";
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    da.SelectCommand.Parameters.AddWithValue("@Tipo", tipoSelecionado);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Tipo", tipoSelecionado);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
 
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -140,20 +212,27 @@ namespace TCC_3_M
         {
             string modeloDigitado = txtModeloPerifericos.Text.Trim();
 
-            // Filtrar a lista de periféricos pelo modelo digitado
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date 
-                                     FROM peripherals p
-                                     JOIN batch b ON p.batch_id = b.id
-                                     WHERE p.model LIKE @Modelo";
+                    string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date, 
+                            CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
+                            FROM peripherals p
+                            JOIN batch b ON p.batch_id = b.id
+                            LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
+                            LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
+                            LEFT JOIN `user` u ON eup.user_id = u.id
+                            LEFT JOIN `admin` a ON eap.admin_id = a.id
+                            WHERE p.model LIKE @Modelo
+                            AND b.tenant_id = @TenantId";
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    da.SelectCommand.Parameters.AddWithValue("@Modelo", "%" + modeloDigitado + "%");
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Modelo", "%" + modeloDigitado + "%");
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
 
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvPerifericos.DataSource = dt;
@@ -167,14 +246,25 @@ namespace TCC_3_M
 
         private void btnNovoPeriferico_Click(object sender, EventArgs e)
         {
-            frm_RegistroPeriferico formNovoPeriferico = new frm_RegistroPeriferico();
-            formNovoPeriferico.Show();
+            frm_RegistroPeriferico formNovoPeriferico = new frm_RegistroPeriferico(tenantId);
+            formNovoPeriferico.ShowDialog();
+            LoadPeripheralsData();
         }
 
         private void btnEditarRegistroPerifericos_Click(object sender, EventArgs e)
         {
-            frm_EditarPerifericos formEditarPerifericos = new frm_EditarPerifericos();
-            formEditarPerifericos.Show();
+            if (dgvPerifericos.SelectedRows.Count > 0)
+            {
+                int perifericoId = Convert.ToInt32(dgvPerifericos.SelectedRows[0].Cells["id"].Value);
+
+                frm_EditarPerifericos editarPerifericoForm = new frm_EditarPerifericos(perifericoId, tenantId);
+                editarPerifericoForm.ShowDialog();
+                LoadPeripheralsData();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um periférico para editar.");
+            }
         }
 
         private void btnCloseMenuPerifericos_Click(object sender, EventArgs e)
@@ -184,28 +274,31 @@ namespace TCC_3_M
 
         private void btnAtualizarPeriferico_Click(object sender, EventArgs e)
         {
+            cmbOrderByPerifericos.SelectedIndex = -1;
+            cmbStatusPerifericos.SelectedIndex = -1;
+            cmbTipoPerifericos.SelectedIndex = -1;
+            cmbUsuario.SelectedIndex = -1;
+
             LoadPeripheralsData();
         }
 
         private void btnExcluirPeriferico_Click(object sender, EventArgs e)
         {
-            // Verifica se há uma linha selecionada no DataGridView
             if (dgvPerifericos.SelectedRows.Count > 0)
             {
-                // Obtém o ID do periférico da linha selecionada
                 int idPeriferico = Convert.ToInt32(dgvPerifericos.SelectedRows[0].Cells["id"].Value);
 
-                // Exibe um diálogo de confirmação para o usuário
                 DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este periférico?", "Confirmação de exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Se o usuário confirmar, realiza a exclusão no banco de dados
                     ExcluirPeriferico(idPeriferico);
-
-                    // Atualiza o DataGridView após a exclusão
                     LoadPeripheralsData();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um periférico para excluir.");
             }
         }
 
@@ -216,23 +309,67 @@ namespace TCC_3_M
                 try
                 {
                     conn.Open();
-                    string query = "DELETE FROM peripherals WHERE id = @Id";
+                    string query = "DELETE FROM peripherals WHERE id = @PerifericoId";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@Id", idPeriferico);
+                    cmd.Parameters.AddWithValue("@PerifericoId", idPeriferico);
+
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Periférico excluído com sucesso.", "Exclusão realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Periférico excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Falha ao excluir o periférico.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Falha ao excluir periférico.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao tentar excluir o periférico: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro ao excluir periférico: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbUsuario.SelectedItem != null)
+            {
+                // Ajuste necessário se cmbUsuario.Items for do tipo KeyValuePair<string, KeyValuePair<int, string>>
+                var selectedUser = (KeyValuePair<string, KeyValuePair<int, string>>)cmbUsuario.SelectedItem;
+                string userType = selectedUser.Key;
+                int userId = selectedUser.Value.Key;
+                string userName = selectedUser.Value.Value;
+
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date, 
+                                CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
+                                FROM peripherals p
+                                JOIN batch b ON p.batch_id = b.id
+                                LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
+                                LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
+                                LEFT JOIN `user` u ON eup.user_id = u.id
+                                LEFT JOIN `admin` a ON eap.admin_id = a.id
+                                WHERE (u.name = @UserName OR a.name = @UserName)
+                                AND b.tenant_id = @TenantId";
+
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@UserName", userName);
+                        cmd.Parameters.AddWithValue("@TenantId", tenantId);
+
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvPerifericos.DataSource = dt;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
             }
         }

@@ -118,8 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adicionar-usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adicionar-usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit24x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit24x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="do-utilizador32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\do-utilizador32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e-mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linkedin (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedin (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big-search-len" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-search-len.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e-mail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e-mail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yasmin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yasmin1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="historia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\historia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="do-utilizador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\do-utilizador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,14 +169,32 @@
   <data name="atualizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atualizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="big-search-len" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-search-len.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vinicius cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vinicius cruz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foto-wallace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto-wallace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linkedinCerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedinCerto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foto-rafa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto-rafa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adicionar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adicionar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wallace22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallace22.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiple-users-silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiple-users-silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,17 +202,29 @@
   <data name="do-utilizador32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\do-utilizador32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cadastrar.32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadastrar.32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit24x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit24x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="github1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\github1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yasmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yasmin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="entregador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\entregador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="telefone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telefone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="victor hugo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\victor hugo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgAnderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgAnderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="laptop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laptop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

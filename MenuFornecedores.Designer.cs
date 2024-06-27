@@ -29,9 +29,9 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnNovoFornecedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -41,8 +41,8 @@ namespace TCC_3_M
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseMenuFornecedores = new System.Windows.Forms.Button();
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
-            this.btnEditarRegistroUsuario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNovoLote = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
@@ -55,7 +55,7 @@ namespace TCC_3_M
             this.btnAtualizarUsuario.BackColor = System.Drawing.Color.Cornsilk;
             this.btnAtualizarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarUsuario.ForeColor = System.Drawing.Color.Gold;
             this.btnAtualizarUsuario.Location = new System.Drawing.Point(815, 686);
             this.btnAtualizarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -72,7 +72,7 @@ namespace TCC_3_M
             this.btnNovoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNovoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoFornecedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoFornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNovoFornecedor.Location = new System.Drawing.Point(1151, 686);
             this.btnNovoFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -101,8 +101,7 @@ namespace TCC_3_M
             this.lblOrderBy.AutoSize = true;
             this.lblOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderBy.ForeColor = System.Drawing.Color.White;
-            this.lblOrderBy.Location = new System.Drawing.Point(16, 55);
-            this.lblOrderBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrderBy.Location = new System.Drawing.Point(12, 38);
             this.lblOrderBy.Name = "lblOrderBy";
             this.lblOrderBy.Size = new System.Drawing.Size(117, 25);
             this.lblOrderBy.TabIndex = 17;
@@ -112,8 +111,7 @@ namespace TCC_3_M
             // 
             this.txtCpfCnpjMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCpfCnpjMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpfCnpjMenu.Location = new System.Drawing.Point(20, 81);
-            this.txtCpfCnpjMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCpfCnpjMenu.Location = new System.Drawing.Point(15, 57);
             this.txtCpfCnpjMenu.Name = "txtCpfCnpjMenu";
             this.txtCpfCnpjMenu.Size = new System.Drawing.Size(173, 26);
             this.txtCpfCnpjMenu.TabIndex = 15;
@@ -174,54 +172,37 @@ namespace TCC_3_M
             this.dgvFornecedor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvFornecedor.ColumnHeadersHeight = 30;
             this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFornecedor.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvFornecedor.EnableHeadersVisualStyles = false;
             this.dgvFornecedor.GridColor = System.Drawing.Color.DarkGray;
             this.dgvFornecedor.Location = new System.Drawing.Point(0, 0);
             this.dgvFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvFornecedor.Name = "dgvFornecedor";
-            this.dgvFornecedor.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvFornecedor.Size = new System.Drawing.Size(1327, 559);
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvFornecedor.Size = new System.Drawing.Size(995, 454);
             this.dgvFornecedor.TabIndex = 22;
-            // 
-            // btnEditarRegistroUsuario
-            // 
-            this.btnEditarRegistroUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEditarRegistroUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRegistroUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarRegistroUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.btnEditarRegistroUsuario.Location = new System.Drawing.Point(983, 686);
-            this.btnEditarRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnEditarRegistroUsuario.Name = "btnEditarRegistroUsuario";
-            this.btnEditarRegistroUsuario.Size = new System.Drawing.Size(160, 86);
-            this.btnEditarRegistroUsuario.TabIndex = 33;
-            this.btnEditarRegistroUsuario.Text = "Editar Registro";
-            this.btnEditarRegistroUsuario.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -236,14 +217,30 @@ namespace TCC_3_M
             this.panel2.Size = new System.Drawing.Size(1327, 559);
             this.panel2.TabIndex = 35;
             // 
+            // btnNovoLote
+            // 
+            this.btnNovoLote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovoLote.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNovoLote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoLote.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnNovoLote.Location = new System.Drawing.Point(737, 557);
+            this.btnNovoLote.Name = "btnNovoLote";
+            this.btnNovoLote.Size = new System.Drawing.Size(120, 70);
+            this.btnNovoLote.TabIndex = 35;
+            this.btnNovoLote.Text = "Novo Lote";
+            this.btnNovoLote.UseVisualStyleBackColor = false;
+            this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
+            // 
             // frm_MenuFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1327, 794);
+            this.ClientSize = new System.Drawing.Size(995, 645);
+            this.Controls.Add(this.btnNovoLote);
             this.Controls.Add(this.btnAtualizarUsuario);
-            this.Controls.Add(this.btnEditarRegistroUsuario);
             this.Controls.Add(this.btnNovoFornecedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -270,10 +267,10 @@ namespace TCC_3_M
         private System.Windows.Forms.TextBox txtCpfCnpjMenu;
         private System.Windows.Forms.Button btnCloseMenuFornecedores;
         private System.Windows.Forms.DataGridView dgvFornecedor;
-        private System.Windows.Forms.Button btnEditarRegistroUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label panelDataGrid;
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnNovoLote;
     }
 }

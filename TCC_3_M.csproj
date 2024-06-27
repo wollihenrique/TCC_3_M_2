@@ -91,6 +91,7 @@
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -116,6 +117,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contatos.Designer.cs">
+      <DependentUpon>Contatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Creditos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +281,9 @@
     <Compile Include="TermosDeUso.Designer.cs">
       <DependentUpon>TermosDeUso.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Contatos.resx">
+      <DependentUpon>Contatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Creditos.resx">
       <DependentUpon>Creditos.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,19 +426,67 @@
     <None Include="Resources\do-utilizador32px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo-2.ico" />
+    <None Include="Resources\ligar.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="Resources\e-mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telefone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e-mail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telefone1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto-rafa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto-wallace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yasmin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinicius cruz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yasmin1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\victor hugo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallace22.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedin %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedinCerto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgAnderson.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\multiple-users-silhouette.png" />

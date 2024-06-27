@@ -16,10 +16,14 @@ namespace TCC_3_M
         private MySqlConnection connection;
         private string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
         private DataTable dataTable;
+        private string emailDoAdministradorLogado; // Campo para armazenar o email do administrador logado
+        private int tenantId; // Campo para armazenar o tenantId
 
-        public frm_MenuFornecedores()
+        public frm_MenuFornecedores(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
+            this.emailDoAdministradorLogado = emailDoAdministradorLogado; // Atribui o email recebido ao campo privado
+            this.tenantId = tenantId; // Atribui o tenantId recebido ao campo privado
             InitializeDatabase();
             AtualizarDataGridView();
         }
@@ -33,14 +37,29 @@ namespace TCC_3_M
         {
             try
             {
-                string query = "SELECT * FROM supplier WHERE 1=1";
+                string query = @"
+            SELECT 
+                s.id AS FornecedorId, 
+                s.name AS NomeFornecedor, 
+                s.document AS DocumentoFornecedor, 
+                b.id AS LoteId, 
+                b.entering_date AS DataEntradaLote,
+                b.amount AS QuantidadeLote
+            FROM 
+                supplier s
+                LEFT JOIN batch b ON s.id = b.supplier_id
+            WHERE 
+                s.tenant_id = @TenantId";
 
                 if (!string.IsNullOrEmpty(txtCpfCnpjMenu.Text))
                 {
-                    query += $" AND document LIKE '%{txtCpfCnpjMenu.Text}%'";
+                    query += $" AND s.document LIKE '%{txtCpfCnpjMenu.Text}%'";
                 }
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@TenantId", tenantId);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 dgvFornecedor.DataSource = dataTable;
@@ -53,7 +72,7 @@ namespace TCC_3_M
 
         private void btnNovoFornecedor_Click(object sender, EventArgs e)
         {
-            frm_RegistroFornecedor registroFornecedor = new frm_RegistroFornecedor();
+            frm_RegistroFornecedor registroFornecedor = new frm_RegistroFornecedor(emailDoAdministradorLogado, tenantId);
             registroFornecedor.Show();
         }
 
@@ -75,10 +94,52 @@ namespace TCC_3_M
             this.Close();
         }
 
+        private void btnExcluirRegistroFuncionario_Click(object sender, EventArgs e)
+        {
+            if (dgvFornecedor.SelectedRows.Count > 0)
+            {
+                int idFornecedor = Convert.ToInt32(dgvFornecedor.SelectedRows[0].Cells[0].Value);
+
+                DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este fornecedor?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string query = "DELETE FROM supplier WHERE id = @Id";
+                        MySqlCommand cmd = new MySqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@Id", idFornecedor);
+
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        connection.Close();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Fornecedor excluído com sucesso!");
+                            AtualizarDataGridView();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao excluir fornecedor: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para excluir.");
+            }
+        }
+
         private void btnNovoLote_Click(object sender, EventArgs e)
         {
-            frm_RegistroLote frm_RegistroLote = new frm_RegistroLote(); 
-            frm_RegistroLote.Show();
+            frm_RegistroLote registroLote = new frm_RegistroLote(tenantId);
+            registroLote.Show();
         }
     }
 }

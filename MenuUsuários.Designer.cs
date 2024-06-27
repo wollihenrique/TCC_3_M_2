@@ -31,13 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCpfUsuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDataGrid = new System.Windows.Forms.Label();
             this.btnCloseMenuUsuarios = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblOrderBy = new System.Windows.Forms.Label();
-            this.cmb_OrderBy_Usuario = new System.Windows.Forms.ComboBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.btnEditarRegistroUsuario = new System.Windows.Forms.Button();
@@ -53,16 +53,37 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.txtCpfUsuario);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtNomeUsuario);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.lblOrderBy);
-            this.panel3.Controls.Add(this.cmb_OrderBy_Usuario);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(995, 97);
             this.panel3.TabIndex = 25;
+            // 
+            // txtCpfUsuario
+            // 
+            this.txtCpfUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpfUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfUsuario.Location = new System.Drawing.Point(167, 65);
+            this.txtCpfUsuario.Name = "txtCpfUsuario";
+            this.txtCpfUsuario.Size = new System.Drawing.Size(130, 22);
+            this.txtCpfUsuario.TabIndex = 20;
+            this.txtCpfUsuario.TextChanged += new System.EventHandler(this.txtCpfUsuario_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(164, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "CPF:";
             // 
             // panel1
             // 
@@ -107,14 +128,15 @@
             this.btnCloseMenuUsuarios.UseVisualStyleBackColor = false;
             this.btnCloseMenuUsuarios.Click += new System.EventHandler(this.btnCloseMenuUsuarios_Click);
             // 
-            // textBox1
+            // txtNomeUsuario
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 22);
-            this.textBox1.TabIndex = 15;
+            this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsuario.Location = new System.Drawing.Point(15, 65);
+            this.txtNomeUsuario.Name = "txtNomeUsuario";
+            this.txtNomeUsuario.Size = new System.Drawing.Size(130, 22);
+            this.txtNomeUsuario.TabIndex = 15;
+            this.txtNomeUsuario.TextChanged += new System.EventHandler(this.txtNomeUsuario_TextChanged);
             // 
             // label1
             // 
@@ -123,36 +145,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 18);
+            this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 14;
-            this.label1.Text = "ID:";
-            // 
-            // lblOrderBy
-            // 
-            this.lblOrderBy.AutoSize = true;
-            this.lblOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderBy.ForeColor = System.Drawing.Color.White;
-            this.lblOrderBy.Location = new System.Drawing.Point(175, 42);
-            this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(92, 18);
-            this.lblOrderBy.TabIndex = 9;
-            this.lblOrderBy.Text = "Ordenar por:";
-            // 
-            // cmb_OrderBy_Usuario
-            // 
-            this.cmb_OrderBy_Usuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmb_OrderBy_Usuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_OrderBy_Usuario.FormattingEnabled = true;
-            this.cmb_OrderBy_Usuario.Items.AddRange(new object[] {
-            "Ultima hora",
-            "Hoje",
-            "Esta semana",
-            "Este mês",
-            "Este ano"});
-            this.cmb_OrderBy_Usuario.Location = new System.Drawing.Point(178, 64);
-            this.cmb_OrderBy_Usuario.Name = "cmb_OrderBy_Usuario";
-            this.cmb_OrderBy_Usuario.Size = new System.Drawing.Size(145, 23);
-            this.cmb_OrderBy_Usuario.TabIndex = 11;
+            this.label1.Text = "Nome:";
             // 
             // dgvUsuarios
             // 
@@ -290,18 +285,18 @@
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblOrderBy;
-        private System.Windows.Forms.ComboBox cmb_OrderBy_Usuario;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btnNovoUsuario;
         private System.Windows.Forms.Button btnEditarRegistroUsuario;
         private System.Windows.Forms.Button btnAtualizarUsuario;
         private System.Windows.Forms.Button btnExcluirUsuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label panelDataGrid;
         private System.Windows.Forms.Button btnCloseMenuUsuarios;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtCpfUsuario;
+        private System.Windows.Forms.Label label2;
     }
 }
