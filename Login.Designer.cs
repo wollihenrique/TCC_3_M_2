@@ -53,9 +53,10 @@
             this.btnEntrarLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrarLog.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrarLog.ForeColor = System.Drawing.Color.White;
-            this.btnEntrarLog.Location = new System.Drawing.Point(599, 462);
+            this.btnEntrarLog.Location = new System.Drawing.Point(799, 569);
+            this.btnEntrarLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrarLog.Name = "btnEntrarLog";
-            this.btnEntrarLog.Size = new System.Drawing.Size(85, 35);
+            this.btnEntrarLog.Size = new System.Drawing.Size(113, 43);
             this.btnEntrarLog.TabIndex = 4;
             this.btnEntrarLog.Text = "Entrar";
             this.btnEntrarLog.UseVisualStyleBackColor = false;
@@ -67,16 +68,18 @@
             this.pnl_Cadastro_Cad.Controls.Add(this.pictureBox1);
             this.pnl_Cadastro_Cad.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Cadastro_Cad.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Cadastro_Cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Cadastro_Cad.Name = "pnl_Cadastro_Cad";
-            this.pnl_Cadastro_Cad.Size = new System.Drawing.Size(300, 530);
+            this.pnl_Cadastro_Cad.Size = new System.Drawing.Size(400, 652);
             this.pnl_Cadastro_Cad.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 158);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 194);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 263);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -85,10 +88,11 @@
             // 
             this.lnkCadastrar.AutoSize = true;
             this.lnkCadastrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkCadastrar.Location = new System.Drawing.Point(449, 326);
+            this.lnkCadastrar.Location = new System.Drawing.Point(599, 401);
+            this.lnkCadastrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCadastrar.Name = "lnkCadastrar";
-            this.lnkCadastrar.Size = new System.Drawing.Size(95, 15);
-            this.lnkCadastrar.TabIndex = 5;
+            this.lnkCadastrar.Size = new System.Drawing.Size(120, 20);
+            this.lnkCadastrar.TabIndex = 3;
             this.lnkCadastrar.TabStop = true;
             this.lnkCadastrar.Text = "Cadastre-se aqui";
             this.lnkCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastrar_LinkClicked);
@@ -97,9 +101,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(335, 326);
+            this.label4.Location = new System.Drawing.Point(447, 401);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 15);
+            this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Não tem uma conta?";
             // 
@@ -107,9 +112,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(335, 190);
+            this.label7.Location = new System.Drawing.Point(447, 234);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 18);
+            this.label7.Size = new System.Drawing.Size(62, 24);
             this.label7.TabIndex = 9;
             this.label7.Text = "Email:";
             // 
@@ -117,18 +123,20 @@
             // 
             this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(335, 215);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(447, 265);
+            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(290, 22);
-            this.txtUsuarioLogin.TabIndex = 13;
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(386, 26);
+            this.txtUsuarioLogin.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(335, 250);
+            this.label8.Location = new System.Drawing.Point(447, 308);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 18);
+            this.label8.Size = new System.Drawing.Size(70, 24);
             this.label8.TabIndex = 14;
             this.label8.Text = "Senha:";
             // 
@@ -136,10 +144,11 @@
             // 
             this.txtSenhaLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenhaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaLogin.Location = new System.Drawing.Point(335, 275);
+            this.txtSenhaLogin.Location = new System.Drawing.Point(447, 338);
+            this.txtSenhaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenhaLogin.Name = "txtSenhaLogin";
-            this.txtSenhaLogin.Size = new System.Drawing.Size(290, 22);
-            this.txtSenhaLogin.TabIndex = 15;
+            this.txtSenhaLogin.Size = new System.Drawing.Size(386, 26);
+            this.txtSenhaLogin.TabIndex = 2;
             this.txtSenhaLogin.UseSystemPasswordChar = true;
             // 
             // btnFechar
@@ -149,10 +158,11 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnFechar.Location = new System.Drawing.Point(710, 0);
+            this.btnFechar.Location = new System.Drawing.Point(947, 0);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(40, 40);
-            this.btnFechar.TabIndex = 16;
+            this.btnFechar.Size = new System.Drawing.Size(53, 49);
+            this.btnFechar.TabIndex = 5;
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -170,8 +180,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 530);
+            this.panel1.Size = new System.Drawing.Size(1000, 652);
             this.panel1.TabIndex = 17;
             // 
             // lblLogin
@@ -179,23 +190,24 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblLogin.Location = new System.Drawing.Point(335, 90);
+            this.lblLogin.Location = new System.Drawing.Point(447, 111);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(121, 44);
+            this.lblLogin.Size = new System.Drawing.Size(153, 55);
             this.lblLogin.TabIndex = 17;
             this.lblLogin.Text = "Login";
             // 
             // frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(750, 530);
+            this.ClientSize = new System.Drawing.Size(1000, 652);
             this.Controls.Add(this.pnl_Cadastro_Cad);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

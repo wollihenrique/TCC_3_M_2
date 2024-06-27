@@ -55,8 +55,9 @@ namespace TCC_3_M
             this.pnlCadastroP.Controls.Add(this.label1);
             this.pnlCadastroP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCadastroP.Location = new System.Drawing.Point(0, 0);
+            this.pnlCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlCadastroP.Name = "pnlCadastroP";
-            this.pnlCadastroP.Size = new System.Drawing.Size(520, 42);
+            this.pnlCadastroP.Size = new System.Drawing.Size(693, 51);
             this.pnlCadastroP.TabIndex = 29;
             // 
             // btnCloseFrmRegistroPerifericos
@@ -64,13 +65,15 @@ namespace TCC_3_M
             this.btnCloseFrmRegistroPerifericos.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCloseFrmRegistroPerifericos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseFrmRegistroPerifericos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseFrmRegistroPerifericos.FlatAppearance.BorderSize = 0;
             this.btnCloseFrmRegistroPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFrmRegistroPerifericos.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseFrmRegistroPerifericos.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCloseFrmRegistroPerifericos.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseFrmRegistroPerifericos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseFrmRegistroPerifericos.Name = "btnCloseFrmRegistroPerifericos";
-            this.btnCloseFrmRegistroPerifericos.Size = new System.Drawing.Size(52, 40);
-            this.btnCloseFrmRegistroPerifericos.TabIndex = 50;
+            this.btnCloseFrmRegistroPerifericos.Size = new System.Drawing.Size(58, 49);
+            this.btnCloseFrmRegistroPerifericos.TabIndex = 8;
             this.btnCloseFrmRegistroPerifericos.Text = "X";
             this.btnCloseFrmRegistroPerifericos.UseVisualStyleBackColor = false;
             this.btnCloseFrmRegistroPerifericos.Click += new System.EventHandler(this.btnCloseFrmRegistroPerifericos_Click);
@@ -80,64 +83,76 @@ namespace TCC_3_M
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 8);
+            this.label1.Location = new System.Drawing.Point(53, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 28);
+            this.label1.Size = new System.Drawing.Size(330, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro de Periféricos";
             // 
             // cmbStatusFrmCadastroP
             // 
+            this.cmbStatusFrmCadastroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStatusFrmCadastroP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatusFrmCadastroP.FormattingEnabled = true;
-            this.cmbStatusFrmCadastroP.Location = new System.Drawing.Point(238, 128);
+            this.cmbStatusFrmCadastroP.Location = new System.Drawing.Point(504, 159);
+            this.cmbStatusFrmCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbStatusFrmCadastroP.Name = "cmbStatusFrmCadastroP";
-            this.cmbStatusFrmCadastroP.Size = new System.Drawing.Size(85, 21);
-            this.cmbStatusFrmCadastroP.TabIndex = 54;
+            this.cmbStatusFrmCadastroP.Size = new System.Drawing.Size(165, 31);
+            this.cmbStatusFrmCadastroP.TabIndex = 5;
             this.cmbStatusFrmCadastroP.SelectedIndexChanged += new System.EventHandler(this.cmbStatusFrmCadastroP_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(235, 109);
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(500, 135);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 16);
+            this.label12.Size = new System.Drawing.Size(73, 23);
             this.label12.TabIndex = 53;
             this.label12.Text = "Status:";
             // 
             // cmbTipoFrmCadastroP
             // 
+            this.cmbTipoFrmCadastroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoFrmCadastroP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoFrmCadastroP.FormattingEnabled = true;
-            this.cmbTipoFrmCadastroP.Location = new System.Drawing.Point(125, 129);
+            this.cmbTipoFrmCadastroP.Location = new System.Drawing.Point(231, 160);
+            this.cmbTipoFrmCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoFrmCadastroP.Name = "cmbTipoFrmCadastroP";
-            this.cmbTipoFrmCadastroP.Size = new System.Drawing.Size(98, 21);
-            this.cmbTipoFrmCadastroP.TabIndex = 56;
+            this.cmbTipoFrmCadastroP.Size = new System.Drawing.Size(238, 31);
+            this.cmbTipoFrmCadastroP.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 109);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(226, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(53, 23);
             this.label2.TabIndex = 55;
             this.label2.Text = "Tipo:";
             // 
             // txtModeloCadastroP
             // 
             this.txtModeloCadastroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtModeloCadastroP.Location = new System.Drawing.Point(14, 77);
+            this.txtModeloCadastroP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModeloCadastroP.Location = new System.Drawing.Point(19, 88);
+            this.txtModeloCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModeloCadastroP.Name = "txtModeloCadastroP";
-            this.txtModeloCadastroP.Size = new System.Drawing.Size(268, 20);
-            this.txtModeloCadastroP.TabIndex = 52;
+            this.txtModeloCadastroP.Size = new System.Drawing.Size(357, 32);
+            this.txtModeloCadastroP.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 57);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 51;
             this.label3.Text = "Modelo:";
             // 
@@ -145,11 +160,12 @@ namespace TCC_3_M
             // 
             this.btnCancelarFrmCadastroP.BackColor = System.Drawing.Color.Firebrick;
             this.btnCancelarFrmCadastroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarFrmCadastroP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFrmCadastroP.Location = new System.Drawing.Point(344, 124);
+            this.btnCancelarFrmCadastroP.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarFrmCadastroP.Location = new System.Drawing.Point(428, 213);
+            this.btnCancelarFrmCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarFrmCadastroP.Name = "btnCancelarFrmCadastroP";
-            this.btnCancelarFrmCadastroP.Size = new System.Drawing.Size(76, 31);
-            this.btnCancelarFrmCadastroP.TabIndex = 58;
+            this.btnCancelarFrmCadastroP.Size = new System.Drawing.Size(111, 43);
+            this.btnCancelarFrmCadastroP.TabIndex = 6;
             this.btnCancelarFrmCadastroP.Text = "Cancelar";
             this.btnCancelarFrmCadastroP.UseVisualStyleBackColor = false;
             this.btnCancelarFrmCadastroP.Click += new System.EventHandler(this.btnCancelarFrmCadastroP_Click);
@@ -158,11 +174,12 @@ namespace TCC_3_M
             // 
             this.btnSalvarFrmCadastroP.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSalvarFrmCadastroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarFrmCadastroP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarFrmCadastroP.Location = new System.Drawing.Point(426, 124);
+            this.btnSalvarFrmCadastroP.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarFrmCadastroP.Location = new System.Drawing.Point(558, 213);
+            this.btnSalvarFrmCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvarFrmCadastroP.Name = "btnSalvarFrmCadastroP";
-            this.btnSalvarFrmCadastroP.Size = new System.Drawing.Size(76, 31);
-            this.btnSalvarFrmCadastroP.TabIndex = 57;
+            this.btnSalvarFrmCadastroP.Size = new System.Drawing.Size(111, 43);
+            this.btnSalvarFrmCadastroP.TabIndex = 7;
             this.btnSalvarFrmCadastroP.Text = "Salvar";
             this.btnSalvarFrmCadastroP.UseVisualStyleBackColor = false;
             this.btnSalvarFrmCadastroP.Click += new System.EventHandler(this.btnSalvarFrmCadastroP_Click);
@@ -170,44 +187,53 @@ namespace TCC_3_M
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 109);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(57, 23);
             this.label4.TabIndex = 55;
             this.label4.Text = "Lote:";
             // 
             // cmbLoteFrmCadastroP
             // 
+            this.cmbLoteFrmCadastroP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbLoteFrmCadastroP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoteFrmCadastroP.FormattingEnabled = true;
-            this.cmbLoteFrmCadastroP.Location = new System.Drawing.Point(17, 129);
+            this.cmbLoteFrmCadastroP.Location = new System.Drawing.Point(23, 160);
+            this.cmbLoteFrmCadastroP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLoteFrmCadastroP.Name = "cmbLoteFrmCadastroP";
-            this.cmbLoteFrmCadastroP.Size = new System.Drawing.Size(93, 21);
-            this.cmbLoteFrmCadastroP.TabIndex = 56;
+            this.cmbLoteFrmCadastroP.Size = new System.Drawing.Size(182, 31);
+            this.cmbLoteFrmCadastroP.TabIndex = 3;
             // 
             // cmbUsuario
             // 
+            this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(302, 76);
+            this.cmbUsuario.Location = new System.Drawing.Point(403, 87);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(189, 21);
-            this.cmbUsuario.TabIndex = 60;
+            this.cmbUsuario.Size = new System.Drawing.Size(251, 31);
+            this.cmbUsuario.TabIndex = 2;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(299, 57);
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(399, 63);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(171, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(275, 23);
             this.lblUsuario.TabIndex = 59;
             this.lblUsuario.Text = "Usuário que está utilizando:";
             // 
             // frm_RegistroPeriferico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 180);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(693, 267);
             this.Controls.Add(this.cmbUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnCancelarFrmCadastroP);
@@ -222,6 +248,7 @@ namespace TCC_3_M
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pnlCadastroP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_RegistroPeriferico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroPerifericos";

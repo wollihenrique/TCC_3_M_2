@@ -77,6 +77,7 @@ namespace TCC_3_M
             this.dgvHardware.GridColor = System.Drawing.Color.DarkGray;
             this.dgvHardware.Location = new System.Drawing.Point(0, 0);
             this.dgvHardware.Name = "dgvHardware";
+            this.dgvHardware.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -115,7 +116,7 @@ namespace TCC_3_M
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(643, 41);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(85, 25);
             this.lblUsuario.TabIndex = 18;
             this.lblUsuario.Text = "Usuário:";
             // 
@@ -123,11 +124,11 @@ namespace TCC_3_M
             // 
             this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Location = new System.Drawing.Point(647, 66);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(175, 24);
+            this.cmbUsuario.Size = new System.Drawing.Size(175, 29);
             this.cmbUsuario.TabIndex = 17;
             this.cmbUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbUsuario_SelectedIndexChanged);
             // 
@@ -142,7 +143,7 @@ namespace TCC_3_M
             this.panelDataGrid.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelDataGrid.Location = new System.Drawing.Point(59, 4);
             this.panelDataGrid.Name = "panelDataGrid";
-            this.panelDataGrid.Size = new System.Drawing.Size(239, 29);
+            this.panelDataGrid.Size = new System.Drawing.Size(288, 36);
             this.panelDataGrid.TabIndex = 15;
             this.panelDataGrid.Text = "Filtros de Pesquisa";
             // 
@@ -165,10 +166,10 @@ namespace TCC_3_M
             // txtTag
             // 
             this.txtTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTag.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTag.Location = new System.Drawing.Point(16, 66);
             this.txtTag.Name = "txtTag";
-            this.txtTag.Size = new System.Drawing.Size(97, 22);
+            this.txtTag.Size = new System.Drawing.Size(97, 30);
             this.txtTag.TabIndex = 8;
             // 
             // label2
@@ -178,7 +179,7 @@ namespace TCC_3_M
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(60, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "TAG:";
             // 
@@ -186,11 +187,11 @@ namespace TCC_3_M
             // 
             this.cmbStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(485, 66);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(100, 24);
+            this.cmbStatus.Size = new System.Drawing.Size(100, 29);
             this.cmbStatus.TabIndex = 6;
             // 
             // lblOrderBy
@@ -200,7 +201,7 @@ namespace TCC_3_M
             this.lblOrderBy.ForeColor = System.Drawing.Color.White;
             this.lblOrderBy.Location = new System.Drawing.Point(220, 41);
             this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(98, 20);
+            this.lblOrderBy.Size = new System.Drawing.Size(123, 25);
             this.lblOrderBy.TabIndex = 3;
             this.lblOrderBy.Text = "Ordenar por:";
             // 
@@ -208,11 +209,11 @@ namespace TCC_3_M
             // 
             this.cmbOrderBy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbOrderBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrderBy.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOrderBy.FormattingEnabled = true;
             this.cmbOrderBy.Location = new System.Drawing.Point(223, 66);
             this.cmbOrderBy.Name = "cmbOrderBy";
-            this.cmbOrderBy.Size = new System.Drawing.Size(165, 24);
+            this.cmbOrderBy.Size = new System.Drawing.Size(165, 29);
             this.cmbOrderBy.TabIndex = 5;
             // 
             // lblStatus
@@ -222,7 +223,7 @@ namespace TCC_3_M
             this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(481, 41);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 20);
+            this.lblStatus.Size = new System.Drawing.Size(74, 25);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status:";
             // 
@@ -232,7 +233,7 @@ namespace TCC_3_M
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 38);
+            this.panel1.Size = new System.Drawing.Size(995, 40);
             this.panel1.TabIndex = 16;
             // 
             // btnExcluirHardware
@@ -241,7 +242,7 @@ namespace TCC_3_M
             this.btnExcluirHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExcluirHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluirHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirHardware.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluirHardware.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExcluirHardware.Location = new System.Drawing.Point(731, 557);
             this.btnExcluirHardware.Name = "btnExcluirHardware";
@@ -257,7 +258,7 @@ namespace TCC_3_M
             this.btnAtualizarHardware.BackColor = System.Drawing.Color.Cornsilk;
             this.btnAtualizarHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarHardware.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarHardware.ForeColor = System.Drawing.Color.Gold;
             this.btnAtualizarHardware.Location = new System.Drawing.Point(465, 557);
             this.btnAtualizarHardware.Name = "btnAtualizarHardware";
@@ -273,7 +274,7 @@ namespace TCC_3_M
             this.btnEditarRegistroHardware.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEditarRegistroHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarRegistroHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRegistroHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarRegistroHardware.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarRegistroHardware.ForeColor = System.Drawing.Color.DarkGray;
             this.btnEditarRegistroHardware.Location = new System.Drawing.Point(599, 557);
             this.btnEditarRegistroHardware.Name = "btnEditarRegistroHardware";
@@ -289,7 +290,7 @@ namespace TCC_3_M
             this.btnNovoHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNovoHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoHardware.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoHardware.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNovoHardware.Location = new System.Drawing.Point(863, 557);
             this.btnNovoHardware.Name = "btnNovoHardware";
@@ -313,7 +314,7 @@ namespace TCC_3_M
             // 
             // frm_CadastroDisp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(995, 645);

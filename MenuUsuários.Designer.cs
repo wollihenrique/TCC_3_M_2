@@ -60,18 +60,20 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(995, 97);
+            this.panel3.Size = new System.Drawing.Size(1327, 119);
             this.panel3.TabIndex = 25;
             // 
             // txtCpfUsuario
             // 
             this.txtCpfUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCpfUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpfUsuario.Location = new System.Drawing.Point(167, 65);
+            this.txtCpfUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfUsuario.Location = new System.Drawing.Point(223, 80);
+            this.txtCpfUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCpfUsuario.Name = "txtCpfUsuario";
-            this.txtCpfUsuario.Size = new System.Drawing.Size(130, 22);
-            this.txtCpfUsuario.TabIndex = 20;
+            this.txtCpfUsuario.Size = new System.Drawing.Size(173, 30);
+            this.txtCpfUsuario.TabIndex = 2;
             this.txtCpfUsuario.TextChanged += new System.EventHandler(this.txtCpfUsuario_TextChanged);
             // 
             // label2
@@ -79,9 +81,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(164, 45);
+            this.label2.Location = new System.Drawing.Point(219, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.Size = new System.Drawing.Size(52, 24);
             this.label2.TabIndex = 19;
             this.label2.Text = "CPF:";
             // 
@@ -92,8 +95,9 @@
             this.panel1.Controls.Add(this.btnCloseMenuUsuarios);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 35);
+            this.panel1.Size = new System.Drawing.Size(1327, 43);
             this.panel1.TabIndex = 18;
             // 
             // panelDataGrid
@@ -105,9 +109,10 @@
             this.panelDataGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.panelDataGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDataGrid.ForeColor = System.Drawing.Color.Gainsboro;
-            this.panelDataGrid.Location = new System.Drawing.Point(60, 1);
+            this.panelDataGrid.Location = new System.Drawing.Point(80, 1);
+            this.panelDataGrid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDataGrid.Name = "panelDataGrid";
-            this.panelDataGrid.Size = new System.Drawing.Size(164, 29);
+            this.panelDataGrid.Size = new System.Drawing.Size(200, 36);
             this.panelDataGrid.TabIndex = 16;
             this.panelDataGrid.Text = "Funcionários";
             // 
@@ -121,8 +126,9 @@
             this.btnCloseMenuUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseMenuUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnCloseMenuUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseMenuUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseMenuUsuarios.Name = "btnCloseMenuUsuarios";
-            this.btnCloseMenuUsuarios.Size = new System.Drawing.Size(59, 35);
+            this.btnCloseMenuUsuarios.Size = new System.Drawing.Size(79, 43);
             this.btnCloseMenuUsuarios.TabIndex = 13;
             this.btnCloseMenuUsuarios.Text = "X";
             this.btnCloseMenuUsuarios.UseVisualStyleBackColor = false;
@@ -131,11 +137,12 @@
             // txtNomeUsuario
             // 
             this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeUsuario.Location = new System.Drawing.Point(15, 65);
+            this.txtNomeUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsuario.Location = new System.Drawing.Point(20, 80);
+            this.txtNomeUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(130, 22);
-            this.txtNomeUsuario.TabIndex = 15;
+            this.txtNomeUsuario.Size = new System.Drawing.Size(173, 30);
+            this.txtNomeUsuario.TabIndex = 1;
             this.txtNomeUsuario.TextChanged += new System.EventHandler(this.txtNomeUsuario_TextChanged);
             // 
             // label1
@@ -143,9 +150,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 45);
+            this.label1.Location = new System.Drawing.Point(16, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nome:";
             // 
@@ -171,14 +179,16 @@
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.DarkGray;
             this.dgvUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarios.Size = new System.Drawing.Size(995, 448);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1327, 551);
             this.dgvUsuarios.TabIndex = 22;
             // 
             // btnNovoUsuario
@@ -187,11 +197,12 @@
             this.btnNovoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNovoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoUsuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNovoUsuario.Location = new System.Drawing.Point(863, 557);
+            this.btnNovoUsuario.Location = new System.Drawing.Point(1151, 686);
+            this.btnNovoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.Size = new System.Drawing.Size(120, 70);
+            this.btnNovoUsuario.Size = new System.Drawing.Size(160, 86);
             this.btnNovoUsuario.TabIndex = 26;
             this.btnNovoUsuario.Text = "Novo Usuario";
             this.btnNovoUsuario.UseVisualStyleBackColor = false;
@@ -203,11 +214,12 @@
             this.btnEditarRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEditarRegistroUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarRegistroUsuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarRegistroUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.btnEditarRegistroUsuario.Location = new System.Drawing.Point(599, 557);
+            this.btnEditarRegistroUsuario.Location = new System.Drawing.Point(799, 686);
+            this.btnEditarRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditarRegistroUsuario.Name = "btnEditarRegistroUsuario";
-            this.btnEditarRegistroUsuario.Size = new System.Drawing.Size(120, 70);
+            this.btnEditarRegistroUsuario.Size = new System.Drawing.Size(160, 86);
             this.btnEditarRegistroUsuario.TabIndex = 27;
             this.btnEditarRegistroUsuario.Text = "Editar Registro";
             this.btnEditarRegistroUsuario.UseVisualStyleBackColor = false;
@@ -219,11 +231,12 @@
             this.btnAtualizarUsuario.BackColor = System.Drawing.Color.Cornsilk;
             this.btnAtualizarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarUsuario.ForeColor = System.Drawing.Color.Gold;
-            this.btnAtualizarUsuario.Location = new System.Drawing.Point(465, 557);
+            this.btnAtualizarUsuario.Location = new System.Drawing.Point(620, 686);
+            this.btnAtualizarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtualizarUsuario.Name = "btnAtualizarUsuario";
-            this.btnAtualizarUsuario.Size = new System.Drawing.Size(120, 70);
+            this.btnAtualizarUsuario.Size = new System.Drawing.Size(160, 86);
             this.btnAtualizarUsuario.TabIndex = 28;
             this.btnAtualizarUsuario.Text = "Atualizar";
             this.btnAtualizarUsuario.UseVisualStyleBackColor = false;
@@ -235,11 +248,12 @@
             this.btnExcluirUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExcluirUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluirUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirUsuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluirUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnExcluirUsuario.Location = new System.Drawing.Point(731, 557);
+            this.btnExcluirUsuario.Location = new System.Drawing.Point(975, 686);
+            this.btnExcluirUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExcluirUsuario.Name = "btnExcluirUsuario";
-            this.btnExcluirUsuario.Size = new System.Drawing.Size(120, 70);
+            this.btnExcluirUsuario.Size = new System.Drawing.Size(160, 86);
             this.btnExcluirUsuario.TabIndex = 29;
             this.btnExcluirUsuario.Text = "Excluir Usuário";
             this.btnExcluirUsuario.UseVisualStyleBackColor = false;
@@ -252,17 +266,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.dgvUsuarios);
-            this.panel2.Location = new System.Drawing.Point(0, 96);
+            this.panel2.Location = new System.Drawing.Point(0, 118);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 455);
+            this.panel2.Size = new System.Drawing.Size(1327, 560);
             this.panel2.TabIndex = 30;
             // 
             // frm_Usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(995, 645);
+            this.ClientSize = new System.Drawing.Size(1327, 794);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnExcluirUsuario);
             this.Controls.Add(this.btnAtualizarUsuario);
@@ -271,6 +286,7 @@
             this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Usuario";
             this.Text = "Menu - [Cadastro Usuarios]";
             this.panel3.ResumeLayout(false);

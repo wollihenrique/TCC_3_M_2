@@ -70,7 +70,7 @@
             this.pnlFilhoConteinerPrincipal.Controls.Add(this.pictureBox1);
             this.pnlFilhoConteinerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(0, 123);
-            this.pnlFilhoConteinerPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFilhoConteinerPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFilhoConteinerPrincipal.Name = "pnlFilhoConteinerPrincipal";
             this.pnlFilhoConteinerPrincipal.Size = new System.Drawing.Size(1067, 644);
             this.pnlFilhoConteinerPrincipal.TabIndex = 5;
@@ -79,10 +79,10 @@
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Location = new System.Drawing.Point(435, 553);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -90,10 +90,10 @@
             // 
             this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEnviar.Location = new System.Drawing.Point(543, 553);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(100, 28);
-            this.btnEnviar.TabIndex = 10;
+            this.btnEnviar.TabIndex = 6;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             // 
@@ -113,37 +113,37 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(449, 207);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(192, 22);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(449, 175);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 22);
-            this.textBox2.TabIndex = 7;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(449, 143);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 1;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(301, 309);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(532, 235);
-            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
             // labelMensagem
@@ -196,7 +196,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(688, 143);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,7 +236,7 @@
             this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.pictureBox2);
             this.pnlFilhoCabecalhoPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.pnlFilhoCabecalhoPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFilhoCabecalhoPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFilhoCabecalhoPrincipal.Name = "pnlFilhoCabecalhoPrincipal";
             this.pnlFilhoCabecalhoPrincipal.Size = new System.Drawing.Size(1067, 123);
             this.pnlFilhoCabecalhoPrincipal.TabIndex = 4;
@@ -251,7 +251,7 @@
             this.bntContato.ForeColor = System.Drawing.Color.White;
             this.bntContato.Image = global::TCC_3_M.Properties.Resources.do_utilizador32px;
             this.bntContato.Location = new System.Drawing.Point(817, 21);
-            this.bntContato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bntContato.Margin = new System.Windows.Forms.Padding(4);
             this.bntContato.Name = "bntContato";
             this.bntContato.Size = new System.Drawing.Size(233, 73);
             this.bntContato.TabIndex = 0;
@@ -264,7 +264,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(13, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 69);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -279,7 +279,7 @@
             this.Controls.Add(this.pnlFilhoConteinerPrincipal);
             this.Controls.Add(this.pnlFilhoCabecalhoPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Contatos";
             this.Text = "Contatos";
             this.pnlFilhoConteinerPrincipal.ResumeLayout(false);

@@ -91,7 +91,7 @@ namespace TCC_3_M
             this.pnlMenuPrincipal.Controls.Add(this.panelLogo);
             this.pnlMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMenuPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
             this.pnlMenuPrincipal.Size = new System.Drawing.Size(291, 889);
             this.pnlMenuPrincipal.TabIndex = 0;
@@ -115,7 +115,7 @@ namespace TCC_3_M
             this.pnlSubMenuHistoric.Controls.Add(this.btnHistoricRegisters);
             this.pnlSubMenuHistoric.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuHistoric.Location = new System.Drawing.Point(0, 730);
-            this.pnlSubMenuHistoric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubMenuHistoric.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubMenuHistoric.Name = "pnlSubMenuHistoric";
             this.pnlSubMenuHistoric.Size = new System.Drawing.Size(289, 55);
             this.pnlSubMenuHistoric.TabIndex = 9;
@@ -129,7 +129,7 @@ namespace TCC_3_M
             this.btnHistoricRegisters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistoricRegisters.ForeColor = System.Drawing.Color.White;
             this.btnHistoricRegisters.Location = new System.Drawing.Point(0, 0);
-            this.btnHistoricRegisters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistoricRegisters.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistoricRegisters.Name = "btnHistoricRegisters";
             this.btnHistoricRegisters.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnHistoricRegisters.Size = new System.Drawing.Size(289, 49);
@@ -149,7 +149,7 @@ namespace TCC_3_M
             this.btnHistórico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistórico.ForeColor = System.Drawing.Color.White;
             this.btnHistórico.Location = new System.Drawing.Point(0, 684);
-            this.btnHistórico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistórico.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistórico.Name = "btnHistórico";
             this.btnHistórico.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnHistórico.Size = new System.Drawing.Size(289, 46);
@@ -170,7 +170,7 @@ namespace TCC_3_M
             this.btnSair.Image = global::TCC_3_M.Properties.Resources.sair;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.Location = new System.Drawing.Point(0, 821);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnSair.Size = new System.Drawing.Size(289, 66);
@@ -189,7 +189,7 @@ namespace TCC_3_M
             this.pnlSubMenuAjuda.Controls.Add(this.btnContatos);
             this.pnlSubMenuAjuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAjuda.Location = new System.Drawing.Point(0, 526);
-            this.pnlSubMenuAjuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubMenuAjuda.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubMenuAjuda.Name = "pnlSubMenuAjuda";
             this.pnlSubMenuAjuda.Size = new System.Drawing.Size(289, 158);
             this.pnlSubMenuAjuda.TabIndex = 6;
@@ -204,7 +204,7 @@ namespace TCC_3_M
             this.btnDuvidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuvidas.ForeColor = System.Drawing.Color.White;
             this.btnDuvidas.Location = new System.Drawing.Point(0, 98);
-            this.btnDuvidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDuvidas.Margin = new System.Windows.Forms.Padding(4);
             this.btnDuvidas.Name = "btnDuvidas";
             this.btnDuvidas.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnDuvidas.Size = new System.Drawing.Size(289, 49);
@@ -224,7 +224,7 @@ namespace TCC_3_M
             this.btnTutoriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTutoriais.ForeColor = System.Drawing.Color.White;
             this.btnTutoriais.Location = new System.Drawing.Point(0, 49);
-            this.btnTutoriais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTutoriais.Margin = new System.Windows.Forms.Padding(4);
             this.btnTutoriais.Name = "btnTutoriais";
             this.btnTutoriais.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnTutoriais.Size = new System.Drawing.Size(289, 49);
@@ -244,7 +244,7 @@ namespace TCC_3_M
             this.btnContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContatos.ForeColor = System.Drawing.Color.White;
             this.btnContatos.Location = new System.Drawing.Point(0, 0);
-            this.btnContatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnContatos.Name = "btnContatos";
             this.btnContatos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnContatos.Size = new System.Drawing.Size(289, 49);
@@ -264,7 +264,7 @@ namespace TCC_3_M
             this.btnAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjuda.ForeColor = System.Drawing.Color.White;
             this.btnAjuda.Location = new System.Drawing.Point(0, 477);
-            this.btnAjuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAjuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnAjuda.Size = new System.Drawing.Size(289, 49);
@@ -280,7 +280,7 @@ namespace TCC_3_M
             this.pnlSubMenuCreditos.Controls.Add(this.btnNossaEquipe);
             this.pnlSubMenuCreditos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuCreditos.Location = new System.Drawing.Point(0, 422);
-            this.pnlSubMenuCreditos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubMenuCreditos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubMenuCreditos.Name = "pnlSubMenuCreditos";
             this.pnlSubMenuCreditos.Size = new System.Drawing.Size(289, 55);
             this.pnlSubMenuCreditos.TabIndex = 4;
@@ -295,7 +295,7 @@ namespace TCC_3_M
             this.btnNossaEquipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNossaEquipe.ForeColor = System.Drawing.Color.White;
             this.btnNossaEquipe.Location = new System.Drawing.Point(0, 0);
-            this.btnNossaEquipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNossaEquipe.Margin = new System.Windows.Forms.Padding(4);
             this.btnNossaEquipe.Name = "btnNossaEquipe";
             this.btnNossaEquipe.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnNossaEquipe.Size = new System.Drawing.Size(289, 49);
@@ -316,7 +316,7 @@ namespace TCC_3_M
             this.btnCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreditos.ForeColor = System.Drawing.Color.White;
             this.btnCreditos.Location = new System.Drawing.Point(0, 373);
-            this.btnCreditos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreditos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreditos.Name = "btnCreditos";
             this.btnCreditos.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnCreditos.Size = new System.Drawing.Size(289, 49);
@@ -335,7 +335,7 @@ namespace TCC_3_M
             this.pnlSubUserMenu.Controls.Add(this.btnUsuarios);
             this.pnlSubUserMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubUserMenu.Location = new System.Drawing.Point(0, 169);
-            this.pnlSubUserMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubUserMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubUserMenu.Name = "pnlSubUserMenu";
             this.pnlSubUserMenu.Size = new System.Drawing.Size(289, 204);
             this.pnlSubUserMenu.TabIndex = 2;
@@ -350,7 +350,7 @@ namespace TCC_3_M
             this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedores.ForeColor = System.Drawing.Color.White;
             this.btnFornecedores.Location = new System.Drawing.Point(0, 147);
-            this.btnFornecedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFornecedores.Margin = new System.Windows.Forms.Padding(4);
             this.btnFornecedores.Name = "btnFornecedores";
             this.btnFornecedores.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnFornecedores.Size = new System.Drawing.Size(289, 49);
@@ -370,7 +370,7 @@ namespace TCC_3_M
             this.btnPerifericos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerifericos.ForeColor = System.Drawing.Color.White;
             this.btnPerifericos.Location = new System.Drawing.Point(0, 98);
-            this.btnPerifericos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPerifericos.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerifericos.Name = "btnPerifericos";
             this.btnPerifericos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnPerifericos.Size = new System.Drawing.Size(289, 49);
@@ -390,7 +390,7 @@ namespace TCC_3_M
             this.btnDispositivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDispositivos.ForeColor = System.Drawing.Color.White;
             this.btnDispositivos.Location = new System.Drawing.Point(0, 49);
-            this.btnDispositivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDispositivos.Margin = new System.Windows.Forms.Padding(4);
             this.btnDispositivos.Name = "btnDispositivos";
             this.btnDispositivos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnDispositivos.Size = new System.Drawing.Size(289, 49);
@@ -410,7 +410,7 @@ namespace TCC_3_M
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(289, 49);
@@ -430,7 +430,7 @@ namespace TCC_3_M
             this.btnRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistros.ForeColor = System.Drawing.Color.White;
             this.btnRegistros.Location = new System.Drawing.Point(0, 123);
-            this.btnRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistros.Name = "btnRegistros";
             this.btnRegistros.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnRegistros.Size = new System.Drawing.Size(289, 46);
@@ -448,7 +448,7 @@ namespace TCC_3_M
             this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(289, 123);
             this.panelLogo.TabIndex = 0;
@@ -458,7 +458,7 @@ namespace TCC_3_M
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(205, 47);
+            this.label3.Location = new System.Drawing.Point(191, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
@@ -482,7 +482,7 @@ namespace TCC_3_M
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(109, 91);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -496,7 +496,7 @@ namespace TCC_3_M
             this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.button1);
             this.pnlFilhoCabecalhoPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(291, 0);
-            this.pnlFilhoCabecalhoPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFilhoCabecalhoPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFilhoCabecalhoPrincipal.Name = "pnlFilhoCabecalhoPrincipal";
             this.pnlFilhoCabecalhoPrincipal.Size = new System.Drawing.Size(988, 123);
             this.pnlFilhoCabecalhoPrincipal.TabIndex = 1;
@@ -524,7 +524,7 @@ namespace TCC_3_M
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::TCC_3_M.Properties.Resources.do_utilizador32px;
             this.button1.Location = new System.Drawing.Point(712, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(263, 73);
             this.button1.TabIndex = 0;
@@ -538,7 +538,7 @@ namespace TCC_3_M
             this.pnlFilhoConteinerPrincipal.Controls.Add(this.pictureBox1);
             this.pnlFilhoConteinerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(291, 123);
-            this.pnlFilhoConteinerPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFilhoConteinerPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFilhoConteinerPrincipal.Name = "pnlFilhoConteinerPrincipal";
             this.pnlFilhoConteinerPrincipal.Size = new System.Drawing.Size(988, 766);
             this.pnlFilhoConteinerPrincipal.TabIndex = 2;
@@ -548,7 +548,7 @@ namespace TCC_3_M
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(353, 198);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(357, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -569,7 +569,7 @@ namespace TCC_3_M
             this.Controls.Add(this.pnlFilhoCabecalhoPrincipal);
             this.Controls.Add(this.pnlMenuPrincipal);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1261, 728);
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

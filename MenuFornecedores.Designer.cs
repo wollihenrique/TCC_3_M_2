@@ -29,9 +29,9 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnNovoFornecedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,12 +55,13 @@ namespace TCC_3_M
             this.btnAtualizarUsuario.BackColor = System.Drawing.Color.Cornsilk;
             this.btnAtualizarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarUsuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarUsuario.ForeColor = System.Drawing.Color.Gold;
-            this.btnAtualizarUsuario.Location = new System.Drawing.Point(611, 557);
+            this.btnAtualizarUsuario.Location = new System.Drawing.Point(815, 686);
+            this.btnAtualizarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtualizarUsuario.Name = "btnAtualizarUsuario";
-            this.btnAtualizarUsuario.Size = new System.Drawing.Size(120, 70);
-            this.btnAtualizarUsuario.TabIndex = 34;
+            this.btnAtualizarUsuario.Size = new System.Drawing.Size(160, 86);
+            this.btnAtualizarUsuario.TabIndex = 2;
             this.btnAtualizarUsuario.Text = "Atualizar";
             this.btnAtualizarUsuario.UseVisualStyleBackColor = false;
             this.btnAtualizarUsuario.Click += new System.EventHandler(this.btnAtualizarUsuario_Click);
@@ -71,12 +72,13 @@ namespace TCC_3_M
             this.btnNovoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNovoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoFornecedor.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoFornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNovoFornecedor.Location = new System.Drawing.Point(863, 557);
+            this.btnNovoFornecedor.Location = new System.Drawing.Point(1151, 686);
+            this.btnNovoFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNovoFornecedor.Name = "btnNovoFornecedor";
-            this.btnNovoFornecedor.Size = new System.Drawing.Size(120, 70);
-            this.btnNovoFornecedor.TabIndex = 32;
+            this.btnNovoFornecedor.Size = new System.Drawing.Size(160, 86);
+            this.btnNovoFornecedor.TabIndex = 4;
             this.btnNovoFornecedor.Text = "Novo Fornecedor";
             this.btnNovoFornecedor.UseVisualStyleBackColor = false;
             this.btnNovoFornecedor.Click += new System.EventHandler(this.btnNovoFornecedor_Click);
@@ -89,29 +91,32 @@ namespace TCC_3_M
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(995, 97);
+            this.panel3.Size = new System.Drawing.Size(1327, 119);
             this.panel3.TabIndex = 31;
             // 
             // lblOrderBy
             // 
             this.lblOrderBy.AutoSize = true;
-            this.lblOrderBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderBy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderBy.ForeColor = System.Drawing.Color.White;
-            this.lblOrderBy.Location = new System.Drawing.Point(12, 38);
+            this.lblOrderBy.Location = new System.Drawing.Point(16, 47);
+            this.lblOrderBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrderBy.Name = "lblOrderBy";
-            this.lblOrderBy.Size = new System.Drawing.Size(88, 20);
+            this.lblOrderBy.Size = new System.Drawing.Size(115, 23);
             this.lblOrderBy.TabIndex = 17;
             this.lblOrderBy.Text = "CPF/CNPJ:";
             // 
             // txtCpfCnpjMenu
             // 
             this.txtCpfCnpjMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCpfCnpjMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpfCnpjMenu.Location = new System.Drawing.Point(15, 57);
+            this.txtCpfCnpjMenu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfCnpjMenu.Location = new System.Drawing.Point(20, 75);
+            this.txtCpfCnpjMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCpfCnpjMenu.Name = "txtCpfCnpjMenu";
-            this.txtCpfCnpjMenu.Size = new System.Drawing.Size(130, 22);
-            this.txtCpfCnpjMenu.TabIndex = 15;
+            this.txtCpfCnpjMenu.Size = new System.Drawing.Size(173, 28);
+            this.txtCpfCnpjMenu.TabIndex = 1;
             this.txtCpfCnpjMenu.TextChanged += new System.EventHandler(this.txtCpfCnpjMenu_TextChanged);
             // 
             // panel1
@@ -121,8 +126,9 @@ namespace TCC_3_M
             this.panel1.Controls.Add(this.btnCloseMenuFornecedores);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 35);
+            this.panel1.Size = new System.Drawing.Size(1327, 43);
             this.panel1.TabIndex = 16;
             // 
             // panelDataGrid
@@ -134,9 +140,10 @@ namespace TCC_3_M
             this.panelDataGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.panelDataGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDataGrid.ForeColor = System.Drawing.Color.Gainsboro;
-            this.panelDataGrid.Location = new System.Drawing.Point(60, 1);
+            this.panelDataGrid.Location = new System.Drawing.Point(80, 1);
+            this.panelDataGrid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDataGrid.Name = "panelDataGrid";
-            this.panelDataGrid.Size = new System.Drawing.Size(177, 29);
+            this.panelDataGrid.Size = new System.Drawing.Size(211, 36);
             this.panelDataGrid.TabIndex = 16;
             this.panelDataGrid.Text = "Fornecedores";
             // 
@@ -150,8 +157,9 @@ namespace TCC_3_M
             this.btnCloseMenuFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseMenuFornecedores.ForeColor = System.Drawing.Color.White;
             this.btnCloseMenuFornecedores.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseMenuFornecedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseMenuFornecedores.Name = "btnCloseMenuFornecedores";
-            this.btnCloseMenuFornecedores.Size = new System.Drawing.Size(59, 35);
+            this.btnCloseMenuFornecedores.Size = new System.Drawing.Size(79, 43);
             this.btnCloseMenuFornecedores.TabIndex = 13;
             this.btnCloseMenuFornecedores.Text = "X";
             this.btnCloseMenuFornecedores.UseVisualStyleBackColor = false;
@@ -166,35 +174,37 @@ namespace TCC_3_M
             this.dgvFornecedor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFornecedor.ColumnHeadersHeight = 30;
             this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFornecedor.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFornecedor.EnableHeadersVisualStyles = false;
             this.dgvFornecedor.GridColor = System.Drawing.Color.DarkGray;
             this.dgvFornecedor.Location = new System.Drawing.Point(0, 0);
+            this.dgvFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvFornecedor.Name = "dgvFornecedor";
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle18;
-            this.dgvFornecedor.Size = new System.Drawing.Size(995, 454);
+            this.dgvFornecedor.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFornecedor.Size = new System.Drawing.Size(1327, 559);
             this.dgvFornecedor.TabIndex = 22;
             // 
             // panel2
@@ -204,9 +214,10 @@ namespace TCC_3_M
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel2.Controls.Add(this.dgvFornecedor);
-            this.panel2.Location = new System.Drawing.Point(0, 97);
+            this.panel2.Location = new System.Drawing.Point(0, 119);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 454);
+            this.panel2.Size = new System.Drawing.Size(1327, 559);
             this.panel2.TabIndex = 35;
             // 
             // btnNovoLote
@@ -215,22 +226,23 @@ namespace TCC_3_M
             this.btnNovoLote.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNovoLote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoLote.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovoLote.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnNovoLote.Location = new System.Drawing.Point(737, 557);
+            this.btnNovoLote.Location = new System.Drawing.Point(983, 686);
+            this.btnNovoLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNovoLote.Name = "btnNovoLote";
-            this.btnNovoLote.Size = new System.Drawing.Size(120, 70);
-            this.btnNovoLote.TabIndex = 35;
+            this.btnNovoLote.Size = new System.Drawing.Size(160, 86);
+            this.btnNovoLote.TabIndex = 3;
             this.btnNovoLote.Text = "Novo Lote";
             this.btnNovoLote.UseVisualStyleBackColor = false;
             this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
             // 
             // frm_MenuFornecedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(995, 645);
+            this.ClientSize = new System.Drawing.Size(1327, 794);
             this.Controls.Add(this.btnNovoLote);
             this.Controls.Add(this.btnAtualizarUsuario);
             this.Controls.Add(this.btnNovoFornecedor);
@@ -238,6 +250,7 @@ namespace TCC_3_M
             this.Controls.Add(this.panel3);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_MenuFornecedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuFornecedores";
