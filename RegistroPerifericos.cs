@@ -50,15 +50,15 @@ namespace TCC_3_M
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
+                conn.Open();
+                MySqlTransaction transaction = conn.BeginTransaction();
                 try
                 {
-                    conn.Open();
-
-                    // Primeiro, insere o periférico na tabela peripherals
+                    // 1. Inserir o periférico na tabela peripherals
                     string queryInsertPeripheral = @"INSERT INTO peripherals (batch_id, type, model, status, tenant_id)
-                                             VALUES (@BatchId, @Type, @Model, @Status, @TenantId); SELECT LAST_INSERT_ID();";
+                                     VALUES (@BatchId, @Type, @Model, @Status, @TenantId); SELECT LAST_INSERT_ID();";
 
-                    MySqlCommand cmdInsertPeripheral = new MySqlCommand(queryInsertPeripheral, conn);
+                    MySqlCommand cmdInsertPeripheral = new MySqlCommand(queryInsertPeripheral, conn, transaction);
                     cmdInsertPeripheral.Parameters.AddWithValue("@BatchId", loteId);
                     cmdInsertPeripheral.Parameters.AddWithValue("@Type", tipo);
                     cmdInsertPeripheral.Parameters.AddWithValue("@Model", modelo);
@@ -67,6 +67,18 @@ namespace TCC_3_M
 
                     // Executa o comando e obtém o ID do periférico inserido
                     int peripheralId = Convert.ToInt32(cmdInsertPeripheral.ExecuteScalar());
+
+                    // 2. Atualizar a quantidade (amount) no lote correspondente
+                    string queryUpdateBatch = @"
+                UPDATE batch
+                SET amount = amount + 1
+                WHERE id = @BatchId AND tenant_id = @TenantId;";
+
+                    MySqlCommand cmdUpdateBatch = new MySqlCommand(queryUpdateBatch, conn, transaction);
+                    cmdUpdateBatch.Parameters.AddWithValue("@BatchId", loteId);
+                    cmdUpdateBatch.Parameters.AddWithValue("@TenantId", tenantId);
+
+                    cmdUpdateBatch.ExecuteNonQuery();
 
                     // Em seguida, verifica se há um usuário selecionado e, se sim, associa ao periférico
                     if (cmbUsuario.SelectedItem != null)
@@ -79,7 +91,7 @@ namespace TCC_3_M
                             "INSERT INTO entity_admin_hardware_peripherals (tenant_id, admin_id, peripherals_id) VALUES (@TenantId, @UserId, @PeripheralId);" :
                             "INSERT INTO entity_user_hardware_peripherals (tenant_id, user_id, peripherals_id) VALUES (@TenantId, @UserId, @PeripheralId);";
 
-                        MySqlCommand cmdAssociateUser = new MySqlCommand(queryAssociateUser, conn);
+                        MySqlCommand cmdAssociateUser = new MySqlCommand(queryAssociateUser, conn, transaction);
                         cmdAssociateUser.Parameters.AddWithValue("@TenantId", tenantId);
                         cmdAssociateUser.Parameters.AddWithValue("@UserId", userId);
                         cmdAssociateUser.Parameters.AddWithValue("@PeripheralId", peripheralId);
@@ -87,11 +99,13 @@ namespace TCC_3_M
                         cmdAssociateUser.ExecuteNonQuery();
                     }
 
+                    transaction.Commit();
                     MessageBox.Show("Periférico registrado com sucesso!");
                     LimparCampos();
                 }
                 catch (Exception ex)
                 {
+                    transaction.Rollback();
                     MessageBox.Show("Erro ao registrar periférico: " + ex.Message);
                 }
             }

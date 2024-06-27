@@ -29,9 +29,9 @@ namespace TCC_3_M
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAtualizarUsuario = new System.Windows.Forms.Button();
             this.btnNovoFornecedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,6 +43,8 @@ namespace TCC_3_M
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnNovoLote = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLoteMenu = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
@@ -84,6 +86,8 @@ namespace TCC_3_M
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txtLoteMenu);
             this.panel3.Controls.Add(this.lblOrderBy);
             this.panel3.Controls.Add(this.txtCpfCnpjMenu);
             this.panel3.Controls.Add(this.panel1);
@@ -166,35 +170,35 @@ namespace TCC_3_M
             this.dgvFornecedor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(172)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvFornecedor.ColumnHeadersHeight = 30;
             this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFornecedor.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFornecedor.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvFornecedor.EnableHeadersVisualStyles = false;
             this.dgvFornecedor.GridColor = System.Drawing.Color.DarkGray;
             this.dgvFornecedor.Location = new System.Drawing.Point(0, 0);
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvFornecedor.Size = new System.Drawing.Size(995, 454);
             this.dgvFornecedor.TabIndex = 22;
             // 
@@ -225,6 +229,27 @@ namespace TCC_3_M
             this.btnNovoLote.Text = "Novo Lote";
             this.btnNovoLote.UseVisualStyleBackColor = false;
             this.btnNovoLote.Click += new System.EventHandler(this.btnNovoLote_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(160, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Lote / Nota Fiscal:";
+            // 
+            // txtLoteMenu
+            // 
+            this.txtLoteMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLoteMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoteMenu.Location = new System.Drawing.Point(163, 61);
+            this.txtLoteMenu.Name = "txtLoteMenu";
+            this.txtLoteMenu.Size = new System.Drawing.Size(130, 23);
+            this.txtLoteMenu.TabIndex = 18;
+            this.txtLoteMenu.TextChanged += new System.EventHandler(this.txtLoteMenu_TextChanged);
             // 
             // frm_MenuFornecedores
             // 
@@ -264,5 +289,7 @@ namespace TCC_3_M
         private System.Windows.Forms.Label lblOrderBy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnNovoLote;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLoteMenu;
     }
 }

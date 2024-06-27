@@ -139,95 +139,111 @@ namespace TCC_3_M
             this.Size = new System.Drawing.Size(FormWidthNormal, FormHeightNormal);
         }
 
-private void btnSalvarCadH_Click(object sender, EventArgs e)
-{
-    // Validação dos campos obrigatórios
-    if (string.IsNullOrEmpty(txtTagCadH.Text) ||
-        string.IsNullOrEmpty(txtModeloCadH.Text) ||
-        string.IsNullOrEmpty(txtMarcaCadH.Text) ||
-        cmbStatusCadH.SelectedItem == null ||
-        cmbLote.SelectedItem == null)
-    {
-        MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
-        return;
-    }
-
-    string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
-    using (MySqlConnection conn = new MySqlConnection(connectionString))
-    {
-        try
+        private void btnSalvarCadH_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string queryInsertHardware = @"
+            // Validação dos campos obrigatórios
+            if (string.IsNullOrEmpty(txtTagCadH.Text) ||
+                string.IsNullOrEmpty(txtModeloCadH.Text) ||
+                string.IsNullOrEmpty(txtMarcaCadH.Text) ||
+                cmbStatusCadH.SelectedItem == null ||
+                cmbLote.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+
+            string connectionString = "server=localhost;database=inventory_system;uid=root;pwd=etec;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlTransaction transaction = conn.BeginTransaction();
+                try
+                {
+                    // 1. Inserir o hardware na tabela hardware
+                    string queryInsertHardware = @"
                 INSERT INTO hardware (tag, batch_id, assurance, model, brand, status, processor, ram, disk, video_card, network_card, observations, tenant_id)
                 VALUES (@tag, @batch_id, @assurance, @model, @brand, @status, @processor, @ram, @disk, @video_card, @network_card, @observations, @tenantId);";
 
-            MySqlCommand cmdInsertHardware = new MySqlCommand(queryInsertHardware, conn);
-            cmdInsertHardware.Parameters.AddWithValue("@tag", txtTagCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
-            cmdInsertHardware.Parameters.AddWithValue("@assurance", string.IsNullOrEmpty(txtGarantiaCadH.Text) ? DBNull.Value : (object)txtGarantiaCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@model", txtModeloCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@brand", txtMarcaCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@status", cmbStatusCadH.SelectedItem.ToString());
-            cmdInsertHardware.Parameters.AddWithValue("@processor", string.IsNullOrEmpty(txtProcessadorCadH.Text) ? DBNull.Value : (object)txtProcessadorCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@ram", string.IsNullOrEmpty(txtRamCadH.Text) ? DBNull.Value : (object)txtRamCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@disk", string.IsNullOrEmpty(txtDiscoCadH.Text) ? DBNull.Value : (object)txtDiscoCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@video_card", string.IsNullOrEmpty(txtPVideoCadH.Text) ? DBNull.Value : (object)txtPVideoCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@network_card", string.IsNullOrEmpty(txtPRedeCadH.Text) ? DBNull.Value : (object)txtPRedeCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
-            cmdInsertHardware.Parameters.AddWithValue("@tenantId", tenantId);
+                    MySqlCommand cmdInsertHardware = new MySqlCommand(queryInsertHardware, conn, transaction);
+                    cmdInsertHardware.Parameters.AddWithValue("@tag", txtTagCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
+                    cmdInsertHardware.Parameters.AddWithValue("@assurance", string.IsNullOrEmpty(txtGarantiaCadH.Text) ? DBNull.Value : (object)txtGarantiaCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@model", txtModeloCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@brand", txtMarcaCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@status", cmbStatusCadH.SelectedItem.ToString());
+                    cmdInsertHardware.Parameters.AddWithValue("@processor", string.IsNullOrEmpty(txtProcessadorCadH.Text) ? DBNull.Value : (object)txtProcessadorCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@ram", string.IsNullOrEmpty(txtRamCadH.Text) ? DBNull.Value : (object)txtRamCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@disk", string.IsNullOrEmpty(txtDiscoCadH.Text) ? DBNull.Value : (object)txtDiscoCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@video_card", string.IsNullOrEmpty(txtPVideoCadH.Text) ? DBNull.Value : (object)txtPVideoCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@network_card", string.IsNullOrEmpty(txtPRedeCadH.Text) ? DBNull.Value : (object)txtPRedeCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@tenantId", tenantId);
 
-            cmdInsertHardware.ExecuteNonQuery();
+                    cmdInsertHardware.ExecuteNonQuery();
 
-            // Se um usuário estiver selecionado, insira na tabela correspondente
-            if (cmbUsuario.SelectedItem != null)
-            {
-                var selectedItem = (KeyValuePair<string, KeyValuePair<int, string>>)cmbUsuario.SelectedItem;
-                string userType = selectedItem.Key; // 'admin' ou 'user'
-                int userId = selectedItem.Value.Key;
-                
-                string queryInsertEntity = "";
-                
-                if (userType == "admin")
-                {
-                    queryInsertEntity = @"
+                    // 2. Atualizar a quantidade (amount) no lote correspondente
+                    string queryUpdateBatch = @"
+                UPDATE batch
+                SET amount = amount + 1
+                WHERE id = @batch_id AND tenant_id = @tenantId;";
+
+                    MySqlCommand cmdUpdateBatch = new MySqlCommand(queryUpdateBatch, conn, transaction);
+                    cmdUpdateBatch.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
+                    cmdUpdateBatch.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    cmdUpdateBatch.ExecuteNonQuery();
+
+                    // Se um usuário estiver selecionado, insira na tabela correspondente
+                    if (cmbUsuario.SelectedItem != null)
+                    {
+                        var selectedItem = (KeyValuePair<string, KeyValuePair<int, string>>)cmbUsuario.SelectedItem;
+                        string userType = selectedItem.Key; // 'admin' ou 'user'
+                        int userId = selectedItem.Value.Key;
+
+                        string queryInsertEntity = "";
+
+                        if (userType == "admin")
+                        {
+                            queryInsertEntity = @"
                         INSERT INTO entity_admin_hardware_peripherals (tenant_id, admin_id, hardware_tag)
                         VALUES (@tenantId, @adminId, @tag);";
-                }
-                else if (userType == "user")
-                {
-                    queryInsertEntity = @"
+                        }
+                        else if (userType == "user")
+                        {
+                            queryInsertEntity = @"
                         INSERT INTO entity_user_hardware_peripherals (tenant_id, user_id, hardware_tag)
                         VALUES (@tenantId, @userId, @tag);";
+                        }
+
+                        if (!string.IsNullOrEmpty(queryInsertEntity))
+                        {
+                            MySqlCommand cmdInsertEntity = new MySqlCommand(queryInsertEntity, conn, transaction);
+                            cmdInsertEntity.Parameters.AddWithValue("@tenantId", tenantId);
+                            cmdInsertEntity.Parameters.AddWithValue("@tag", txtTagCadH.Text);
+
+                            if (userType == "admin")
+                            {
+                                cmdInsertEntity.Parameters.AddWithValue("@adminId", userId);
+                            }
+                            else if (userType == "user")
+                            {
+                                cmdInsertEntity.Parameters.AddWithValue("@userId", userId);
+                            }
+
+                            cmdInsertEntity.ExecuteNonQuery();
+                        }
+                    }
+
+                    transaction.Commit();
+                    MessageBox.Show("Dados inseridos com sucesso!");
                 }
-
-                if (!string.IsNullOrEmpty(queryInsertEntity))
+                catch (Exception ex)
                 {
-                    MySqlCommand cmdInsertEntity = new MySqlCommand(queryInsertEntity, conn);
-                    cmdInsertEntity.Parameters.AddWithValue("@tenantId", tenantId);
-                    cmdInsertEntity.Parameters.AddWithValue("@tag", txtTagCadH.Text);
-
-                    if (userType == "admin")
-                    {
-                        cmdInsertEntity.Parameters.AddWithValue("@adminId", userId);
-                    }
-                    else if (userType == "user")
-                    {
-                        cmdInsertEntity.Parameters.AddWithValue("@userId", userId);
-                    }
-
-                    cmdInsertEntity.ExecuteNonQuery();
+                    transaction.Rollback();
+                    MessageBox.Show("Erro ao salvar dados: " + ex.Message);
                 }
             }
-
-            MessageBox.Show("Dados inseridos com sucesso!");
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao salvar dados: " + ex.Message);
-        }
-    }
-}
 
         private void btnLimparCadH_Click(object sender, EventArgs e)
         {

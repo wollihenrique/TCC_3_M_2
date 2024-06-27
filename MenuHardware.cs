@@ -102,19 +102,6 @@ namespace TCC_3_M
                 dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                // Adiciona uma nova coluna para o lote se ainda não existir
-                if (!dataTable.Columns.Contains("Lote"))
-                {
-                    DataColumn column = new DataColumn("Lote", typeof(string));
-                    dataTable.Columns.Add(column);
-                }
-
-                // Preenche a coluna do lote com os dados
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    row["Lote"] = row["batch_id"].ToString();
-                }
-
                 dgvHardware.DataSource = dataTable; // Configura o DataSource do DataGridView
             }
             catch (Exception ex)
