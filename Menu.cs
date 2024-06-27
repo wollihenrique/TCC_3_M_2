@@ -56,7 +56,6 @@ namespace TCC_3_M
             pnlSubUserMenu.Visible = false;
             pnlSubMenuCreditos.Visible = false;
             pnlSubMenuAjuda.Visible = false;
-            pnlSubMenuHistoric.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -192,18 +191,6 @@ namespace TCC_3_M
             //...EScrever o resto dos códigos
             //...
             //hideSubMenu();
-        }
-        #endregion
-
-        #region MENU HISTÓRICO
-        private void btnHistórico_Click(object sender, EventArgs e)
-        {
-            showSubMenu(pnlSubMenuHistoric);
-        }
-
-        private void btnHistoricRegisters_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frm_Historico());
         }
         #endregion
 

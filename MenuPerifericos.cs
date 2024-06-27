@@ -132,9 +132,9 @@ namespace TCC_3_M
         private void PreencherComboBoxUsuarios()
         {
             cmbUsuario.Items.Clear();
-            string query = "SELECT 'admin' AS user_type, id, name FROM `admin` WHERE tenant_id = @TenantId " +
-                           "UNION ALL " +
-                           "SELECT 'user' AS user_type, id, name FROM `user` WHERE tenant_id = @TenantId";
+            string query = "SELECT name FROM `admin` WHERE tenant_id = @TenantId " +
+                           "UNION " +
+                           "SELECT name FROM `user` WHERE tenant_id = @TenantId";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -147,10 +147,8 @@ namespace TCC_3_M
 
                     while (reader.Read())
                     {
-                        string userType = reader["user_type"].ToString();
-                        int userId = Convert.ToInt32(reader["id"]);
                         string userName = reader["name"].ToString();
-                        cmbUsuario.Items.Add(new KeyValuePair<string, KeyValuePair<int, string>>(userType, new KeyValuePair<int, string>(userId, userName)));
+                        cmbUsuario.Items.Add(userName);
                     }
 
                     reader.Close();
@@ -335,11 +333,7 @@ namespace TCC_3_M
         {
             if (cmbUsuario.SelectedItem != null)
             {
-                // Ajuste necessário se cmbUsuario.Items for do tipo KeyValuePair<string, KeyValuePair<int, string>>
-                var selectedUser = (KeyValuePair<string, KeyValuePair<int, string>>)cmbUsuario.SelectedItem;
-                string userType = selectedUser.Key;
-                int userId = selectedUser.Value.Key;
-                string userName = selectedUser.Value.Value;
+                string userName = cmbUsuario.SelectedItem.ToString();
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
@@ -347,15 +341,15 @@ namespace TCC_3_M
                     {
                         conn.Open();
                         string query = @"SELECT p.id, p.batch_id, p.type, p.model, p.status, b.entering_date, 
-                                CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
-                                FROM peripherals p
-                                JOIN batch b ON p.batch_id = b.id
-                                LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
-                                LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
-                                LEFT JOIN `user` u ON eup.user_id = u.id
-                                LEFT JOIN `admin` a ON eap.admin_id = a.id
-                                WHERE (u.name = @UserName OR a.name = @UserName)
-                                AND b.tenant_id = @TenantId";
+                        CONCAT(COALESCE(u.name, ''), COALESCE(a.name, '')) AS user_name
+                        FROM peripherals p
+                        JOIN batch b ON p.batch_id = b.id
+                        LEFT JOIN entity_user_hardware_peripherals eup ON p.id = eup.peripherals_id
+                        LEFT JOIN entity_admin_hardware_peripherals eap ON p.id = eap.peripherals_id
+                        LEFT JOIN `user` u ON eup.user_id = u.id
+                        LEFT JOIN `admin` a ON eap.admin_id = a.id
+                        WHERE (u.name = @UserName OR a.name = @UserName)
+                        AND b.tenant_id = @TenantId";
 
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@UserName", userName);

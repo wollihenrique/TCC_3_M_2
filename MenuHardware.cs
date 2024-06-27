@@ -262,12 +262,6 @@ namespace TCC_3_M
             }
         }
 
-        private void btnNovoLote_Click(object sender, EventArgs e)
-        {
-            frm_RegistroLote registroLote = new frm_RegistroLote(tenantId);
-            registroLote.Show();
-        }
-
         private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
         {
             // Limpar seleção das comboboxes

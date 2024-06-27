@@ -158,52 +158,35 @@ namespace TCC_3_M
                 try
                 {
                     conn.Open();
-                    string query = "INSERT INTO hardware (tag, batch_id, assurance, model, brand, status, processor, ram, disk, video_card, network_card, observations, tenant_id) " +
-                                   "VALUES (@tag, @batch_id, @assurance, @model, @brand, @status, @processor, @ram, @disk, @video_card, @network_card, @observations, @tenantId)";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@tag", txtTagCadH.Text);
-                    cmd.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@assurance", string.IsNullOrEmpty(txtGarantiaCadH.Text) ? DBNull.Value : (object)txtGarantiaCadH.Text);
-                    cmd.Parameters.AddWithValue("@model", txtModeloCadH.Text);
-                    cmd.Parameters.AddWithValue("@brand", txtMarcaCadH.Text);
-                    cmd.Parameters.AddWithValue("@status", cmbStatusCadH.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@processor", string.IsNullOrEmpty(txtProcessadorCadH.Text) ? DBNull.Value : (object)txtProcessadorCadH.Text);
-                    cmd.Parameters.AddWithValue("@ram", string.IsNullOrEmpty(txtRamCadH.Text) ? DBNull.Value : (object)txtRamCadH.Text);
-                    cmd.Parameters.AddWithValue("@disk", string.IsNullOrEmpty(txtDiscoCadH.Text) ? DBNull.Value : (object)txtDiscoCadH.Text);
-                    cmd.Parameters.AddWithValue("@video_card", string.IsNullOrEmpty(txtPVideoCadH.Text) ? DBNull.Value : (object)txtPVideoCadH.Text);
-                    cmd.Parameters.AddWithValue("@network_card", string.IsNullOrEmpty(txtPRedeCadH.Text) ? DBNull.Value : (object)txtPRedeCadH.Text);
-                    cmd.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
-                    cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
-                    cmd.ExecuteNonQuery();
+                    string queryInsertHardware = @"
+                        INSERT INTO hardware (tag, batch_id, assurance, model, brand, status, processor, ram, disk, video_card, network_card, observations, tenant_id)
+                        VALUES (@tag, @batch_id, @assurance, @model, @brand, @status, @processor, @ram, @disk, @video_card, @network_card, @observations, @tenantId);";
 
-                    if (cmbStatusCadH.SelectedItem.ToString().Equals("Em Uso", StringComparison.OrdinalIgnoreCase) && cmbUsuario.SelectedItem != null)
-                    {
-                        int entityId = ((KeyValuePair<int, string>)cmbUsuario.SelectedItem).Key;
-                        string queryInsert;
-                        if (cmbUsuario.SelectedItem.ToString().Contains("admin"))
-                        {
-                            queryInsert = "INSERT INTO entity_admin_hardware_peripherals (tenant_id, admin_id, hardware_tag) VALUES (@tenantId, @entityId, @hardwareTag)";
-                        }
-                        else
-                        {
-                            queryInsert = "INSERT INTO entity_user_hardware_peripherals (tenant_id, user_id, hardware_tag) VALUES (@tenantId, @entityId, @hardwareTag)";
-                        }
-                        cmd = new MySqlCommand(queryInsert, conn);
-                        cmd.Parameters.AddWithValue("@tenantId", tenantId);
-                        cmd.Parameters.AddWithValue("@entityId", entityId);
-                        cmd.Parameters.AddWithValue("@hardwareTag", txtTagCadH.Text);
-                        cmd.ExecuteNonQuery();
-                    }
+                    MySqlCommand cmdInsertHardware = new MySqlCommand(queryInsertHardware, conn);
+                    cmdInsertHardware.Parameters.AddWithValue("@tag", txtTagCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@batch_id", cmbLote.SelectedItem.ToString());
+                    cmdInsertHardware.Parameters.AddWithValue("@assurance", string.IsNullOrEmpty(txtGarantiaCadH.Text) ? DBNull.Value : (object)txtGarantiaCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@model", txtModeloCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@brand", txtMarcaCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@status", cmbStatusCadH.SelectedItem.ToString());
+                    cmdInsertHardware.Parameters.AddWithValue("@processor", string.IsNullOrEmpty(txtProcessadorCadH.Text) ? DBNull.Value : (object)txtProcessadorCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@ram", string.IsNullOrEmpty(txtRamCadH.Text) ? DBNull.Value : (object)txtRamCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@disk", string.IsNullOrEmpty(txtDiscoCadH.Text) ? DBNull.Value : (object)txtDiscoCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@video_card", string.IsNullOrEmpty(txtPVideoCadH.Text) ? DBNull.Value : (object)txtPVideoCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@network_card", string.IsNullOrEmpty(txtPRedeCadH.Text) ? DBNull.Value : (object)txtPRedeCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@observations", string.IsNullOrEmpty(txtObsCadH.Text) ? DBNull.Value : (object)txtObsCadH.Text);
+                    cmdInsertHardware.Parameters.AddWithValue("@tenantId", tenantId);
+
+                    cmdInsertHardware.ExecuteNonQuery();
 
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro: " + ex.Message);
+                    MessageBox.Show("Erro ao salvar dados: " + ex.Message);
                 }
             }
         }
-
 
         private void btnLimparCadH_Click(object sender, EventArgs e)
         {

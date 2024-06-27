@@ -33,14 +33,7 @@ namespace TCC_3_M
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Inicio));
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnlSubMenuHistoric = new System.Windows.Forms.Panel();
-            this.btnHistoricRegisters = new System.Windows.Forms.Button();
-            this.btnHistórico = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pnlSubMenuAjuda = new System.Windows.Forms.Panel();
-            this.btnDuvidas = new System.Windows.Forms.Button();
-            this.btnTutoriais = new System.Windows.Forms.Button();
-            this.btnContatos = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
             this.pnlSubMenuCreditos = new System.Windows.Forms.Panel();
             this.btnNossaEquipe = new System.Windows.Forms.Button();
@@ -61,9 +54,10 @@ namespace TCC_3_M
             this.pnlFilhoConteinerPrincipal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerRelogio = new System.Windows.Forms.Timer(this.components);
+            this.btnContatos = new System.Windows.Forms.Button();
+            this.btnTutoriais = new System.Windows.Forms.Button();
+            this.pnlSubMenuAjuda = new System.Windows.Forms.Panel();
             this.pnlMenuPrincipal.SuspendLayout();
-            this.pnlSubMenuHistoric.SuspendLayout();
-            this.pnlSubMenuAjuda.SuspendLayout();
             this.pnlSubMenuCreditos.SuspendLayout();
             this.pnlSubUserMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -71,6 +65,7 @@ namespace TCC_3_M
             this.pnlFilhoCabecalhoPrincipal.SuspendLayout();
             this.pnlFilhoConteinerPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlSubMenuAjuda.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenuPrincipal
@@ -79,8 +74,6 @@ namespace TCC_3_M
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
             this.pnlMenuPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMenuPrincipal.Controls.Add(this.label2);
-            this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuHistoric);
-            this.pnlMenuPrincipal.Controls.Add(this.btnHistórico);
             this.pnlMenuPrincipal.Controls.Add(this.btnSair);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSubMenuAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
@@ -91,9 +84,8 @@ namespace TCC_3_M
             this.pnlMenuPrincipal.Controls.Add(this.panelLogo);
             this.pnlMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
-            this.pnlMenuPrincipal.Size = new System.Drawing.Size(291, 889);
+            this.pnlMenuPrincipal.Size = new System.Drawing.Size(219, 722);
             this.pnlMenuPrincipal.TabIndex = 0;
             // 
             // label2
@@ -102,62 +94,11 @@ namespace TCC_3_M
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(8, 800);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 649);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 24);
+            this.label2.Size = new System.Drawing.Size(192, 18);
             this.label2.TabIndex = 10;
             this.label2.Text = "_______________________";
-            // 
-            // pnlSubMenuHistoric
-            // 
-            this.pnlSubMenuHistoric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.pnlSubMenuHistoric.Controls.Add(this.btnHistoricRegisters);
-            this.pnlSubMenuHistoric.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuHistoric.Location = new System.Drawing.Point(0, 730);
-            this.pnlSubMenuHistoric.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlSubMenuHistoric.Name = "pnlSubMenuHistoric";
-            this.pnlSubMenuHistoric.Size = new System.Drawing.Size(289, 55);
-            this.pnlSubMenuHistoric.TabIndex = 9;
-            // 
-            // btnHistoricRegisters
-            // 
-            this.btnHistoricRegisters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.btnHistoricRegisters.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistoricRegisters.FlatAppearance.BorderSize = 0;
-            this.btnHistoricRegisters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistoricRegisters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistoricRegisters.ForeColor = System.Drawing.Color.White;
-            this.btnHistoricRegisters.Location = new System.Drawing.Point(0, 0);
-            this.btnHistoricRegisters.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHistoricRegisters.Name = "btnHistoricRegisters";
-            this.btnHistoricRegisters.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnHistoricRegisters.Size = new System.Drawing.Size(289, 49);
-            this.btnHistoricRegisters.TabIndex = 0;
-            this.btnHistoricRegisters.Text = "Histórico de Registros";
-            this.btnHistoricRegisters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistoricRegisters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistoricRegisters.UseVisualStyleBackColor = false;
-            this.btnHistoricRegisters.Click += new System.EventHandler(this.btnHistoricRegisters_Click);
-            // 
-            // btnHistórico
-            // 
-            this.btnHistórico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(148)))));
-            this.btnHistórico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistórico.FlatAppearance.BorderSize = 0;
-            this.btnHistórico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistórico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistórico.ForeColor = System.Drawing.Color.White;
-            this.btnHistórico.Location = new System.Drawing.Point(0, 684);
-            this.btnHistórico.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHistórico.Name = "btnHistórico";
-            this.btnHistórico.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnHistórico.Size = new System.Drawing.Size(289, 46);
-            this.btnHistórico.TabIndex = 8;
-            this.btnHistórico.Text = "Histórico";
-            this.btnHistórico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistórico.UseVisualStyleBackColor = false;
-            this.btnHistórico.Click += new System.EventHandler(this.btnHistórico_Click);
             // 
             // btnSair
             // 
@@ -169,90 +110,16 @@ namespace TCC_3_M
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = global::TCC_3_M.Properties.Resources.sair;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(0, 821);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Location = new System.Drawing.Point(0, 666);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(289, 66);
+            this.btnSair.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSair.Size = new System.Drawing.Size(217, 54);
             this.btnSair.TabIndex = 7;
             this.btnSair.Text = "  Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // pnlSubMenuAjuda
-            // 
-            this.pnlSubMenuAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.pnlSubMenuAjuda.Controls.Add(this.btnDuvidas);
-            this.pnlSubMenuAjuda.Controls.Add(this.btnTutoriais);
-            this.pnlSubMenuAjuda.Controls.Add(this.btnContatos);
-            this.pnlSubMenuAjuda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuAjuda.Location = new System.Drawing.Point(0, 526);
-            this.pnlSubMenuAjuda.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlSubMenuAjuda.Name = "pnlSubMenuAjuda";
-            this.pnlSubMenuAjuda.Size = new System.Drawing.Size(289, 158);
-            this.pnlSubMenuAjuda.TabIndex = 6;
-            // 
-            // btnDuvidas
-            // 
-            this.btnDuvidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.btnDuvidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDuvidas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDuvidas.FlatAppearance.BorderSize = 0;
-            this.btnDuvidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuvidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuvidas.ForeColor = System.Drawing.Color.White;
-            this.btnDuvidas.Location = new System.Drawing.Point(0, 98);
-            this.btnDuvidas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDuvidas.Name = "btnDuvidas";
-            this.btnDuvidas.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnDuvidas.Size = new System.Drawing.Size(289, 49);
-            this.btnDuvidas.TabIndex = 2;
-            this.btnDuvidas.Text = "Duvidas";
-            this.btnDuvidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuvidas.UseVisualStyleBackColor = false;
-            this.btnDuvidas.Click += new System.EventHandler(this.btnDuvidas_Click);
-            // 
-            // btnTutoriais
-            // 
-            this.btnTutoriais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.btnTutoriais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTutoriais.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTutoriais.FlatAppearance.BorderSize = 0;
-            this.btnTutoriais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutoriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutoriais.ForeColor = System.Drawing.Color.White;
-            this.btnTutoriais.Location = new System.Drawing.Point(0, 49);
-            this.btnTutoriais.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTutoriais.Name = "btnTutoriais";
-            this.btnTutoriais.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnTutoriais.Size = new System.Drawing.Size(289, 49);
-            this.btnTutoriais.TabIndex = 1;
-            this.btnTutoriais.Text = "Tutoriais";
-            this.btnTutoriais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTutoriais.UseVisualStyleBackColor = false;
-            this.btnTutoriais.Click += new System.EventHandler(this.btnTutoriais_Click);
-            // 
-            // btnContatos
-            // 
-            this.btnContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
-            this.btnContatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContatos.FlatAppearance.BorderSize = 0;
-            this.btnContatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContatos.ForeColor = System.Drawing.Color.White;
-            this.btnContatos.Location = new System.Drawing.Point(0, 0);
-            this.btnContatos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnContatos.Name = "btnContatos";
-            this.btnContatos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnContatos.Size = new System.Drawing.Size(289, 49);
-            this.btnContatos.TabIndex = 0;
-            this.btnContatos.Text = "Contatos";
-            this.btnContatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContatos.UseVisualStyleBackColor = false;
-            this.btnContatos.Click += new System.EventHandler(this.btnContatos_Click);
             // 
             // btnAjuda
             // 
@@ -263,11 +130,10 @@ namespace TCC_3_M
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjuda.ForeColor = System.Drawing.Color.White;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 477);
-            this.btnAjuda.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 388);
             this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnAjuda.Size = new System.Drawing.Size(289, 49);
+            this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAjuda.Size = new System.Drawing.Size(217, 40);
             this.btnAjuda.TabIndex = 5;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -279,10 +145,9 @@ namespace TCC_3_M
             this.pnlSubMenuCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
             this.pnlSubMenuCreditos.Controls.Add(this.btnNossaEquipe);
             this.pnlSubMenuCreditos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuCreditos.Location = new System.Drawing.Point(0, 422);
-            this.pnlSubMenuCreditos.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSubMenuCreditos.Location = new System.Drawing.Point(0, 343);
             this.pnlSubMenuCreditos.Name = "pnlSubMenuCreditos";
-            this.pnlSubMenuCreditos.Size = new System.Drawing.Size(289, 55);
+            this.pnlSubMenuCreditos.Size = new System.Drawing.Size(217, 45);
             this.pnlSubMenuCreditos.TabIndex = 4;
             // 
             // btnNossaEquipe
@@ -295,10 +160,9 @@ namespace TCC_3_M
             this.btnNossaEquipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNossaEquipe.ForeColor = System.Drawing.Color.White;
             this.btnNossaEquipe.Location = new System.Drawing.Point(0, 0);
-            this.btnNossaEquipe.Margin = new System.Windows.Forms.Padding(4);
             this.btnNossaEquipe.Name = "btnNossaEquipe";
-            this.btnNossaEquipe.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnNossaEquipe.Size = new System.Drawing.Size(289, 49);
+            this.btnNossaEquipe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNossaEquipe.Size = new System.Drawing.Size(217, 40);
             this.btnNossaEquipe.TabIndex = 0;
             this.btnNossaEquipe.Text = "Lista de Créditos";
             this.btnNossaEquipe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -315,11 +179,10 @@ namespace TCC_3_M
             this.btnCreditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreditos.ForeColor = System.Drawing.Color.White;
-            this.btnCreditos.Location = new System.Drawing.Point(0, 373);
-            this.btnCreditos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreditos.Location = new System.Drawing.Point(0, 303);
             this.btnCreditos.Name = "btnCreditos";
-            this.btnCreditos.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnCreditos.Size = new System.Drawing.Size(289, 49);
+            this.btnCreditos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCreditos.Size = new System.Drawing.Size(217, 40);
             this.btnCreditos.TabIndex = 3;
             this.btnCreditos.Text = "Creditos";
             this.btnCreditos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,10 +197,9 @@ namespace TCC_3_M
             this.pnlSubUserMenu.Controls.Add(this.btnDispositivos);
             this.pnlSubUserMenu.Controls.Add(this.btnUsuarios);
             this.pnlSubUserMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubUserMenu.Location = new System.Drawing.Point(0, 169);
-            this.pnlSubUserMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSubUserMenu.Location = new System.Drawing.Point(0, 137);
             this.pnlSubUserMenu.Name = "pnlSubUserMenu";
-            this.pnlSubUserMenu.Size = new System.Drawing.Size(289, 204);
+            this.pnlSubUserMenu.Size = new System.Drawing.Size(217, 166);
             this.pnlSubUserMenu.TabIndex = 2;
             // 
             // btnFornecedores
@@ -349,11 +211,10 @@ namespace TCC_3_M
             this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedores.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedores.Location = new System.Drawing.Point(0, 147);
-            this.btnFornecedores.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFornecedores.Location = new System.Drawing.Point(0, 120);
             this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnFornecedores.Size = new System.Drawing.Size(289, 49);
+            this.btnFornecedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFornecedores.Size = new System.Drawing.Size(217, 40);
             this.btnFornecedores.TabIndex = 3;
             this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,11 +230,10 @@ namespace TCC_3_M
             this.btnPerifericos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerifericos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerifericos.ForeColor = System.Drawing.Color.White;
-            this.btnPerifericos.Location = new System.Drawing.Point(0, 98);
-            this.btnPerifericos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPerifericos.Location = new System.Drawing.Point(0, 80);
             this.btnPerifericos.Name = "btnPerifericos";
-            this.btnPerifericos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnPerifericos.Size = new System.Drawing.Size(289, 49);
+            this.btnPerifericos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPerifericos.Size = new System.Drawing.Size(217, 40);
             this.btnPerifericos.TabIndex = 2;
             this.btnPerifericos.Text = "Periféricos";
             this.btnPerifericos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,11 +249,10 @@ namespace TCC_3_M
             this.btnDispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDispositivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDispositivos.ForeColor = System.Drawing.Color.White;
-            this.btnDispositivos.Location = new System.Drawing.Point(0, 49);
-            this.btnDispositivos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDispositivos.Location = new System.Drawing.Point(0, 40);
             this.btnDispositivos.Name = "btnDispositivos";
-            this.btnDispositivos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnDispositivos.Size = new System.Drawing.Size(289, 49);
+            this.btnDispositivos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDispositivos.Size = new System.Drawing.Size(217, 40);
             this.btnDispositivos.TabIndex = 1;
             this.btnDispositivos.Text = "Dispositivos";
             this.btnDispositivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,10 +269,9 @@ namespace TCC_3_M
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(289, 49);
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(217, 40);
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -429,11 +287,10 @@ namespace TCC_3_M
             this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistros.ForeColor = System.Drawing.Color.White;
-            this.btnRegistros.Location = new System.Drawing.Point(0, 123);
-            this.btnRegistros.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistros.Location = new System.Drawing.Point(0, 100);
             this.btnRegistros.Name = "btnRegistros";
-            this.btnRegistros.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnRegistros.Size = new System.Drawing.Size(289, 46);
+            this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnRegistros.Size = new System.Drawing.Size(217, 37);
             this.btnRegistros.TabIndex = 1;
             this.btnRegistros.Text = "Registros";
             this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,9 +305,8 @@ namespace TCC_3_M
             this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(289, 123);
+            this.panelLogo.Size = new System.Drawing.Size(217, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // label3
@@ -458,10 +314,9 @@ namespace TCC_3_M
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(191, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(143, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 29);
+            this.label3.Size = new System.Drawing.Size(56, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Stock";
             // 
@@ -470,10 +325,9 @@ namespace TCC_3_M
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(112, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(84, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 29);
+            this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Device";
             // 
@@ -481,10 +335,9 @@ namespace TCC_3_M
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(109, 91);
+            this.pictureBox2.Size = new System.Drawing.Size(82, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -495,10 +348,9 @@ namespace TCC_3_M
             this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.labelRelogio);
             this.pnlFilhoCabecalhoPrincipal.Controls.Add(this.button1);
             this.pnlFilhoCabecalhoPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(291, 0);
-            this.pnlFilhoCabecalhoPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlFilhoCabecalhoPrincipal.Location = new System.Drawing.Point(219, 0);
             this.pnlFilhoCabecalhoPrincipal.Name = "pnlFilhoCabecalhoPrincipal";
-            this.pnlFilhoCabecalhoPrincipal.Size = new System.Drawing.Size(988, 123);
+            this.pnlFilhoCabecalhoPrincipal.Size = new System.Drawing.Size(740, 100);
             this.pnlFilhoCabecalhoPrincipal.TabIndex = 1;
             // 
             // labelRelogio
@@ -507,10 +359,9 @@ namespace TCC_3_M
             this.labelRelogio.AutoSize = true;
             this.labelRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRelogio.ForeColor = System.Drawing.Color.White;
-            this.labelRelogio.Location = new System.Drawing.Point(742, 74);
-            this.labelRelogio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRelogio.Location = new System.Drawing.Point(555, 60);
             this.labelRelogio.Name = "labelRelogio";
-            this.labelRelogio.Size = new System.Drawing.Size(100, 20);
+            this.labelRelogio.Size = new System.Drawing.Size(85, 16);
             this.labelRelogio.TabIndex = 1;
             this.labelRelogio.Text = "labelRelogio";
             // 
@@ -523,10 +374,9 @@ namespace TCC_3_M
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::TCC_3_M.Properties.Resources.do_utilizador32px;
-            this.button1.Location = new System.Drawing.Point(712, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(533, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 73);
+            this.button1.Size = new System.Drawing.Size(197, 59);
             this.button1.TabIndex = 0;
             this.button1.Text = "Administrador";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -537,20 +387,18 @@ namespace TCC_3_M
             this.pnlFilhoConteinerPrincipal.BackColor = System.Drawing.SystemColors.Control;
             this.pnlFilhoConteinerPrincipal.Controls.Add(this.pictureBox1);
             this.pnlFilhoConteinerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(291, 123);
-            this.pnlFilhoConteinerPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlFilhoConteinerPrincipal.Location = new System.Drawing.Point(219, 100);
             this.pnlFilhoConteinerPrincipal.Name = "pnlFilhoConteinerPrincipal";
-            this.pnlFilhoConteinerPrincipal.Size = new System.Drawing.Size(988, 766);
+            this.pnlFilhoConteinerPrincipal.Size = new System.Drawing.Size(740, 622);
             this.pnlFilhoConteinerPrincipal.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(353, 198);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 161);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(357, 300);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 244);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -559,26 +407,72 @@ namespace TCC_3_M
             // 
             this.timerRelogio.Interval = 1000;
             // 
+            // btnContatos
+            // 
+            this.btnContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnContatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContatos.FlatAppearance.BorderSize = 0;
+            this.btnContatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContatos.ForeColor = System.Drawing.Color.White;
+            this.btnContatos.Location = new System.Drawing.Point(0, 0);
+            this.btnContatos.Name = "btnContatos";
+            this.btnContatos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnContatos.Size = new System.Drawing.Size(217, 40);
+            this.btnContatos.TabIndex = 0;
+            this.btnContatos.Text = "Contatos";
+            this.btnContatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContatos.UseVisualStyleBackColor = false;
+            this.btnContatos.Click += new System.EventHandler(this.btnContatos_Click);
+            // 
+            // btnTutoriais
+            // 
+            this.btnTutoriais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.btnTutoriais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTutoriais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTutoriais.FlatAppearance.BorderSize = 0;
+            this.btnTutoriais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutoriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTutoriais.ForeColor = System.Drawing.Color.White;
+            this.btnTutoriais.Location = new System.Drawing.Point(0, 40);
+            this.btnTutoriais.Name = "btnTutoriais";
+            this.btnTutoriais.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnTutoriais.Size = new System.Drawing.Size(217, 40);
+            this.btnTutoriais.TabIndex = 1;
+            this.btnTutoriais.Text = "Tutoriais";
+            this.btnTutoriais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTutoriais.UseVisualStyleBackColor = false;
+            this.btnTutoriais.Click += new System.EventHandler(this.btnTutoriais_Click);
+            // 
+            // pnlSubMenuAjuda
+            // 
+            this.pnlSubMenuAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(152)))), ((int)(((byte)(224)))));
+            this.pnlSubMenuAjuda.Controls.Add(this.btnTutoriais);
+            this.pnlSubMenuAjuda.Controls.Add(this.btnContatos);
+            this.pnlSubMenuAjuda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuAjuda.Location = new System.Drawing.Point(0, 428);
+            this.pnlSubMenuAjuda.Name = "pnlSubMenuAjuda";
+            this.pnlSubMenuAjuda.Size = new System.Drawing.Size(217, 86);
+            this.pnlSubMenuAjuda.TabIndex = 6;
+            // 
             // frm_Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1279, 889);
+            this.ClientSize = new System.Drawing.Size(959, 722);
             this.Controls.Add(this.pnlFilhoConteinerPrincipal);
             this.Controls.Add(this.pnlFilhoCabecalhoPrincipal);
             this.Controls.Add(this.pnlMenuPrincipal);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1261, 728);
+            this.MinimumSize = new System.Drawing.Size(950, 599);
             this.Name = "frm_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenuPrincipal.ResumeLayout(false);
             this.pnlMenuPrincipal.PerformLayout();
-            this.pnlSubMenuHistoric.ResumeLayout(false);
-            this.pnlSubMenuAjuda.ResumeLayout(false);
             this.pnlSubMenuCreditos.ResumeLayout(false);
             this.pnlSubUserMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -588,6 +482,7 @@ namespace TCC_3_M
             this.pnlFilhoCabecalhoPrincipal.PerformLayout();
             this.pnlFilhoConteinerPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlSubMenuAjuda.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -601,16 +496,9 @@ namespace TCC_3_M
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnRegistros;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel pnlSubMenuHistoric;
-        private System.Windows.Forms.Button btnHistoricRegisters;
-        private System.Windows.Forms.Button btnHistórico;
         private System.Windows.Forms.Panel pnlSubMenuCreditos;
         private System.Windows.Forms.Button btnNossaEquipe;
         private System.Windows.Forms.Button btnCreditos;
-        private System.Windows.Forms.Panel pnlSubMenuAjuda;
-        private System.Windows.Forms.Button btnDuvidas;
-        private System.Windows.Forms.Button btnTutoriais;
-        private System.Windows.Forms.Button btnContatos;
         private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Panel pnlFilhoCabecalhoPrincipal;
         private System.Windows.Forms.Panel pnlFilhoConteinerPrincipal;
@@ -624,5 +512,8 @@ namespace TCC_3_M
         private System.Windows.Forms.Label labelRelogio;
         private System.Windows.Forms.Timer timerRelogio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlSubMenuAjuda;
+        private System.Windows.Forms.Button btnTutoriais;
+        private System.Windows.Forms.Button btnContatos;
     }
 }
