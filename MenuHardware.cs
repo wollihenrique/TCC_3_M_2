@@ -10,31 +10,35 @@ namespace TCC_3_M
         private MySqlConnection connection;
         private DataTable dataTable;
         private DataRow selectedHardware;
-        private int tenantId; // Variável para armazenar o tenant_id
-
-        private DataGridView dgvHardware;
+        private int tenantId;
+        private string connectionString = "server=localhost;database=inventory_system;user=root;password=etec";
 
         public frm_CadastroDisp(string emailDoAdministradorLogado, int tenantId)
         {
             InitializeComponent();
-            InitializeDatabaseConnection();
-            this.tenantId = tenantId; // Atribui o tenant_id recebido do formulário pai
-            LoadHardwareData();
-            SetupComboBoxes();
-            txtTag.TextChanged += new EventHandler(txtTag_TextChanged);
+            this.tenantId = tenantId;
 
-            // Inicialização do dgvHardware
-            dgvHardware = new DataGridView();
-            dgvHardware.SelectionChanged += new EventHandler(dgvHardware_SelectionChanged);
+            // Adicionando tratamento de exceções para inicialização
+            try
+            {
+                InitializeDatabaseConnection();
+                LoadHardwareData();
+                SetupComboBoxes();
+                txtTag.TextChanged += txtTag_TextChanged;
+                cmbUsuario.SelectedIndexChanged += cmbUsuario_SelectedIndexChanged; // Vincular evento de seleção
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro na inicialização do formulário: " + ex.Message);
+            }
         }
 
         private void InitializeDatabaseConnection()
         {
-            string connectionString = "server=localhost;database=inventory_system;user=root;password=etec";
             connection = new MySqlConnection(connectionString);
         }
 
-        private void LoadHardwareData(string orderBy = "", string statusFilter = "", int userId = -1)
+        private void LoadHardwareData(string orderBy = "", string statusFilter = "", string userFilter = "")
         {
             try
             {
@@ -44,24 +48,24 @@ namespace TCC_3_M
                 }
 
                 string query = @"
-SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date,
-       COALESCE(u.name, a.name) AS user_name
-FROM hardware h
-JOIN batch b ON h.batch_id = b.id
-LEFT JOIN entity_user_hardware_peripherals euhp ON h.tag = euhp.hardware_tag AND h.tenant_id = euhp.tenant_id
-LEFT JOIN user u ON euhp.user_id = u.id AND euhp.tenant_id = u.tenant_id
-LEFT JOIN entity_admin_hardware_peripherals eahp ON h.tag = eahp.hardware_tag AND h.tenant_id = eahp.tenant_id
-LEFT JOIN admin a ON eahp.admin_id = a.id AND eahp.tenant_id = a.tenant_id
-WHERE h.tenant_id = @tenantId";
+                    SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date,
+                           COALESCE(u.name, a.name) AS user_name
+                    FROM hardware h
+                    JOIN batch b ON h.batch_id = b.id
+                    LEFT JOIN entity_user_hardware_peripherals euhp ON h.tag = euhp.hardware_tag
+                    LEFT JOIN user u ON euhp.user_id = u.id
+                    LEFT JOIN entity_admin_hardware_peripherals eahp ON h.tag = eahp.hardware_tag
+                    LEFT JOIN admin a ON eahp.admin_id = a.id
+                    WHERE h.tenant_id = @tenantId";
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
                     query += " AND h.status = @status";
                 }
 
-                if (userId != -1)
+                if (!string.IsNullOrEmpty(userFilter))
                 {
-                    query += " AND (euhp.user_id = @userId OR eahp.admin_id = @userId)";
+                    query += " AND (u.name = @UserName OR a.name = @UserName)";
                 }
 
                 if (orderBy == "Mais recentes")
@@ -89,9 +93,9 @@ WHERE h.tenant_id = @tenantId";
                     cmd.Parameters.AddWithValue("@status", statusFilter);
                 }
 
-                if (userId != -1)
+                if (!string.IsNullOrEmpty(userFilter))
                 {
-                    cmd.Parameters.AddWithValue("@userId", userId);
+                    cmd.Parameters.AddWithValue("@UserName", userFilter);
                 }
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -111,11 +115,11 @@ WHERE h.tenant_id = @tenantId";
                     row["Lote"] = row["batch_id"].ToString();
                 }
 
-                dgvHardware.DataSource = dataTable;
+                dgvHardware.DataSource = dataTable; // Configura o DataSource do DataGridView
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading data: " + ex.Message);
+                MessageBox.Show("Erro ao carregar dados: " + ex.Message);
             }
             finally
             {
@@ -126,21 +130,52 @@ WHERE h.tenant_id = @tenantId";
             }
         }
 
+        private void LoadUserComboBox()
+        {
+            cmbUsuario.Items.Clear();
+            string query = "SELECT name FROM `admin` WHERE tenant_id = @TenantId " +
+                           "UNION " +
+                           "SELECT name FROM `user` WHERE tenant_id = @TenantId";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TenantId", tenantId);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string userName = reader["name"].ToString();
+                        cmbUsuario.Items.Add(userName);
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao preencher ComboBox de usuários: " + ex.Message);
+                }
+            }
+        }
+
         private void SetupComboBoxes()
         {
             cmbOrderBy.Items.Add("Mais recentes");
             cmbOrderBy.Items.Add("Mais antigos");
             cmbOrderBy.Items.Add("Este mês");
             cmbOrderBy.Items.Add("Este ano");
-            cmbOrderBy.SelectedIndexChanged += new EventHandler(cmbOrderBy_SelectedIndexChanged);
+            cmbOrderBy.SelectedIndexChanged += cmbOrderBy_SelectedIndexChanged;
 
-            cmbUsuario.SelectedIndexChanged += new EventHandler(cmbUsuario_SelectedIndexChanged);
+            cmbUsuario.SelectedIndexChanged += cmbUsuario_SelectedIndexChanged;
 
             cmbStatus.Items.Add("Em Uso");
             cmbStatus.Items.Add("Estoque");
             cmbStatus.Items.Add("Manutenção");
             cmbStatus.Items.Add("Defeituoso");
-            cmbStatus.SelectedIndexChanged += new EventHandler(cmbStatus_SelectedIndexChanged);
+            cmbStatus.SelectedIndexChanged += cmbStatus_SelectedIndexChanged;
 
             // Carregar os usuários na ComboBox de usuários
             LoadUserComboBox();
@@ -149,75 +184,11 @@ WHERE h.tenant_id = @tenantId";
             cmbUsuario.SelectedIndex = -1;
         }
 
-        private void LoadUserComboBox()
-        {
-            try
-            {
-                connection.Open();
-                string query = @"
-                    SELECT id, name FROM user WHERE tenant_id = @tenantId
-                    UNION
-                    SELECT id, name FROM admin WHERE tenant_id = @tenantId";
-
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@tenantId", tenantId);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable users = new DataTable();
-                adapter.Fill(users);
-
-                cmbUsuario.DisplayMember = "name";
-                cmbUsuario.ValueMember = "id";
-                cmbUsuario.DataSource = users;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading users: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
         private void cmbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedOrder = cmbOrderBy.SelectedItem?.ToString() ?? "";
             string selectedStatus = cmbStatus.SelectedItem?.ToString() ?? "";
-
-            // Tratar a ordenação e carregar os dados
-            if (selectedOrder == "Mais recentes")
-            {
-                LoadHardwareData("Mais recentes", selectedStatus);
-            }
-            else if (selectedOrder == "Mais antigos")
-            {
-                LoadHardwareData("Mais antigos", selectedStatus);
-            }
-            else if (selectedOrder == "Este mês")
-            {
-                LoadHardwareData("Este mês", selectedStatus);
-            }
-            else if (selectedOrder == "Este ano")
-            {
-                LoadHardwareData("Este ano", selectedStatus);
-            }
-            else
-            {
-                LoadHardwareData("", selectedStatus);
-            }
-        }
-
-        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbUsuario.SelectedItem != null)
-            {
-                int userId = Convert.ToInt32(cmbUsuario.SelectedValue);
-                LoadHardwareData("", "", userId);
-            }
-            else
-            {
-                LoadHardwareData(); // Carregar todos os hardwares se nenhum usuário estiver selecionado
-            }
+            LoadHardwareData(selectedOrder, selectedStatus);
         }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -234,6 +205,20 @@ WHERE h.tenant_id = @tenantId";
             else
             {
                 cmbUsuario.Enabled = true; // Habilita a ComboBox de usuários
+            }
+        }
+
+        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbUsuario.SelectedIndex >= 0) // Verifica se algum usuário está selecionado
+            {
+                string userName = cmbUsuario.SelectedItem.ToString();
+                LoadHardwareData("", "", userName);
+            }
+            else
+            {
+                // Se nenhum usuário estiver selecionado, carrega os dados sem filtro de usuário
+                LoadHardwareData();
             }
         }
 
@@ -273,14 +258,8 @@ WHERE h.tenant_id = @tenantId";
             }
         }
 
-        private void btnAtualizarHardware_Click_1(object sender, EventArgs e)
+        private void btnAtualizarHardware_Click(object sender, EventArgs e)
         {
-            // Limpar seleção das comboboxes
-            cmbOrderBy.SelectedIndex = -1;
-            cmbStatus.SelectedIndex = -1;
-            cmbUsuario.SelectedIndex = -1;
-
-            // Carregar os dados atualizados
             LoadHardwareData();
         }
 
@@ -288,20 +267,31 @@ WHERE h.tenant_id = @tenantId";
         {
             if (selectedHardware != null)
             {
-                DialogResult result = MessageBox.Show("Você tem certeza que deseja excluir este hardware?", "Confirmação de Exclusão", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este hardware?", "Confirmação de Exclusão", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     try
                     {
-                        connection.Open();
-                        string query = "DELETE FROM hardware WHERE tag = @Tag AND tenant_id = @tenantId"; // Adicionado filtro por tenant_id
-                        MySqlCommand cmd = new MySqlCommand(query, connection);
-                        cmd.Parameters.AddWithValue("@Tag", selectedHardware["tag"]);
-                        cmd.Parameters.AddWithValue("@tenantId", tenantId); // Passa o tenant_id como parâmetro
-                        cmd.ExecuteNonQuery();
+                        if (connection.State != ConnectionState.Open)
+                        {
+                            connection.Open();
+                        }
 
-                        MessageBox.Show("Hardware excluído com sucesso.");
-                        LoadHardwareData();
+                        string deleteQuery = "DELETE FROM hardware WHERE tag = @tag AND tenant_id = @tenantId";
+                        MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
+                        cmd.Parameters.AddWithValue("@tag", selectedHardware["tag"].ToString());
+                        cmd.Parameters.AddWithValue("@tenantId", tenantId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Hardware excluído com sucesso!");
+                            LoadHardwareData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nenhum hardware foi excluído.");
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -309,7 +299,10 @@ WHERE h.tenant_id = @tenantId";
                     }
                     finally
                     {
-                        connection.Close();
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
                     }
                 }
             }

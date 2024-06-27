@@ -265,7 +265,7 @@ namespace TCC_3_M
             this.btnAtualizarHardware.TabIndex = 32;
             this.btnAtualizarHardware.Text = "Atualizar";
             this.btnAtualizarHardware.UseVisualStyleBackColor = false;
-            this.btnAtualizarHardware.Click += new System.EventHandler(this.btnAtualizarHardware_Click_1);
+            this.btnAtualizarHardware.Click += new System.EventHandler(this.btnAtualizarHardware_Click);
             // 
             // btnEditarRegistroHardware
             // 
@@ -354,5 +354,6 @@ namespace TCC_3_M
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.DataGridView dgvHardware;
     }
 }
