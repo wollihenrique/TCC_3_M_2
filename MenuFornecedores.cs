@@ -38,34 +38,42 @@ namespace TCC_3_M
             try
             {
                 string query = @"
-        SELECT 
-            s.id AS FornecedorId, 
-            s.name AS NomeFornecedor, 
-            s.document AS DocumentoFornecedor, 
-            b.id AS LoteId, 
-            b.entering_date AS DataEntradaLote,
-            b.amount AS QuantidadeLote
-        FROM 
-            supplier s
-            LEFT JOIN batch b ON s.id = b.supplier_id
-        WHERE 
-            s.tenant_id = @TenantId";
+            SELECT 
+                s.id AS FornecedorId, 
+                s.name AS NomeFornecedor, 
+                s.document AS DocumentoFornecedor, 
+                b.id AS LoteId, 
+                b.entering_date AS DataEntradaLote,
+                b.amount AS QuantidadeLote
+            FROM 
+                supplier s
+                LEFT JOIN batch b ON s.id = b.supplier_id
+            WHERE 
+                s.tenant_id = @TenantId";
 
+                // Adicionando o filtro por CNPJ/CPF diretamente na consulta SQL
                 if (!string.IsNullOrEmpty(txtCpfCnpjMenu.Text))
                 {
-                    query += $" AND s.document LIKE '%{txtCpfCnpjMenu.Text}%'";
+                    query += $" AND s.document LIKE @DocumentoFornecedor";
                 }
 
                 if (!string.IsNullOrEmpty(txtLoteMenu.Text))
                 {
-                    query += $" AND b.id = @BatchId";
+                    query += $" AND b.id LIKE @BatchId";
                 }
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@TenantId", tenantId);
+
+                // Adicionando parâmetros para os filtros
+                if (!string.IsNullOrEmpty(txtCpfCnpjMenu.Text))
+                {
+                    cmd.Parameters.AddWithValue("@DocumentoFornecedor", $"%{txtCpfCnpjMenu.Text}%");
+                }
+
                 if (!string.IsNullOrEmpty(txtLoteMenu.Text))
                 {
-                    cmd.Parameters.AddWithValue("@BatchId", txtLoteMenu.Text);
+                    cmd.Parameters.AddWithValue("@BatchId", txtLoteMenu.Text + "%");
                 }
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -92,16 +100,17 @@ namespace TCC_3_M
 
         private void txtCpfCnpjMenu_TextChanged(object sender, EventArgs e)
         {
-            if (dataTable != null)
-            {
-                dataTable.DefaultView.RowFilter = $"document LIKE '%{txtCpfCnpjMenu.Text}%'";
-            }
+                AtualizarDataGridView();
         }
 
         private void txtLoteMenu_TextChanged(object sender, EventArgs e)
         {
-            AtualizarDataGridView();
+            if (dataTable != null)
+            {
+                AtualizarDataGridView();
+            }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
