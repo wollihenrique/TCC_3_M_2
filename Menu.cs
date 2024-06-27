@@ -211,9 +211,14 @@ namespace TCC_3_M
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frm_Login login = new frm_Login();
-            login.Show();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frm_Login login = new frm_Login();
+                login.Show();
+            }
         }
 
         private void AtualizarNomeUsuario()
