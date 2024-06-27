@@ -161,7 +161,6 @@ namespace TCC_3_M
             this.btnCloseFrmMenuFornecedores.TabIndex = 14;
             this.btnCloseFrmMenuFornecedores.Text = "X";
             this.btnCloseFrmMenuFornecedores.UseVisualStyleBackColor = false;
-            this.btnCloseFrmMenuFornecedores.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtTag
             // 

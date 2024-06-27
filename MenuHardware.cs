@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -16,8 +10,9 @@ namespace TCC_3_M
         private MySqlConnection connection;
         private DataTable dataTable;
         private DataRow selectedHardware;
-        private DataGridView dgvHardware;
         private int tenantId; // Variável para armazenar o tenant_id
+
+        private DataGridView dgvHardware;
 
         public frm_CadastroDisp(string emailDoAdministradorLogado, int tenantId)
         {
@@ -27,6 +22,9 @@ namespace TCC_3_M
             LoadHardwareData();
             SetupComboBoxes();
             txtTag.TextChanged += new EventHandler(txtTag_TextChanged);
+
+            // Inicialização do dgvHardware
+            dgvHardware = new DataGridView();
             dgvHardware.SelectionChanged += new EventHandler(dgvHardware_SelectionChanged);
         }
 
@@ -46,15 +44,15 @@ namespace TCC_3_M
                 }
 
                 string query = @"
-        SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date,
-               COALESCE(u.name, a.name) AS user_name
-        FROM hardware h
-        JOIN batch b ON h.batch_id = b.id
-        LEFT JOIN entity_user_hardware_peripherals euhp ON h.tag = euhp.hardware_tag AND h.tenant_id = euhp.tenant_id
-        LEFT JOIN user u ON euhp.user_id = u.id AND euhp.tenant_id = u.tenant_id
-        LEFT JOIN entity_admin_hardware_peripherals eahp ON h.tag = eahp.hardware_tag AND h.tenant_id = eahp.tenant_id
-        LEFT JOIN admin a ON eahp.admin_id = a.id AND eahp.tenant_id = a.tenant_id
-        WHERE h.tenant_id = @tenantId";
+SELECT h.tag, h.assurance, h.model, h.brand, h.status, h.processor, h.ram, h.disk, h.video_card, h.network_card, h.observations, h.batch_id, b.entering_date,
+       COALESCE(u.name, a.name) AS user_name
+FROM hardware h
+JOIN batch b ON h.batch_id = b.id
+LEFT JOIN entity_user_hardware_peripherals euhp ON h.tag = euhp.hardware_tag AND h.tenant_id = euhp.tenant_id
+LEFT JOIN user u ON euhp.user_id = u.id AND euhp.tenant_id = u.tenant_id
+LEFT JOIN entity_admin_hardware_peripherals eahp ON h.tag = eahp.hardware_tag AND h.tenant_id = eahp.tenant_id
+LEFT JOIN admin a ON eahp.admin_id = a.id AND eahp.tenant_id = a.tenant_id
+WHERE h.tenant_id = @tenantId";
 
                 if (!string.IsNullOrEmpty(statusFilter))
                 {
@@ -100,9 +98,12 @@ namespace TCC_3_M
                 dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                // Adiciona uma nova coluna para o lote
-                DataColumn column = new DataColumn("Lote", typeof(string));
-                dataTable.Columns.Add(column);
+                // Adiciona uma nova coluna para o lote se ainda não existir
+                if (!dataTable.Columns.Contains("Lote"))
+                {
+                    DataColumn column = new DataColumn("Lote", typeof(string));
+                    dataTable.Columns.Add(column);
+                }
 
                 // Preenche a coluna do lote com os dados
                 foreach (DataRow row in dataTable.Rows)
@@ -125,19 +126,6 @@ namespace TCC_3_M
             }
         }
 
-        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbUsuario.SelectedItem != null)
-            {
-                int userId = Convert.ToInt32(cmbUsuario.SelectedValue);
-                LoadHardwareData("", "", userId);
-            }
-            else
-            {
-                LoadHardwareData(); // Carregar todos os hardwares se nenhum usuário estiver selecionado
-            }
-        }
-
         private void SetupComboBoxes()
         {
             cmbOrderBy.Items.Add("Mais recentes");
@@ -145,6 +133,8 @@ namespace TCC_3_M
             cmbOrderBy.Items.Add("Este mês");
             cmbOrderBy.Items.Add("Este ano");
             cmbOrderBy.SelectedIndexChanged += new EventHandler(cmbOrderBy_SelectedIndexChanged);
+
+            cmbUsuario.SelectedIndexChanged += new EventHandler(cmbUsuario_SelectedIndexChanged);
 
             cmbStatus.Items.Add("Em Uso");
             cmbStatus.Items.Add("Estoque");
@@ -191,14 +181,48 @@ namespace TCC_3_M
 
         private void cmbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedOrder = cmbOrderBy.SelectedItem.ToString();
+            string selectedOrder = cmbOrderBy.SelectedItem?.ToString() ?? "";
             string selectedStatus = cmbStatus.SelectedItem?.ToString() ?? "";
-            LoadHardwareData(selectedOrder, selectedStatus);
+
+            // Tratar a ordenação e carregar os dados
+            if (selectedOrder == "Mais recentes")
+            {
+                LoadHardwareData("Mais recentes", selectedStatus);
+            }
+            else if (selectedOrder == "Mais antigos")
+            {
+                LoadHardwareData("Mais antigos", selectedStatus);
+            }
+            else if (selectedOrder == "Este mês")
+            {
+                LoadHardwareData("Este mês", selectedStatus);
+            }
+            else if (selectedOrder == "Este ano")
+            {
+                LoadHardwareData("Este ano", selectedStatus);
+            }
+            else
+            {
+                LoadHardwareData("", selectedStatus);
+            }
+        }
+
+        private void cmbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbUsuario.SelectedItem != null)
+            {
+                int userId = Convert.ToInt32(cmbUsuario.SelectedValue);
+                LoadHardwareData("", "", userId);
+            }
+            else
+            {
+                LoadHardwareData(); // Carregar todos os hardwares se nenhum usuário estiver selecionado
+            }
         }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedStatus = cmbStatus.SelectedItem.ToString();
+            string selectedStatus = cmbStatus.SelectedItem?.ToString() ?? "";
             string selectedOrder = cmbOrderBy.SelectedItem?.ToString() ?? "";
             LoadHardwareData(selectedOrder, selectedStatus);
 
@@ -227,19 +251,6 @@ namespace TCC_3_M
             DataView dv = new DataView(dataTable);
             dv.RowFilter = $"tag LIKE '%{tagFilter}%'";
             dgvHardware.DataSource = dv;
-        }
-
-        private void btn_Pesquisar_CadastroDispo_Click(object sender, EventArgs e)
-        {
-            string tagFilter = txtTag.Text.Trim();
-            DataView dv = new DataView(dataTable);
-            dv.RowFilter = $"tag = '{tagFilter}'";
-            dgvHardware.DataSource = dv;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnNovoHardware_Click(object sender, EventArgs e)
@@ -294,7 +305,7 @@ namespace TCC_3_M
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao excluir hardware: ", ex.Message);
+                        MessageBox.Show("Erro ao excluir hardware: " + ex.Message);
                     }
                     finally
                     {
